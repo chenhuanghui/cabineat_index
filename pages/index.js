@@ -1,5 +1,26 @@
-function HomePage() {
+const AirtablePlus = require('airtable-plus');
+const airtable = new AirtablePlus({
+    baseID: 'appCZGNOFg53FFSE4',
+    apiKey: 'keyLNupG6zOmmokND',
+    tableName: 'menu',
+});
+
+async function getMenu(){
+    try {
+        // allows for api params to be passed in from Airtable api
+        const readRes = await airtable.read({});
+        console.log(readRes)
+        return readRes
+    }
+    catch(e) {
+        console.error(e);
+    }
+}
+
+function HomePage({menu, hero}) {
+    // const menuLitsing = getMenu()
     return <>
+    <div className="PublicWebNav svelte-1hvfxdz" style-={{"--color-theme":"#3374ff", zIndex: "200", position: "relative"}}>
         <div className="theme-royal-blue">
             <header role="banner" className="Header svelte-8z8xuo">
                 <nav role="navigation" className="Nav desktop align-center svelte-i0996t">
@@ -15,128 +36,29 @@ function HomePage() {
                 2.6c-1 0-2.8-.3-3.9-2l-.1-.1-1.2.9v.1c1.1 1.6 2.9 2.5 5.1 2.5 2.9 0 4.9-1.6
                 4.9-4.1 0-2.8-2.7-3.5-4.8-4.1z" fill="black" className="svelte-j9c4sa"></path><path d="M25.5 9.5V8h1.4v14h-1.4v-5.5c-.8 1.1-2 1.7-3.4 1.7-2.7
                 0-4.5-2.1-4.5-5.2s1.9-5.2 4.5-5.2c1.4-.1 2.6.6 3.4 1.7zM19.1 13c0 2.9 1.6
-                3.9 3.2 3.9 2 0 3.3-1.5 3.3-3.9s-1.3-3.9-3.3-3.9c-2.4 0-3.2 2-3.2 3.9z" fill-rule="evenodd" clip-rule="evenodd" fill="black" className="svelte-j9c4sa"></path><path d="M36.2 8v5.5c0 1.9-1.3 3.3-3.2 3.3-1.5 0-2.3-.9-2.3-2.8V8h-1.4v6.4c0 2.4
+                3.9 3.2 3.9 2 0 3.3-1.5 3.3-3.9s-1.3-3.9-3.3-3.9c-2.4 0-3.2 2-3.2 3.9z" fillRule="evenodd" clipRule="evenodd" fill="black" className="svelte-j9c4sa"></path><path d="M36.2 8v5.5c0 1.9-1.3 3.3-3.2 3.3-1.5 0-2.3-.9-2.3-2.8V8h-1.4v6.4c0 2.4
                 1.3 3.8 3.5 3.8 1.4 0 2.5-.6 3.3-1.6V18h1.4V8h-1.3z" fill="black" className="svelte-j9c4sa"></path><path d="M40.3 9c1-.8 2.4-1.3 3.9-1.3 2.2 0 3.6 1.1 3.6 3V18h-1.4v-1.1c-.7.9-1.7
                 1.3-3.1 1.3-2.2 0-3.5-1.2-3.5-3.1 0-2.5 2.3-2.8 3.3-3 .2 0 .3-.1.5-.1 1.4-.2
                 2.7-.4 2.7-1.6 0-1.3-1.7-1.4-2.2-1.4-.9 0-2.2.3-3.1 1v.2L40.3 9zm.9 6.1c0
                 1.6 1.5 1.8 2.2 1.8 1.4 0 2.9-.8
-                2.9-2.9v-1.4c-.7.4-1.7.6-2.5.8l-.4.1c-1.5.1-2.2.5-2.2 1.6z" fill-rule="evenodd" clip-rule="evenodd" fill="black" className="svelte-j9c4sa"></path><path d="M55.9 8.2c-.3-.2-.9-.4-1.4-.4-1.1 0-2.2.6-2.8
+                2.9-2.9v-1.4c-.7.4-1.7.6-2.5.8l-.4.1c-1.5.1-2.2.5-2.2 1.6z" fillRule="evenodd" clipRule="evenodd" fill="black" className="svelte-j9c4sa"></path><path d="M55.9 8.2c-.3-.2-.9-.4-1.4-.4-1.1 0-2.2.6-2.8
                 1.5V8h-1.4v10h1.4v-5.4c0-2.4 1.3-3.4 2.7-3.4.4 0 .8.1 1.1.2l.1.1.3-1.3z" fill="black" className="svelte-j9c4sa"></path><path d="M56.3 13c0-3.1 1.9-5.3 4.7-5.3 2.7 0 4.5 1.9 4.5 4.7V13.2h-7.7c0 2.2 1.4
                 3.6 3.4 3.6 1.2 0 2.2-.5 2.8-1.3l.1-.1 1 .9-.1.1c-.7.8-1.9 1.8-3.9 1.8-2.9
-                0-4.8-2.1-4.8-5.2zm4.6-3.9c-1.7 0-2.9 1.1-3.1 2.9H64c-.1-1.4-1-2.9-3.1-2.9z" fill-rule="evenodd" clip-rule="evenodd" fill="black" className="svelte-j9c4sa"></path></svg> <span className="text svelte-j9c4sa">Square</span></span></a>
+                0-4.8-2.1-4.8-5.2zm4.6-3.9c-1.7 0-2.9 1.1-3.1 2.9H64c-.1-1.4-1-2.9-3.1-2.9z" fillRule="evenodd" clipRule="evenodd" fill="black" className="svelte-j9c4sa"></path></svg> <span className="text svelte-j9c4sa">Square</span></span></a>
                     </div> */}
                     <div className="middle-slot svelte-i0996t">
-                        <ul className="NavList align-center svelte-x5qcbk">
-                            <li className="category-item svelte-x5qcbk">
-                                <div id="7sZvs5CQAUEm5Zb20tXiPf" className="Category svelte-56sb18">
-                                    <button className="toggle svelte-56sb18" aria-haspopup="true" aria-expanded="false"><span className="title svelte-56sb18">Payments</span>
-                                    </button>
-                                    <div className="Flyout align-center svelte-1odnmjg">
-                                        <ul className="CategoryList svelte-3x0fk8">
-                                            <li className="link-item svelte-3x0fk8"><a id="2UBx0USYFm0K9tvvx4E0Vg" className="CategoryLink svelte-359eaa" href="/au/en/payments"><span className="title svelte-359eaa">Payments Overview</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="1kb7Mriix4UeDwERXVMV2p" className="CategoryLink svelte-359eaa" href="/au/en/ecommerce"><span className="title svelte-359eaa">On your Website</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="1rt1VXbTkeSx5gUYH8pTsf" className="CategoryLink svelte-359eaa" href="/au/en/invoices"><span className="title svelte-359eaa">By Invoice</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="75v3cRAgwUAPmAapDaknnV" className="CategoryLink svelte-359eaa" href="/au/en/payments/virtual-terminal"><span className="title svelte-359eaa">On your Computer</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="62ROihS5W0nPD6DEeIvYK6" className="CategoryLink svelte-359eaa" href="https://developer.squareup.com/au/en"><span className="title svelte-359eaa">APIs</span> </a> 
-                                            </li>
-                                        </ul>
+                        <ul className="NavList align-center svelte-x5qcbk"> 
+                        {
+                            menu.length > 0 && menu.map((item, index) => (
+                                <li className="category-item svelte-x5qcbk" key={index}>
+                                    <div id="7sZvs5CQAUEm5Zb20tXiPf" className="Category svelte-56sb18">
+                                        <button className="toggle svelte-56sb18">
+                                            <span className="title svelte-56sb18">{item.fields.title}</span>
+                                        </button>
                                     </div>
-                                </div>
-                            </li>
-                            <li className="category-item svelte-x5qcbk">
-                                <div id="2O3OLytMfZe5WaLEc7qviH" className="Category svelte-56sb18">
-                                    <button className="toggle svelte-56sb18" aria-haspopup="true" aria-expanded="false"><span className="title svelte-56sb18">Point of Sale</span>
-                                    </button>
-                                    <div className="Flyout align-center svelte-1odnmjg">
-                                        <ul className="CategoryList svelte-3x0fk8">
-                                            <li className="link-item svelte-3x0fk8"><a id="2W51WSupiwlXYN2GAmxGHg" className="CategoryLink svelte-359eaa" href="/au/en/point-of-sale"><span className="title svelte-359eaa">Square Point of Sale</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="3JYNkkLeFcgjScrldg9ZsW" className="CategoryLink svelte-359eaa" href="/au/en/appointments"><span className="title svelte-359eaa">Square Appointments</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="2WBIeDKi4BoLoHUGl5x4g9" className="CategoryLink svelte-359eaa" href="/au/en/point-of-sale/restaurants"><span className="title svelte-359eaa">Square for Restaurants</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="6BRWeRgQi6MqLaVhQuoEtX" className="CategoryLink svelte-359eaa" href="/shop/hardware/au/en"><span className="title svelte-359eaa">Shop Hardware</span> </a> 
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                            <li className="category-item svelte-x5qcbk">
-                                <div id="6rYCCVIQoAtpEoaTtlQo93" className="Category svelte-56sb18">
-                                    <button className="toggle svelte-56sb18" aria-haspopup="true" aria-expanded="false"><span className="title svelte-56sb18">Hardware</span>
-                                    </button>
-                                    <div className="Flyout align-center svelte-1odnmjg">
-                                        <ul className="CategoryList svelte-3x0fk8">
-                                            <li className="link-item svelte-3x0fk8"><a id="1ZSs5X7p5jNBaBeuVTEdDb" className="CategoryLink svelte-359eaa" href="/au/en/hardware/reader"><span className="title svelte-359eaa">Square Reader</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="1V1Yqy3F0MZqjxPO1PPR5G" className="CategoryLink svelte-359eaa" href="/au/en/hardware/stand"><span className="title svelte-359eaa">Square Stand</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="50SErcp17LIrqJ5sf8bod6" className="CategoryLink svelte-359eaa" href="/au/en/hardware/terminal"><span className="title svelte-359eaa">Square Terminal</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="1byGn4KP6K5WW7lYAUHBwj" className="CategoryLink svelte-359eaa" href="/au/en/hardware"><span className="title svelte-359eaa">Compare Hardware</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="5cB5aKYLcnByVXqKJooVye" className="CategoryLink svelte-359eaa" href="/shop/hardware/au/en/products/accessories"><span className="title svelte-359eaa">Accessories</span> </a> 
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                            <li className="category-item svelte-x5qcbk">
-                                <div id="6uNtkm1io8Ps9fCFBX9JNQ" className="Category svelte-56sb18">
-                                    <button className="toggle svelte-56sb18" aria-haspopup="true" aria-expanded="false"><span className="title svelte-56sb18">Business Tools</span>
-                                    </button>
-                                    <div className="Flyout align-center svelte-1odnmjg">
-                                        <ul className="CategoryList svelte-3x0fk8">
-                                            <li className="link-item svelte-3x0fk8"><a id="6ngFvZ2EP6xBtbnOMIOAbl" className="CategoryLink svelte-359eaa" href="/au/en/online-store"><span className="title svelte-359eaa">Online Store</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="6Y3f6BXQ4EqpD1E63Nu1nM" className="CategoryLink svelte-359eaa" href="/au/en/online-checkout"><span className="title svelte-359eaa">Online Checkout</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="5Qsk8phSLpSXJjFWAuLX1r" className="CategoryLink svelte-359eaa" href="/au/en/app-marketplace"><span className="title svelte-359eaa">Integrations</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="438alU6gI8rwosIQuxgdQQ" className="CategoryLink svelte-359eaa" href="/au/en/software/loyalty"><span className="title svelte-359eaa">Loyalty</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="Sl0PE6SZ1fXHuKnpty3Es" className="CategoryLink svelte-359eaa" href="/au/en/point-of-sale/features/team-management"><span className="title svelte-359eaa">Team Management</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="aF9H1D6TV3aycibqUrPGO" className="CategoryLink svelte-359eaa" href="https://developer.squareup.com/au/en"><span className="title svelte-359eaa">APIs</span> </a> 
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                            <li className="category-item svelte-x5qcbk">
-                                <div id="4Bk3rPUce85vkg2OkQ3nsO" className="Category svelte-56sb18">
-                                    <button className="toggle svelte-56sb18" aria-haspopup="true" aria-expanded="false"><span className="title svelte-56sb18">Resources</span>
-                                    </button>
-                                    <div className="Flyout align-center svelte-1odnmjg">
-                                        <ul className="CategoryList svelte-3x0fk8">
-                                            <li className="link-item svelte-3x0fk8"><a id="2Qv35jow3okEXNroRYgjtR" className="CategoryLink svelte-359eaa" href="/au/en/l/immediate-support-response"><span className="title svelte-359eaa">COVID-19 Resources</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="4LvsZnbpEk3zkDg4WiFSeG" className="CategoryLink svelte-359eaa" href="/au/en/pricing"><span className="title svelte-359eaa">Pricing</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="mT88czKP0sDs1fS3dkTlC" className="CategoryLink svelte-359eaa" href="/help/au/en"><span className="title svelte-359eaa">Support Centre</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="3L3lZXFz325vt75Jtei4TF" className="CategoryLink svelte-359eaa" href="/au/en/sales"><span className="title svelte-359eaa">Contact Sales</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="2aKNePqIn8MeBaRgoXbZkG" className="CategoryLink svelte-359eaa" href="/au/en/whats-new"><span className="title svelte-359eaa">What’s New</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="5v5O0Uf6ML9FAfrXCtgnaW" className="CategoryLink svelte-359eaa" href="/au/en/app-marketplace"><span className="title svelte-359eaa">App Marketplace</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="1y27iuHCj1uLU4us394z5E" className="CategoryLink svelte-359eaa" href="/au/en/sales"><span className="title svelte-359eaa">Switch to Square</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="4oZDGXU5pcq2yHNAZQsNBZ" className="CategoryLink svelte-359eaa" href="https://www.sellercommunity.com/t5/Seller-Community-Australia/ct-p/Seller_Community_AU"><span className="title svelte-359eaa">Community</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="5sroDz20D9iVyBFIb13vqS" className="CategoryLink svelte-359eaa" href="/au/en/townsquare"><span className="title svelte-359eaa">Blog</span> </a> 
-                                            </li>
-                                            <li className="link-item svelte-3x0fk8"><a id="4bodmH6PCp84MiDxp3EPuw" className="CategoryLink svelte-359eaa" href="https://developer.squareup.com/au/en"><span className="title svelte-359eaa">Developers</span> </a> 
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
+                                </li>
+                            ))
+                        }
                         </ul>
                     </div>
                     <div className="right-slot svelte-i0996t">
@@ -156,7 +78,7 @@ function HomePage() {
                 1-.5.9-1.1 0-.5-.5-.9-1-.9h-.3L24
                 5.2c.1-.5-.3-1.1-.8-1.2H5.4v-.1c-.1-.4-.2-.8-.4-1.2C4.7 2 4.1 1 2.7
                 1H1zm5.6 7.2L5.9 6h15.9l-1.2 6.9-12.5.6-.2-.6c-.4-1.5-.9-3.1-1.3-4.7zM8
-                24c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                24c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z" fillRule="evenodd" clipRule="evenodd"></path>
                                 </svg> <span className="title svelte-1w51rza">Your cart</span>
                             </button>
                             <div className="Flyout align-right svelte-1odnmjg isCart">
@@ -182,18 +104,16 @@ function HomePage() {
 
             <main className="main-content" id="main-content" role="main">
                 <div className="auto-layout-collapse">
-                    <section className="hero section-hero bg-invert" data-entry-id="1fHKjVavDyZsVAg7GUr3iG">
+                    <section className="hero section-hero bg-invert">
                         <div className="content">
                             <div className="content-wrapper">
-                                <div className="font-eyebrow-large">Square Online</div>
-                                <h1 className="balance-text">Take orders on your
-                                    <br data-owner="balance-text"/>
-                                    restaurant website. </h1>
-                                <p className="font-size-large balance-text" >No monthly fees or commissions.</p>
+                                <div className="font-eyebrow-large">{hero.fields.pre_title}</div>
+                                <h1 className="balance-text">{hero.fields.title}</h1>
+                                <p className="font-size-large balance-text" >{hero.fields.sub_title}</p>
                                 <div className="grid grid-space-line font-size-small">
                                     <div className="column">
-                                        <div className="display-inline-block" data-entry-id="26sslPzbQIBbHKf1jRJ6bl">
-                                            <a className="button gap-none" href="../../../signup/au-lang_code=en-AU&amp;v=online-store.html">Launch a free ordering page</a>
+                                        <div className="display-inline-block">
+                                            <a className="button gap-none" href={hero.fields.call2action_href}>{hero.fields.call2action}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -719,7 +639,23 @@ function HomePage() {
                 </div>
             </footer>
         </div>
+        </div>
     </>
+}
+
+HomePage.getInitialProps = async ({query}) => {        
+    const menuRes = await airtable.read({
+        sort: [{field: 'sort', direction: 'asc'}]
+    },{tableName:"menu"});
+
+    const heroRes = await airtable.read({
+        filterByFormula: `isActive = "1"`,
+        maxRecords: 1
+    },{tableName:"hero"});
+
+    console.log(heroRes)
+
+    return { menu: menuRes, hero: heroRes[0] }
 }
   
 export default HomePage

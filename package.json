@@ -1,0 +1,15 @@
+{
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "airtable-plus": "^1.0.4",
+        "jquery": "^3.5.1",
+        "next": "^9.5.3",
+        "nookies": "^2.4.0",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    }
+}

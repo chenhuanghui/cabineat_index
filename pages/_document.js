@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        {/* <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <link rel="icon" href="https://xms-production-f.squarecdn.com/xms/assets/public-web-styles/favicon-770e0889aefd823056c7cdbb066a445be0f0754c1b4d4cba877e120fdbcb63e6.ico" />
         <meta name="sq:environment" content="{&quot;env&quot;:&quot;production&quot;,&quot;country_code&quot;:&quot;AU&quot;,&quot;lang_code&quot;:&quot;en&quot;,&quot;locale&quot;:&quot;en-AU&quot;,&quot;country_default_language&quot;:&quot;en&quot;,&quot;default_country&quot;:&quot;US&quot;,&quot;default_language&quot;:&quot;en&quot;,&quot;supported_countries&quot;:[&quot;AU&quot;,&quot;CA&quot;,&quot;GB&quot;,&quot;JP&quot;,&quot;US&quot;],&quot;detected_country_code&quot;:null,&quot;available_languages&quot;:[&quot;en&quot;,&quot;en-AU&quot;,&quot;en-CA&quot;,&quot;en-GB&quot;,&quot;en-US&quot;,&quot;fr&quot;,&quot;fr-CA&quot;,&quot;es&quot;,&quot;es-US&quot;,&quot;ja&quot;,&quot;ja-JP&quot;],&quot;user_has_ever_logged_in&quot;:false}" />
@@ -39,7 +39,7 @@ class MyDocument extends Document {
         <meta name="csrf-param" content="authenticity_token" />
         <meta name="csrf-token" content="j97KXvV20y6BQct1-uUl8Z1ULk778dlfJtCBwCe2FeM" />
         <link type="application/opensearchdescription+xml" href="https://supportcenter-production-f.squarecdn.com/help/opensearch.xml" rel="search" title="Search Square Support" />
-        <meta content="[]" name="sq:nav_optimizely_experiments" />
+        <meta content="[]" name="sq:nav_optimizely_experiments" /> */}
             <link rel="stylesheet" href="../assets/css/style.css"></link>
 
         </Head>

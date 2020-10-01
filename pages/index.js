@@ -21,8 +21,11 @@ function HomePage({menu, hero}) {
     // return "homepaghe";
     // const menuLitsing = getMenu()
     return <>
-    <div className="PublicWebNav svelte-1hvfxdz">
-        <div className="theme-royal-blue">
+    <div className="asdf">
+        asdfsdaf
+    </div>
+    {/* <div className="PublicWebNav svelte-1hvfxdz">
+        <div className="theme-royal-blue"> */}
             {/* <header role="banner" className="Header svelte-8z8xuo"> */}
                 {/* <nav role="navigation" className="Nav desktop align-center svelte-i0996t">                    
                     <div className="middle-slot svelte-i0996t">
@@ -82,8 +85,8 @@ function HomePage({menu, hero}) {
                 {/* <div>cascasdc</div> */}
             {/* </header> */}
 
-            <main className="main-content" id="main-content" role="main">
-                <div className="auto-layout-collapse">
+            {/* <main className="main-content" id="main-content" role="main">
+                <div className="auto-layout-collapse"> */}
                     {/* <section className="hero section-hero bg-invert">
                         <div className="content">
                             <div className="content-wrapper">
@@ -497,8 +500,8 @@ function HomePage({menu, hero}) {
                             </div>
                         </div>
                     </section> */}
-                </div>
-            </main>
+                {/* </div>
+            </main> */}
 
             {/* <footer className="page-footer">
                 <div className="content pad-vert-medium">
@@ -584,8 +587,8 @@ function HomePage({menu, hero}) {
                     </div>
                 </div>
             </footer> */}
-        </div>
-        </div>
+        {/* </div>
+        </div> */}
         <style jsx>{`
         // html {
         //     -webkit-text-size-adjust: 100%;
@@ -596,19 +599,19 @@ function HomePage({menu, hero}) {
     </>
 }
 
-HomePage.getInitialProps = async ({query}) => {        
-    const menuRes = await airtable.read({
-        sort: [{field: 'sort', direction: 'asc'}]
-    },{tableName:"menu"});
+// HomePage.getInitialProps = async ({query}) => {        
+//     const menuRes = await airtable.read({
+//         sort: [{field: 'sort', direction: 'asc'}]
+//     },{tableName:"menu"});
 
-    const heroRes = await airtable.read({
-        filterByFormula: `isActive = "1"`,
-        maxRecords: 1
-    },{tableName:"hero"});
+//     const heroRes = await airtable.read({
+//         filterByFormula: `isActive = "1"`,
+//         maxRecords: 1
+//     },{tableName:"hero"});
 
-    console.log(heroRes)
+//     console.log(heroRes)
 
-    return { menu: menuRes, hero: heroRes[0] }
-}
+//     return { menu: menuRes, hero: heroRes[0] }
+// }
   
 export default HomePage

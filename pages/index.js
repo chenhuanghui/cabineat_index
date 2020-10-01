@@ -410,7 +410,7 @@ function HomePage({menu, hero}) {
                             </div>
                         </div>
                     </section> */}
-                    <section className="section-multi-column bg-white auto-layout flex-valign-middle" data-entry-id="5VnvOH7LO3xl6FWslyXFqy">
+                    {/* <section className="section-multi-column bg-white auto-layout flex-valign-middle" data-entry-id="5VnvOH7LO3xl6FWslyXFqy">
                         <div className="content">
                             <div className="intro font-size-base">
                                 <h2 className="balance-text h2" data-title-for="5VnvOH7LO3xl6FWslyXFqy" >Connect with other Square solutions</h2>
@@ -496,10 +496,11 @@ function HomePage({menu, hero}) {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section> */}
                 </div>
             </main>
-            <footer className="page-footer">
+
+            {/* <footer className="page-footer">
                 <div className="content pad-vert-medium">
                     <nav className="tertiary" role="navigation">
                         <div className="grid-flex-at-extra-small grid-space-line grid-align-justify">
@@ -582,7 +583,7 @@ function HomePage({menu, hero}) {
                         </div>
                     </div>
                 </div>
-            </footer>
+            </footer> */}
         </div>
         </div>
         <style jsx>{`

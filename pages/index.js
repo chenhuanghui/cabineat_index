@@ -125,7 +125,7 @@ function HomePage({menu, hero}) {
                         </div>
                     </section>
 
-                    {/* <section className="section-multi-column bg-white auto-layout flex-valign-middle" data-entry-id="3Axus6aEzkCgiY9Hiy2qo7">
+                    <section className="section-multi-column bg-white auto-layout flex-valign-middle" data-entry-id="3Axus6aEzkCgiY9Hiy2qo7">
                         <div className="content">
                             <div className="grid-3-at-medium multi-column-grid align-center grid-space-small grid-align-center grid-valign-top grid-row-equal-heights">
                                 <div className="column">
@@ -184,7 +184,7 @@ function HomePage({menu, hero}) {
                     </section>
                     
                     <hr className="section-border content" data-entry-id="7e0qhknUVUEYcAgCAcaAgc"/>
-
+                    {/* 
                     <section className="section-multi-column bg-white auto-layout flex-valign-middle">
                         <div className="content">
                             <div className="grid-2-at-medium multi-column-grid align-left grid-space-large grid-align-center grid-valign-middle grid-row-equal-heights">

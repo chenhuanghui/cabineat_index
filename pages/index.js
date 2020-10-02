@@ -23,65 +23,47 @@ function HomePage({menu, hero}) {
     return <>
     <div className="PublicWebNav svelte-1hvfxdz">
         <div className="theme-royal-blue">
-            <header role="banner" className="Header svelte-8z8xuo">
-                <nav role="navigation" className="Nav desktop align-center svelte-i0996t">                    
-                    <div className="middle-slot svelte-i0996t">
-                        <ul className="NavList align-center svelte-x5qcbk"> 
-                        {
-                            // menu.length > 0 && menu.map((item, index) => (
-                            //     <li className="category-item svelte-x5qcbk" key={index}>
-                            //         <div id="7sZvs5CQAUEm5Zb20tXiPf" className="Category svelte-56sb18">
-                            //             <button className="toggle svelte-56sb18">
-                            //                 <span className="title svelte-56sb18">{item.fields.title}</span>
-                            //             </button>
-                            //         </div>
-                            //     </li>
-                            // ))
-                        }
+            <nav className="navbar navbar-expand-lg navbar-light">
+                <div className="container">
+                    <a className="navbar-brand mr-auto" href="./index.html">
+                        {/* <img src="./assets/img/logo.svg" alt="..." className="navbar-brand-img"/> */}
+                        <span className="logo svelte-atgojb">
+                        <svg className="LogoJewel svelte-1ur14si" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44" height="44"><path fill="black" d="M36.65 0H7.354A7.354 7.354 0 0 0 0 7.354V36.65a7.354 7.354 0 0 0 7.354
+                        7.354H36.65a7.353 7.353 0 0 0 7.354-7.354V7.354A7.352 7.352 0 0 0 36.65
+                        0zm-.646 33.685a2.32 2.32 0 0 1-2.32 2.32H10.325a2.32 2.32 0 0
+                        1-2.321-2.32v-23.36a2.32 2.32 0 0 1 2.321-2.321h23.359a2.32 2.32 0 0 1 2.32
+                        2.321v23.36z" className="svelte-1ur14si"></path><path fill="black" d="M17.333 28.003c-.736 0-1.332-.6-1.332-1.339V17.34c0-.739.596-1.339
+                        1.332-1.339h9.338c.738 0 1.332.6 1.332 1.339v9.324c0 .739-.594 1.339-1.332
+                        1.339h-9.338z" className="svelte-1ur14si"></path></svg> <svg className="LogoWordmark svelte-j9c4sa" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 22" width="66" height="22"><path d="M11.2 10c-.7-.2-1.3-.4-1.8-.6C8.4 9 8 8.4 8 7.6c0-1.5 1.5-2.2 3-2.2 1.4 0
+                        2.6.6 3.5 1.6l.1.1 1.2-.9-.1-.1c-1.1-1.4-2.7-2.2-4.6-2.2-1.2 0-2.4.3-3.2.9-1
+                        .8-1.5 1.7-1.5 2.9 0 2.7 2.6 3.4 4.6 3.9 2.1.6 3.4 1 3.4 2.6s-1.3 2.6-3.2
+                        2.6c-1 0-2.8-.3-3.9-2l-.1-.1-1.2.9v.1c1.1 1.6 2.9 2.5 5.1 2.5 2.9 0 4.9-1.6
+                        4.9-4.1 0-2.8-2.7-3.5-4.8-4.1z" fill="black" className="svelte-j9c4sa"></path><path d="M25.5 9.5V8h1.4v14h-1.4v-5.5c-.8 1.1-2 1.7-3.4 1.7-2.7
+                        0-4.5-2.1-4.5-5.2s1.9-5.2 4.5-5.2c1.4-.1 2.6.6 3.4 1.7zM19.1 13c0 2.9 1.6
+                        3.9 3.2 3.9 2 0 3.3-1.5 3.3-3.9s-1.3-3.9-3.3-3.9c-2.4 0-3.2 2-3.2 3.9z" fill-rule="evenodd" clip-rule="evenodd" fill="black" className="svelte-j9c4sa"></path><path d="M36.2 8v5.5c0 1.9-1.3 3.3-3.2 3.3-1.5 0-2.3-.9-2.3-2.8V8h-1.4v6.4c0 2.4
+                        1.3 3.8 3.5 3.8 1.4 0 2.5-.6 3.3-1.6V18h1.4V8h-1.3z" fill="black" className="svelte-j9c4sa"></path><path d="M40.3 9c1-.8 2.4-1.3 3.9-1.3 2.2 0 3.6 1.1 3.6 3V18h-1.4v-1.1c-.7.9-1.7
+                        1.3-3.1 1.3-2.2 0-3.5-1.2-3.5-3.1 0-2.5 2.3-2.8 3.3-3 .2 0 .3-.1.5-.1 1.4-.2
+                        2.7-.4 2.7-1.6 0-1.3-1.7-1.4-2.2-1.4-.9 0-2.2.3-3.1 1v.2L40.3 9zm.9 6.1c0
+                        1.6 1.5 1.8 2.2 1.8 1.4 0 2.9-.8
+                        2.9-2.9v-1.4c-.7.4-1.7.6-2.5.8l-.4.1c-1.5.1-2.2.5-2.2 1.6z" fill-rule="evenodd" clip-rule="evenodd" fill="black" className="svelte-j9c4sa"></path><path d="M55.9 8.2c-.3-.2-.9-.4-1.4-.4-1.1 0-2.2.6-2.8
+                        1.5V8h-1.4v10h1.4v-5.4c0-2.4 1.3-3.4 2.7-3.4.4 0 .8.1 1.1.2l.1.1.3-1.3z" fill="black" className="svelte-j9c4sa"></path><path d="M56.3 13c0-3.1 1.9-5.3 4.7-5.3 2.7 0 4.5 1.9 4.5 4.7V13.2h-7.7c0 2.2 1.4
+                        3.6 3.4 3.6 1.2 0 2.2-.5 2.8-1.3l.1-.1 1 .9-.1.1c-.7.8-1.9 1.8-3.9 1.8-2.9
+                        0-4.8-2.1-4.8-5.2zm4.6-3.9c-1.7 0-2.9 1.1-3.1 2.9H64c-.1-1.4-1-2.9-3.1-2.9z" fill-rule="evenodd" clip-rule="evenodd" fill="black" className="svelte-j9c4sa"></path></svg> 
+                        <span className="text svelte-j9c4sa">Square</span>
+                        </span>
+                    </a>
+                    <div className="collapse navbar-collapse">
+                        <ul className="navbar-nav mr-lg-auto">
+                            <li className="nav-item" style={{color: "black"}}>Payments</li>
+                            <li className="nav-item">Payments</li>
+                            <li className="nav-item">Payments</li>
+                            <li className="nav-item">Payments</li>
                         </ul>
                     </div>
-                    <div className="right-slot svelte-i0996t">
-                        {/* <ul className="NavList align-right svelte-x5qcbk">
-                            <li className="link-item svelte-x5qcbk"><a id="735gGmzBRZBLLrnQxBIs8O" href="/login" className="Link svelte-14997ds"><span className="title svelte-14997ds">Sign In</span></a> 
-                            </li>
-                            <li className="link-item svelte-x5qcbk"><a id="4FDsfEQF9Ll6m044D2d3sA" href="/shop/hardware/au/en" className="Link svelte-14997ds"><span className="title svelte-14997ds">Shop</span></a> 
-                            </li>
-                        </ul> */}
-
-                        {/* <div id="qBa5DkWABZuwiFxSDtBlE" className="Cart svelte-j4l4t">
-                            <button type="button" className="Toggle svelte-1w51rza" aria-haspopup="true" aria-expanded="false">
-                                <svg className="Icon svelte-7v6t8b" width="24" height="24" viewBox="0 0 24 24" fill="black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 1c-.6 0-1 .4-1 1s.4 1 1 1h1.7c.1 0 .3 0 .5.5.1.2.2.5.2.8l.1.3c0
-                .2.1.4.1.6.1.5.8 2.9 1.5 5.2l.9 3.1.2.7-.2.2c-.5.5-.8 1.3-.8 2.4 0 1.8 1.7
-                3.2 3.3 3.2H20c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2h3c.6 0 1-.4
-                1-1s-.4-1-1-1H8.5c-.7 0-1.3-.6-1.3-1.2 0-.7.2-1 .3-1.1l.1-.1 15.4-.8c.6 0
-                1-.5.9-1.1 0-.5-.5-.9-1-.9h-.3L24
-                5.2c.1-.5-.3-1.1-.8-1.2H5.4v-.1c-.1-.4-.2-.8-.4-1.2C4.7 2 4.1 1 2.7
-                1H1zm5.6 7.2L5.9 6h15.9l-1.2 6.9-12.5.6-.2-.6c-.4-1.5-.9-3.1-1.3-4.7zM8
-                24c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z" fillRule="evenodd" clipRule="evenodd"></path>
-                                </svg> <span className="title svelte-1w51rza">Your cart</span>
-                            </button>
-                            <div className="Flyout align-right svelte-1odnmjg isCart">
-                                <div className="Status svelte-1qzvt6b">
-                                    <div className="title svelte-1qzvt6b">Your cart</div>
-                                    <div className="message svelte-1qzvt6b">No items in your cart</div>
-                                </div>
-                                <ul className="CategoryList svelte-3x0fk8">
-                                    <li className="button-item svelte-3x0fk8"><a id="4RJj0fF7Zi2LfPKmITl5ad" href="/shop/hardware/au/en" className="ButtonLink primary svelte-1xxigqd" style={{width: "100%"}}><span className="title svelte-1xxigqd">Shop hardware</span></a> 
-                                    </li>
-                                </ul>
-                                <ul className="CategoryList svelte-3x0fk8">
-                                    <li className="link-item svelte-3x0fk8"><a id="77auS5kIXPZ1pdgmR90EeP" className="CategoryLink svelte-359eaa" href="/shop/hardware/au/en/cart"><span className="title svelte-359eaa">View cart</span> </a> 
-                                    </li>
-                                    <li className="link-item svelte-3x0fk8"><a id="5kvWjJkupKM48SYVFF6one" className="CategoryLink svelte-359eaa" href="/shop/hardware/au/en/my-orders"><span className="title svelte-359eaa">Order history</span> </a> 
-                                    </li>
-                                </ul>
-                            </div>
-                        </div> */}
-                    </div>
-                </nav>
-            </header>
-
+                    <button className="navbar-toggler ml-auto btn btn-white" type="button"><span className="navbar-toggler-icon"></span></button>
+                </div>
+            </nav>
+            
             <main className="main-content" id="main-content" role="main">
                 <div className="auto-layout-collapse">
                     <section className="hero section-hero bg-invert">

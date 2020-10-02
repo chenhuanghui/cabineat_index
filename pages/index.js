@@ -21,36 +21,34 @@ function HomePage({menu, hero}) {
     // return "homepaghe";
     // const menuLitsing = getMenu()
     return <>
-    <div className="asdf">
-        asdfsdaf
-    </div>
-    {/* <div className="PublicWebNav svelte-1hvfxdz">
-        <div className="theme-royal-blue"> */}
-            {/* <header role="banner" className="Header svelte-8z8xuo"> */}
-                {/* <nav role="navigation" className="Nav desktop align-center svelte-i0996t">                    
+    <div className="PublicWebNav svelte-1hvfxdz">
+        <div className="theme-royal-blue">
+            <header role="banner" className="Header svelte-8z8xuo">
+                <nav role="navigation" className="Nav desktop align-center svelte-i0996t">                    
                     <div className="middle-slot svelte-i0996t">
                         <ul className="NavList align-center svelte-x5qcbk"> 
                         {
-                            menu.length > 0 && menu.map((item, index) => (
-                                <li className="category-item svelte-x5qcbk" key={index}>
-                                    <div id="7sZvs5CQAUEm5Zb20tXiPf" className="Category svelte-56sb18">
-                                        <button className="toggle svelte-56sb18">
-                                            <span className="title svelte-56sb18">{item.fields.title}</span>
-                                        </button>
-                                    </div>
-                                </li>
-                            ))
+                            // menu.length > 0 && menu.map((item, index) => (
+                            //     <li className="category-item svelte-x5qcbk" key={index}>
+                            //         <div id="7sZvs5CQAUEm5Zb20tXiPf" className="Category svelte-56sb18">
+                            //             <button className="toggle svelte-56sb18">
+                            //                 <span className="title svelte-56sb18">{item.fields.title}</span>
+                            //             </button>
+                            //         </div>
+                            //     </li>
+                            // ))
                         }
                         </ul>
                     </div>
                     <div className="right-slot svelte-i0996t">
-                        <ul className="NavList align-right svelte-x5qcbk">
+                        {/* <ul className="NavList align-right svelte-x5qcbk">
                             <li className="link-item svelte-x5qcbk"><a id="735gGmzBRZBLLrnQxBIs8O" href="/login" className="Link svelte-14997ds"><span className="title svelte-14997ds">Sign In</span></a> 
                             </li>
                             <li className="link-item svelte-x5qcbk"><a id="4FDsfEQF9Ll6m044D2d3sA" href="/shop/hardware/au/en" className="Link svelte-14997ds"><span className="title svelte-14997ds">Shop</span></a> 
                             </li>
-                        </ul>
-                        <div id="qBa5DkWABZuwiFxSDtBlE" className="Cart svelte-j4l4t">
+                        </ul> */}
+
+                        {/* <div id="qBa5DkWABZuwiFxSDtBlE" className="Cart svelte-j4l4t">
                             <button type="button" className="Toggle svelte-1w51rza" aria-haspopup="true" aria-expanded="false">
                                 <svg className="Icon svelte-7v6t8b" width="24" height="24" viewBox="0 0 24 24" fill="black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 1c-.6 0-1 .4-1 1s.4 1 1 1h1.7c.1 0 .3 0 .5.5.1.2.2.5.2.8l.1.3c0
@@ -79,15 +77,14 @@ function HomePage({menu, hero}) {
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
-                </nav> */}
-                {/* <div>cascasdc</div> */}
-            {/* </header> */}
+                </nav>
+            </header>
 
-            {/* <main className="main-content" id="main-content" role="main">
-                <div className="auto-layout-collapse"> */}
-                    {/* <section className="hero section-hero bg-invert">
+            <main className="main-content" id="main-content" role="main">
+                <div className="auto-layout-collapse">
+                    <section className="hero section-hero bg-invert">
                         <div className="content">
                             <div className="content-wrapper">
                                 <div className="font-eyebrow-large">{hero.fields.pre_title}</div>
@@ -102,7 +99,7 @@ function HomePage({menu, hero}) {
                                 </div>
                             </div>
                         </div>
-                    </section> */}
+                    </section>
                     
                     {/* <section className="section-screenshot bg-invert-to-white pad-bottom-small" data-entry-id="1yuPhizpTvVcjBBPavXdy4" data-frame-type="full-width">
                         <div className="sticky-banner-waypoint-on" style={{position: "absolute", top: "0px"}}></div>
@@ -500,8 +497,8 @@ function HomePage({menu, hero}) {
                             </div>
                         </div>
                     </section> */}
-                {/* </div>
-            </main> */}
+                </div>
+            </main>
 
             {/* <footer className="page-footer">
                 <div className="content pad-vert-medium">
@@ -587,8 +584,8 @@ function HomePage({menu, hero}) {
                     </div>
                 </div>
             </footer> */}
-        {/* </div>
-        </div> */}
+            </div>
+        </div>
         <style jsx>{`
         // html {
         //     -webkit-text-size-adjust: 100%;
@@ -599,19 +596,21 @@ function HomePage({menu, hero}) {
     </>
 }
 
-// HomePage.getInitialProps = async ({query}) => {        
-//     const menuRes = await airtable.read({
-//         sort: [{field: 'sort', direction: 'asc'}]
-//     },{tableName:"menu"});
+HomePage.getInitialProps = async ({query}) => {        
+    const menuRes = await airtable.read({
+        sort: [{field: 'sort', direction: 'asc'}]
+    },{tableName:"menu"});
+    
+    console.log("menu: ", menuRes)
 
-//     const heroRes = await airtable.read({
-//         filterByFormula: `isActive = "1"`,
-//         maxRecords: 1
-//     },{tableName:"hero"});
+    const heroRes = await airtable.read({
+        filterByFormula: `isActive = "1"`,
+        maxRecords: 1
+    },{tableName:"hero"});
 
-//     console.log(heroRes)
+    console.log(heroRes)
 
-//     return { menu: menuRes, hero: heroRes[0] }
-// }
+    return { menu: menuRes, hero: heroRes[0] }
+}
   
 export default HomePage

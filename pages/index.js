@@ -17,9 +17,10 @@ async function getMenu(){
     }
 }
 
-function HomePage({menu, hero}) {
+function HomePage({menu, hero, feature}) {
     // return "homepaghe";
     // const menuLitsing = getMenu()
+    console.log(feature.fields.img1[0].url)
     return <>
     <div className="PublicWebNav svelte-1hvfxdz">
         <div className="theme-royal-blue">
@@ -109,19 +110,19 @@ function HomePage({menu, hero}) {
 
                     <section className="section-multi-column bg-white auto-layout flex-valign-middle">
                         <div className="content">
-                            <div className="grid-3-at-medium multi-column-grid align-center grid-space-small grid-align-center grid-valign-top grid-row-equal-heights">
+                            <div className="grid-3-at-medium multi-column-grid align-center grid-space-small grid-align-center grid-valign-top grid-row-equal-heights">                                
                                 <div className="column">
                                     <div data-entry-id="7HMLEyeoNGqgmZ33D2R1BF">
                                         <div className="grid grid-space-line">
                                             <div className="column">
                                                 <div className="position-relative">
-                                                    <img className="display-inline-block" src="https://images.ctfassets.net/2d5q1td6cyxq/4xaHw4J2LwtfoJbPuhstFJ/9827c7952b77dcd53a8b80959cc1239f/illos_A.svg"/>
+                                                    <img className="display-inline-block" src={feature.fields.img1[0].url}/>
                                                 </div>
                                             </div>
                                             <div className="column">
                                                 <div className="headings-compact font-size-small">
-                                                    <h3 className="balance-text h6" data-title-for="7HMLEyeoNGqgmZ33D2R1BF" >Fast and easy</h3>
-                                                    <p>Start taking food orders online right away. Easily import items from your Square POS directly into Square Online to quickly create a mobile-ready ordering page.</p>
+                                                    <h3 className="balance-text h6" data-title-for="7HMLEyeoNGqgmZ33D2R1BF" >{feature.fields.title1}</h3>
+                                                    <p>{feature.fields.desc1}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -132,13 +133,13 @@ function HomePage({menu, hero}) {
                                         <div className="grid grid-space-line">
                                             <div className="column">
                                                 <div className="position-relative">
-                                                    <img id="uid-7xlOjM9oPdGov64l4l2TUL-a376ca10db37c610c635eae5090a0bfcd78eb2d66b2ddf5eb79fa31c8bf4483d" className="display-inline-block" src="https://images.ctfassets.net/2d5q1td6cyxq/7xlOjM9oPdGov64l4l2TUL/a60ff157d4c31738ada01b5fc5a13e9d/illos_B.svg"/>
+                                                    <img className="display-inline-block" src={feature.fields.img2[0].url}/>
                                                 </div>
                                             </div>
                                             <div className="column">
                                                 <div className="headings-compact font-size-small">
-                                                    <h3 className="balance-text h6" data-title-for="7e8qnUTyqWt19ik7VP5jkf" >Streamline ordering</h3>
-                                                    <p>Online orders instantly display in your restaurant point of sale system and relay to your kitchen printers so there’s no disruption to your standard order process.</p>
+                                                    <h3 className="balance-text h6" data-title-for="7e8qnUTyqWt19ik7VP5jkf" >{feature.fields.title2}</h3>
+                                                    <p>{feature.fields.desc2}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -149,13 +150,13 @@ function HomePage({menu, hero}) {
                                         <div className="grid grid-space-line">
                                             <div className="column">
                                                 <div className="position-relative">
-                                                    <img id="uid-6YnZwyWnc0TAlT5Y0v3LJh-ad990354f41339110ab4202d83e3735c40837335e367af60d9fe47b86f1ec797" className="display-inline-block" src="https://images.ctfassets.net/2d5q1td6cyxq/6YnZwyWnc0TAlT5Y0v3LJh/e32b10aebd92fe44f382985c26d3f76c/illos_C.svg"/>
+                                                    <img className="display-inline-block" src={feature.fields.img3[0].url}/>
                                                 </div>
                                             </div>
                                             <div className="column">
                                                 <div className="headings-compact font-size-small">
-                                                    <h3 className="balance-text h6" data-title-for="5E2a3qwOyxNiOOFGCCN5ZS" >Pickup and delivery</h3>
-                                                    <p>It’s easy to give customers a variety of pickup and delivery options. Offer in-person and curbside pickup or delivery by your own on-staff courier.</p>
+                                                    <h3 className="balance-text h6" data-title-for="5E2a3qwOyxNiOOFGCCN5ZS" >{feature.fields.title3}</h3>
+                                                    <p>{feature.fields.desc3}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -592,7 +593,14 @@ HomePage.getInitialProps = async ({query}) => {
 
     console.log(heroRes)
 
-    return { menu: menuRes, hero: heroRes[0] }
+    const featureRes = await airtable.read({
+        filterByFormula: `isActive = "1"`,
+        maxRecords: 1
+    },{tableName:"feature"});
+
+    console.log(featureRes)
+
+    return { menu: menuRes, hero: heroRes[0], feature: featureRes[0] }
 }
   
 export default HomePage

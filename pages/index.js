@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 const AirtablePlus = require('airtable-plus');
 const airtable = new AirtablePlus({
     baseID: 'appCZGNOFg53FFSE4',
@@ -17,10 +18,8 @@ async function getMenu(){
     }
 }
 
-function HomePage({menu, hero, feature}) {
-    // return "homepaghe";
-    // const menuLitsing = getMenu()
-    console.log(feature.fields.img1[0].url)
+function HomePage({menu, hero, feature, message, benefit, pricing}) {
+    
     return <>
     <div className="PublicWebNav svelte-1hvfxdz">
         <div className="theme-royal-blue">
@@ -155,7 +154,7 @@ function HomePage({menu, hero, feature}) {
                                             </div>
                                             <div className="column">
                                                 <div className="headings-compact font-size-small">
-                                                    <h3 className="balance-text h6" data-title-for="5E2a3qwOyxNiOOFGCCN5ZS" >{feature.fields.title3}</h3>
+                                                    <h3 className="balance-text h6">{feature.fields.title3}</h3>
                                                     <p>{feature.fields.desc3}</p>
                                                 </div>
                                             </div>
@@ -173,14 +172,12 @@ function HomePage({menu, hero, feature}) {
                             <div className="row">
                                 <div className="col-12 col-md-6 col-xl-6">
                                     <div className="headings-compact font-size-large">
-                                        <h3 className="balance-text h2" data-title-for="5UBUD3apICCiRuSF2e7CAk" >Go contact free with
-                                            <br data-owner="balance-text"/>
-                                            self-serve ordering</h3>
-                                        <p>Give customers and staff the space they deserve. Limit in-person contact, increase safety and improve order accuracy with self-serve ordering.</p>
+                                        <h3 className="balance-text h2" >{message.fields.title}</h3>
+                                        <p>{message.fields.desc}</p>
                                         <div className="grid grid-space-base">
                                             <div className="column">
                                                 <div className="display-inline-block">
-                                                    <a className="" href="../../../us/en/online-store/restaurant-website/self-serve-ordering.html">Learn<span className="arrow no-wrap">more</span></a>
+                                                    <a className="" href={message.fields.btn_href}>{message.fields.btn_title}<span className=" ml-2 arrow no-wrap"></span></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -189,20 +186,7 @@ function HomePage({menu, hero, feature}) {
                                 <div className="col-12 col-md-6 col-xl-6">
                                     <div className="position-relative mt-5 mt-md-0">
                                         <div id="uid-2AMupnetDch5e76zj9Wau7-f950d36e4b2ff51c61b9667412980e727858a9eac30c8d98cc50ebf2658e08a6" className="picture">
-                                            <picture className="apropos">
-                                                <source media="(min-width: 1292px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=468&amp;h=370&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=936&amp;h=740&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=468&amp;h=370&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=936&amp;h=740&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                    <source media="(min-width: 1292px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=468&amp;h=370&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=936&amp;h=740&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=468&amp;h=370&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=936&amp;h=740&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                                        <source media="(min-width: 1024px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=394&amp;h=312&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=788&amp;h=624&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=394&amp;h=312&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=788&amp;h=624&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                            <source media="(min-width: 1024px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=394&amp;h=312&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=788&amp;h=624&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=394&amp;h=312&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=788&amp;h=624&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                                                <source media="(min-width: 718px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=300&amp;h=237&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=600&amp;h=474&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=300&amp;h=237&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=600&amp;h=474&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                                    <source media="(min-width: 718px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=300&amp;h=237&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=600&amp;h=474&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=300&amp;h=237&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=600&amp;h=474&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                                                        <source media="(min-width: 480px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=424&amp;h=335&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=848&amp;h=670&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=424&amp;h=335&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=848&amp;h=670&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                                            <source media="(min-width: 480px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=424&amp;h=335&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=848&amp;h=670&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=424&amp;h=335&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=848&amp;h=670&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                                                                <source media="(min-width: 374px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=324&amp;h=256&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=648&amp;h=512&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=324&amp;h=256&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=648&amp;h=512&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                                                    <source media="(min-width: 374px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=324&amp;h=256&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=648&amp;h=512&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=324&amp;h=256&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=648&amp;h=512&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                                                                        <source type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=276&amp;h=218&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=552&amp;h=436&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=276&amp;h=218&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=552&amp;h=436&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                                                            <img data-srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=276&amp;h=218&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=552&amp;h=436&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=276&amp;h=218&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/2AMupnetDch5e76zj9Wau7/4a2a37cf2626248e2bfcea5894f8f370/sso-grid.png?w=552&amp;h=436&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" className="loaded" data-ll-status="loaded"/>
-                                            </picture>
+                                            <img src={message.fields.img[0].url}/>
                                         </div>
                                     </div>
                                 </div>
@@ -210,13 +194,14 @@ function HomePage({menu, hero, feature}) {
                         </div>
                     </section>
 
-                    <hr className="section-border content" data-entry-id="7e0qhknUVUEYcAgCAcaAgc"/> 
+                    <hr className="section-border content"/> 
                     
-                    <section className="section-one-column bg-white auto-layout flex-valign-middle" data-entry-id="7gWUGaLIFPLH7OYEdFZWDt">
+                    <section className="section-one-column bg-white auto-layout flex-valign-middle">
                         <div className="content pad-top-large">
                             <div className="intro intro font-size-base">
-                                <h2 className="balance-text h2" data-title-for="7gWUGaLIFPLH7OYEdFZWDt" >Provide the convenience
-                                <br data-owner="balance-text"/>of delivery and pickup</h2>
+                                <h2 className="balance-text h2 markdown-custom">
+                                    <ReactMarkdown source={benefit.fields.headline} />
+                                </h2>
                             </div>
                         </div>
                     </section>
@@ -226,30 +211,14 @@ function HomePage({menu, hero, feature}) {
                         <div className="content">
                             <div className="row">
                                 <div className="col-12 col-md-6 col-xl-6 mb-5 mb-md-0">
-                                    <div id="uid-12jIBhALzhOl7Ki5ax86WP-710b31f0436392af34e6dbe49d908d9d73163bccb9246934aeebecfcf0157871" className="picture">
-                                        <picture className="apropos">
-                                            <source media="(min-width: 1292px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=493&amp;h=330&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=986&amp;h=660&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=493&amp;h=330&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=986&amp;h=660&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                <source media="(min-width: 1292px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=493&amp;h=330&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=986&amp;h=660&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=493&amp;h=330&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=986&amp;h=660&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                                    <source media="(min-width: 1024px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=419&amp;h=280&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=838&amp;h=560&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=419&amp;h=280&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=838&amp;h=560&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                        <source media="(min-width: 1024px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=419&amp;h=280&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=838&amp;h=560&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=419&amp;h=280&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=838&amp;h=560&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                                            <source media="(min-width: 718px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=325&amp;h=218&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=650&amp;h=436&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=325&amp;h=218&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=650&amp;h=436&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                                <source media="(min-width: 718px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=325&amp;h=218&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=650&amp;h=436&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=325&amp;h=218&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=650&amp;h=436&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                                                    <source media="(min-width: 480px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=424&amp;h=284&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=848&amp;h=568&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=424&amp;h=284&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=848&amp;h=568&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                                        <source media="(min-width: 480px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=424&amp;h=284&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=848&amp;h=568&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=424&amp;h=284&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=848&amp;h=568&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                                                            <source media="(min-width: 374px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=324&amp;h=217&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=648&amp;h=434&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=324&amp;h=217&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=648&amp;h=434&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                                                <source media="(min-width: 374px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=324&amp;h=217&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=648&amp;h=434&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=324&amp;h=217&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=648&amp;h=434&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                                                                    <source type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=276&amp;h=185&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=552&amp;h=370&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=276&amp;h=185&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=552&amp;h=370&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                                                        <img data-srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=276&amp;h=185&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=552&amp;h=370&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=276&amp;h=185&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/12jIBhALzhOl7Ki5ax86WP/27ca63a0ece695b45fb5a4d1bde2ed9c/SOS-POS-M.png?w=552&amp;h=370&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" className="loaded" data-ll-status="loaded"/>
-                                        </picture>
+                                    <div className="picture">
+                                        <img src={benefit.fields.img1[0].url} />
                                     </div>
                                 </div>
                                 <div className="col-12 col-md-6 col-xl-6">
                                     <div className="headings-compact font-size-normal">
-                                        <h4 id="delivery">Delivery</h4>
-                                        <p>Choose our on-demand delivery platform or your own delivery staff.</p>
-                                        <h6 id="on-demand-delivery">On-demand delivery</h6>
-                                        <p>Now you don’t have to pay commissions to use reliable couriers from third party delivery services. When a customer places an order for delivery, a courier from a delivery service, like Postmates, automatically gets dispatched to your location to fulfill the delivery for a flat fee of $1.50 per order.</p>
-                                        <p>You can pass delivery costs on to your customers, pay it yourself, or cover it for orders over a certain amount, e.g. free delivery over $50. Text alerts from Square Online link customers to a live map for real-time order tracking.</p>
+                                        <h4 id="delivery">{benefit.fields.title1}</h4>
+                                        <p><ReactMarkdown source={benefit.fields.desc1} /></p>
                                     </div>
                                 </div>                                
                             </div>
@@ -257,26 +226,13 @@ function HomePage({menu, hero, feature}) {
                             <div className="row mt-5 mt-md-0">
                                 <div className="col-12 col-md-6 col-xl-6 mb-5 mb-md-0">
                                     <div id="uid-6xr3DaitQccubioFlA4Oab-9dcbe964d494dd98ca16aaa2fc2d480e87a4cce18aa55c7f33c27e59190274dd" className="picture">
-                                        <picture className="apropos">
-                                            <source media="(min-width: 1292px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=493&amp;h=374&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=986&amp;h=748&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=493&amp;h=374&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=986&amp;h=748&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                <source media="(min-width: 1292px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=493&amp;h=374&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=986&amp;h=748&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=493&amp;h=374&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=986&amp;h=748&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                                    <source media="(min-width: 1024px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=419&amp;h=318&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=838&amp;h=636&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=419&amp;h=318&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=838&amp;h=636&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                        <source media="(min-width: 1024px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=419&amp;h=318&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=838&amp;h=636&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=419&amp;h=318&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=838&amp;h=636&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                                            <source media="(min-width: 718px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=325&amp;h=247&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=650&amp;h=494&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=325&amp;h=247&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=650&amp;h=494&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                                <source media="(min-width: 718px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=325&amp;h=247&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=650&amp;h=494&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=325&amp;h=247&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=650&amp;h=494&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                                                    <source media="(min-width: 480px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=424&amp;h=322&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=848&amp;h=644&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=424&amp;h=322&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=848&amp;h=644&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                                        <source media="(min-width: 480px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=424&amp;h=322&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=848&amp;h=644&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=424&amp;h=322&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=848&amp;h=644&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                                                            <source media="(min-width: 374px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=324&amp;h=246&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=648&amp;h=492&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=324&amp;h=246&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=648&amp;h=492&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                                                <source media="(min-width: 374px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=324&amp;h=246&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=648&amp;h=492&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=324&amp;h=246&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=648&amp;h=492&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                                                                    <source type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=276&amp;h=209&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=552&amp;h=418&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=276&amp;h=209&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=552&amp;h=418&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                                                        <img data-srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=276&amp;h=209&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=552&amp;h=418&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=276&amp;h=209&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/6xr3DaitQccubioFlA4Oab/681945cf2c1e165a3e2b3ab00d85b533/location-control-M-2.png?w=552&amp;h=418&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" className="loaded" data-ll-status="loaded"/>
-                                        </picture>
+                                        <img src={benefit.fields.img2[0].url} />
                                     </div>
                                 </div>
-                                <div className="col-12 col-md-6 col-xl-6">
+                                <div className="col-12 col-md-6 col-xl-6 mt-auto">
                                     <div className="headings-compact font-size-normal">
-                                        <h6 id="in-house-delivery">In-house delivery</h6>
-                                        <p>You can also use your own in-house delivery team. To better manage deliveries you can set estimated food delivery time, delivery fee, and minimum delivery order value. Send text alerts to keep customers up to date on their order status. Even create a custom delivery radius for more control over your service area. The In-house delivery option is available for just 50¢ per order.</p>
+                                        <h6 id="in-house-delivery">{benefit.fields.title2}</h6>
+                                        <p>{benefit.fields.desc2}</p>
                                     </div>
                                 </div>                                
                             </div>
@@ -284,24 +240,26 @@ function HomePage({menu, hero, feature}) {
                     </section>
                                                         
                     
-                    <section className="section-multi-column bg-white auto-layout flex-valign-middle" data-entry-id="2oX6AalbFrldetfC49oQot">
+                    <section className="section-multi-column bg-white auto-layout flex-valign-middle">
                         <div className="content">
                             <div className="intro font-size-base">
-                                <h2 className="balance-text h2" data-title-for="2oX6AalbFrldetfC49oQot" >Offer any fulfilment option you like</h2>
+                                <h2 className="balance-text h2 markdown-custom">
+                                    <ReactMarkdown source={pricing.fields.headline} />
+                                </h2>
                             </div>
                             <div className="grid-2-at-medium multi-column-grid align-center grid-space-small grid-align-center grid-valign-top grid-row-equal-heights">
                                 <div className="column">
-                                    <a className="tile" data-entry-id="6g1XQSDow5NiwVJHJco1qY">
+                                    <a className="tile">
                                         <div className="tile-content">
                                             <div className="grid-space-line">
                                                 <div className="column">
                                                     <div className="grid-space-base">
                                                         <div className="column">
-                                                            <h3 className="balance-text h6" data-title-for="6g1XQSDow5NiwVJHJco1qY" >Pickup</h3>
+                                                            <h3 className="balance-text h6">{pricing.fields.packtitle1}</h3>
                                                         </div>
                                                         <div className="column tile-body font-size-normal">
-                                                            <h2 className="color-royal-blue" id="0">$0</h2>
-                                                            <p>Per order</p>
+                                                            <h2 className="color-royal-blue">{pricing.fields.packprice1} <span className="small">vnđ</span></h2>
+                                                            <p>{pricing.fields.packdesc1}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -316,11 +274,11 @@ function HomePage({menu, hero, feature}) {
                                                 <div className="column">
                                                     <div className="grid-space-base">
                                                         <div className="column">
-                                                            <h3 className="balance-text h6" data-title-for="150lUUYLwaWQ675TRqPwlL" >In-house delivery</h3>
+                                                            <h3 className="balance-text h6">{pricing.fields.packtitle2}</h3>
                                                         </div>
                                                         <div className="column tile-body font-size-normal">
-                                                            <h2 className="color-royal-blue" id="50">50¢</h2>
-                                                            <p>per order</p>
+                                                            <h2 className="color-royal-blue">{pricing.fields.packprice2} <span className="small">vnđ</span></h2>
+                                                            <p>{pricing.fields.packdesc2}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -332,14 +290,15 @@ function HomePage({menu, hero, feature}) {
                         </div>
                     </section>
                     
-                    <section className="section-one-column bg-white auto-layout flex-valign-middle" data-entry-id="3sqnKmZl7dQct7d0Uu61JO">
+                    <section className="section-one-column bg-white auto-layout flex-valign-middle">
                         <div className="content">
                             <div className="intro intro font-size-base">
-                                <p>*In-house delivery fees will be waived until November 1st, 2020.</p>
-                                <p>Enjoy eCommerce processing fees of 2.2% per transaction or lower.</p>
+                                <ReactMarkdown source={pricing.fields.hint} />
                                 <div className="grid grid-space-base">
                                     <div className="column">
-                                        <div className="display-inline-block" data-entry-id="6HxUNJiQ62taoZdrYAW6VJ"><a className="" href="plans.html" target="_blank">Learn more about Square Online <span className="arrow no-wrap">plans</span></a>
+                                        <div className="display-inline-block">
+                                            <a className="" href={pricing.fields.btn_href} target="_blank">
+                                            {pricing.fields.btn_title} <span className="arrow no-wrap"></span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -598,9 +557,28 @@ HomePage.getInitialProps = async ({query}) => {
         maxRecords: 1
     },{tableName:"feature"});
 
-    console.log(featureRes)
+    const messageRes = await airtable.read({
+        filterByFormula: `isActive = "1"`,
+        maxRecords: 1
+    },{tableName:"message"});
 
-    return { menu: menuRes, hero: heroRes[0], feature: featureRes[0] }
+    console.log(messageRes)
+
+    const benefitRes = await airtable.read({
+        filterByFormula: `isActive = "1"`,
+        maxRecords: 1
+    },{tableName:"benefit"});
+
+    console.log(benefitRes)
+
+    const pricingRes = await airtable.read({
+        filterByFormula: `isActive = "1"`,
+        maxRecords: 1
+    },{tableName:"pricing"});
+
+    console.log(pricingRes)
+
+    return { menu: menuRes, hero: heroRes[0], feature: featureRes[0], message: messageRes[0], benefit: benefitRes[0], pricing: pricingRes[0]}
 }
   
 export default HomePage

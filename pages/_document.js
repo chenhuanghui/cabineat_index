@@ -12,7 +12,7 @@ class MyDocument extends Document {
         <Head>
           <link rel="stylesheet" href="../assets/css/theme.min.css"></link>
           <link rel="stylesheet" href="../assets/css/style.css"></link>
-
+          <link rel="stylesheet" href="../assets/css/custom.css"></link>
         </Head>
         <body>
           <Main />

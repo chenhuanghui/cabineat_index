@@ -348,7 +348,7 @@ function HomePage({menu, hero}) {
                             </div>
                         </div>
                     </section>
-                    {/* 
+                    
                     <section className="section-one-column bg-white auto-layout flex-valign-middle" data-entry-id="3sqnKmZl7dQct7d0Uu61JO">
                         <div className="content">
                             <div className="intro intro font-size-base">
@@ -363,6 +363,7 @@ function HomePage({menu, hero}) {
                             </div>
                         </div>
                     </section>
+                    {/* 
                     <section className="section-screenshot bg-white" data-entry-id="6hUFHr7fbOyp7QcOXAf54n" data-frame-type="full-width">
                         <div>
                             <div className="apropos-entry position-relative">

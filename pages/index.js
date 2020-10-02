@@ -101,7 +101,7 @@ function HomePage({menu, hero}) {
                         </div>
                     </section>
                     
-                    {/* <section className="section-screenshot bg-invert-to-white pad-bottom-small" data-entry-id="1yuPhizpTvVcjBBPavXdy4" data-frame-type="full-width">
+                    <section className="section-screenshot bg-invert-to-white pad-bottom-small" data-entry-id="1yuPhizpTvVcjBBPavXdy4" data-frame-type="full-width">
                         <div className="sticky-banner-waypoint-on" style={{position: "absolute", top: "0px"}}></div>
                         <div>
                             <div className="apropos-entry position-relative" data-entry-id="62e3N9gF8S8mCKp8mSxkmX">
@@ -123,7 +123,7 @@ function HomePage({menu, hero}) {
                                 </div>
                             </div>
                         </div>
-                    </section> */}
+                    </section>
 
                     {/* <section className="section-multi-column bg-white auto-layout flex-valign-middle" data-entry-id="3Axus6aEzkCgiY9Hiy2qo7">
                         <div className="content">

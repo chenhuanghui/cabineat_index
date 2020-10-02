@@ -18,8 +18,8 @@ async function getMenu(){
     }
 }
 
-function HomePage({menu, hero, feature, message, benefit, pricing}) {
-    
+function HomePage({menu, hero, feature, message, benefit, pricing, more, solution, call2action}) {
+    console.log("more headline: ", more.headline)
     return <>
     <div className="PublicWebNav svelte-1hvfxdz">
         <div className="theme-royal-blue">
@@ -306,35 +306,22 @@ function HomePage({menu, hero, feature, message, benefit, pricing}) {
                         </div>
                     </section>
 
-                    <section className="section-screenshot bg-white" data-entry-id="2oX6AalbFrldetfC49oQot">
-                        <div id="uid-5tApeIcaRXYaL85aOkER9f-f295cb75640eef734527320403f2e571668bf036f55adc7516c2ab9e92c21c54" className="picture">
-                            <picture className="apropos">
-                                <source media="(min-width: 1292px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=1680&amp;h=772&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=3360&amp;h=1544&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=1680&amp;h=772&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=3360&amp;h=1544&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                    <source media="(min-width: 1292px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=1680&amp;h=772&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=3360&amp;h=1544&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=1680&amp;h=772&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=3360&amp;h=1544&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                        <source media="(min-width: 1024px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=1291&amp;h=593&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=2582&amp;h=1186&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=1291&amp;h=593&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=2582&amp;h=1186&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                            <source media="(min-width: 1024px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=1291&amp;h=593&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=2582&amp;h=1186&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=1291&amp;h=593&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=2582&amp;h=1186&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                                <source media="(min-width: 718px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=1023&amp;h=470&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=2046&amp;h=940&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=1023&amp;h=470&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=2046&amp;h=940&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                    <source media="(min-width: 718px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=1023&amp;h=470&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=2046&amp;h=940&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=1023&amp;h=470&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=2046&amp;h=940&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                                        <source media="(min-width: 480px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=717&amp;h=329&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=1434&amp;h=658&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=717&amp;h=329&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=1434&amp;h=658&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                            <source media="(min-width: 480px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=717&amp;h=329&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=1434&amp;h=658&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=717&amp;h=329&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=1434&amp;h=658&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                                                <source media="(min-width: 374px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=479&amp;h=220&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=958&amp;h=440&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=479&amp;h=220&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=958&amp;h=440&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                                    <source media="(min-width: 374px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=479&amp;h=220&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=958&amp;h=440&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=479&amp;h=220&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=958&amp;h=440&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x"/>
-                                                                        <source type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=373&amp;h=171&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=746&amp;h=342&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=373&amp;h=171&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=746&amp;h=342&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
-                                                                            <img data-srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=373&amp;h=171&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=746&amp;h=342&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=373&amp;h=171&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/5tApeIcaRXYaL85aOkER9f/9f3ea35b101dc167d6e43cdcd80af926/Image_Break_B.png?w=746&amp;h=342&amp;fm=jpg&amp;q=85&amp;bg=rgb%3Affffff&amp;fit=scale&amp;fl=progressive 2x" className="loaded" data-ll-status="loaded"/>
-                            </picture>
+                    <section className="section-screenshot bg-white">
+                        <div className="picture">
+                            <img src={more.headline.img[0].url} />
                         </div>
                     </section>
                     
                     
-                    <section className="section-one-column bg-white auto-layout flex-valign-middle" data-entry-id="3y04vkLshWhCKOIKaEyHyr">
+                    <section className="section-one-column bg-white auto-layout flex-valign-middle">
                         <div className="content">
                             <div className="intro intro font-size-base">
-                                <h2 className="balance-text h2" data-title-for="3y04vkLshWhCKOIKaEyHyr" >More online ordering page features</h2>
+                                <h2 className="balance-text h2">{more.headline.name}</h2>
                             </div>
                         </div>
                     </section>
                     
-                    <section className="section-multi-column bg-white auto-layout flex-valign-middle" data-entry-id="pZEBLfWLJ0JlTYnDmgjWj">
+                    <section className="section-multi-column bg-white auto-layout flex-valign-middle">
                         <div className="content">
                             <div className="grid-2-at-medium multi-column-grid align-left grid-space-small grid-align-center grid-valign-top grid-row-equal-heights">
                                 <div className="column">
@@ -343,10 +330,11 @@ function HomePage({menu, hero, feature, message, benefit, pricing}) {
                                             <div className="column">
                                                 <div className="headings-compact font-size-normal">
                                                     <ul className="check-list grid-space-base">
-                                                        <li><strong>Order scheduling:</strong> Let customers place pickup orders for a future date and time</li>
-                                                        <li><strong>Order staggering:</strong> Limit the number of orders you can accept in a set time period</li>
-                                                        <li><strong>Order tipping:</strong> Automatically add a tipping line item to all orders</li>
-                                                        <li><strong>Orders page:</strong> Customizable page layout designed specially for food ordering</li>
+                                                        {more.listitem.length > 0 && more.listitem.map((item, index) => {
+                                                            return index <= more.listitem.length /2
+                                                            ? <li><strong>{item.fields.name}:</strong> {item.fields.desc}</li>
+                                                            : ''
+                                                        })}                                                        
                                                     </ul>
                                                 </div>
                                             </div>
@@ -359,9 +347,11 @@ function HomePage({menu, hero, feature, message, benefit, pricing}) {
                                             <div className="column">
                                                 <div className="headings-compact font-size-normal">
                                                     <ul className="check-list grid-space-base">
-                                                        <li><strong>Multi-location support:</strong> Take orders from all your locations on a single website</li>
-                                                        <li><strong>Square Pay:</strong> Let customers save payment info for future orders</li>
-                                                        <li><strong>Instagram:</strong> Import your Instagram feed to your site and connect with followers</li>
+                                                        {more.listitem.length > 0 && more.listitem.map((item, index) => {
+                                                            return index > more.listitem.length /2
+                                                            ? <li><strong>{item.fields.name}:</strong> {item.fields.desc}</li>
+                                                            : ''
+                                                        })}
                                                     </ul>
                                                 </div>
                                             </div>
@@ -377,46 +367,39 @@ function HomePage({menu, hero, feature, message, benefit, pricing}) {
                     <section className="section-multi-column bg-white auto-layout flex-valign-middle">
                         <div className="content">
                             <div className="intro font-size-base">
-                                <h2 className="balance-text h2" data-title-for="5VnvOH7LO3xl6FWslyXFqy" >Connect with other Square solutions</h2>
+                                <h2 className="balance-text h2">{solution.fields.headline}</h2>
                             </div>
                             <div className="row">
                                 <div className="col-12 col-md-4 col-xl-4">
                                     <div className="column no-shrink icon-theme mb-3">
-                                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M63 57a1 1 0 1 0-2 0h2zm-44 0a1 1 0 1 0-2 0h2zM54 5a1 1 0 1 0-2 0h2zm-2 48a1 1 0 1 0 2 0h-2zm7-41a1 1 0 1 0 0 2v-2zm10 2a1 1 0 1 0 0-2v2zm-10 4a1 1 0 1 0 0 2v-2zm10 2a1 1 0 1 0 0-2v2zm-10 4a1 1 0 1 0 0 2v-2zm10 2a1 1 0 1 0 0-2v2zM59 42a1 1 0 1 0 0 2v-2zm10 2a1 1 0 1 0 0-2v2zM21 21v1a1 1 0 0 0 1-1h-1zm-8 0h-1a1 1 0 0 0 1 1v-1zm0-8v-1a1 1 0 0 0-1 1h1zm8 0h1a1 1 0 0 0-1-1v1zm12 8v1a1 1 0 0 0 1-1h-1zm-8 0h-1a1 1 0 0 0 1 1v-1zm0-8v-1a1 1 0 0 0-1 1h1zm8 0h1a1 1 0 0 0-1-1v1zm12 8v1a1 1 0 0 0 1-1h-1zm-8 0h-1a1 1 0 0 0 1 1v-1zm0-8v-1a1 1 0 0 0-1 1h1zm8 0h1a1 1 0 0 0-1-1v1zM21 33v1a1 1 0 0 0 1-1h-1zm-8 0h-1a1 1 0 0 0 1 1v-1zm0-8v-1a1 1 0 0 0-1 1h1zm8 0h1a1 1 0 0 0-1-1v1zm0 20v1a1 1 0 0 0 1-1h-1zm-8 0h-1a1 1 0 0 0 1 1v-1zm0-8v-1a1 1 0 0 0-1 1h1zm8 0h1a1 1 0 0 0-1-1v1zm12 8v1a1 1 0 0 0 1-1h-1zm-8 0h-1a1 1 0 0 0 1 1v-1zm0-8v-1a1 1 0 0 0-1 1h1zm8 0h1a1 1 0 0 0-1-1v1zm0-4v1a1 1 0 0 0 1-1h-1zm-8 0h-1a1 1 0 0 0 1 1v-1zm0-8v-1a1 1 0 0 0-1 1h1zm8 0h1a1 1 0 0 0-1-1v1zm12 8v1a1 1 0 0 0 1-1h-1zm-8 0h-1a1 1 0 0 0 1 1v-1zm0-8v-1a1 1 0 0 0-1 1h1zm8 0h1a1 1 0 0 0-1-1v1zM6 56c-2.248 0-4-1.752-4-4H0c0 3.352 2.648 6 6 6v-2zm-4-4V6H0v46h2zM2 6c0-2.248 1.752-4 4-4V0C2.648 0 0 2.648 0 6h2zm4-4h68V0H6v2zm68 0c2.248 0 4 1.752 4 4h2c0-3.352-2.648-6-6-6v2zm4 4v46h2V6h-2zm0 46c0 2.248-1.752 4-4 4v2c3.352 0 6-2.648 6-6h-2zm-4 4H6v2h68v-2zM63 73V57h-2v16h2zM17 57v16h2V57h-2zm-3 19c0 2.374 1.77 4 4 4v-2c-1.17 0-2-.774-2-2h-2zm4 4h44v-2H18v2zm44 0c2.23 0 4-1.626 4-4h-2c0 1.226-.83 2-2 2v2zm4-4c0-2.374-1.77-4-4-4v2c1.17 0 2 .774 2 2h2zm-4-4H18v2h44v-2zm-44 0c-2.23 0-4 1.626-4 4h2c0-1.226.83-2 2-2v-2zM74 6a.197.197 0 0 1-.045-.005l-.01-.003.013.008a.176.176 0 0 1 .05.056l-.003-.01A.199.199 0 0 1 74 6h2c0-.575-.278-1.067-.605-1.395C75.067 4.278 74.575 4 74 4v2zm0 0v46h2V6h-2zm0 46c0-.02.003-.036.005-.045l.003-.01a.176.176 0 0 1-.064.064c-.001 0 .002-.002.01-.004A.199.199 0 0 1 74 52v2c.575 0 1.067-.278 1.395-.605.328-.328.605-.82.605-1.395h-2zm0 0H6v2h68v-2zM6 52c.02 0 .036.003.045.005l.01.003a.179.179 0 0 1-.064-.064c0-.001.002.002.004.01A.197.197 0 0 1 6 52H4c0 .575.278 1.067.605 1.395.328.327.82.605 1.395.605v-2zm0 0V6H4v46h2zM6 6c0 .02-.003.036-.005.045l-.003.01L6 6.043a.179.179 0 0 1 .056-.05l-.01.003A.197.197 0 0 1 6 6V4c-.575 0-1.067.278-1.395.605C4.278 4.933 4 5.425 4 6h2zm0 0h68V4H6v2zm46-1v48h2V5h-2zm7 9h10v-2H59v2zm0 6h10v-2H59v2zm0 6h10v-2H59v2zm0 18h10v-2H59v2zM21 20h-8v2h8v-2zm-7 1v-8h-2v8h2zm-1-7h8v-2h-8v2zm7-1v8h2v-8h-2zm13 7h-8v2h8v-2zm-7 1v-8h-2v8h2zm-1-7h8v-2h-8v2zm7-1v8h2v-8h-2zm13 7h-8v2h8v-2zm-7 1v-8h-2v8h2zm-1-7h8v-2h-8v2zm7-1v8h2v-8h-2zM21 32h-8v2h8v-2zm-7 1v-8h-2v8h2zm-1-7h8v-2h-8v2zm7-1v8h2v-8h-2zm1 19h-8v2h8v-2zm-7 1v-8h-2v8h2zm-1-7h8v-2h-8v2zm7-1v8h2v-8h-2zm13 7h-8v2h8v-2zm-7 1v-8h-2v8h2zm-1-7h8v-2h-8v2zm7-1v8h2v-8h-2zm1-5h-8v2h8v-2zm-7 1v-8h-2v8h2zm-1-7h8v-2h-8v2zm7-1v8h2v-8h-2zm13 7h-8v2h8v-2zm-7 1v-8h-2v8h2zm-1-7h8v-2h-8v2zm7-1v8h2v-8h-2z" fill="#1a1a1a"></path>
-                                        </svg>
+                                        <img src={solution.fields.img1[0].url} />
                                     </div>
                                     <div className="column">
                                         <div className="headings-compact font-size-small">
-                                            <h3 className="balance-text h6" data-title-for="1lWSghgQYgTOfNIuk3RF3p" >Square POS</h3>
-                                            <p>Square Online Store works seamlessly with <a href="../point-of-sale.html">Square POS</a> and <a href="../point-of-sale/restaurants.html">Square for Restaurants</a> to streamline your orders and even keep your items and inventory
-                                                <br/>in sync.</p>
+                                            <h3 className="balance-text h6">{solution.fields.title1}</h3>
+                                            <ReactMarkdown source={solution.fields.desc1} />
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-12 col-md-4 col-xl-4  mt-5 mt-md-0">
-                                    <div className="column no-shrink icon-theme">
-                                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M20.6 37.6l-.872.49a1 1 0 0 0 .687.493l.185-.983zm5.3 1l.734.68a1 1 0 0 0-.549-1.663l-.185.983zm-3.7 4l-.734-.679a1 1 0 0 0-.26.79l.994-.111zm.6 5.4l-.425.905a1 1 0 0 0 1.419-1.015L22.8 48zm-4.9-2.3l.425-.905a1 1 0 0 0-.85 0l.425.905zM13 48l-.992-.129a1 1 0 0 0 1.417 1.034L13 48zm.7-5.4l.992.129a1 1 0 0 0-.258-.808l-.734.679zm-3.7-4l-.185-.983a1 1 0 0 0-.55 1.662L10 38.6zm5.3-1l.185.983a1 1 0 0 0 .694-.507L15.3 37.6zm2.6-4.8l.872-.49a1 1 0 0 0-1.751.014l.879.476zm24.4 4.8l-.88.476a1 1 0 0 0 .695.507l.185-.983zm5.3 1l.734.68a1 1 0 0 0-.548-1.663l-.186.983zm-3.7 4l-.734-.679a1 1 0 0 0-.258.808l.992-.129zm.7 5.4l-.425.905a1 1 0 0 0 1.417-1.034L44.6 48zm-4.9-2.3l.425-.905a1 1 0 0 0-.85 0l.425.905zM34.8 48l-.994-.11a1 1 0 0 0 1.42 1.015L34.8 48zm.6-5.4l.994.11a1 1 0 0 0-.26-.789l-.734.679zm-3.7-4l-.182-.983a1 1 0 0 0-.552 1.662l.734-.679zm5.4-1l.182.983a1 1 0 0 0 .698-.507l-.88-.476zm2.6-4.8l.88-.476a1 1 0 0 0-1.76 0l.88.476zm25 4.8l-.88.476a1 1 0 0 0 .694.507l.186-.983zm5.3 1l.734.68a1 1 0 0 0-.549-1.663L70 38.6zm-3.7 4l-.734-.679a1 1 0 0 0-.258.808l.992-.129zM67 48l-.425.905a1 1 0 0 0 1.416-1.034L67 48zm-4.9-2.3l.425-.905a1 1 0 0 0-.85 0l.425.905zM57.2 48l-.994-.11a1 1 0 0 0 1.418 1.015L57.2 48zm.6-5.4l.994.11a1 1 0 0 0-.26-.789l-.734.679zm-3.7-4l-.186-.983a1 1 0 0 0-.549 1.662l.735-.679zm5.3-1l.185.983a1 1 0 0 0 .686-.493l-.871-.49zm2.7-4.8l.879-.476a1 1 0 0 0-1.751-.014l.872.49zM2 16c0-1.07.874-2 2-2v-2c-2.274 0-4 1.87-4 4h2zm2-2h72v-2H4v2zm72 0c1.148 0 2 .852 2 2h2c0-2.252-1.748-4-4-4v2zm2 2v48h2V16h-2zm0 48c0 1.148-.852 2-2 2v2c2.252 0 4-1.748 4-4h-2zm-2 2H4v2h72v-2zM4 66c-1.148 0-2-.852-2-2H0c0 2.252 1.748 4 4 4v-2zm-2-2V16H0v48h2zm18.415-25.417l5.3 1 .37-1.966-5.3-1-.37 1.966zm4.75-.662l-3.7 4 1.47 1.358 3.7-4-1.47-1.358zm-3.959 4.79l.6 5.4 1.988-.221-.6-5.4-1.988.22zm2.019 4.384l-4.9-2.3-.85 1.81 4.9 2.3.85-1.81zm-5.75-2.3l-4.9 2.3.85 1.81 4.9-2.3-.85-1.81zm-3.483 3.334l.7-5.4-1.984-.258-.7 5.4 1.984.258zm.442-6.208l-3.7-4-1.468 1.358 3.7 4 1.468-1.358zm-4.249-2.338l5.3-1-.37-1.966-5.3 1 .37 1.966zm5.994-1.507l2.6-4.8-1.758-.952-2.6 4.8 1.758.952zm.85-4.786l2.7 4.8 1.743-.98-2.7-4.8-1.744.98zm25.086 5.293l5.3 1 .37-1.966-5.3-1-.37 1.966zm4.751-.662l-3.7 4 1.468 1.358 3.7-4-1.468-1.358zm-3.958 4.808l.7 5.4 1.984-.258-.7-5.4-1.984.258zm2.117 4.366l-4.9-2.3-.85 1.81 4.9 2.3.85-1.81zm-5.75-2.3l-4.9 2.3.85 1.81 4.9-2.3-.85-1.81zm-3.48 3.316l.6-5.4-1.989-.221-.6 5.4 1.988.22zm.34-6.19l-3.7-4-1.469 1.358 3.7 4 1.468-1.358zm-4.253-2.338l5.4-1-.364-1.966-5.4 1 .364 1.966zm6.098-1.507l2.6-4.8-1.76-.952-2.6 4.8 1.76.952zm.84-4.8l2.6 4.8 1.76-.952-2.6-4.8-1.76.952zm25.694 5.307l5.3 1 .371-1.966-5.3-1-.37 1.966zm4.752-.662l-3.7 4 1.468 1.358 3.7-4-1.468-1.358zm-3.958 4.808l.7 5.4 1.983-.258-.7-5.4-1.983.258zm2.116 4.366l-4.9-2.3-.85 1.81 4.9 2.3.85-1.81zm-5.75-2.3l-4.9 2.3.85 1.81 4.9-2.3-.85-1.81zm-3.48 3.316l.6-5.4-1.988-.221-.6 5.4 1.987.22zm.34-6.19l-3.7-4-1.469 1.358 3.7 4 1.469-1.358zm-4.249-2.338l5.3-1-.37-1.966-5.3 1 .37 1.966zm5.986-1.493l2.7-4.8-1.743-.98-2.7 4.8 1.743.98zm.95-4.814l2.6 4.8 1.758-.952-2.6-4.8-1.759.952z" fill="#1a1a1a"></path>
-                                        </svg>
+                                    <div className="column no-shrink icon-theme mb-3">
+                                        <img src={solution.fields.img2[0].url} />
                                     </div>
                                     <div className="column">
                                         <div className="headings-compact font-size-small">
-                                            <h3 className="balance-text h6" data-title-for="210bEUB5u8LnJNmfV3BXN5" >Square Loyalty</h3>
-                                            <p>Allow customers to redeem and collect loyalty points for online purchases when you use <a href="../software/loyalty.html">Square Loyalty</a> with your online store.</p>
+                                            <h3 className="balance-text h6">{solution.fields.title2}</h3>
+                                            <ReactMarkdown source={solution.fields.desc2} />
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-12 col-md-4 col-xl-4 mt-5 mt-md-0">
-                                    <div className="column no-shrink icon-theme">
-                                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 39a1 1 0 1 0 0 2v-2zm78 2a1 1 0 1 0 0-2v2zM41 13a1 1 0 1 0-2 0h2zm-2 54a1 1 0 1 0 2 0h-2zm13.9-32.5l-.707-.707-.007.007-.007.007.721.693zM40 40.1l-.286.958a1 1 0 0 0 .563.003L40 40.1zm13.6-13.8l-.707.707.008.009.01.008.689-.724zm-27.2 0l.69.724.009-.008.008-.009-.707-.707zM40 40l.964-.265a1 1 0 0 0-1.928 0L40 40zm-15 7a1 1 0 0 0 0 2v-2zm30 2a1 1 0 1 0 0-2v2zM1 41h78v-2H1v2zm38-28v54h2V13h-2zm13.18 20.807c-.494.513-1.473 1.124-2.789 1.766-1.284.626-2.784 1.232-4.225 1.764a88.687 88.687 0 0 1-5.416 1.794l-.02.006-.006.002h-.001l.277.96.277.962h.001l.002-.001a.255.255 0 0 0 .006-.002l.024-.007a22.57 22.57 0 0 0 .43-.128 90.695 90.695 0 0 0 5.119-1.71c1.472-.543 3.04-1.175 4.409-1.842 1.337-.652 2.596-1.391 3.353-2.178l-1.442-1.386zM40 40.1l.963.269v-.002l.002-.005.006-.02a18.467 18.467 0 0 1 .119-.414 91.436 91.436 0 0 1 1.615-5.005c.513-1.441 1.098-2.942 1.702-4.227.619-1.318 1.208-2.297 1.7-2.789l-1.414-1.414c-.758.758-1.469 2.016-2.096 3.352-.643 1.367-1.252 2.935-1.776 4.407a93.4 93.4 0 0 0-1.782 5.57l-.002.007v.002L40 40.1zm6.107-12.193c2.262-2.262 5.313-2.372 6.786-.9l1.414-1.414c-2.527-2.528-6.876-1.838-9.614.9l1.414 1.414zm6.803-.883c1.567 1.492 1.521 4.53-.717 6.769l1.414 1.414c2.762-2.762 3.316-7.123.683-9.631l-1.38 1.448zm-26.517 8.183c.754.754 2.007 1.477 3.342 2.123 1.366.66 2.932 1.295 4.403 1.844a97.555 97.555 0 0 0 5.454 1.847l.09.028.024.007.006.002h.002L40 40.1l.286-.958h-.002a2.94 2.94 0 0 0-.111-.033 93.532 93.532 0 0 1-1.528-.482 95.563 95.563 0 0 1-3.808-1.326c-1.441-.539-2.944-1.148-4.23-1.771-1.32-.639-2.303-1.24-2.8-1.737l-1.414 1.414zM40 40.1l.963-.269v-.002l-.002-.006a6.837 6.837 0 0 0-.032-.114 90.039 90.039 0 0 0-.465-1.566 93.43 93.43 0 0 0-1.284-3.891c-.524-1.471-1.134-3.04-1.776-4.407-.628-1.335-1.339-2.594-2.097-3.352l-1.414 1.414c.492.492 1.081 1.47 1.7 2.789.605 1.285 1.19 2.786 1.703 4.227a91.436 91.436 0 0 1 1.733 5.418l.006.021a.14.14 0 0 0 .002.007l.963-.27zm-4.693-13.607c-2.738-2.738-7.086-3.428-9.614-.9l1.414 1.414c1.473-1.473 4.524-1.362 6.786.9l1.414-1.414zm-9.596-.917c-2.634 2.508-2.08 6.87.682 9.631l1.414-1.414c-2.238-2.238-2.284-5.277-.717-6.769l-1.38-1.448zM40 40a73.219 73.219 0 0 1-.964-.267l.001-.002v-.002l-.001.006a4.07 4.07 0 0 1-.087.246c-.072.184-.19.458-.372.793a9.832 9.832 0 0 1-1.958 2.494C34.67 45.08 31.172 47 25 47v2c6.628 0 10.629-2.08 12.981-4.268a11.823 11.823 0 0 0 2.355-3.006c.224-.415.378-.766.476-1.02a5.996 5.996 0 0 0 .147-.424l.003-.01.001-.004v-.001c.001-.001.001-.002-.963-.267zm0 0c-.964.265-.964.266-.964.267v.001l.002.004.003.01a1.51 1.51 0 0 0 .037.12c.024.075.06.178.11.304.098.254.252.605.476 1.02.45.83 1.189 1.921 2.355 3.006C44.37 46.92 48.372 49 55 49v-2c-6.172 0-9.671-1.92-11.619-3.732a9.832 9.832 0 0 1-1.958-2.494c-.181-.335-.3-.61-.372-.793a4.07 4.07 0 0 1-.087-.246l-.001-.006v.005L40 40zm38 22c0 2.248-1.752 4-4 4v2c3.352 0 6-2.648 6-6h-2zm-4 4H6v2h68v-2zM6 66c-2.248 0-4-1.752-4-4H0c0 3.352 2.648 6 6 6v-2zm-4-4V18H0v44h2zm0-44c0-2.248 1.752-4 4-4v-2c-3.352 0-6 2.648-6 6h2zm4-4h68v-2H6v2zm68 0c2.248 0 4 1.752 4 4h2c0-3.352-2.648-6-6-6v2zm4 4v44h2V18h-2z" fill="#1a1a1a"></path>
-                                        </svg>
+                                    <div className="column no-shrink icon-theme mb-3">
+                                        <img src={solution.fields.img3[0].url} />
                                     </div>
                                     <div className="column">
                                         <div className="headings-compact font-size-small">
-                                            <h3 className="balance-text h6" data-title-for="4QuVYNULNtpDHjvs41qKFj" >Square Gift Cards</h3>
-                                            <p>Accept online and plastic <a href="../gift-cards.html">Square Gift Cards</a>. Plus, sell eGift cards for your business right on your site.</p>
+                                            <h3 className="balance-text h6">{solution.fields.title3}</h3>
+                                            <ReactMarkdown source={solution.fields.desc3} />
                                         </div>
                                     </div>
                                 </div>
@@ -425,14 +408,15 @@ function HomePage({menu, hero, feature, message, benefit, pricing}) {
                     </section>
 
                     
-                    <section className="section-one-column bg-accent auto-layout flex-valign-middle" data-entry-id="1GrqRQm33oGIbj1NyRyatI">
+                    <section className="section-one-column bg-accent auto-layout flex-valign-middle">
                         <div className="content pad-top-large">
                             <div className="intro intro font-size-base">
-                                <h2 className="balance-text h2" data-title-for="1GrqRQm33oGIbj1NyRyatI" >Start taking online orders today.</h2>
-                                <p>Discover how Square Online can help your restaurant.</p>
+                                <h2 className="balance-text h2">{call2action.fields.headline}</h2>
+                                <p>{call2action.fields.desc}</p>
                                 <div className="grid grid-space-base">
                                     <div className="column">
-                                        <div className="display-inline-block" data-entry-id="W4BG9aFTOZ4vtMnDfhrU0"><a className="button gap-none" href="../../../signup/au-lang_code=en-AU&amp;v=online-store.html" target="_blank">Launch a free ordering page</a>
+                                        <div className="display-inline-block">
+                                            <a className="button gap-none" href={call2action.fields.btn_href} target="_blank">{call2action.fields.btn_title}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -578,7 +562,34 @@ HomePage.getInitialProps = async ({query}) => {
 
     console.log(pricingRes)
 
-    return { menu: menuRes, hero: heroRes[0], feature: featureRes[0], message: messageRes[0], benefit: benefitRes[0], pricing: pricingRes[0]}
+    
+    const moreRes1 = await airtable.read({
+        filterByFormula: `type = "headline"`,
+        maxRecords: 1
+    },{tableName:"more"});
+    const moreRes2 = await airtable.read({
+        filterByFormula: `type = "list-item"`,
+    },{tableName:"more"});
+
+    var moreRes = {
+        headline: moreRes1[0].fields,
+        listitem: moreRes2
+    }    
+
+    console.log("more res: ", moreRes)
+
+    const solutionRes = await airtable.read({
+        filterByFormula: `isActive = "1"`,
+        maxRecords: 1
+    },{tableName:"solution"});
+
+    const call2actionRes = await airtable.read({
+        filterByFormula: `isActive = "1"`,
+        maxRecords: 1
+    },{tableName:"call2action"});
+
+
+    return { menu: menuRes, hero: heroRes[0], feature: featureRes[0], message: messageRes[0], benefit: benefitRes[0], pricing: pricingRes[0], more: moreRes, solution: solutionRes[0], call2action: call2actionRes[0]}
 }
   
 export default HomePage

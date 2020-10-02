@@ -18,7 +18,7 @@ async function getMenu(){
     }
 }
 
-function HomePage({menu, hero, feature, message, benefit, pricing, more, solution, call2action}) {
+function HomePage({brand, hero, feature, message, benefit, pricing, more, solution, call2action}) {
     console.log("more headline: ", more.headline)
     return <>
     <div className="PublicWebNav svelte-1hvfxdz">
@@ -28,27 +28,7 @@ function HomePage({menu, hero, feature, message, benefit, pricing, more, solutio
                     <a className="navbar-brand mr-auto" href="./index.html">
                         {/* <img src="./assets/img/logo.svg" alt="..." className="navbar-brand-img"/> */}
                         <span className="logo svelte-atgojb">
-                        <svg className="LogoJewel svelte-1ur14si" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44" height="44"><path fill="black" d="M36.65 0H7.354A7.354 7.354 0 0 0 0 7.354V36.65a7.354 7.354 0 0 0 7.354
-                        7.354H36.65a7.353 7.353 0 0 0 7.354-7.354V7.354A7.352 7.352 0 0 0 36.65
-                        0zm-.646 33.685a2.32 2.32 0 0 1-2.32 2.32H10.325a2.32 2.32 0 0
-                        1-2.321-2.32v-23.36a2.32 2.32 0 0 1 2.321-2.321h23.359a2.32 2.32 0 0 1 2.32
-                        2.321v23.36z" className="svelte-1ur14si"></path><path fill="black" d="M17.333 28.003c-.736 0-1.332-.6-1.332-1.339V17.34c0-.739.596-1.339
-                        1.332-1.339h9.338c.738 0 1.332.6 1.332 1.339v9.324c0 .739-.594 1.339-1.332
-                        1.339h-9.338z" className="svelte-1ur14si"></path></svg> <svg className="LogoWordmark svelte-j9c4sa" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 22" width="66" height="22"><path d="M11.2 10c-.7-.2-1.3-.4-1.8-.6C8.4 9 8 8.4 8 7.6c0-1.5 1.5-2.2 3-2.2 1.4 0
-                        2.6.6 3.5 1.6l.1.1 1.2-.9-.1-.1c-1.1-1.4-2.7-2.2-4.6-2.2-1.2 0-2.4.3-3.2.9-1
-                        .8-1.5 1.7-1.5 2.9 0 2.7 2.6 3.4 4.6 3.9 2.1.6 3.4 1 3.4 2.6s-1.3 2.6-3.2
-                        2.6c-1 0-2.8-.3-3.9-2l-.1-.1-1.2.9v.1c1.1 1.6 2.9 2.5 5.1 2.5 2.9 0 4.9-1.6
-                        4.9-4.1 0-2.8-2.7-3.5-4.8-4.1z" fill="black" className="svelte-j9c4sa"></path><path d="M25.5 9.5V8h1.4v14h-1.4v-5.5c-.8 1.1-2 1.7-3.4 1.7-2.7
-                        0-4.5-2.1-4.5-5.2s1.9-5.2 4.5-5.2c1.4-.1 2.6.6 3.4 1.7zM19.1 13c0 2.9 1.6
-                        3.9 3.2 3.9 2 0 3.3-1.5 3.3-3.9s-1.3-3.9-3.3-3.9c-2.4 0-3.2 2-3.2 3.9z" fill-rule="evenodd" clip-rule="evenodd" fill="black" className="svelte-j9c4sa"></path><path d="M36.2 8v5.5c0 1.9-1.3 3.3-3.2 3.3-1.5 0-2.3-.9-2.3-2.8V8h-1.4v6.4c0 2.4
-                        1.3 3.8 3.5 3.8 1.4 0 2.5-.6 3.3-1.6V18h1.4V8h-1.3z" fill="black" className="svelte-j9c4sa"></path><path d="M40.3 9c1-.8 2.4-1.3 3.9-1.3 2.2 0 3.6 1.1 3.6 3V18h-1.4v-1.1c-.7.9-1.7
-                        1.3-3.1 1.3-2.2 0-3.5-1.2-3.5-3.1 0-2.5 2.3-2.8 3.3-3 .2 0 .3-.1.5-.1 1.4-.2
-                        2.7-.4 2.7-1.6 0-1.3-1.7-1.4-2.2-1.4-.9 0-2.2.3-3.1 1v.2L40.3 9zm.9 6.1c0
-                        1.6 1.5 1.8 2.2 1.8 1.4 0 2.9-.8
-                        2.9-2.9v-1.4c-.7.4-1.7.6-2.5.8l-.4.1c-1.5.1-2.2.5-2.2 1.6z" fill-rule="evenodd" clip-rule="evenodd" fill="black" className="svelte-j9c4sa"></path><path d="M55.9 8.2c-.3-.2-.9-.4-1.4-.4-1.1 0-2.2.6-2.8
-                        1.5V8h-1.4v10h1.4v-5.4c0-2.4 1.3-3.4 2.7-3.4.4 0 .8.1 1.1.2l.1.1.3-1.3z" fill="black" className="svelte-j9c4sa"></path><path d="M56.3 13c0-3.1 1.9-5.3 4.7-5.3 2.7 0 4.5 1.9 4.5 4.7V13.2h-7.7c0 2.2 1.4
-                        3.6 3.4 3.6 1.2 0 2.2-.5 2.8-1.3l.1-.1 1 .9-.1.1c-.7.8-1.9 1.8-3.9 1.8-2.9
-                        0-4.8-2.1-4.8-5.2zm4.6-3.9c-1.7 0-2.9 1.1-3.1 2.9H64c-.1-1.4-1-2.9-3.1-2.9z" fill-rule="evenodd" clip-rule="evenodd" fill="black" className="svelte-j9c4sa"></path></svg> 
+                            <img src={brand.logo} />
                         <span className="text svelte-j9c4sa">Square</span>
                         </span>
                     </a>
@@ -496,11 +476,22 @@ function HomePage({menu, hero, feature, message, benefit, pricing, more, solutio
 }
 
 HomePage.getInitialProps = async ({query}) => {        
+    const logoRes = await airtable.read({
+        filterByFormula: `type = "logo"`,
+        maxRecords : 1
+    },{tableName:"brand"});
     const menuRes = await airtable.read({
+        filterByFormula: `type = "menu-item"`,
         sort: [{field: 'sort', direction: 'asc'}]
-    },{tableName:"menu"});
+    },{tableName:"brand"});
+
+    var brandRes = {
+        logo: logoRes[0].fields.img[0].url,
+        menuitem: menuRes
+    }
     
-    console.log("menu: ", menuRes)
+    
+    console.log("brand: ", brandRes)
 
     const heroRes = await airtable.read({
         filterByFormula: `isActive = "1"`,
@@ -562,7 +553,7 @@ HomePage.getInitialProps = async ({query}) => {
     },{tableName:"call2action"});
 
 
-    return { menu: menuRes, hero: heroRes[0], feature: featureRes[0], message: messageRes[0], benefit: benefitRes[0], pricing: pricingRes[0], more: moreRes, solution: solutionRes[0], call2action: call2actionRes[0]}
+    return { brand: brandRes, hero: heroRes[0], feature: featureRes[0], message: messageRes[0], benefit: benefitRes[0], pricing: pricingRes[0], more: moreRes, solution: solutionRes[0], call2action: call2actionRes[0]}
 }
   
 export default HomePage

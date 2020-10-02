@@ -500,7 +500,7 @@ function HomePage({menu, hero}) {
                 </div>
             </main>
 
-            {/* <footer className="page-footer">
+            <footer className="page-footer">
                 <div className="content pad-vert-medium">
                     <nav className="tertiary" role="navigation">
                         <div className="grid-flex-at-extra-small grid-space-line grid-align-justify">
@@ -583,7 +583,7 @@ function HomePage({menu, hero}) {
                         </div>
                     </div>
                 </div>
-            </footer> */}
+            </footer>
             </div>
         </div>
         <style jsx>{`

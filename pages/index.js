@@ -299,53 +299,8 @@ function HomePage({menu, hero}) {
                             </div>
                         </div>
                     </section>
-                    
-                    
-                    {/* <section className="section-two-column bg-white auto-layout flex-valign-middle" data-entry-id="3B3cGkR43s2Bwrr0uEfEgE">
-                        <div className="content">
-                            <div className="two-column-outer-grid grid-space-medium grid-space-large-at-medium">
-                                <div className="column">
-                                    <div data-entry-id="23uq0Fg7zaQv0w9QJ6uDAM">
-                                        <div className="two-column-inner-grid grid-valign-middle grid-2-at-medium">
-                                            <div className="column -at-">
-                                                <div className="position-relative">
-                                                    <div id="uid-HcPs1w8njNRBwN9rxmg98-c8d85c6baed6ea988e232871ff0c8a434e9c5852c8d2027b08d78f09b0f621c1" className="picture">
                                                         
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="column align-left content-cell-padding-left">
-                                                <div className="headings-compact font-size-normal">
-                                                    <h4 id="in-house-delivery-beta">In-house delivery (beta)</h4>
-                                                    <p>Use your own in-house team to deliver orders. To better manage deliveries you can set estimated food delivery time, delivery fee and minimum delivery order value. Send text alerts to keep customers up to date on their order status. Even create a custom delivery radius for more control over your service area. The In-house delivery option is available for just 50¢ per order.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="column">
-                                    <div data-entry-id="3rU7R29Fc8SO6G5IvBxAHE">
-                                        <div className="two-column-inner-grid grid-valign-middle grid-2-at-medium">
-                                            <div className="column -at-">
-                                                <div className="position-relative">
-                                                    <div id="uid-6SCGA6AootjAaJqqIKdcan-178d34b972325bcdbbb0428503009acc13676d36694a286833747e6878378de6" className="picture">
-                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="column align-left content-cell-padding-left">
-                                                <div className="headings-compact font-size-normal">
-                                                    <h5 id="pickup">Pickup</h5>
-                                                    <p>Give your customers the ability to order and pay online, and pick up their items in person at your restaurant location. Or offer the added convenience of curbside pickup so customers never have to leave their car.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section> */}
-                    {/* 
+                    
                     <section className="section-multi-column bg-white auto-layout flex-valign-middle" data-entry-id="2oX6AalbFrldetfC49oQot">
                         <div className="content">
                             <div className="intro font-size-base">
@@ -393,6 +348,7 @@ function HomePage({menu, hero}) {
                             </div>
                         </div>
                     </section>
+                    {/* 
                     <section className="section-one-column bg-white auto-layout flex-valign-middle" data-entry-id="3sqnKmZl7dQct7d0Uu61JO">
                         <div className="content">
                             <div className="intro intro font-size-base">

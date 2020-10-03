@@ -1,6 +1,7 @@
 import React from 'react';
 import Router from 'next/router';
 import Link from 'next/link'
+import Carousel from 'react-multi-carousel';
 
 export default class Nav extends React.Component {
     constructor(props){
@@ -14,13 +15,44 @@ export default class Nav extends React.Component {
     }
 
     render() {
+        const responsive = {
+            superLargeDesktop: {
+              // the naming can be any, depends on you.
+              breakpoint: { max: 4000, min: 3000 },
+              items: 5
+            },
+            desktop: {
+              breakpoint: { max: 3000, min: 1024 },
+              items: 3
+            },
+            tablet: {
+              breakpoint: { max: 1024, min: 464 },
+              items: 2
+            },
+            mobile: {
+              breakpoint: { max: 464, min: 0 },
+              items: 1
+            }
+        };
         return(
+            // <Carousel responsive={responsive}>
+                
+                        
+            // </Carousel>
             <section className="section-multi-column bg-white auto-layout flex-valign-middle overflow-hidden" data-entry-id="1Mfj7eQcMjx9OkVbkKLRv1">
-            <div className="sticky-banner-waypoint-on" style={{position: "absolute", top: "0px"}}></div>
+                
+            {/* <div className="sticky-banner-waypoint-on" style={{position: "absolute", top: "0px"}}></div> */}
             <div className="content">
-                <div className="carousel" data-indicators="true" data-opacity-focus="true" data-dragging="false" data-carousel-enabled="true" data-animating="false">
-                    <div className="grid-2-at-medium multi-column-grid align-left grid-space-medium grid-align-center grid-valign-top grid-row-equal-heights carousel-slider" style={{transform: "translate3d(1076px, 0px, 0px)"}}>
-                        <div className="column carousel-slide" data-active="true" data-index="0">
+                <div className="carousel">
+                    {/* <div className="grid-2-at-medium multi-column-grid align-left grid-space-medium grid-align-center grid-valign-top grid-row-equal-heights carousel-slider" style={{transform: "translate3d(1076px, 0px, 0px)"}}> */}
+                    <Carousel 
+                    arrows
+                    // showDots
+                    // dotListClass = "carousel-nav"
+                    responsive={responsive}>
+
+                        
+                        <div className="column carousel-slide" data-active="true" data-index="0">                            
                             <div data-entry-id="1viNg1FqO6ApH3cpXB9fSh">
                                 <div className="grid grid-space-line">
                                     <div className="column">
@@ -148,17 +180,25 @@ export default class Nav extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        
-                    </div>
-                    <div className="carousel-nav">
+                    </Carousel>    
+                    {/* </div> */}
+                    {/* <div className="carousel-nav">
                         <div className="carousel-button" data-index="0" data-active="true"></div>
                         <div className="carousel-button" data-index="1" data-active="false"></div>
                         <div className="carousel-button" data-index="2" data-active="false"></div>
                         <div className="carousel-button" data-index="3" data-active="false"></div>
                         <div className="carousel-button" data-index="4" data-active="false"></div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
+                <style jsx>{`
+                ul {
+                    list-style : none !important;
+                }
+                ul > li {
+                    list-style-type : none !important;
+                }
+                `}</style>
         </section>
         )
     }

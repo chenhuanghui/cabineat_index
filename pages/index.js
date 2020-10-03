@@ -151,7 +151,7 @@ function HomePage({brand, hero, feature, message, benefit, pricing, more, soluti
                     </div>
                 </section>
 
-                {/* <CasoureSlider /> */}
+                <CasoureSlider />
 
                 <hr className="section-border content"/> 
                 

@@ -191,12 +191,11 @@ export default class Nav extends React.Component {
                     </div> */}
                 </div>
             </div>
-                <style jsx>{`
-                ul {
-                    list-style : none !important;
-                }
-                ul > li {
+                <style jsx>{`                
+                .react-multi-carousel-item {
                     list-style-type : none !important;
+                    margin: 0 !important;
+                    padding: 0 !important;
                 }
                 `}</style>
         </section>

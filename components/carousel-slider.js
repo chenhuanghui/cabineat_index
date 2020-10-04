@@ -47,7 +47,8 @@ export default class Nav extends React.Component {
                     {/* <div className="grid-2-at-medium multi-column-grid align-left grid-space-medium grid-align-center grid-valign-top grid-row-equal-heights carousel-slider" style={{transform: "translate3d(1076px, 0px, 0px)"}}> */}
                     <Carousel 
                     arrows
-                    // showDots
+                    // showDots={true}
+                    // renderDotsOutside
                     // dotListClass = "carousel-nav"
                     responsive={responsive}>
 

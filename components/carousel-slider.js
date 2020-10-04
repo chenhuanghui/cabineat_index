@@ -2,6 +2,7 @@ import React from 'react';
 import Router from 'next/router';
 import Link from 'next/link'
 import Carousel from 'react-multi-carousel';
+// https://www.npmjs.com/package/react-multi-carousel
 
 export default class Nav extends React.Component {
     constructor(props){

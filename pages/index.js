@@ -27,7 +27,9 @@ function HomePage({brand, hero, feature, message, benefit, pricing, more, soluti
                     <div className="content">
                         <div className="content-wrapper">
                             <div className="font-eyebrow-large">{hero.fields.pre_title}</div>
-                            <h1 className="balance-text">{hero.fields.title}</h1>
+                            <h1 className="balance-text markdown-custom">
+                                <ReactMarkdown source={hero.fields.title} />
+                            </h1>
                             <p className="font-size-large balance-text" >{hero.fields.sub_title}</p>
                             <div className="grid grid-space-line font-size-small">
                                 <div className="column">

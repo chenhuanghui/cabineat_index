@@ -125,6 +125,13 @@ function HomePage({brand, hero, feature, message, benefit, pricing, more, soluti
                 <section className="section-multi-column bg-white auto-layout flex-valign-middle">
                     <div className="content">
                         <div className="row">
+                            <div className="col-12 col-md-6 col-xl-6 d-block d-sm-none mb-5">
+                                <div className="position-relative mt-5 mt-md-0">
+                                    <div id="uid-2AMupnetDch5e76zj9Wau7-f950d36e4b2ff51c61b9667412980e727858a9eac30c8d98cc50ebf2658e08a6" className="picture">
+                                        <img src={message.fields.img[0].url}/>
+                                    </div>
+                                </div>
+                            </div>
                             <div className="col-12 col-md-6 col-xl-6">
                                 <div className="headings-compact font-size-large">
                                     <h3 className="balance-text h2 markdown-custom">
@@ -140,7 +147,7 @@ function HomePage({brand, hero, feature, message, benefit, pricing, more, soluti
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-12 col-md-6 col-xl-6">
+                            <div className="col-12 col-md-6 col-xl-6 d-sm-block d-none">
                                 <div className="position-relative mt-5 mt-md-0">
                                     <div id="uid-2AMupnetDch5e76zj9Wau7-f950d36e4b2ff51c61b9667412980e727858a9eac30c8d98cc50ebf2658e08a6" className="picture">
                                         <img src={message.fields.img[0].url}/>
@@ -182,8 +189,8 @@ function HomePage({brand, hero, feature, message, benefit, pricing, more, soluti
                             </div>                                
                         </div>
 
-                        <div className="row mt-5 mt-md-0">
-                            <div className="col-12 col-md-6 col-xl-6 mb-5 mb-md-0">
+                        <div className="row mt-5">
+                            <div className="col-12 col-md-6 col-xl-6 mb-5 mb-md-0 d-block d-sm-none">
                                 <div id="uid-6xr3DaitQccubioFlA4Oab-9dcbe964d494dd98ca16aaa2fc2d480e87a4cce18aa55c7f33c27e59190274dd" className="picture">
                                     <img src={benefit.fields.img2[0].url} />
                                 </div>
@@ -191,9 +198,14 @@ function HomePage({brand, hero, feature, message, benefit, pricing, more, soluti
                             <div className="col-12 col-md-6 col-xl-6 mt-auto">
                                 <div className="headings-compact font-size-normal">
                                     <h6 id="in-house-delivery">{benefit.fields.title2}</h6>
-                                    <p>{benefit.fields.desc2}</p>
+                                    <p><ReactMarkdown source={benefit.fields.desc2} /></p>
                                 </div>
-                            </div>                                
+                            </div>         
+                            <div className="col-12 col-md-6 col-xl-6 mb-5 mb-md-0 d-none d-sm-block">
+                                <div id="uid-6xr3DaitQccubioFlA4Oab-9dcbe964d494dd98ca16aaa2fc2d480e87a4cce18aa55c7f33c27e59190274dd" className="picture">
+                                    <img src={benefit.fields.img2[0].url} />
+                                </div>
+                            </div>                       
                         </div>
                     </div>
                 </section>

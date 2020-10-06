@@ -11,7 +11,7 @@ const airtable = new AirtablePlus({
     apiKey: 'keyLNupG6zOmmokND'
 });
 
-function HomePage({brand, hero, feature, message, benefit, pricing, more, solution, call2action}) {
+function HomePage({brand, hero, feature, message, benefit, pricing, more, solution, call2action, stepready4sale}) {
     return <>
         <Head>
             <title>CabinEat - Trang chủ</title>
@@ -30,7 +30,9 @@ function HomePage({brand, hero, feature, message, benefit, pricing, more, soluti
                             <h1 className="balance-text markdown-custom">
                                 <ReactMarkdown source={hero.fields.title} />
                             </h1>
-                            <p className="font-size-large balance-text" >{hero.fields.sub_title}</p>
+                            <p className="font-size-large balance-text" >
+                                <ReactMarkdown source={hero.fields.sub_title} />
+                            </p>
                             <div className="grid grid-space-line font-size-small">
                                 <div className="column">
                                     <div className="display-inline-block">
@@ -42,11 +44,11 @@ function HomePage({brand, hero, feature, message, benefit, pricing, more, soluti
                     </div>
                 </section>
                 
-                <section className="section-screenshot bg-invert-to-white pad-bottom-small" data-entry-id="1yuPhizpTvVcjBBPavXdy4" data-frame-type="full-width">
+                <section className="section-screenshot bg-invert-to-white pad-bottom-small">
                     <div className="sticky-banner-waypoint-on" style={{position: "absolute", top: "0px"}}></div>
                     <div>
-                        <div className="apropos-entry position-relative" data-entry-id="62e3N9gF8S8mCKp8mSxkmX">
-                            <div id="uid-62e3N9gF8S8mCKp8mSxkmX-fcb7d26426839521a2318280b727f9014851040abd5b7743a496f8e1daa3b7a8" className="picture">
+                        <div className="apropos-entry position-relative">
+                            <div className="picture">
                                 <picture className="apropos apropos-fluid">
                                     <source media="(min-width: 1292px)" type="image/webp" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/1uv3b3FGHKlEtBX5cOlJyQ/9f7fdce796cb7c95fbdbf5b3be20eb82/XL-SOS-restaurants-subpage.png?w=1680&amp;h=888&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/1uv3b3FGHKlEtBX5cOlJyQ/9f7fdce796cb7c95fbdbf5b3be20eb82/XL-SOS-restaurants-subpage.png?w=3360&amp;h=1776&amp;fm=webp&amp;q=85&amp;fit=scale 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/1uv3b3FGHKlEtBX5cOlJyQ/9f7fdce796cb7c95fbdbf5b3be20eb82/XL-SOS-restaurants-subpage.png?w=1680&amp;h=888&amp;fm=webp&amp;q=85&amp;fit=scale, //images.ctfassets.net/2d5q1td6cyxq/1uv3b3FGHKlEtBX5cOlJyQ/9f7fdce796cb7c95fbdbf5b3be20eb82/XL-SOS-restaurants-subpage.png?w=3360&amp;h=1776&amp;fm=webp&amp;q=85&amp;fit=scale 2x"/>
                                         <source media="(min-width: 1292px)" type="image/jpeg" data-srcset="//images.ctfassets.net/2d5q1td6cyxq/1uv3b3FGHKlEtBX5cOlJyQ/9f7fdce796cb7c95fbdbf5b3be20eb82/XL-SOS-restaurants-subpage.png?w=1680&amp;h=888&amp;fm=jpg&amp;q=85&amp;bg=rgb%3A030303&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/1uv3b3FGHKlEtBX5cOlJyQ/9f7fdce796cb7c95fbdbf5b3be20eb82/XL-SOS-restaurants-subpage.png?w=3360&amp;h=1776&amp;fm=jpg&amp;q=85&amp;bg=rgb%3A030303&amp;fit=scale&amp;fl=progressive 2x" srcset="//images.ctfassets.net/2d5q1td6cyxq/1uv3b3FGHKlEtBX5cOlJyQ/9f7fdce796cb7c95fbdbf5b3be20eb82/XL-SOS-restaurants-subpage.png?w=1680&amp;h=888&amp;fm=jpg&amp;q=85&amp;bg=rgb%3A030303&amp;fit=scale&amp;fl=progressive, //images.ctfassets.net/2d5q1td6cyxq/1uv3b3FGHKlEtBX5cOlJyQ/9f7fdce796cb7c95fbdbf5b3be20eb82/XL-SOS-restaurants-subpage.png?w=3360&amp;h=1776&amp;fm=jpg&amp;q=85&amp;bg=rgb%3A030303&amp;fit=scale&amp;fl=progressive 2x"/>
@@ -162,7 +164,9 @@ function HomePage({brand, hero, feature, message, benefit, pricing, more, soluti
                     </div>
                 </section>
 
-                <CasoureSlider />
+                <CasoureSlider 
+                    data = {stepready4sale}
+                />
 
                 <hr className="section-border content"/> 
                 
@@ -448,6 +452,12 @@ HomePage.getInitialProps = async ({query}) => {
 
     console.log(messageRes)
 
+    const stepready4saleRes = await airtable.read({
+        sort: [{field: 'step', direction: 'asc'}]
+    },{tableName:"stepready4sale"});
+    
+    console.log(stepready4saleRes)
+
     const benefitRes = await airtable.read({
         filterByFormula: `isActive = "1"`,
         maxRecords: 1
@@ -489,7 +499,7 @@ HomePage.getInitialProps = async ({query}) => {
     },{tableName:"call2action"});
 
 
-    return { brand: brandRes, hero: heroRes[0], feature: featureRes[0], message: messageRes[0], benefit: benefitRes[0], pricing: pricingRes[0], more: moreRes, solution: solutionRes[0], call2action: call2actionRes[0]}
+    return { brand: brandRes, hero: heroRes[0], feature: featureRes[0], message: messageRes[0], stepready4sale: stepready4saleRes, benefit: benefitRes[0], pricing: pricingRes[0], more: moreRes, solution: solutionRes[0], call2action: call2actionRes[0]}
 }
   
 export default HomePage

@@ -51,7 +51,7 @@ export default class Footer extends React.Component {
                                     <div className="grid-auto-at-extra-small grid-col-space-base grid-row-space-line align-center">
                                         <div className="column">
                                             <div className="avatar avatar-4by3 avatar-xs">
-                                                <img classNam="" src="/assets/img/vn-flag.png" className="avatar-img rounded"/>
+                                                <img className="" src="/assets/img/vn-flag.png" className="avatar-img rounded"/>
                                             </div>
                                         </div>
                                         <div className="column">

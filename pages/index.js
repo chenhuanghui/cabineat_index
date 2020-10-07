@@ -87,12 +87,23 @@ export default class HomePage extends React.Component {
         // end get data of stepready4saleRes
     
         // start get data of benefitRes
-        const benefitRes = await airtable.read({
-            filterByFormula: `isActive = "1"`,
+        const benefitHeadlineRes = await airtable.read({
+            filterByFormula: `AND(type="headline", isActive = "1")`,
             maxRecords: 1
         },{tableName:"benefit"});
-        console.log(benefitRes)
-        currentComponent.setState({benefit: benefitRes[0]})
+
+        const benefitItemRes = await airtable.read({
+            filterByFormula: `AND(type="item", isActive = "1")`,
+            sort: [{field: 'sort', direction: 'asc'}]
+        },{tableName:"benefit"});
+    
+        var benefitRes = {
+            headline: benefitHeadlineRes[0].fields.title,
+            item: benefitItemRes
+        }
+
+        console.log("benefit: ", benefitRes)
+        currentComponent.setState({benefit: benefitRes})
         // end get data of benefitRes
 
         // end get data of pricing
@@ -297,45 +308,49 @@ export default class HomePage extends React.Component {
                                 <div className="content pad-top-large">
                                     <div className="intro intro font-size-base">
                                         <h2 className="balance-text h2 markdown-custom">
-                                            <ReactMarkdown source={benefit.fields.headline} />
+                                            <ReactMarkdown source={benefit.headline} />
                                         </h2>
                                     </div>
                                 </div>
                             </section>
                             <section className="section-multi-column bg-white auto-layout flex-valign-middle">
                                 <div className="content">
-                                    <div className="row">
-                                        <div className="col-12 col-md-6 col-xl-6 mb-5 mb-md-0">
-                                            <div className="picture">
-                                                <img src={benefit.fields.img1[0].url} />
+                                    {benefit.item.map((item, index)=>{
+                                        return index%2 === 0
+                                        ? 
+                                        <div className="row mb-5" key={index} data-id={item.id}>
+                                            <div className="col-12 col-md-6 col-xl-6 mb-5 mb-md-0">
+                                                <div className="picture">
+                                                    <img src={item.fields.img[0].url} />
+                                                </div>
                                             </div>
+                                            <div className="col-12 col-md-6 col-xl-6">
+                                                <div className="headings-compact font-size-normal markdown-custom">
+                                                    <h4 id="delivery">{item.fields.title}</h4>
+                                                    <p><ReactMarkdown source={item.fields.desc} /></p>
+                                                </div>
+                                            </div>                                
                                         </div>
-                                        <div className="col-12 col-md-6 col-xl-6">
-                                            <div className="headings-compact font-size-normal">
-                                                <h4 id="delivery">{benefit.fields.title1}</h4>
-                                                <p><ReactMarkdown source={benefit.fields.desc1} /></p>
+                                        : 
+                                        <div className="row mb-5">
+                                            <div className="col-12 col-md-6 col-xl-6 mb-5 mb-md-0 d-block d-sm-none">
+                                                <div className="picture">
+                                                    <img src={item.fields.img[0].url} />
+                                                </div>
                                             </div>
-                                        </div>                                
-                                    </div>
-
-                                    <div className="row mt-5">
-                                        <div className="col-12 col-md-6 col-xl-6 mb-5 mb-md-0 d-block d-sm-none">
-                                            <div id="uid-6xr3DaitQccubioFlA4Oab-9dcbe964d494dd98ca16aaa2fc2d480e87a4cce18aa55c7f33c27e59190274dd" className="picture">
-                                                <img src={benefit.fields.img2[0].url} />
-                                            </div>
+                                            <div className="col-12 col-md-6 col-xl-6 mt-auto">
+                                                <div className="headings-compact font-size-normal markdown-custom">
+                                                    <h4 id="in-house-delivery">{item.fields.title}</h4>
+                                                    <p><ReactMarkdown source={item.fields.desc} /></p>
+                                                </div>
+                                            </div>         
+                                            <div className="col-12 col-md-6 col-xl-6 mb-5 mb-md-0 d-none d-sm-block">
+                                                <div className="picture">
+                                                    <img src={item.fields.img[0].url} />
+                                                </div>
+                                            </div>                       
                                         </div>
-                                        <div className="col-12 col-md-6 col-xl-6 mt-auto">
-                                            <div className="headings-compact font-size-normal">
-                                                <h6 id="in-house-delivery">{benefit.fields.title2}</h6>
-                                                <p><ReactMarkdown source={benefit.fields.desc2} /></p>
-                                            </div>
-                                        </div>         
-                                        <div className="col-12 col-md-6 col-xl-6 mb-5 mb-md-0 d-none d-sm-block">
-                                            <div id="uid-6xr3DaitQccubioFlA4Oab-9dcbe964d494dd98ca16aaa2fc2d480e87a4cce18aa55c7f33c27e59190274dd" className="picture">
-                                                <img src={benefit.fields.img2[0].url} />
-                                            </div>
-                                        </div>                       
-                                    </div>
+                                    })}                                    
                                 </div>
                             </section>
                         </>

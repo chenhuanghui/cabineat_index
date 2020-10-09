@@ -126,16 +126,19 @@ export default class HomePage extends React.Component {
     
         // start get data of more
         const moreRes1 = await airtable.read({
-            filterByFormula: `type = "headline"`,
+            filterByFormula: `AND(type = "headline", isActive = "1")`,
             maxRecords: 1
         },{tableName:"more"});
         const moreRes2 = await airtable.read({
-            filterByFormula: `type = "list-item"`,
+            filterByFormula: `AND(type = "list-item", isActive = "1")`,
         },{tableName:"more"});
     
-        var moreRes = {
-            headline: moreRes1[0].fields,
-            listitem: moreRes2
+        var moreRes
+        if (moreRes1.length > 0 && moreRes2.length > 0) {
+            moreRes = {
+                headline: moreRes1[0].fields,
+                listitem: moreRes2
+            }   
         }    
     
         console.log("more res: ", moreRes)

@@ -450,9 +450,12 @@ export default class HomePage extends React.Component {
                                             {pricing.fields.btn_title 
                                             ?
                                             <div className="column">
-                                                <div className="display-inline-block">
+                                                {/* <div className="display-inline-block">
                                                     <a className="" href={pricing.fields.btn_href} target="_blank">
                                                     {pricing.fields.btn_title} <span className="arrow no-wrap"></span></a>
+                                                </div> */}
+                                                <div className="display-inline-block">
+                                                    <a className="button gap-none" href={pricing.fields.btn_href} target="_blank">{pricing.fields.btn_title}</a>
                                                 </div>
                                             </div>
                                             : null 

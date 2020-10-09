@@ -377,7 +377,7 @@ export default class HomePage extends React.Component {
                                             <ReactMarkdown source={pricing.fields.headline} />
                                         </h2>
                                     </div>
-                                    <div className="grid-2-at-medium multi-column-grid align-center grid-space-small grid-align-center grid-valign-top grid-row-equal-heights">
+                                    <div className="grid-3-at-medium multi-column-grid align-center grid-space-small grid-align-center grid-valign-top grid-row-equal-heights">
                                         <div className="column">
                                             <a className="tile">
                                                 <div className="tile-content">

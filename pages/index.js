@@ -33,18 +33,22 @@ export default class HomePage extends React.Component {
         
         // start get data of brand
         const logoRes = await airtable.read({
-            filterByFormula: `type = "logo"`,
+            filterByFormula: `AND(type = "logo", isActive = "1")`,
             maxRecords : 1
         },{tableName:"brand"});
         const menuRes = await airtable.read({
-            filterByFormula: `type = "menu-item"`,
+            filterByFormula: `AND(type = "menu-item", isActive = "1")`,
             sort: [{field: 'sort', direction: 'asc'}]
         },{tableName:"brand"});
     
-        var brandRes = {
-            logo: logoRes[0].fields.img[0].url,
-            menuitem: menuRes
+        var brandRes
+        if (logoRes.length > 0 && menuRes.length > 0) {
+            brandRes = {
+                logo: logoRes[0].fields.img[0].url,
+                menuitem: menuRes
+            }
         }
+        
         console.log("brand: ", brandRes)
         currentComponent.setState({brand: brandRes})
         // end get data of brand
@@ -172,7 +176,7 @@ export default class HomePage extends React.Component {
                 <Head>
                     <title>CabinEat - Trang chủ</title>
                 </Head>
-                {brand 
+                {brand && brand.length > 0
                 ? <Nav brand = {brand}/>
                 : null
                 }

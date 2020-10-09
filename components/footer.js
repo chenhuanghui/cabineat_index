@@ -92,7 +92,7 @@ export default class Footer extends React.Component {
                             <div className="column expand align-center align-left-at-medium">
                                 <p className="copyright">© 2020 CabinEat Pte. Ltd.</p>
                             </div>
-                            <div className="column align-center align-right-at-medium">
+                            {/* <div className="column align-center align-right-at-medium">
                                 <nav>
                                     <ul className="destination-links reset grid-space-base">
                                         <li><a href="#">Privacy Notice</a></li>
@@ -101,7 +101,7 @@ export default class Footer extends React.Component {
                                         <li><a href="#">Square Financial Services Guide</a></li>
                                     </ul>
                                 </nav>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </footer>

@@ -398,7 +398,7 @@ export default class HomePage extends React.Component {
                                             </a>
                                         </div>
                                         <div className="column">
-                                            <a className="tile" data-entry-id="150lUUYLwaWQ675TRqPwlL">
+                                            <a className="tile">
                                                 <div className="tile-content">
                                                     <div className="grid-space-line">
                                                         <div className="column">
@@ -409,6 +409,25 @@ export default class HomePage extends React.Component {
                                                                 <div className="column tile-body font-size-normal">
                                                                     <h2 className="color-royal-blue">{pricing.fields.packprice2} <span className="small">vnđ</span></h2>
                                                                     <p>{pricing.fields.packdesc2}</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div className="column">
+                                            <a className="tile" data-entry-id="150lUUYLwaWQ675TRqPwlL">
+                                                <div className="tile-content">
+                                                    <div className="grid-space-line">
+                                                        <div className="column">
+                                                            <div className="grid-space-base">
+                                                                <div className="column">
+                                                                    <h3 className="balance-text h6">{pricing.fields.packtitle3}</h3>
+                                                                </div>
+                                                                <div className="column tile-body font-size-normal">
+                                                                    <h2 className="color-royal-blue">{pricing.fields.packprice3} <span className="small">vnđ</span></h2>
+                                                                    <p>{pricing.fields.packdesc3}</p>
                                                                 </div>
                                                             </div>
                                                         </div>

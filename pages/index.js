@@ -456,14 +456,14 @@ export default class HomePage extends React.Component {
 
                                             }
                                         </div>
-                                    </div>
+                                    </div>                                    
                                 </div>
                             </section>
                         </>
                         : null
                         }
                                                 
-                        {more
+                        {more && more.length > 0
                         ? 
                         <>
                             <section className="section-screenshot bg-white">
@@ -526,10 +526,10 @@ export default class HomePage extends React.Component {
                         : null
                         }
                         
-                        <hr className="section-border content"/> 
 
-                        {solution
+                        {solution && solution.length > 0
                         ? <>
+                            <hr className="section-border content"/> 
                             <section className="section-multi-column bg-white auto-layout flex-valign-middle">
                                 <div className="content">
                                     <div className="intro font-size-base">
@@ -577,7 +577,7 @@ export default class HomePage extends React.Component {
                         :null
                         }
                         
-                        {call2action
+                        {call2action && call2action.length > 0
                         ?<>
                             <section className="section-one-column bg-accent auto-layout flex-valign-middle">
                                 <div className="content pad-top-large">

@@ -79,6 +79,7 @@ export default class HomePage extends React.Component {
     
         // start get data of stepready4saleRes
         const stepready4saleRes = await airtable.read({
+            filterByFormula: `isActive = "1"`,
             sort: [{field: 'step', direction: 'asc'}]
         },{tableName:"stepready4sale"});
         
@@ -294,7 +295,7 @@ export default class HomePage extends React.Component {
                         : null
                         }
                         
-                        {stepready4sale
+                        {stepready4sale && stepready4sale.length > 0
                         ? <CasoureSlider data = {stepready4sale}/>
                         : null
                         }

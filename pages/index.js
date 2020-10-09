@@ -97,11 +97,19 @@ export default class HomePage extends React.Component {
             filterByFormula: `AND(type="item", isActive = "1")`,
             sort: [{field: 'sort', direction: 'asc'}]
         },{tableName:"benefit"});
-    
-        var benefitRes = {
-            headline: benefitHeadlineRes[0].fields.title,
-            item: benefitItemRes
+        
+        var benefitRes
+        if (benefitHeadlineRes.length > 0 && benefitItemRes.length > 0) {
+            benefitRes = {
+                headline: benefitHeadlineRes[0].fields.title,
+                item: benefitItemRes
+            }    
         }
+
+        // var benefitRes = {
+        //     headline: benefitHeadlineRes[0].fields.title,
+        //     item: benefitItemRes
+        // }
 
         console.log("benefit: ", benefitRes)
         currentComponent.setState({benefit: benefitRes})

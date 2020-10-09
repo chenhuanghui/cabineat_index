@@ -438,17 +438,23 @@ export default class HomePage extends React.Component {
                                     </div>
                                 </div>
                             </section>
+
                             <section className="section-one-column bg-white auto-layout flex-valign-middle">
                                 <div className="content">
                                     <div className="intro intro font-size-base">
                                         <ReactMarkdown source={pricing.fields.hint} />
                                         <div className="grid grid-space-base">
+                                            {pricing.fields.btn_title 
+                                            ?
                                             <div className="column">
                                                 <div className="display-inline-block">
                                                     <a className="" href={pricing.fields.btn_href} target="_blank">
                                                     {pricing.fields.btn_title} <span className="arrow no-wrap"></span></a>
                                                 </div>
                                             </div>
+                                            : null 
+
+                                            }
                                         </div>
                                     </div>
                                 </div>

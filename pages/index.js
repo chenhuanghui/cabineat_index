@@ -302,7 +302,7 @@ export default class HomePage extends React.Component {
                         
                         <hr className="section-border content"/> 
                         
-                        { benefit
+                        { benefit && benefit.length > 0
                         ? 
                         <>
                             <section className="section-one-column bg-white auto-layout flex-valign-middle">

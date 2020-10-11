@@ -61,8 +61,8 @@ export default class HomePage extends React.Component {
                     <div className="container-fluid">
                         <div className="row align-items-center justify-content-center">
                             <div className="col-12 col-md-5 col-lg-6 col-xl-4 px-lg-6 my-5">
-                                <h1 className="display-4 text-center mb-3">Đăng ký</h1>
-                                <p className="text-muted text-center mb-5">Tạo cửa hàng online của riêng bạn.</p>
+                                <h1 className="display-4 text-center mb-0">Đăng ký</h1>
+                                <p className="text-muted text-center mb-5 mt-1">Tạo cửa hàng online của riêng bạn.</p>
 
                                 <div>
                                     <div className="form-group">

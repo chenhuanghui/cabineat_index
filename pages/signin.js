@@ -66,19 +66,11 @@ export default class HomePage extends React.Component {
 
                                 <div>
                                     <div className="form-group">
-                                        <label>Tên thương hiệu</label>
-                                        <input type="text" className="form-control" id="brand"/>
-                                    </div>
+                                        <label>Tài khoản <span className="small muted">(Email / Số điện thoại)</span></label>
+                                        <input className="form-control"  id="account_id"/>
+                                    </div>                                    
                                     <div className="form-group">
-                                        <label>Email</label>
-                                        <input type="email" className="form-control"  id="email" placeholder="name@address.com"/>
-                                    </div>
-                                    <div className="form-group">
-                                        <label>Số điện thoại</label>
-                                        <input type="tel" className="form-control" placeholder="" id="tel"/>
-                                    </div>
-                                    {/* <div className="form-group">
-                                        <label>Password</label>
+                                        <label>Mật khẩu</label>
                                         <div className="input-group input-group-merge">
                                             <input type="password" className="form-control form-control-appended" placeholder="Enter your password"/>
                                             <div className="input-group-append"> 
@@ -87,29 +79,14 @@ export default class HomePage extends React.Component {
                                                 </span>
                                             </div>
                                         </div>
-                                    </div> */}
-                                    <div className="form-group">
-                                        <label>Chọn gói sản phẩm</label>
-                                        <RadioGroup onChange={(value)=> {console.log(value)} } value='6months' id="pack">
-                                            <RadioButton value="1month">
-                                                1 tháng ( 5.000 đ/ngày)
-                                            </RadioButton>
-                                            <RadioButton value="6months">
-                                                6 tháng ( 85.000 đ/tháng)
-                                            </RadioButton>
-                                            <RadioButton value="12months">
-                                                12 tháng ( 59.000 đ/tháng)
-                                            </RadioButton>
-                                            
-                                        </RadioGroup>
                                     </div>
                                     
                                     <button className="btn btn-lg btn-block btn-primary mb-3" onClick={this.signup}>
-                                        Đăng ký
+                                        Đăng nhập
                                     </button>
 
                                     <div className="text-center"> 
-                                        <small className="text-muted text-center">Bạn đã có tài khoản? <a href="#">Đăng nhập</a>.</small>
+                                        <small className="text-muted text-center">Bạn chưa có tài khoản? <a href="/signin">Đăng ký</a>.</small>
                                     </div>
                                 </div>
                             </div>

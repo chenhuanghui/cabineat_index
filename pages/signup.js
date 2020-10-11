@@ -2,28 +2,53 @@ import Head from 'next/head'
 import Nav from '../components/nav'
 import CasoureSlider from '../components/carousel-slider'
 import Footer from '../components/footer'
+import ModalPackage from "../components/modalPackage"
 
 import ReactMarkdown from "react-markdown";
+// documents: https://www.npmjs.com/package/react-radio-buttons
+import { RadioGroup, RadioButton } from 'react-radio-buttons';
 
 const AirtablePlus = require('airtable-plus');
 const airtable = new AirtablePlus({
-    baseID: 'appCZGNOFg53FFSE4',
+    baseID: 'appZrRbUCYRH3VPvx',
     apiKey: 'keyLNupG6zOmmokND'
 });
 
+const BrandEntity = require("../entity/brandEntity")
+const brandObject = new BrandEntity()
+
 export default class HomePage extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
+
         this.state = {
-            
+            openModal: false,
+            brand: '',
+            email: '',
+            tel: '',
+            pack: '',            
         }
     }
 
     async componentDidMount() { 
-        let currentComponent = this
-                
+        let currentComponent = this        
+            
     }   
+
+    async signup() {
+        var brandObj = {
+            name: $("#brand").val(),
+            email: $("#email").val(),
+            tel: $("#tel").val(),
+            pack: this.state.pack
+        }
+        console.log("brandObj: ", brandObj)
+        const brand = await brandObject.createBrand(brandObj)
+        console.log("brand created: ", brand)
+    }
+
     render() {
+        const {openModal, brand, email, tel, pack} = this.state
         return (
             <>
                 <Head>
@@ -39,17 +64,17 @@ export default class HomePage extends React.Component {
                                 <div>
                                     <div className="form-group">
                                         <label>Tên thương hiệu</label>
-                                        <input type="text" className="form-control"/>
+                                        <input type="text" className="form-control" id="brand"/>
                                     </div>
                                     <div className="form-group">
                                         <label>Email Address</label>
-                                        <input type="email" className="form-control" placeholder="name@address.com"/>
+                                        <input type="email" className="form-control"  id="email" placeholder="name@address.com"/>
                                     </div>
                                     <div className="form-group">
                                         <label>Số điện thoại</label>
-                                        <input type="tel" className="form-control"/>
+                                        <input type="tel" className="form-control" placeholder="" id="tel"/>
                                     </div>
-                                    <div className="form-group">
+                                    {/* <div className="form-group">
                                         <label>Password</label>
                                         <div className="input-group input-group-merge">
                                             <input type="password" className="form-control form-control-appended" placeholder="Enter your password"/>
@@ -59,14 +84,27 @@ export default class HomePage extends React.Component {
                                                 </span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <div className="form-group">
                                         <label>Chọn gói sản phẩm</label>
-                                        <input type="tel" className="form-control"/>
+                                        <RadioGroup onChange={(value)=> {console.log(value)} } value='6month'>
+                                            <RadioButton value="1month">
+                                                1 tháng ( 5.000 đ/ngày)
+                                            </RadioButton>
+                                            <RadioButton value="6month">
+                                                6 tháng ( 85.000 đ/tháng)
+                                            </RadioButton>
+                                            <RadioButton value="12months">
+                                                12 tháng ( 59.000 đ/tháng)
+                                            </RadioButton>
+                                            
+                                        </RadioGroup>
                                     </div>
-                                    <button className="btn btn-lg btn-block btn-primary mb-3">Sign up</button>
+                                    
+                                    <button className="btn btn-lg btn-block btn-primary mb-3" onClick={this.signup}>Sign up</button>
+
                                     <div className="text-center"> 
-                                        <small className="text-muted text-center">Already have an account? <a href="sign-in-cover.html">Log in</a>.</small>
+                                        <small className="text-muted text-center">Already have an account? <a href="#">Log in</a>.</small>
                                     </div>
                                 </div>
                             </div>
@@ -76,6 +114,13 @@ export default class HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
+                {this.state.openModal 
+                    ? <ModalPackage
+                        onClosed = {()=> {
+                            this.setState({openModal: false})
+                        }}
+                    />
+                : null}
             </>
         )
     }

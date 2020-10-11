@@ -76,14 +76,17 @@ export default class HomePage extends React.Component {
                                     <div className="form-group">
                                         <label>Chọn gói sản phẩm</label>
                                         <RadioGroup onChange={(value)=> {console.log(value)} } value='6months' id="pack">
-                                            <RadioButton value="1month">
-                                                1 tháng ( 5.000 đ/ngày)
+                                            <RadioButton value="1month" pointColor="#2c7be5">
+                                                <p className="radio-custom mb-0">1 tháng - 149.000 đ/tháng</p>
+                                                {/* <span className="text-muted">~ 5.000 đ/ngày</span> */}
                                             </RadioButton>
-                                            <RadioButton value="6months">
-                                                6 tháng ( 85.000 đ/tháng)
+                                            <RadioButton value="6months" pointColor="#2c7be5">
+                                                <p className="radio-custom mb-0">6 tháng - 519.000 đ/tháng</p>
+                                                <span className="text-muted small">~ 85.000 đ/tháng</span>
                                             </RadioButton>
-                                            <RadioButton value="12months">
-                                                12 tháng ( 59.000 đ/tháng)
+                                            <RadioButton value="12months" pointColor="#2c7be5">
+                                                <p className="radio-custom mb-0">12 tháng - 719.000 đ/tháng</p>
+                                                <span className="text-muted small">~ 59.000 đ/tháng</span>
                                             </RadioButton>
                                             
                                         </RadioGroup>
@@ -111,6 +114,9 @@ export default class HomePage extends React.Component {
                         }}
                     />
                 : null}
+                <style jsx>{`
+
+                `}</style>
             </>
         )
     }

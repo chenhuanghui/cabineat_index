@@ -58,11 +58,11 @@ export default class HomePage extends React.Component {
                         <div className="row align-items-center justify-content-center">
                             <div className="col-12 col-md-5 col-lg-6 col-xl-4 px-lg-6 my-5">
                                 <h1 className="display-4 text-center mb-0">Đăng ký</h1>
-                                <p className="text-muted text-center mb-5 mt-1">Tạo cửa hàng online của riêng bạn.</p>
+                                <p className="text-muted text-center mb-5 mt-1">Tạo nhà hàng online của riêng bạn.</p>
 
                                 <div>
                                     <div className="form-group">
-                                        <label>Tên thương hiệu</label>
+                                        <label>Thương hiệu</label>
                                         <input type="text" className="form-control" id="brand"/>
                                     </div>
                                     <div className="form-group">
@@ -73,17 +73,6 @@ export default class HomePage extends React.Component {
                                         <label>Số điện thoại</label>
                                         <input type="tel" className="form-control" placeholder="" id="tel"/>
                                     </div>
-                                    {/* <div className="form-group">
-                                        <label>Password</label>
-                                        <div className="input-group input-group-merge">
-                                            <input type="password" className="form-control form-control-appended" placeholder="Enter your password"/>
-                                            <div className="input-group-append"> 
-                                                <span className="input-group-text">
-                                                    <i className="fe fe-eye"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div> */}
                                     <div className="form-group">
                                         <label>Chọn gói sản phẩm</label>
                                         <RadioGroup onChange={(value)=> {console.log(value)} } value='6months' id="pack">

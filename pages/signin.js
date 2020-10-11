@@ -1,12 +1,6 @@
 import Head from 'next/head'
-import Nav from '../components/nav'
-import CasoureSlider from '../components/carousel-slider'
-import Footer from '../components/footer'
 import ModalPackage from "../components/modalPackage"
 
-import ReactMarkdown from "react-markdown";
-// documents: https://www.npmjs.com/package/react-radio-buttons
-import { RadioGroup, RadioButton } from 'react-radio-buttons';
 
 const AirtablePlus = require('airtable-plus');
 const airtable = new AirtablePlus({
@@ -86,7 +80,7 @@ export default class HomePage extends React.Component {
                                     </button>
 
                                     <div className="text-center"> 
-                                        <small className="text-muted text-center">Bạn chưa có tài khoản? <a href="/signin">Đăng ký</a>.</small>
+                                        <small className="text-muted text-center">Bạn chưa có tài khoản? <a href="/signup">Đăng ký</a>.</small>
                                     </div>
                                 </div>
                             </div>

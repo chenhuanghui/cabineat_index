@@ -1,10 +1,6 @@
 import Head from 'next/head'
-import Nav from '../components/nav'
-import CasoureSlider from '../components/carousel-slider'
-import Footer from '../components/footer'
 import ModalPackage from "../components/modalPackage"
 
-import ReactMarkdown from "react-markdown";
 // documents: https://www.npmjs.com/package/react-radio-buttons
 import { RadioGroup, RadioButton } from 'react-radio-buttons';
 

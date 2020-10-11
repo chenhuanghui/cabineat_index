@@ -33,6 +33,10 @@ class BrandEntity {
     //     return []
     // }
 
+    signin = async() => {
+        
+    }
+
     createBrand = async(dataObj) => {
         const brandData = await airtableBRAND.create({
             name: dataObj.name,
@@ -40,6 +44,7 @@ class BrandEntity {
             tel: dataObj.tel,
             package: dataObj.pack
         },{tableName:"Brand"});
+        return brandData
     }
 }
 

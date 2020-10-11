@@ -44,7 +44,7 @@ export default class HomePage extends React.Component {
         }
         console.log("brandObj: ", brandObj)
         const brand = await brandObject.createBrand(brandObj)
-        console.log("brand created: ", brand)
+        console.log(brand)
     }
 
     render() {
@@ -101,10 +101,12 @@ export default class HomePage extends React.Component {
                                         </RadioGroup>
                                     </div>
                                     
-                                    <button className="btn btn-lg btn-block btn-primary mb-3" onClick={this.signup}>Sign up</button>
+                                    <button className="btn btn-lg btn-block btn-primary mb-3" onClick={this.signup}>
+                                        Đăng ký
+                                    </button>
 
                                     <div className="text-center"> 
-                                        <small className="text-muted text-center">Already have an account? <a href="#">Log in</a>.</small>
+                                        <small className="text-muted text-center">Bạn đã có tài khoản? <a href="#">Đăng nhập</a>.</small>
                                     </div>
                                 </div>
                             </div>

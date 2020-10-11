@@ -38,7 +38,7 @@ class BrandEntity {
             name: dataObj.name,
             email: dataObj.email,
             tel: dataObj.tel,
-            pack: dataObj.pack
+            package: dataObj.pack
         },{tableName:"Brand"});
     }
 }

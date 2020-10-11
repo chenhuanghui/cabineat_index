@@ -40,7 +40,7 @@ export default class HomePage extends React.Component {
             name: $("#brand").val(),
             email: $("#email").val(),
             tel: $("#tel").val(),
-            pack: this.state.pack
+            pack: $("#pack").attr("value")
         }
         console.log("brandObj: ", brandObj)
         const brand = await brandObject.createBrand(brandObj)
@@ -87,11 +87,11 @@ export default class HomePage extends React.Component {
                                     </div> */}
                                     <div className="form-group">
                                         <label>Chọn gói sản phẩm</label>
-                                        <RadioGroup onChange={(value)=> {console.log(value)} } value='6month'>
+                                        <RadioGroup onChange={(value)=> {console.log(value)} } value='6month' id="pack">
                                             <RadioButton value="1month">
                                                 1 tháng ( 5.000 đ/ngày)
                                             </RadioButton>
-                                            <RadioButton value="6month">
+                                            <RadioButton value="6months">
                                                 6 tháng ( 85.000 đ/tháng)
                                             </RadioButton>
                                             <RadioButton value="12months">

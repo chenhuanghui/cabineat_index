@@ -105,7 +105,7 @@ export default class HomePage extends React.Component {
                                     </button>
 
                                     <div className="text-center"> 
-                                        <small className="text-muted text-center">Bạn đã có tài khoản? <a href="#">Đăng nhập</a>.</small>
+                                        <small className="text-muted text-center">Bạn đã có tài khoản? <a href="/signin">Đăng nhập</a>.</small>
                                     </div>
                                 </div>
                             </div>

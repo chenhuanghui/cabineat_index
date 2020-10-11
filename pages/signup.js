@@ -87,7 +87,7 @@ export default class HomePage extends React.Component {
                                     </div> */}
                                     <div className="form-group">
                                         <label>Chọn gói sản phẩm</label>
-                                        <RadioGroup onChange={(value)=> {console.log(value)} } value='6month' id="pack">
+                                        <RadioGroup onChange={(value)=> {console.log(value)} } value='6months' id="pack">
                                             <RadioButton value="1month">
                                                 1 tháng ( 5.000 đ/ngày)
                                             </RadioButton>

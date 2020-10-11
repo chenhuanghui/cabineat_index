@@ -44,7 +44,10 @@ export default class HomePage extends React.Component {
         }
         console.log("brandObj: ", brandObj)
         const brand = await brandObject.createBrand(brandObj)
+        
         console.log(brand)
+        if (brand) alert("Welcome to CabinEat")
+        
     }
 
     render() {

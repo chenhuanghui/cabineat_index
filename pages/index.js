@@ -303,7 +303,7 @@ export default class HomePage extends React.Component {
                             <p className="text-center mt-5"> {pricing.fields.hint}</p>
 
                             <div className="row align-items-center justify-content-center mt-3">                            
-                                <a href={pricing.fields.btn_href} className="btn btn-primary pl-3 pr-3" target="_blank">{pricing.fields.btn_title}</a>
+                                <a href={pricing.fields.btn_href} className="btn btn-primary pl-5 pr-5 pt-3 pb-3 font-weight-bold" target="_blank">{pricing.fields.btn_title}</a>
                             </div>
                         </section>
                     : null

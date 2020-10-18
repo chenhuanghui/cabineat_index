@@ -197,7 +197,8 @@ export default class HomePage extends React.Component {
                         <div className="container mt-n2">
                             <div className="row align-items-center justify-content-center">
                                 <div className="pl-5 pr-5 pt-0 pb-0">
-                                    <img className="img-fluid rounded"  src={hero && hero.fields.img && hero.fields.img[0].url}/>
+                                    <img className="img-fluid rounded d-none d-md-block"  src={hero && hero.fields.imgDesktop && hero.fields.imgDesktop[0].url}/>
+                                    <img className="img-fluid rounded d-block d-md-none"  src={hero && hero.fields.imgMobile && hero.fields.imgMobile[0].url}/>
                                 </div>
                             </div>
                         </div>

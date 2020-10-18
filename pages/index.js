@@ -4,6 +4,7 @@ import CasoureSlider from '../components/corsousel-new'
 import Footer from '../components/footer-new'
 
 import ReactMarkdown from "react-markdown";
+import $ from 'jquery';
 
 const AirtablePlus = require('airtable-plus');
 const airtable = new AirtablePlus({
@@ -24,12 +25,17 @@ export default class HomePage extends React.Component {
             more    :   null, 
             solution:   null, 
             call2action:null, 
-            stepready4sale:null
+            stepready4sale:null,
+            mHeight : 0
         }
     }
 
     async componentDidMount() { 
         let currentComponent = this
+
+        let clientHeight = window.innerHeight
+        currentComponent.setState({mHeight: clientHeight})
+        
         
         // start get data of brand
         const logoRes = await airtable.read({
@@ -175,14 +181,14 @@ export default class HomePage extends React.Component {
         
     }   
     render() {
-        const {brand, hero, feature, message, benefit, pricing, more, solution, call2action, stepready4sale} = this.state
+        const {brand, hero, feature, message, benefit, pricing, more, solution, call2action, stepready4sale, mHeight} = this.state
         return (
             <>
                 <Head>
                     <title>CabinEat - Trang chủ</title>
                 </Head>
                 <Nav />
-                <div className="main-container pt-5" style={{backgroundColor: "white"}}>                    
+                <div className="main-container pt-5" style={{backgroundColor: "white", minHeight: mHeight}}>                    
                     {hero 
                     ?
                         <section className="bg-dark custom">

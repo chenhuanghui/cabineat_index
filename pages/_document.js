@@ -11,7 +11,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="stylesheet" href="../assets/css/theme.min.css"></link>
-          <link rel="stylesheet" href="../assets/css/style.css"></link>
+          {/* <link rel="stylesheet" href="../assets/css/style.css"></link> */}
           <link rel="stylesheet" href="../assets/css/custom.css"></link>
           <link
             rel="stylesheet"
@@ -28,6 +28,7 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <div className="modal-backdrop fade"></div>
         </body>
       </Html>
     )

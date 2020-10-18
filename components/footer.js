@@ -35,7 +35,7 @@ export default class Footer extends React.Component {
         return(
             <>
                 <footer className="page-footer">
-                    <div className="content pad-vert-medium">
+                    <div className="container pad-vert-medium">
                         <nav className="primary text-align-left">
                             <div className="h6 gap-bottom-base">
                                 <a className="" href="#"><span className="arrow no-wrap">Về CabinEat</span></a>
@@ -105,6 +105,25 @@ export default class Footer extends React.Component {
                         </div>
                     </div>
                 </footer>
+                <style jsx>{`
+                .page-footer {
+                    position: relative;
+                    background-color: #030303;
+                    color: #737373;
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+                .pad-vert-medium {
+                    padding-top: 60px !important;
+                    padding-bottom: 60px !important;
+                }
+                @media (min-width: 1292px){
+                    .content {
+                        width: 1016px;
+                    }
+                }
+                    
+                `}</style>
             </>
         )
     }

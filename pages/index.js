@@ -191,7 +191,7 @@ export default class HomePage extends React.Component {
                                 <ReactMarkdown source={hero.fields.title} className="mt-0 mb-0 text-center markdown-custom h1"/> 
                                 <ReactMarkdown source={hero.fields.sub_title} className="text-center my-5 markdown-custom"/>
                                 <div className="row align-items-center justify-content-center">
-                                    <a className="btn btn-primary pl-5 pr-5 pt-3 pb-3 font-weight-bold" href={hero.fields.call2action_href} target="_blank">{hero.fields.call2action}</a>
+                                    <a className="btn btn-primary btn-lg font-weight-bold" href={hero.fields.call2action_href} target="_blank">{hero.fields.call2action}</a>
                                 </div>
                             </div>
                         </section> 
@@ -303,7 +303,7 @@ export default class HomePage extends React.Component {
                             <p className="text-center mt-5"> {pricing.fields.hint}</p>
 
                             <div className="row align-items-center justify-content-center mt-3">                            
-                                <a href={pricing.fields.btn_href} className="btn btn-primary pl-5 pr-5 pt-3 pb-3 font-weight-bold" target="_blank">{pricing.fields.btn_title}</a>
+                                <a href={pricing.fields.btn_href} className="btn btn-primary btn-lg font-weight-bold" target="_blank">{pricing.fields.btn_title}</a>
                             </div>
                         </section>
                     : null

@@ -44,10 +44,10 @@ export default class Nav extends React.Component {
                     <div className="navbar-collapse collapse ml-auto order-last" id="navbar" >
                         <ul className="navbar-nav mr-lg-auto">
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Công cụ</a>
+                                <a className="nav-link disable" href="#">Công cụ</a>
                             </li>  
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Kiến thức</a>
+                                <a className="nav-link disable" href="#">Kiến thức</a>
                             </li>
                         </ul>
                         <hr className="d-md-none"/>
@@ -61,14 +61,7 @@ export default class Nav extends React.Component {
                     <button className="navbar-toggler ml-auto" onClick={this.toggleMenu}>
                         <span className="navbar-toggler-icon"></span>
                     </button>      
-
-                    {/* <div className="navbar-user d-none d-md-flex ml-4" id="navbar" >
-                        <a href="http://my.cabineat.vn/sign-in" target="_blank" className="text text-dark"><span className="fe fe-user-check " style={{fontSize: "25px"}}></span></a>    
-                    </div> */}
                     
-                    {/* <button className="navbar-toggler ml-auto d-block d-md-none" onClick={this.showMenuModal}>
-                        <span className="navbar-toggler-icon"></span>
-                    </button> */}
                 </div>
             </nav>
             {this.state.openMenu 
@@ -83,6 +76,20 @@ export default class Nav extends React.Component {
         .nav-link {
             color: #1a1a1a !important;
             font-weight: bold !important;
+        }
+
+        .nav-link :hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .nav-link.disable {
+            color: #6e84a3 !important;
+            text-decoration: none;
+        }
+
+        .nav-link.disable :hover {
+            cursor: default
         }
 
         .navbar{

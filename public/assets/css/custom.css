@@ -30,7 +30,7 @@
 }
 
 
-.custom h1 {
+.custom h1, .custom .h1 {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: -0.4px;
@@ -38,21 +38,21 @@
 }
 
 @media (min-width: 718px) {
-    .custom h1 {
+    .custom h1, .custom .h1 {
         font-size: 44px;
         line-height: 52px;
         letter-spacing: -0.6px;
     }
 }
 
-.custom h2{
+.custom h2, .custom .h2{
     font-size: 24px;
     line-height: 34px;
     letter-spacing: -0.2px;
 }
 
 @media (min-width: 718px) {
-    .custom h2 {
+    .custom h2, .custom .h2 {
         font-size: 32px;
         line-height: 44px;
         letter-spacing: -0.4px;

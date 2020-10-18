@@ -41,7 +41,6 @@ export default class CarouselNew extends React.Component {
               items: 1
             }
         };
-        console.log(this.props.data[0], this.props.data[0].fields.img[0].url)
         return(
             
             <section className="pb-6 custom">                
@@ -63,12 +62,8 @@ export default class CarouselNew extends React.Component {
                                             </div>
                                         </div>
                                         <div className="row pt-4">
-                                            <h2 className="mb-0 mb-n3" data-title-for={item.id}>
-                                                <ReactMarkdown source={item.fields.title} />
-                                            </h2>
-                                            <p data-desc-for={item.id}>
-                                                <ReactMarkdown source={item.fields.desc} />
-                                            </p>
+                                            <ReactMarkdown source={item.fields.title} className="mb-0 mb-n3 h2"/>
+                                            <ReactMarkdown source={item.fields.desc} />
                                         </div>
                                     </div>
                                 </div>
@@ -81,6 +76,11 @@ export default class CarouselNew extends React.Component {
                     list-style-type : none !important;
                     margin: 0 !important;
                     padding: 0 !important;
+                }
+
+                .carousel-nav {
+                    position: absolute;
+                    bottom: -25px ~!important;
                 }
                 
                 `}</style>

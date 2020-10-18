@@ -89,7 +89,7 @@ export default class Nav extends React.Component {
             position: fixed;
             width: 100%;
             top: 0px;
-            z-index: 1000
+            z-index: 1001
         }
         
         `}</style>

@@ -81,9 +81,9 @@ export default class FooterNew extends React.Component {
                             </div>
                         </div>
                         
-                        <div className="row mt-4">
-                            <div className="card-body">
-                                <p className="copyright text-md-left text-center" style={{color: "#737373 !important"}}>© 2020 CabinEat Pte. Ltd.</p>
+                        <div className="row">                            
+                            <div className="col-12 col-md-4">
+                                <p className="copyright text-md-left text-center ml-3 mt-3" style={{color: "#737373 !important"}}>© 2020 CabinEat Pte. Ltd.</p>
                             </div>
                             
                             {/* <div className="card-body ml-md-auto">

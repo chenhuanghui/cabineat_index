@@ -9,12 +9,29 @@
   fbq('init', '962321430930011');
   fbq('track', 'PageView');
 
-  // chat fuel --> connect to messenger of CabinEat Page chat.
-  var div = document.createElement('div');
-  div.className = 'fb-customerchat';
-  div.setAttribute('page_id', '104712234753529');
-  div.setAttribute('ref', '');
-  document.body.appendChild(div);
+
+      
+//   window.fbAsyncInit = function() {
+//     FB.init({
+//       xfbml            : true,
+//       version          : 'v8.0'
+//     });
+//   };
+
+//   (function(d, s, id) {
+//   var js, fjs = d.getElementsByTagName(s)[0];
+//   if (d.getElementById(id)) return;
+//   js = d.createElement(s); js.id = id;
+//   js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+//   fjs.parentNode.insertBefore(js, fjs);
+// }(document, 'script', 'facebook-jssdk'));
+
+
+  // var div = document.createElement('div');
+  // div.className = 'fb-customerchat';
+  // div.setAttribute('page_id', '104712234753529');
+  // div.setAttribute('ref', '');
+  // document.body.appendChild(div);
   window.fbMessengerPlugins = window.fbMessengerPlugins || {
     init: function () {
       FB.init({

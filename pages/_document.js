@@ -27,12 +27,19 @@ class MyDocument extends Document {
           />
           
           <script src="/static/fb.js" />
+          
         </Head>
         <body>
           <Main />
           <NextScript />
           <div className="modal-backdrop fade"></div>
-          
+          <div id="fb-root"></div>
+          <div className="fb-customerchat"
+            attribution="setup_tool"
+            page_id="104712234753529"
+            logged_in_greeting="Xin chào, CabinEat có thể giúp gì cho Bạn ?"
+            logged_out_greeting="Xin chào, CabinEat có thể giúp gì cho Bạn ?">            
+          </div>
         </body>
       </Html>
     )

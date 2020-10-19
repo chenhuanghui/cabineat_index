@@ -298,7 +298,7 @@ export default class HomePage extends React.Component {
                                 <div className="col-12 col-md-3 card-body border ml-4 mr-4 mb-4 pt-5 pb-5">
                                     <h3 className="text-center"> {pricing.fields.packtitle3}</h3>
                                     <div className="mb-1 mt-3">
-                                        <h1 className="text-center text-primary " style={{letterSpacing:"-2px"}}> {pricing.fields.packprice3}
+                                        <h1 className="text-center text-primary" style={{letterSpacing:"-2px"}}> {pricing.fields.packprice3}
                                             <span className="small font-weight-normal ml-2" style={{letterSpacing:"0px"}}>vnđ</span>
                                         </h1>
                                     </div>

@@ -189,11 +189,11 @@ export default class HomePage extends React.Component {
     }   
 
     wantToSignUpHero() {
-        mixpanel.track("want to signup account",{btn: "btn_hero"});
+        mixpanel.track("want to signup account",{"btn": "btn_hero"});
     }
 
     wantToSignUpPricing() {
-        mixpanel.track("want to signup account",{btn: "btn_pricing"});
+        mixpanel.track("want to signup account",{"btn": "btn_pricing"});
     }
 
     render() {

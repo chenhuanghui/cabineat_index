@@ -196,24 +196,6 @@ export default class HomePage extends React.Component {
         mixpanel.track("signup_wish",{"source_btn": "btn_pricing"});
     }
 
-    signupSuccess() {
-        mixpanel.track("signup_success");
-        mixpanel.people.set({"tel":"0941926368"});
-        mixpanel.identify("0941926368");
-    }
-
-    bookPlan() {
-        mixpanel.people.set({ "plan": "6months", "payment_status":"not confirmed" })
-        mixpanel.identify("0941926368")
-    }
-
-    paymentConfirmed() {
-        mixpanel.track("payment_success")
-        mixpanel.people.set({"payment_status":"success" })
-        mixpanel.people.track_charge(519000)
-        mixpanel.identify("0941926368")
-    }
-
     render() {
         const {brand, hero, feature, message, benefit, pricing, more, solution, call2action, stepready4sale, mHeight} = this.state
         return (
@@ -232,9 +214,6 @@ export default class HomePage extends React.Component {
                                 <ReactMarkdown source={hero.fields.sub_title} className="text-center my-5 markdown-custom"/>
                                 <div className="row align-items-center justify-content-center">
                                     <a className="btn btn-primary btn-lg font-weight-bold" href={hero.fields.call2action_href} target="_blank" onClick={this.wantToSignUpHero}>{hero.fields.call2action}</a>
-                                    <a className="btn btn-primary btn-lg font-weight-bold" href="#" onClick={this.signupSuccess}>SignUp Success</a>
-                                    <a className="btn btn-primary btn-lg font-weight-bold" href="#" onClick={this.bookPlan}>Book Plan</a>
-                                    <a className="btn btn-primary btn-lg font-weight-bold" href="#" onClick={this.paymentConfirmed}>Payment Confimred</a>
                                 </div>
                             </div>
                         </section> 

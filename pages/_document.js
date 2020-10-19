@@ -11,6 +11,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="stylesheet" href="../assets/css/theme.min.css"></link>
+          <link rel="icon" href="../assets/img/favicon.ico"></link>
           {/* <link rel="stylesheet" href="../assets/css/style.css"></link> */}
           <link rel="stylesheet" href="../assets/css/custom.css"></link>
           <link

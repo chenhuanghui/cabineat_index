@@ -40,7 +40,7 @@ export default class CarouselNew extends React.Component {
               breakpoint: { max: 464, min: 0 },
               items: 1
             }
-        };
+        }
         return(
             
             <section className="pb-6 custom">                

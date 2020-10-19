@@ -16,10 +16,6 @@ export default class Nav extends React.Component {
     }
     
     toggleMenu = () => {
-        // console.log("modal open")
-        // $("body").addClass("modal-open")
-        // $(".modal-backdrop").show()
-        // this.setState({openMenu: true})
         if ($(".navbar-collapse").hasClass("show")) {
             $(".navbar-collapse").removeClass("show")
         } else {
@@ -27,8 +23,7 @@ export default class Nav extends React.Component {
         }        
     }
 
-    render() {        
-           
+    render() {           
         return(
             <>
             <nav className="navbar navbar-expand-lg navbar-light" id="topnav">

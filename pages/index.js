@@ -187,6 +187,11 @@ export default class HomePage extends React.Component {
         // end get data of call2action
         
     }   
+
+    wantToSignUp() {
+        mixpanel.track("want to signup account");
+    }
+
     render() {
         const {brand, hero, feature, message, benefit, pricing, more, solution, call2action, stepready4sale, mHeight} = this.state
         return (
@@ -204,7 +209,7 @@ export default class HomePage extends React.Component {
                                 <ReactMarkdown source={hero.fields.title} className="mt-0 mb-0 text-center markdown-custom h1"/> 
                                 <ReactMarkdown source={hero.fields.sub_title} className="text-center my-5 markdown-custom"/>
                                 <div className="row align-items-center justify-content-center">
-                                    <a className="btn btn-primary btn-lg font-weight-bold" href={hero.fields.call2action_href} target="_blank">{hero.fields.call2action}</a>
+                                    <a className="btn btn-primary btn-lg font-weight-bold" href={hero.fields.call2action_href} target="_blank" onClick={this.wantToSignUp}>{hero.fields.call2action}</a>
                                 </div>
                             </div>
                         </section> 

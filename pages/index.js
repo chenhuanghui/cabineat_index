@@ -12,6 +12,9 @@ const airtable = new AirtablePlus({
     apiKey: 'keyLNupG6zOmmokND'
 });
 
+var mixpanel = require('mixpanel-browser');
+mixpanel.init("eb9876c08581cc2c1ab8c3e4a94b50fb");
+
 export default class HomePage extends React.Component {
     constructor(props){
         super(props);
@@ -31,6 +34,10 @@ export default class HomePage extends React.Component {
     }
 
     async componentDidMount() { 
+        // tracking
+        mixpanel.track("index page view");
+
+        // fetching data
         let currentComponent = this
 
         let clientHeight = window.innerHeight

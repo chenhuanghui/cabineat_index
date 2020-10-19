@@ -35,7 +35,7 @@ export default class HomePage extends React.Component {
 
     async componentDidMount() { 
         // tracking
-        mixpanel.track("index page view");
+        mixpanel.track("visit",{"page":"cabineat.vn"})
 
         // fetching data
         let currentComponent = this

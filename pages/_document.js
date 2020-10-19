@@ -27,7 +27,7 @@ class MyDocument extends Document {
           />
           
           <script src="/static/fb.js" />
-          
+          <script src="/static/ga.js" />
         </Head>
         <body>
           <Main />

@@ -38,21 +38,22 @@ export default class FooterNew extends React.Component {
                     <div className="container py-5">
                         <div className="row mt-4 pl-1 pr-1">
                             <div className="col-12 col-md-3">
-                                <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>CabinEat</h4>
+                                <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Giới thiệu</h4>
                                 <ul className="footer-nav pl-0 mb-4">
-                                    <li className="mb-2"><a href="/about">Giới thiệu</a></li>
+                                    <li className="mb-2"><a href="/about">Về CabinEat</a></li>
                                     <li className="mb-2"><a href="#">Kiến thức</a></li>
-                                    <li className="mb-2"><a href="#">Đối tác</a></li>
                                     <li className="mb-2"><a href="#">Việc làm</a></li>
                                     <li className="mb-2"><a href="#">Nhà đầu tư</a></li>
                                 </ul>                                                                        
                             </div>
                             <div className="col-12 col-md-3">
-                                <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Tính năng</h4>
+                                <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>CabinEat</h4>
                                 <ul className="footer-nav pl-0 mb-4">
                                     <li className="mb-2"><a href="#">Giỏ hàng thông minh</a></li>
                                     <li className="mb-2"><a href="#">Xử lý đơn hàng</a></li>
                                     <li className="mb-2"><a href="#">Hệ thống quản lý</a></li>
+                                    <li className="mb-2"><a href="http://bit.ly/cabineat-signup">Tạo nhà hàng</a></li>
+                                    <li className="mb-2"><a href="http://bit.ly/my-cabineat">Đăng nhập</a></li>
                                 </ul>                                    
                             </div>
                             <div className="col-12 col-md-3">

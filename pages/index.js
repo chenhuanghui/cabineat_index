@@ -95,11 +95,27 @@ export default class HomePage extends React.Component {
         // end get data of feature
     
         // start get data of stepready4saleRes
-        const stepready4saleRes = await airtable.read({
-            filterByFormula: `isActive = "1"`,
+        const stepready4saleStep = await airtable.read({
+            filterByFormula: `AND(type="step", isActive = "1")`,
             sort: [{field: 'step', direction: 'asc'}]
         },{tableName:"stepready4sale"});
+
+        const stepready4saleTitle = await airtable.read({
+            filterByFormula: `AND(type="title", isActive = "1")`,
+            maxRecords: 1
+        },{tableName:"stepready4sale"});
+
+        const stepready4saleDesc = await airtable.read({
+            filterByFormula: `AND(type="desc", isActive = "1")`,
+            maxRecords: 1
+        },{tableName:"stepready4sale"});
         
+        var stepready4saleRes = {
+            title : stepready4saleTitle[0].fields.title,
+            desc : stepready4saleDesc[0].fields.title,
+            step : stepready4saleStep,
+        }
+
         // console.log(stepready4saleRes)
         currentComponent.setState({stepready4sale: stepready4saleRes})
         // end get data of stepready4saleRes
@@ -211,7 +227,7 @@ export default class HomePage extends React.Component {
                             <div className="container-fluid py-6">                            
                                 <p className="text-center pre-title text-uppercase font-weight-bold small" style={{letterSpacing: "2px"}}>{hero.fields.pre_title}</p>
                                 <ReactMarkdown source={hero.fields.title} className="mt-0 mb-0 text-center markdown-custom h1"/> 
-                                <ReactMarkdown source={hero.fields.sub_title} className="text-center my-5 markdown-custom"/>
+                                <ReactMarkdown source={hero.fields.sub_title} className="text-center mt-5 markdown-custom mb-3"/>
                                 <div className="row align-items-center justify-content-center">
                                     <a className="btn btn-primary btn-lg font-weight-bold" href={hero.fields.call2action_href} target="_blank" onClick={this.wantToSignUpHero}>{hero.fields.call2action}</a>
                                 </div>
@@ -278,17 +294,25 @@ export default class HomePage extends React.Component {
                     : null
                     }
                 
+                    {stepready4sale
+                    ?
+                        <section className="container custom py-3">
+                            <div className="pl-3 row">
+                                <div className="col-12 col-md-6">
+                                    <ReactMarkdown source={stepready4sale.title} className="header-title mb-3 markdown-custom h2"/>
+                                    <p>{stepready4sale.desc}</p>
+                                </div>
+                            </div>
+                            {stepready4sale && stepready4sale.step.length > 0
+                                ? <CasoureSlider data = {stepready4sale.step}/>
+                                : null
+                            }
+                            <hr className="mt-2"/>
+                        </section>
+                    
+                    :null
 
-                    <section className="container custom py-3">
-                        <div className="pl-3">
-                            <h2 className="header-title mb-3">4 bước cơ bản <br/> có ngay đơn hàng</h2>
-                        </div>
-                        {stepready4sale && stepready4sale.length > 0
-                            ? <CasoureSlider data = {stepready4sale}/>
-                            : null
-                        }
-                        <hr className="mt-2"/>
-                    </section>
+                    }
                     
                     {pricing
                     ?

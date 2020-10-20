@@ -28,7 +28,7 @@ export default class Nav extends React.Component {
             <>
             <nav className="navbar navbar-expand-lg navbar-light" id="topnav">
                 <div className="container">          
-                    <a className="navbar-brand mr-auto mt-2" href="#">
+                    <a className="navbar-brand mr-auto mt-2" href="/">
                         <img src="./assets/img/logo.svg" alt="..." className="navbar-brand-img" style={{maxHeight: "2rem"}}/>
                     </a>
 

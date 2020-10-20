@@ -76,3 +76,8 @@ body {
 .modal-backdrop {
     display: none;
 }
+
+.list-none-style {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+}

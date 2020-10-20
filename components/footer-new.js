@@ -40,7 +40,7 @@ export default class FooterNew extends React.Component {
                             <div className="col-12 col-md-3">
                                 <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>CabinEat</h4>
                                 <ul className="footer-nav pl-0 mb-4">
-                                    <li className="mb-2"><a href="#">Giới thiệu</a></li>
+                                    <li className="mb-2"><a href="/about">Giới thiệu</a></li>
                                     <li className="mb-2"><a href="#">Kiến thức</a></li>
                                     <li className="mb-2"><a href="#">Đối tác</a></li>
                                     <li className="mb-2"><a href="#">Việc làm</a></li>

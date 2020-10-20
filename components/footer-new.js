@@ -35,7 +35,7 @@ export default class FooterNew extends React.Component {
         return(
             <>
                 <footer className="bg-dark">
-                    <div className="container py-3">
+                    <div className="container py-5">
                         <div className="row mt-4 pl-1 pr-1">
                             <div className="col-12 col-md-3">
                                 <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>CabinEat</h4>

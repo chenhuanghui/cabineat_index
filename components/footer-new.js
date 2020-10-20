@@ -48,6 +48,14 @@ export default class FooterNew extends React.Component {
                                 </ul>                                                                        
                             </div>
                             <div className="col-12 col-md-3">
+                                <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Tính năng</h4>
+                                <ul className="footer-nav pl-0 mb-4">
+                                    <li className="mb-2"><a href="#">Giỏ hàng thông minh</a></li>
+                                    <li className="mb-2"><a href="#">Xử lý đơn hàng</a></li>
+                                    <li className="mb-2"><a href="#">Hệ thống quản lý</a></li>
+                                </ul>                                    
+                            </div>
+                            <div className="col-12 col-md-3">
                                 <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Cabin Platform</h4>
                                 <ul className="footer-nav pl-0 mb-4">
                                     <li className="mb-2"><a href="#" >Cabin Food</a></li>
@@ -57,16 +65,7 @@ export default class FooterNew extends React.Component {
                                 </ul>                                    
                             </div>
                             <div className="col-12 col-md-3">
-                                <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Nhà phát triển</h4>
-                                <ul className="footer-nav pl-0 mb-4">
-                                    <li className="mb-2"><a href="#">Nền tảng</a></li>
-                                    <li className="mb-2"><a href="#">Đăng ký</a></li>
-                                    <li className="mb-2"><a href="#">Tài liệu</a></li>                                    
-                                    <li className="mb-2"><a href="#">APIs</a></li>                   
-                                </ul>                                    
-                            </div>
-                            <div className="col-12 col-md-3">
-                                <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Công cụ</h4>
+                                <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Công cụ hỗ trợ</h4>
                                 <ul className="footer-nav pl-0 mb-4">
                                     <li className="mb-2"><a href="#">SMS quảng cáo</a></li>
                                     <li className="mb-2"><a href="#">Tạo QRCode</a></li>
@@ -74,6 +73,26 @@ export default class FooterNew extends React.Component {
                                     <li className="mb-2"><a href="#">Kho ảnh miễn phi</a></li>
                                 </ul>                                    
                             </div>
+                        </div>
+
+                        <div className="row mt-4 pl-1 pr-1">
+                            <div className="col-12 col-md-3">
+                                <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Đối tác</h4>
+                                <ul className="footer-nav pl-0 mb-4">
+                                    <li className="mb-2"><a href="#">Vận chuyển</a></li>                                    
+                                    <li className="mb-2"><a href="#">Đào tạo</a></li>
+                                    <li className="mb-2"><a href="#">Truyền thông</a></li>
+                                </ul>                                                                        
+                            </div>
+                            <div className="col-12 col-md-3">
+                                <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Nhà phát triển</h4>
+                                <ul className="footer-nav pl-0 mb-4">
+                                    <li className="mb-2"><a href="#">Nền tảng</a></li>
+                                    <li className="mb-2"><a href="#">Đăng ký</a></li>
+                                    <li className="mb-2"><a href="#">Tài liệu</a></li>                                    
+                                    <li className="mb-2"><a href="#">APIs</a></li>                   
+                                </ul>                                    
+                            </div>                            
                         </div>
 
                         <div className="row">

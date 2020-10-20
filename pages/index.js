@@ -272,16 +272,20 @@ export default class HomePage extends React.Component {
                                 </div>
                             </div>
                         </div>
+                        <hr className="mt-6"/>
                         
                     </section>
                     : null
                     }
                 
 
-                    <section className="container">
+                    <section className="container custom py-3">
+                        <div className="pl-3">
+                            <h2 className="header-title mb-3">4 bước cơ bản <br/> có ngay đơn hàng</h2>
+                        </div>
                         {stepready4sale && stepready4sale.length > 0
-                        ? <CasoureSlider data = {stepready4sale}/>
-                        : null
+                            ? <CasoureSlider data = {stepready4sale}/>
+                            : null
                         }
                         <hr className="mt-2"/>
                     </section>

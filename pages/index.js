@@ -298,7 +298,7 @@ export default class HomePage extends React.Component {
                     ?
                         <section className="container custom py-3">
                             <div className="pl-3 row">
-                                <div className="col-12 col-md-6">
+                                <div className="col-12 col-md-8">
                                     <ReactMarkdown source={stepready4sale.title} className="header-title mb-3 markdown-custom h2"/>
                                     <p>{stepready4sale.desc}</p>
                                 </div>

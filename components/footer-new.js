@@ -94,6 +94,20 @@ export default class FooterNew extends React.Component {
                                     <li className="mb-2"><a href="#">APIs</a></li>                   
                                 </ul>                                    
                             </div>                            
+                            <div className="col-12 col-md-3">
+                                <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Hỗ trợ & Liên hệ</h4>
+                                <ul className="footer-nav pl-0 mb-4">
+                                    <li className="mb-2"><a href="#">Liên hệ kinh doanh</a></li>
+                                    <li className="mb-2"><a href="#">Email đến CabinEat</a></li>
+                                    <li className="mb-2"><a href="#">Hướng dẫn</a></li>
+                                </ul>                                    
+                            </div>
+                            <div className="col-12 col-md-3">
+                                <div className="mt-4 mt-md-0">
+                                    <h2>CabinEat</h2>
+                                    <p>Giúp bạn sở hữu ngay nhà hàng online sẵn sàng kinh doanh với các công nghệ hiện đại nhất chỉ trong 30s.</p>
+                                </div>
+                            </div>
                         </div>
 
                         <div className="row">

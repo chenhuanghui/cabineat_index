@@ -119,7 +119,7 @@ export default class HomePage extends React.Component {
                         <div className="py-4 ">
                             <h2 className="text-center">Email</h2>
                             <ul className="list-none-style text-center">
-                                <li className="mb-2"><p className="mb-0"> Support: <span className="font-weight-bold"> hello@cabineat.vn</span></p></li>
+                                <li className="mb-2"><p className="mb-0"> Hỗ trợ: <span className="font-weight-bold"> hello@cabineat.vn</span></p></li>
                             </ul>
                         </div>
                     <hr />

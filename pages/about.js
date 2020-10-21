@@ -45,7 +45,7 @@ export default class HomePage extends React.Component {
             maxRecords : 1
         },{tableName:"about_hero"});
         
-        console.log("hero", hero_res)
+        // console.log("hero", hero_res)
         if(hero_res.length > 0 ) {
             var temp = []
             for(var i=0; i<hero_res[0].fields.bgImages.length; i++) {

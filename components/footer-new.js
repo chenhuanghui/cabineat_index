@@ -59,7 +59,7 @@ export default class FooterNew extends React.Component {
                             <div className="col-12 col-md-3">
                                 <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Cabin Platform</h4>
                                 <ul className="footer-nav pl-0 mb-4">
-                                    <li className="mb-2"><a href="#" >Cabin Food</a></li>
+                                    <li className="mb-2"><a href="http://www.cabinfood.vn" target="_blank">Cabin Food</a></li>
                                     <li className="mb-2"><a href="#" >Cabin POS</a></li>
                                     <li className="mb-2"><a href="#" >Cabin Marketing</a></li>
                                     <li className="mb-2"><a href="#" >Cabin Academy</a></li>
@@ -105,7 +105,7 @@ export default class FooterNew extends React.Component {
                             <div className="col-12 col-md-3">
                                 <div className="mt-4 mt-md-0">
                                     <h2>CabinEat</h2>
-                                    <p>Giúp bạn sở hữu ngay nhà hàng online sẵn sàng kinh doanh với các công nghệ hiện đại nhất chỉ trong 30s.</p>
+                                    <p>Giúp bạn sở hữu ngay nhà hàng online - sẵn sàng kinh doanh với các công nghệ hiện đại nhất chỉ trong 30s.</p>
                                 </div>
                             </div>
                         </div>

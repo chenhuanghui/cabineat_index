@@ -122,7 +122,6 @@ export default class HomePage extends React.Component {
                                 <li className="mb-2"><p className="mb-0"> Hỗ trợ: <span className="font-weight-bold"> hello@cabineat.vn</span></p></li>
                             </ul>
                         </div>
-                    <hr />
                     </section>
 
                     

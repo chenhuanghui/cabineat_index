@@ -280,7 +280,13 @@ export default class HomePage extends React.Component {
                             <div className="col-12 col-md-6 card-body">
                                 <ReactMarkdown source={message.fields.title} className="header-title mb-3 markdown-custom h2"/>
                                 <p>{message.fields.desc}</p>
-                                <a href={message.fields.btn_href} className="text-primary card-title"> {message.fields.btn_title} <span className="fe fe-chevrons-right ml-2"></span></a>
+                                <ul className="check-list list-none-style ml-md-4" style={{paddingLeft: "calc(5px + 1.75em)"}}>
+                                    <li className="mb-3"> <span className="fe fe-check mr-2 text-primary"></span>Có ngay trang đặt món cho khách hàng được thiết kế tối ưu cho các loại thiết bị</li>
+                                    <li className="mb-3"><span className="fe fe-check mr-2 text-primary"></span>Kênh xử lý đơn hàng chuyên biệt từ delivery, và đồng bộ các dịch vụ vận chuyển COD</li>
+                                    <li className="mb-3"><span className="fe fe-check mr-2 text-primary"></span>Quản lý đơn hàng, khách hàng, sản phẩm và các dữ liệu quan trọng chỉ trong một hệ thống </li>
+                                    <li className="mb-3"><span className="fe fe-check mr-2 text-primary"></span>Chủ động xây dựng các chương trình khuyến mãi, tiếp cận khách hàng bằng các công cụ và khuôn mẫu marketing được tích hợp sẵn </li>
+                                </ul>
+                                <a href={message.fields.btn_href} className="text-primary card-title font-weight-bold"> {message.fields.btn_title} <span className="fe fe-chevrons-right ml-2"></span></a>
                             </div>
                             <div className="col-12 col-md-6 d-none d-md-block">
                                 <div className="align-items-center justify-content-center">
@@ -372,6 +378,8 @@ export default class HomePage extends React.Component {
                 // .bg-invert-to-white, .bg-theme-to-white {
                 //     background-image: linear-gradient(to bottom, #030303 0%, #030303 50%, #fff 50%, #fff 100%);
                 // }
+
+                
                 
 
                 `}</style>

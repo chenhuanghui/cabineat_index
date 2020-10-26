@@ -45,7 +45,7 @@ export default class FooterNew extends React.Component {
                             </div>
                             <div className="row align-items-center justify-content-center">
                                 <p className="font-weight-bold text-center">Hãy để chúng tôi giúp tăng trưởng hoạt động kinh doanh của bạn.</p>
-                                <p className="text-center">Hệ thống <a href="http://cabineat.vn">cabineat</a> sẽ giúp bạn chủ động, đơn giản hóa các hoạt động, thiết lập các giải pháp hiện đại ứng dụng công nghệ giúp tối ưu hoạt động kinh doanh của bạn.</p>
+                                <p className="text-center">Hệ thống <a href="http://cabineat.vn" name="cabineat nha hang online">cabineat</a> sẽ giúp bạn chủ động, đơn giản hóa các hoạt động, thiết lập các giải pháp hiện đại ứng dụng công nghệ giúp tối ưu hoạt động kinh doanh của bạn.</p>
                                 <a href="#" className="font-weight-bold text-center">Tạo nhà hàng online ngay <span className="fe fe-chevrons-right"></span></a>
                             </div>
                         </div>
@@ -55,10 +55,9 @@ export default class FooterNew extends React.Component {
                     <div className="container py-5">
                         <div className="row mt-4 pl-1 pr-1">
                             <div className="col-12 col-md-3">
-                                <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Tổng quan</h4>
+                                <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Công ty</h4>
                                 <ul className="footer-nav pl-0 mb-4">
                                     <li className="mb-2"><a href="/about">Giới thiệu</a></li>
-                                    <li className="mb-2"><a href="#">Kiến thức</a></li>
                                     <li className="mb-2"><a href="#">Việc làm</a></li>
                                     <li className="mb-2"><a href="#">Nhà đầu tư</a></li>
                                 </ul>                                                                        
@@ -66,9 +65,10 @@ export default class FooterNew extends React.Component {
                             <div className="col-12 col-md-3">
                                 <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>CabinEat</h4>
                                 <ul className="footer-nav pl-0 mb-4">
-                                    <li className="mb-2"><a href="#">Giỏ hàng thông minh</a></li>
+                                    <li className="mb-2"><a href="#">Kênh bán hàng</a></li>
                                     <li className="mb-2"><a href="#">Xử lý đơn hàng</a></li>
                                     <li className="mb-2"><a href="#">Hệ thống quản lý</a></li>
+                                    <li className="mb-2"><a href="#">Kiến thức</a></li>
                                     <li className="mb-2"><a href="http://bit.ly/cabineat-signup">Tạo nhà hàng</a></li>
                                     <li className="mb-2"><a href="http://bit.ly/my-cabineat">Đăng nhập</a></li>
                                 </ul>                                    
@@ -79,11 +79,11 @@ export default class FooterNew extends React.Component {
                                     <li className="mb-2"><a href="http://cabinfood.vn" target="_blank">Cabin Food</a></li>
                                     <li className="mb-2"><a href="#" >Cabin POS</a></li>
                                     <li className="mb-2"><a href="#" >Cabin Marketing</a></li>
-                                    <li className="mb-2"><a href="#" >Cabin Academy</a></li>
+                                    <li className="mb-2"><a href="#" >Cabinverse</a></li>
                                 </ul>                                    
                             </div>
                             <div className="col-12 col-md-3">
-                                <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Công cụ hỗ trợ</h4>
+                                <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Công cụ</h4>
                                 <ul className="footer-nav pl-0 mb-4">
                                     <li className="mb-2"><a href="#">SMS quảng cáo</a></li>
                                     <li className="mb-2"><a href="#">Tạo QRCode</a></li>
@@ -114,9 +114,8 @@ export default class FooterNew extends React.Component {
                             <div className="col-12 col-md-3">
                                 <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Hỗ trợ & Liên hệ</h4>
                                 <ul className="footer-nav pl-0 mb-4">
-                                    <li className="mb-2"><a href="#">Liên hệ kinh doanh</a></li>
-                                    <li className="mb-2"><a href="#">Email đến CabinEat</a></li>
-                                    <li className="mb-2"><a href="#">Hướng dẫn</a></li>
+                                    <li className="mb-2"><a href="#">Liên hệ</a></li>
+                                    <li className="mb-2"><a href="mailto:hello@cabineat.vn">Email</a></li>
                                 </ul>                                    
                             </div>
                             <div className="col-12 col-md-3">

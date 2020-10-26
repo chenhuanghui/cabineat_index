@@ -16,10 +16,10 @@ export default class Nav extends React.Component {
     }
     
     toggleMenu = () => {
-        if ($(".navbar-collapse").hasClass("show")) {
-            $(".navbar-collapse").removeClass("show")
+        if ($("#navbar").hasClass("show")) {
+            $("#navbar").removeClass("show")
         } else {
-            $(".navbar-collapse").addClass("show")
+            $("#navbar").addClass("show")
         }        
     }
 

@@ -98,7 +98,7 @@ export default class HomePage extends React.Component {
                         </div>
                     </div>
 
-                    {/* <nav className="navbar navbar-expand-lg  navbar-light" id="topnav">
+                    <nav className="navbar navbar-expand-lg  navbar-light" id="topnav">
                         <div className="container">                                      
                             <div className="navbar-collapse collapse mr-auto order-last" id="sub-nav" >
                                 <ul className="navbar-nav mr-lg-auto">
@@ -116,16 +116,14 @@ export default class HomePage extends React.Component {
                                     </li>
                                 </ul>
                             </div>   
-                            <button className="navbar-toggler ml-auto" onClick={this.toggleSubNav}>
-                                
-                                <div className="row">
-                                    <p className="mr-3 mt-2">Chọn danh mục</p>
-                                    <p className="ml-auto"></p>
-                                    <span className="navbar-toggler-icon ml-auto"></span>
+                            <div className="navbar-toggler" onClick={this.toggleSubNav} style={{width: "100%"}}>
+                                <div className="row pl-3 pr-3">
+                                    <span className="mr-auto mt-2">Chọn chủ đề</span>
+                                    <span className="fe fe-chevron-down "></span>
                                 </div>
-                            </button>                               
+                            </div>                               
                         </div>                        
-                    </nav> */}
+                    </nav>
 
                     <div className="section " id="">
                         <div className="container py-4 py-md-6">
@@ -133,9 +131,15 @@ export default class HomePage extends React.Component {
                                 <div className="col-12 col-md-9">
                                     <div className="container">
                                         <div className="row">
+                                            <div className="col-12 article-item">
+                                                <img className="img-fluid" src="https://cdn.shopify.com/shopifycloud/brochure/assets/content-marketing/blog/blog_header/get-started-large-a46ee8d7c314de2b8faa5fdcd910ca5041420267f8efaea623e473eecd15f41c.jpg?quality=50" />
+                                                <p className="py-4">There are many successful businesses that aren’t born from unique ideas. There’s still value in looking for tried-and-true business ideas as there are many ways to make a business stand out beyond the products you sell. It’s how you use your desire to turn an idea into action that can make you a successful independent business owner. Today is a great day to start a business.</p>
+                                            </div>
+                                        </div>
+                                        <div className="row">
                                             <div className="col-12 col-md-6 article-item mb-4">
                                                 <img className="img-fluid" src="https://cdn.shopify.com/s/files/1/0070/7032/files/Shopify_makeup_line-header.jpg?v=1603138525&width=600" />
-                                                <p className="mt-2 mb-2">Business Ideas</p>
+                                                <p className="pt-3 mb-2 text-primary">Business Ideas</p>
                                                 <h3 className="mb-2">How to Launch a Makeup Brand and Sell Online: The Ultimate Guide</h3>
                                                 <p className="small">
                                                     by <span className="text-primary">Dayna Winter</span>, Oct 20, 2020
@@ -143,7 +147,7 @@ export default class HomePage extends React.Component {
                                             </div>
                                             <div className="col-12 col-md-6 article-item mb-4">
                                                 <img className="img-fluid" src="https://cdn.shopify.com/s/files/1/0070/7032/files/Shopify_makeup_line-header.jpg?v=1603138525&width=600" />
-                                                <p className="mt-2 mb-2">Business Ideas</p>
+                                                <p className="pt-3 mb-2 text-primary">Business Ideas</p>
                                                 <h3 className="mb-2">How to Launch a Makeup Brand and Sell Online: The Ultimate Guide</h3>
                                                 <p className="small">
                                                     by <span className="text-primary">Dayna Winter</span>, Oct 20, 2020
@@ -151,7 +155,7 @@ export default class HomePage extends React.Component {
                                             </div>
                                             <div className="col-12 col-md-6 article-item mb-4">
                                                 <img className="img-fluid" src="https://cdn.shopify.com/s/files/1/0070/7032/files/Shopify_makeup_line-header.jpg?v=1603138525&width=600" />
-                                                <p className="mt-2 mb-2">Business Ideas</p>
+                                                <p className="pt-3 mb-2 text-primary">Business Ideas</p>
                                                 <h3 className="mb-2">How to Launch a Makeup Brand and Sell Online: The Ultimate Guide</h3>
                                                 <p className="small">
                                                     by <span className="text-primary">Dayna Winter</span>, Oct 20, 2020
@@ -159,7 +163,7 @@ export default class HomePage extends React.Component {
                                             </div>
                                             <div className="col-12 col-md-6 article-item mb-4">
                                                 <img className="img-fluid" src="https://cdn.shopify.com/s/files/1/0070/7032/files/Shopify_makeup_line-header.jpg?v=1603138525&width=600" />
-                                                <p className="mt-2 mb-2">Business Ideas</p>
+                                                <p className="pt-3 mb-2 text-primary">Business Ideas</p>
                                                 <h3 className="mb-2">How to Launch a Makeup Brand and Sell Online: The Ultimate Guide</h3>
                                                 <p className="small">
                                                     by <span className="text-primary">Dayna Winter</span>, Oct 20, 2020
@@ -167,7 +171,7 @@ export default class HomePage extends React.Component {
                                             </div>
                                             <div className="col-12 col-md-6 article-item mb-4">
                                                 <img className="img-fluid" src="https://cdn.shopify.com/s/files/1/0070/7032/files/Shopify_makeup_line-header.jpg?v=1603138525&width=600" />
-                                                <p className="mt-2 mb-2">Business Ideas</p>
+                                                <p className="pt-3 mb-2 text-primary">Business Ideas</p>
                                                 <h3 className="mb-2">How to Launch a Makeup Brand and Sell Online: The Ultimate Guide</h3>
                                                 <p className="small">
                                                     by <span className="text-primary">Dayna Winter</span>, Oct 20, 2020
@@ -175,7 +179,7 @@ export default class HomePage extends React.Component {
                                             </div>
                                             <div className="col-12 col-md-6 article-item mb-4">
                                                 <img className="img-fluid" src="https://cdn.shopify.com/s/files/1/0070/7032/files/Shopify_makeup_line-header.jpg?v=1603138525&width=600" />
-                                                <p className="mt-2 mb-2">Business Ideas</p>
+                                                <p className="pt-3 mb-2 text-primary">Business Ideas</p>
                                                 <h3 className="mb-2">How to Launch a Makeup Brand and Sell Online: The Ultimate Guide</h3>
                                                 <p className="small">
                                                     by <span className="text-primary">Dayna Winter</span>, Oct 20, 2020

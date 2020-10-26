@@ -80,9 +80,9 @@ export default class HomePage extends React.Component {
                 </Head>
                 <Nav />
                 <div className="main-container pt-5" style={{backgroundColor: "white", minHeight: mHeight}}>
-                    <div className="custom section bg-dark" id="hero" style={{minHeight: mHeight*0.6}}>
+                    <div className="custom section bg-dark" id="hero">
                         <div className="container-fluid pt-7 row align-items-center justify-content-center ml-0 pl-0 mr-0 pr-0">
-                            <div className="col-12 col-md-6">
+                            <div className="col-12 col-md-7 pb-6">
                                 <h1 className="text-center">Bắt đầu từ đây</h1>
                                 <p className="text-center">Chúng tôi ở đây để giúp đỡ, chia sẻ kiến thức, công thức, mẹo và nguồn cảm hứng để giúp bạn bắt đầu và phát triển một nhà hàng online thành công.</p>
                                 <div className="row align-items-center justify-content-center">
@@ -128,7 +128,7 @@ export default class HomePage extends React.Component {
                     <div className="section " id="">
                         <div className="container py-4 py-md-6">
                             <div className="row">
-                                <div className="col-12 col-md-9">
+                                <div className="col-12 col-md-12 col-sm-9 col-xl-9">
                                     <div className="container">
                                         <div className="row">
                                             <div className="col-12 article-item">
@@ -191,7 +191,7 @@ export default class HomePage extends React.Component {
                                     </div>
                                 </div>
                                 
-                                <div className="col-12 col-md-3 mt-md-0 mt-5 ml-0 mr-0 pl-0 pr-0">
+                                <div className="col-12 col-md-12 col-sm-3 col-xl-3 mt-md-0 mt-5 ml-0 mr-0 pl-0 pr-0">
                                     <div className="bg-dark">         
                                         <div className="container">
                                             <div className="row align-items-center justify-content-center py-6 ">

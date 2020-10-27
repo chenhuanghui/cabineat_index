@@ -18,7 +18,7 @@ const airtable = new AirtablePlus({
 var mixpanel = require('mixpanel-browser');
 mixpanel.init("eb9876c08581cc2c1ab8c3e4a94b50fb");
 
-export default class HomePage extends React.Component {
+export default class Cabinverse extends React.Component {
     constructor(props){
         super(props);
         this.state = {            
@@ -30,37 +30,14 @@ export default class HomePage extends React.Component {
 
     async componentDidMount() { 
         // tracking
-        mixpanel.track("visit",{"page":"cabineat.vn"})
+        mixpanel.track("visit",{"page":"cabineat.vn/cabinverse"})
 
         // fetching data
         let currentComponent = this
 
         let clientHeight = window.innerHeight
         currentComponent.setState({mHeight: clientHeight})
-        
-        
-        // start get data of brand
-        const hero_res = await airtable.read({
-            filterByFormula: `isActive = "1"`,
-            maxRecords : 1
-        },{tableName:"about_hero"});
-        
-        // console.log("hero", hero_res)
-        if(hero_res.length > 0 ) {
-            var temp = []
-            for(var i=0; i<hero_res[0].fields.bgImages.length; i++) {
-                temp.push(hero_res[0].fields.bgImages[i].url)
-            }
-            hero_res[0].fields.bgImages = temp;
-            console.log(hero_res[0].fields)
-            currentComponent.setState({hero: hero_res[0].fields})
-        }
-
-        const share_res = await airtable.read({
-            filterByFormula: `isActive = "1"`,
-            maxRecords : 1
-        },{tableName:"about_sharing"});
-        currentComponent.setState({sharing: share_res[0].fields})        
+                    
     }   
 
     toggleSubNav = () => {
@@ -76,7 +53,7 @@ export default class HomePage extends React.Component {
         return (
             <>
                 <Head>
-                    <title>CabinEat - Giới thiệu CabinEat</title>
+                    <title>Cabinverse - Học viện kinh doanh nhà hàng online</title>
                 </Head>
                 <Nav />
                 <div className="main-container pt-5" style={{backgroundColor: "white", minHeight: mHeight}}>
@@ -103,16 +80,16 @@ export default class HomePage extends React.Component {
                             <div className="navbar-collapse collapse mr-auto order-last" id="sub-nav" >
                                 <ul className="navbar-nav mr-lg-auto">
                                     <li className="nav-item">
-                                        <a className="nav-link disable" href="#">Bài viết mới nhất</a>
+                                        <a className="nav-link disable" href="#">Mới nhất</a>
                                     </li>  
                                     <li className="nav-item">
-                                        <a className="nav-link disable" href="#">Tìm kiếm sản phẩm</a>
+                                        <a className="nav-link disable" href="#">Tìm kiếm ý tưởng</a>
                                     </li>  
                                     <li className="nav-item">
                                         <a className="nav-link disable" href="#">Thiết lập nhà hàng</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link disable" href="#">Truyền thông hiệu quả</a>
+                                        <a className="nav-link disable" href="#">Kinh doanh & Truyền thông</a>
                                     </li>
                                 </ul>
                             </div>   

@@ -313,7 +313,6 @@ export default class HomePage extends React.Component {
                                 ? <CasoureSlider data = {stepready4sale.step}/>
                                 : null
                             }
-                            <hr className="mt-2"/>
                         </section>
                     
                     :null
@@ -323,6 +322,7 @@ export default class HomePage extends React.Component {
                     {pricing
                     ?
                         <section className="container custom pt-5 pb-6 pt-md-6">
+                            <hr className="mt-2"/>
                             <ReactMarkdown source={pricing.fields.headline} className="text-center markdown-custom h2"/>
                             
                             <div className="row mt-0 mt-md-6 align-items-center justify-content-center">

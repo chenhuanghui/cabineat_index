@@ -27,8 +27,8 @@ class MyDocument extends Document {
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
           />
           
-          <script src="/static/fb.js" />
-          <script src="/static/ga.js" />
+          {/* <script src="/static/fb.js" /> */}
+          {/* <script src="/static/ga.js" /> */}
           <script src="/static/segment.js" />
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176827516-1"></script>
         </Head>

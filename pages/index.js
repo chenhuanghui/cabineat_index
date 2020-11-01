@@ -6,14 +6,31 @@ import Footer from '../components/footer-new'
 import ReactMarkdown from "react-markdown";
 import $ from 'jquery';
 
+// Setup tracking Segment follow guideline here
+// https://www.npmjs.com/package/@analytics/segment
+import Analytics from 'analytics'
+import segmentPlugin from '@analytics/segment'
+
+const analytics = Analytics({
+    app: 'cabineat.vn',
+    plugins: [
+      segmentPlugin({
+        writeKey: '97rFFXHTo1pC4tymS612x2'
+      })
+    ]
+})
+
+// *** end
+
 const AirtablePlus = require('airtable-plus');
 const airtable = new AirtablePlus({
     baseID: 'appCZGNOFg53FFSE4',
     apiKey: 'keyLNupG6zOmmokND'
 });
 
-var mixpanel = require('mixpanel-browser');
-mixpanel.init("eb9876c08581cc2c1ab8c3e4a94b50fb");
+// var mixpanel = require('mixpanel-browser');
+// mixpanel.init("eb9876c08581cc2c1ab8c3e4a94b50fb");
+
 
 export default class HomePage extends React.Component {
     constructor(props){
@@ -35,7 +52,13 @@ export default class HomePage extends React.Component {
 
     async componentDidMount() { 
         // tracking
-        mixpanel.track("visit",{"page":"cabineat.vn"})
+        // mixpanel.track("visit",{"page":"cabineat.vn"})
+        /* Identify a visitor */
+        analytics.identify('090123123', {
+            firstName: 'lala1',
+            lastName: "aloha1",
+            tel: '090123123'
+        })
 
         // fetching data
         let currentComponent = this

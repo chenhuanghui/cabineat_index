@@ -29,6 +29,7 @@ class MyDocument extends Document {
           
           <script src="/static/fb.js" />
           <script src="/static/ga.js" />
+          <script src="/static/segment.js" />
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176827516-1"></script>
         </Head>
         <body>

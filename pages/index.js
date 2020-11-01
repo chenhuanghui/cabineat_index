@@ -54,11 +54,11 @@ export default class HomePage extends React.Component {
         // tracking
         // mixpanel.track("visit",{"page":"cabineat.vn"})
         /* Identify a visitor */
-        analytics.identify('090123123', {
-            firstName: 'lala1',
-            lastName: "aloha1",
-            tel: '090123123'
-        })
+        // analytics.identify('090123123', {
+        //     firstName: 'lala1',
+        //     lastName: "aloha1",
+        //     tel: '090123123'
+        // })
 
         // fetching data
         let currentComponent = this

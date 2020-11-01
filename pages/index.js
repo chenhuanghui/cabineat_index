@@ -15,7 +15,7 @@ const analytics = Analytics({
     app: 'cabineat.vn',
     plugins: [
       segmentPlugin({
-        writeKey: '97rFFXHTo1pC4tymS612x2'
+        writeKey: 'gKEHwr0ikjhiUSENPqXBkTnlPP84V6CV'
       })
     ]
 })

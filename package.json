@@ -8,6 +8,7 @@
         "@analytics/segment": "^0.5.0",
         "airtable-plus": "^1.0.4",
         "analytics": "^0.5.5",
+        "contentful": "^7.14.8",
         "jquery": "^3.5.1",
         "mixpanel-browser": "^2.39.0",
         "next": "^9.5.3",

@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Nav from '../components/nav-new'
-import CasoureSlider from '../components/corsousel-new'
-import Footer from '../components/footer-new'
+import Nav from '../../components/nav-new'
+import CasoureSlider from '../../components/corsousel-new'
+import Footer from '../../components/footer-new'
 
 import ReactMarkdown from "react-markdown";
 import $ from 'jquery';
@@ -18,22 +18,56 @@ const airtable = new AirtablePlus({
 var mixpanel = require('mixpanel-browser');
 mixpanel.init("eb9876c08581cc2c1ab8c3e4a94b50fb");
 
+const contentful = require("contentful");
+const client = contentful.createClient({
+  space: "0s01bkenrjm9",
+  accessToken: "n9oDwlvUxgwxjQPXKEl0TepabVC7zjC-ZuwO5yCf9Ls"
+});
+
+// This API call will request an entry with the specified ID from the space defined at the top, using a space-specific access token.
+async function fetchEntries(query) {
+    const entries = await client.getEntries(query)
+    if (entries.items) {
+        console.log('entries:',entries.items);
+        return entries.items
+    }
+    console.log(`Error getting Entries for ${contentType.name}.`)
+}
+
+// client
+//   .getEntry("5PeGS2SoZGSa4GuiQsigQu")
+//   .then(entry => console.log(entry))
+//   .catch(err => console.log(err));
+
 export default class Cabinverse extends React.Component {
     constructor(props){
         super(props);
         this.state = {            
             mHeight : 0,
             hero: null,
-            sharing: null
+            sharing: null,
+            courseList : []
         }
     }
 
-    async componentDidMount() { 
+    componentDidMount() { 
         // tracking
         mixpanel.track("visit",{"page":"cabineat.vn/cabinverse"})
 
         // fetching data
         let currentComponent = this
+
+        // const allPosts = await fetchEntries({content_type: 'document'})  // query posts only
+        // currentComponent.setState({posts:[...allPosts]})
+
+        client
+        .getEntries({content_type: 'courseItem'})
+        .then(entry => {
+            // console.log(entry)
+            currentComponent.setState({courseList: [...entry.items]})
+            console.log(currentComponent.state.courseList)
+        })
+        .catch(err => console.log(err));
 
         let clientHeight = window.innerHeight
         currentComponent.setState({mHeight: clientHeight})
@@ -49,7 +83,7 @@ export default class Cabinverse extends React.Component {
     }
 
     render() {
-        const {mHeight, hero, sharing} = this.state
+        const {mHeight, courseList} = this.state
         return (
             <>
                 <Head>
@@ -107,6 +141,7 @@ export default class Cabinverse extends React.Component {
                             <div className="row">
                                 <div className="col-12 col-md-9">
                                     <div className="container">
+
                                         <div className="row">
                                             <div className="col-12 article-item">
                                                 <img className="img-fluid" src="https://cdn.shopify.com/shopifycloud/brochure/assets/content-marketing/blog/blog_header/get-started-large-a46ee8d7c314de2b8faa5fdcd910ca5041420267f8efaea623e473eecd15f41c.jpg?quality=50" />
@@ -114,56 +149,16 @@ export default class Cabinverse extends React.Component {
                                             </div>
                                         </div>
                                         <div className="row">
-                                            <div className="col-12 col-md-6 article-item mb-4">
-                                                <img className="img-fluid" src="https://cdn.shopify.com/s/files/1/0070/7032/files/Shopify_makeup_line-header.jpg?v=1603138525&width=600" />
-                                                <p className="pt-3 mb-2 text-primary">Business Ideas</p>
-                                                <h3 className="mb-2">How to Launch a Makeup Brand and Sell Online: The Ultimate Guide</h3>
-                                                <p className="small">
-                                                    by <span className="text-primary">Dayna Winter</span>, Oct 20, 2020
-                                                </p>
-                                            </div>
-                                            <div className="col-12 col-md-6 article-item mb-4">
-                                                <img className="img-fluid" src="https://cdn.shopify.com/s/files/1/0070/7032/files/Shopify_makeup_line-header.jpg?v=1603138525&width=600" />
-                                                <p className="pt-3 mb-2 text-primary">Business Ideas</p>
-                                                <h3 className="mb-2">How to Launch a Makeup Brand and Sell Online: The Ultimate Guide</h3>
-                                                <p className="small">
-                                                    by <span className="text-primary">Dayna Winter</span>, Oct 20, 2020
-                                                </p>
-                                            </div>
-                                            <div className="col-12 col-md-6 article-item mb-4">
-                                                <img className="img-fluid" src="https://cdn.shopify.com/s/files/1/0070/7032/files/Shopify_makeup_line-header.jpg?v=1603138525&width=600" />
-                                                <p className="pt-3 mb-2 text-primary">Business Ideas</p>
-                                                <h3 className="mb-2">How to Launch a Makeup Brand and Sell Online: The Ultimate Guide</h3>
-                                                <p className="small">
-                                                    by <span className="text-primary">Dayna Winter</span>, Oct 20, 2020
-                                                </p>
-                                            </div>
-                                            <div className="col-12 col-md-6 article-item mb-4">
-                                                <img className="img-fluid" src="https://cdn.shopify.com/s/files/1/0070/7032/files/Shopify_makeup_line-header.jpg?v=1603138525&width=600" />
-                                                <p className="pt-3 mb-2 text-primary">Business Ideas</p>
-                                                <h3 className="mb-2">How to Launch a Makeup Brand and Sell Online: The Ultimate Guide</h3>
-                                                <p className="small">
-                                                    by <span className="text-primary">Dayna Winter</span>, Oct 20, 2020
-                                                </p>
-                                            </div>
-                                            <div className="col-12 col-md-6 article-item mb-4">
-                                                <img className="img-fluid" src="https://cdn.shopify.com/s/files/1/0070/7032/files/Shopify_makeup_line-header.jpg?v=1603138525&width=600" />
-                                                <p className="pt-3 mb-2 text-primary">Business Ideas</p>
-                                                <h3 className="mb-2">How to Launch a Makeup Brand and Sell Online: The Ultimate Guide</h3>
-                                                <p className="small">
-                                                    by <span className="text-primary">Dayna Winter</span>, Oct 20, 2020
-                                                </p>
-                                            </div>
-                                            <div className="col-12 col-md-6 article-item mb-4">
-                                                <img className="img-fluid" src="https://cdn.shopify.com/s/files/1/0070/7032/files/Shopify_makeup_line-header.jpg?v=1603138525&width=600" />
-                                                <p className="pt-3 mb-2 text-primary">Business Ideas</p>
-                                                <h3 className="mb-2">How to Launch a Makeup Brand and Sell Online: The Ultimate Guide</h3>
-                                                <p className="small">
-                                                    by <span className="text-primary">Dayna Winter</span>, Oct 20, 2020
-                                                </p>
-                                            </div>
-                                            
-                                            
+                                            {courseList && courseList.length>0 && courseList.map((item, id)=>(
+                                                <div className="col-12 col-md-6 article-item mb-4" key={id}>
+                                                    <img className="img-fluid" src={item.fields.cover.fields.file.url} />
+                                                    <p className="pt-3 mb-2 text-primary">Business Ideas</p>
+                                                    <h3 className="mb-2">{item.fields.title}</h3>
+                                                    <p className="small">
+                                                        by <span className="text-primary">{item.fields.author.fields.name}</span>, {new Date().toDateString(item.fields.createdDate)}
+                                                    </p>
+                                                </div>
+                                            ))}
                                         </div>
                                     </div>
                                 </div>

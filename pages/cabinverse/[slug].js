@@ -62,14 +62,6 @@ export default class CourseItem extends React.Component {
         let clientHeight = window.innerHeight
         currentComponent.setState({mHeight: clientHeight})
                     
-    }   
-
-    toggleSubNav = () => {
-        if ($("#sub-nav").hasClass("show")) {
-            $("#sub-nav").removeClass("show")
-        } else {
-            $("#sub-nav").addClass("show")
-        }        
     }
 
     render() {

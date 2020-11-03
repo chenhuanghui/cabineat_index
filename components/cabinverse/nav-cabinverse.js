@@ -28,6 +28,14 @@ export default class NavCabinverse extends React.Component {
         console.log(collectionRes)
     }
 
+    toggleSubNav = () => {
+        if ($("#sub-nav").hasClass("show")) {
+            $("#sub-nav").removeClass("show")
+        } else {
+            $("#sub-nav").addClass("show")
+        }        
+    }
+
     render() {
         const {collectionRes} = this.state
         return (

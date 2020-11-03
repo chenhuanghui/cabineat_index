@@ -11,7 +11,7 @@ const airtable = new AirtablePlus({
     apiKey: 'keyLNupG6zOmmokND'
 });
 
-export default class GetSubscribeEmail extends React.Component {
+export default class Subscribe extends React.Component {
     componentDidMount() {
 
     }

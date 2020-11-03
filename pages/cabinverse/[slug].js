@@ -4,7 +4,7 @@ import Footer from '../../components/footer-new'
 import Intro from '../../components/cabinverse/intro'
 import LastedCourse from '../../components/cabinverse/lastedCourse'
 import NavCabinverse from '../../components/cabinverse/nav-cabinverse'
-import SubscribeEmail from '../../components/cabinverse/subscribeEmail'
+import Subscribe from '../../components/cabinverse/subscribe'
 
 import ReactMarkdown from "react-markdown";
 import $ from 'jquery';
@@ -108,7 +108,7 @@ export default class CourseItem extends React.Component {
                                 </div>
                                 
                                 <div className="col-12 col-md-3 mt-md-0 mt-5 ml-0 mr-0 pl-0 pr-0">
-                                    <SubscribeEmail />
+                                    <Subscribe />
                                     <LastedCourse />
                                     
                                 </div>

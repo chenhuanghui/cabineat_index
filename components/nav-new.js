@@ -29,7 +29,7 @@ export default class Nav extends React.Component {
             <nav className="navbar navbar-expand-lg navbar-light" id="topnav">
                 <div className="container">          
                     <a className="navbar-brand mr-auto mt-2" href="/">
-                        <img src="./assets/img/logo.svg" alt="..." className="navbar-brand-img" style={{maxHeight: "2rem"}}/>
+                        <img src="../assets/img/logo.svg" alt="..." className="navbar-brand-img" style={{maxHeight: "2rem"}}/>
                     </a>
 
                     {/* <div className="navbar-user d-flex d-md-none" id="navbar" >
@@ -48,7 +48,7 @@ export default class Nav extends React.Component {
                         <hr className="d-md-none"/>
                         <ul className="navbar-nav mr-lg-auto">
                             <li className="nav-item">
-                                <a href="http://my.cabineat.vn" className="nav-link">Đăng nhập</a>
+                                <a href="http://my.cabineat.vn" className="nav-link">Truy cập</a>
                             </li>  
                         </ul>
                     </div>

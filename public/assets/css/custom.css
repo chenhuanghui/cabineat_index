@@ -81,3 +81,7 @@ body {
     list-style-type: none !important;
     padding-left: 0 !important;
 }
+
+.pre-title {
+    text-transform: uppercase;
+}

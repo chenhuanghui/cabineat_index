@@ -46,7 +46,7 @@ export default class FooterNew extends React.Component {
                             <div className="row align-items-center justify-content-center">
                                 <p className="font-weight-bold text-center">Hãy để chúng tôi giúp tăng trưởng hoạt động kinh doanh của bạn.</p>
                                 <p className="text-center">Hệ thống <a href="http://cabineat.vn" name="cabineat nha hang online">cabineat</a> sẽ giúp bạn chủ động, đơn giản hóa các hoạt động, thiết lập các giải pháp hiện đại ứng dụng công nghệ giúp tối ưu hoạt động kinh doanh của bạn.</p>
-                                <a href="#" className="font-weight-bold text-center">Tạo nhà hàng online ngay <span className="fe fe-chevrons-right"></span></a>
+                                <a href="http://my.cabineat.vn" className="font-weight-bold text-center">Tạo nhà hàng online ngay <span className="fe fe-chevrons-right"></span></a>
                             </div>
                         </div>
                     </div>

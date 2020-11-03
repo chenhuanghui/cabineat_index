@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Head from 'next/head'
 import Nav from '../../components/nav-new'
 import CasoureSlider from '../../components/corsousel-new'
@@ -11,7 +12,7 @@ import ReactMarkdown from "react-markdown";
 import $ from 'jquery';
 
 import BackgroundSlider from 'react-background-slider'
-import Link from 'next/link';
+
 // https://github.com/u2ix/react-background-slider
 
 import { BLOCKS } from '@contentful/rich-text-types';

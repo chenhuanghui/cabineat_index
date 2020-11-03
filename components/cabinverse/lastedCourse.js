@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Head from 'next/head'
 import Nav from '../nav-new'
 import Footer from '../footer-new'
@@ -36,8 +37,12 @@ export default class LastestCourse extends React.Component {
                     <ul className="list-none-style pt-2">
                         {lastestEntries && lastestEntries.map((item, index)=>(
                             <li className="border-bottom py-3 related-item" key={index}>
-                                <h4 className="font-weight-normal "><a href="#" className="text-dark mb-2">{item.fields.collection.fields.name}</a></h4>
-                                <a href="#" className="">{item.fields.title}</a>
+                                <h4 className="font-weight-bold "><a href="#" className="text-dark mb-2">{item.fields.collection.fields.name}</a></h4>
+                                <Link href="cabinverse/[slug]" as={`cabinverse/${item.sys.id}`}>
+                                    <a className="py-2 ">
+                                        {item.fields.title}
+                                    </a>
+                                </Link>                                                    
                             </li>
                         ))}
                     </ul>

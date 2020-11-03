@@ -5,6 +5,7 @@ import Footer from '../../components/footer-new'
 import Intro from '../../components/cabinverse/intro'
 import LastedCourse from '../../components/cabinverse/lastedCourse'
 import SubscribeEmail from '../../components/cabinverse/subscribeEmail'
+import NavCabinverse from '../../components/cabinverse/nav-cabinverse'
 
 import ReactMarkdown from "react-markdown";
 import $ from 'jquery';
@@ -26,21 +27,12 @@ const airtable = new AirtablePlus({
 var mixpanel = require('mixpanel-browser');
 mixpanel.init("eb9876c08581cc2c1ab8c3e4a94b50fb");
 
+// contentful setting start
 const contentful = require("contentful");
 const client = contentful.createClient({
   space: "0s01bkenrjm9",
   accessToken: "n9oDwlvUxgwxjQPXKEl0TepabVC7zjC-ZuwO5yCf9Ls"
 });
-
-// This API call will request an entry with the specified ID from the space defined at the top, using a space-specific access token.
-async function fetchEntries(query) {
-    const entries = await client.getEntries(query)
-    if (entries.items) {
-        console.log('entries:',entries.items);
-        return entries.items
-    }
-    console.log(`Error getting Entries for ${contentType.name}.`)
-}
 
 const contentfulOptions = {
     renderNode: {
@@ -48,6 +40,7 @@ const contentfulOptions = {
             `<img src="${fields.file.url}" height="auto" width="${fields.file.details.image.width}" alt="${fields.description}"/>`,
     },
 }
+// contentful setting end
 
 export default class Cabinverse extends React.Component {
     constructor(props){
@@ -66,9 +59,6 @@ export default class Cabinverse extends React.Component {
 
         // fetching data
         let currentComponent = this
-
-        // const allPosts = await fetchEntries({content_type: 'document'})  // query posts only
-        // currentComponent.setState({posts:[...allPosts]})
 
         client
         .getEntries({content_type: 'courseItem'})
@@ -103,32 +93,7 @@ export default class Cabinverse extends React.Component {
                 <div className="main-container pt-5" style={{backgroundColor: "white", minHeight: mHeight}}>
                     <Intro />
 
-                    <nav className="navbar navbar-expand-lg  navbar-light" id="topnav">
-                        <div className="container">                                      
-                            <div className="navbar-collapse collapse mr-auto order-last" id="sub-nav" >
-                                <ul className="navbar-nav mr-lg-auto">
-                                    <li className="nav-item">
-                                        <a className="nav-link disable" href="#">Mới nhất</a>
-                                    </li>  
-                                    <li className="nav-item">
-                                        <a className="nav-link disable" href="#">Tìm kiếm ý tưởng</a>
-                                    </li>  
-                                    <li className="nav-item">
-                                        <a className="nav-link disable" href="#">Thiết lập nhà hàng</a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link disable" href="#">Kinh doanh & Truyền thông</a>
-                                    </li>
-                                </ul>
-                            </div>   
-                            <div className="navbar-toggler" onClick={this.toggleSubNav} style={{width: "100%"}}>
-                                <div className="row pl-3 pr-3">
-                                    <span className="mr-auto mt-2">Chọn chủ đề</span>
-                                    <span className="fe fe-chevron-down "></span>
-                                </div>
-                            </div>                               
-                        </div>                        
-                    </nav>
+                    <NavCabinverse />
 
                     <div className="section " id="">
                         <div className="container py-4 py-md-6">

@@ -4,6 +4,7 @@ import Footer from '../../components/footer-new'
 import Intro from '../../components/cabinverse/intro'
 import LastedCourse from '../../components/cabinverse/lastedCourse'
 import SubscribeEmail from '../../components/cabinverse/subscribeEmail'
+import NavCabinverse from '../../components/cabinverse/nav-cabinverse'
 
 import ReactMarkdown from "react-markdown";
 import $ from 'jquery';
@@ -31,17 +32,15 @@ const client = contentful.createClient({
 const contentfulOptions = {
     renderNode: {
         [BLOCKS.EMBEDDED_ASSET]: ({ data: { target: { fields }}}) =>
-            `<img src="${fields.file.url}" height="auto" width="${fields.file.details.image.width}" alt="${fields.description}"/>`,
+            `<img class="img-fluid" src="${fields.file.url}" height="auto" width="${fields.file.details.image.width}" alt="${fields.description}"/>`,
     },
 }
-
 // contentful setting end
 
 export default class CourseItem extends React.Component {
     static async getInitialProps({req, query}) {
         console.log("query id:", query)
         const entryRes = await client.getEntry(query.slug)
-        const entriesRes = await client.getEntries({content_type: 'courseItem'})
         return {course: entryRes}
     }
 
@@ -84,32 +83,7 @@ export default class CourseItem extends React.Component {
                 <div className="main-container pt-5" style={{backgroundColor: "white", minHeight: mHeight}}>
                     <Intro />
 
-                    <nav className="navbar navbar-expand-lg  navbar-light" id="topnav">
-                        <div className="container">                                      
-                            <div className="navbar-collapse collapse mr-auto order-last" id="sub-nav" >
-                                <ul className="navbar-nav mr-lg-auto">
-                                    <li className="nav-item">
-                                        <a className="nav-link disable" href="#">Mới nhất</a>
-                                    </li>  
-                                    <li className="nav-item">
-                                        <a className="nav-link disable" href="#">Tìm kiếm ý tưởng</a>
-                                    </li>  
-                                    <li className="nav-item">
-                                        <a className="nav-link disable" href="#">Thiết lập nhà hàng</a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link disable" href="#">Kinh doanh & Truyền thông</a>
-                                    </li>
-                                </ul>
-                            </div>   
-                            <div className="navbar-toggler" onClick={this.toggleSubNav} style={{width: "100%"}}>
-                                <div className="row pl-3 pr-3">
-                                    <span className="mr-auto mt-2">Chọn chủ đề</span>
-                                    <span className="fe fe-chevron-down "></span>
-                                </div>
-                            </div>                               
-                        </div>                        
-                    </nav>
+                    <NavCabinverse />
 
                     <div className="section " id="">
                         <div className="container py-4">
@@ -118,7 +92,7 @@ export default class CourseItem extends React.Component {
                                     <div className="container">
 
                                         <div className="row">
-                                            <div className="col-12 article-item">
+                                            <div className="col-12 article-item custom">
                                                 <h1 className="mb-2">{this.props.course.fields.title}</h1>
                                                 <p className="small">
                                                     by <span className="text-primary">{this.props.course.fields.author.fields.name}</span>, {new Date().toDateString(this.props.course.fields.createdDate)}

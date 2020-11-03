@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Head from 'next/head'
 import Nav from '../../components/nav-new'
-import CasoureSlider from '../../components/corsousel-new'
+
 import Footer from '../../components/footer-new'
 import Intro from '../../components/cabinverse/intro'
 import LastedCourse from '../../components/cabinverse/lastedCourse'

@@ -77,7 +77,7 @@ export default class CourseItem extends React.Component {
         return (
             <>
                 <Head>
-                    <title>Cabinverse - Học viện kinh doanh nhà hàng online</title>
+                    <title>Cabinverse - {this.props.course.fields.title}</title>
                 </Head>
                 <Nav />
                 <div className="main-container pt-5" style={{backgroundColor: "white", minHeight: mHeight}}>
@@ -110,17 +110,7 @@ export default class CourseItem extends React.Component {
                                 <div className="col-12 col-md-3 mt-md-0 mt-5 ml-0 mr-0 pl-0 pr-0">
                                     <SubscribeEmail />
                                     <LastedCourse />
-                                    {/* <div id="releated" className="mt-5 container">
-                                        <h5 className="pre-title"> <span className="fe fe-briefcase mr-2"></span> Mới nhất</h5>
-                                        <ul className="list-none-style pt-2">
-                                            {this.props.listEntries && this.props.listEntries.map((item, index)=>(
-                                                <li className="border-bottom py-3 related-item" key={index}>
-                                                    <h4 className="font-weight-normal "><a href="#" className="text-dark mb-2">{item.fields.collection.fields.name}</a></h4>
-                                                    <a href="#" className="">{item.fields.title}</a>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div> */}
+                                    
                                 </div>
 
                             </div>

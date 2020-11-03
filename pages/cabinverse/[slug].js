@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Nav from '../../components/nav-new'
 import Footer from '../../components/footer-new'
+import Intro from '../../components/cabinverse/intro'
 
 import ReactMarkdown from "react-markdown";
 import $ from 'jquery';
@@ -77,23 +78,7 @@ export default class CourseItem extends React.Component {
                 </Head>
                 <Nav />
                 <div className="main-container pt-5" style={{backgroundColor: "white", minHeight: mHeight}}>
-                    <div className="custom section bg-dark" id="hero">
-                        <div className="container-fluid pt-7 row align-items-center justify-content-center ml-0 pl-0 mr-0 pr-0">
-                            <div className="col-12 col-md-7 pb-6">
-                                <h1 className="text-center">Bắt đầu từ đây</h1>
-                                <p className="text-center">Chúng tôi ở đây để giúp đỡ, chia sẻ kiến thức, công thức, mẹo và nguồn cảm hứng để giúp bạn bắt đầu và phát triển một nhà hàng online thành công.</p>
-                                <div className="row align-items-center justify-content-center">
-                                    <div className="col-11 col-md-12 mt-5 ">
-                                        <div className="row align-items-center justify-content-center">
-                                            <input type="text" className="col-12 col-md-5 form-control form-control-appended py-4" placeholder="Địa chỉ email"/>
-                                            <button className="col-12 col-md-3 mt-3 mt-md-0 btn btn-primary ml-2 py-3">Nhận thông báo</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p className="mt-3 text-center small">Thông tin mới sẽ được thông báo đến bạn qua email.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <Intro />
 
                     <nav className="navbar navbar-expand-lg  navbar-light" id="topnav">
                         <div className="container">                                      
@@ -135,7 +120,7 @@ export default class CourseItem extends React.Component {
                                                     by <span className="text-primary">{this.props.course.fields.author.fields.name}</span>, {new Date().toDateString(this.props.course.fields.createdDate)}
                                                 </p>
                                                 <hr className="my-4"/>
-                                                
+
                                                 <img className="img-fluid" src={this.props.course.fields.cover.fields.file.url} />
                                                 <div className='py-4' dangerouslySetInnerHTML={{__html: documentToHtmlString(this.props.course.fields.desc,contentfulOptions)}} />
                                                 

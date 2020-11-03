@@ -22,9 +22,7 @@ export default class GetSubscribeEmail extends React.Component {
         
         if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(emailVal))
         {
-            console.log(emailVal)
             const res = await airtable.create({ email: emailVal},{tableName:"Email"});
-            console.log(res)
             if (res) {
                 $("#email_address").hide()
                 $('.btn-subscribe').hide()

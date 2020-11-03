@@ -2,10 +2,12 @@ import Head from 'next/head'
 import Nav from '../../components/nav-new'
 import Footer from '../../components/footer-new'
 import Intro from '../../components/cabinverse/intro'
+import LastedCourse from '../../components/cabinverse/lastedCourse'
+import SubscribeEmail from '../../components/cabinverse/subscribeEmail'
 
 import ReactMarkdown from "react-markdown";
 import $ from 'jquery';
-import SubscribeEmail from '../../components/cabinverse/SubscribeEmail'
+
 
 import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
@@ -19,6 +21,7 @@ const airtable = new AirtablePlus({
 var mixpanel = require('mixpanel-browser');
 mixpanel.init("eb9876c08581cc2c1ab8c3e4a94b50fb");
 
+// contentful setting start
 const contentful = require("contentful");
 const client = contentful.createClient({
   space: "0s01bkenrjm9",
@@ -32,12 +35,14 @@ const contentfulOptions = {
     },
 }
 
+// contentful setting end
+
 export default class CourseItem extends React.Component {
     static async getInitialProps({req, query}) {
         console.log("query id:", query)
         const entryRes = await client.getEntry(query.slug)
         const entriesRes = await client.getEntries({content_type: 'courseItem'})
-        return {course: entryRes, listEntries : entriesRes.items}
+        return {course: entryRes}
     }
 
     constructor(props){
@@ -54,7 +59,6 @@ export default class CourseItem extends React.Component {
         // fetching data
         let currentComponent = this
         console.log("course prop: ", currentComponent.props.course)
-        console.log("course list: ", currentComponent.props.listEntries)
 
         let clientHeight = window.innerHeight
         currentComponent.setState({mHeight: clientHeight})
@@ -131,8 +135,8 @@ export default class CourseItem extends React.Component {
                                 
                                 <div className="col-12 col-md-3 mt-md-0 mt-5 ml-0 mr-0 pl-0 pr-0">
                                     <SubscribeEmail />
-
-                                    <div id="releated" className="mt-5 container">
+                                    <LastedCourse />
+                                    {/* <div id="releated" className="mt-5 container">
                                         <h5 className="pre-title"> <span className="fe fe-briefcase mr-2"></span> Mới nhất</h5>
                                         <ul className="list-none-style pt-2">
                                             {this.props.listEntries && this.props.listEntries.map((item, index)=>(
@@ -142,7 +146,7 @@ export default class CourseItem extends React.Component {
                                                 </li>
                                             ))}
                                         </ul>
-                                    </div>
+                                    </div> */}
                                 </div>
 
                             </div>

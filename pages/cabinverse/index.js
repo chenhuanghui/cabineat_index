@@ -3,6 +3,8 @@ import Nav from '../../components/nav-new'
 import CasoureSlider from '../../components/corsousel-new'
 import Footer from '../../components/footer-new'
 import Intro from '../../components/cabinverse/intro'
+import LastedCourse from '../../components/cabinverse/lastedCourse'
+import SubscribeEmail from '../../components/cabinverse/subscribeEmail'
 
 import ReactMarkdown from "react-markdown";
 import $ from 'jquery';
@@ -163,38 +165,8 @@ export default class Cabinverse extends React.Component {
                                 </div>
                                 
                                 <div className="col-12 col-md-3 mt-md-0 mt-5 ml-0 mr-0 pl-0 pr-0">
-                                    <div className="bg-dark">         
-                                        <div className="container">
-                                            <div className="row align-items-center justify-content-center py-6 ">
-                                                <div className="col-11">
-                                                    <h1 className="fe fe-file-text text-center"></h1>
-                                                    <h2 className="text-center">Join 446,005 <br />entrepreneurs who already have a head start.</h2>
-                                                    <p className="text-center small">Get free online marketing tips and resources delivered directly to your inbox.</p>
-                                                    <div className="">
-                                                        <input type="text" className="col-12 form-control form-control-appended" placeholder="Địa chỉ email"/>
-                                                        <button className="col-12 mt-3 btn btn-primary">Nhận thông báo</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="releated" className="mt-5 container">
-                                        <h5 className="pre-title"> <span className="fe fe-briefcase mr-2"></span> QUICKSTART GUIDES</h5>
-                                        <ul className="list-none-style pt-2">
-                                            <li className="border-bottom py-3 related-item">
-                                                <h4 className="font-weight-normal "><a href="#" className="text-dark mb-2">Trending Products</a></h4>
-                                                <a href="#" className="">Start a business selling in-demand products</a>
-                                            </li>
-                                            <li className="border-bottom py-3 related-item">
-                                                <h4 className="font-weight-normal "><a href="#" className="text-dark mb-2">Trending Products</a></h4>
-                                                <a href="#" className="">Start a business selling in-demand products</a>
-                                            </li>
-                                            <li className="border-bottom py-3 related-item">
-                                                <h4 className="font-weight-normal "><a href="#" className="text-dark mb-2">Trending Products</a></h4>
-                                                <a href="#" className="">Start a business selling in-demand products</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <SubscribeEmail />
+                                    <LastedCourse />
                                 </div>
 
                             </div>

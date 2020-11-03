@@ -5,7 +5,7 @@ import Nav from '../../components/nav-new'
 import Footer from '../../components/footer-new'
 import Intro from '../../components/cabinverse/intro'
 import LastedCourse from '../../components/cabinverse/lastedCourse'
-import SubscribeEmail from '../../components/cabinverse/subscribeEmail'
+// import SubscribeEmail from '../../components/cabinverse/subscribeEmail'
 import NavCabinverse from '../../components/cabinverse/nav-cabinverse'
 
 import ReactMarkdown from "react-markdown";
@@ -131,7 +131,7 @@ export default class Cabinverse extends React.Component {
                                 </div>
                                 
                                 <div className="col-12 col-md-3 mt-md-0 mt-5 ml-0 mr-0 pl-0 pr-0">
-                                    <SubscribeEmail />
+                                    {/* <SubscribeEmail /> */}
                                     <LastedCourse />
                                 </div>
 

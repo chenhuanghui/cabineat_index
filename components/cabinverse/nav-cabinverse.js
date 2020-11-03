@@ -16,19 +16,20 @@ export default class NavCabinverse extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            lastestEntries : []
+            collectionRes : []
         }
 
     }
     async componentDidMount() {
         let currentComponent = this;
 
-        const entriesRes = await client.getEntries({content_type: 'courseItem'})
-        currentComponent.setState({lastestEntries: [...entriesRes.items]})
+        const collectionRes = await client.getEntries({content_type: 'collectionCabinverse',order:'fields.sort'})
+        currentComponent.setState({collectionRes: [...collectionRes.items]})
+        console.log(collectionRes)
     }
 
     render() {
-        const {lastestEntries} = this.state
+        const {collectionRes} = this.state
         return (
             <>            
                 <nav className="navbar navbar-expand-lg  navbar-light" id="topnav">
@@ -38,15 +39,11 @@ export default class NavCabinverse extends React.Component {
                                 <li className="nav-item">
                                     <a className="nav-link disable" href="#">Mới nhất</a>
                                 </li>  
-                                <li className="nav-item">
-                                    <a className="nav-link disable" href="#">Tìm kiếm ý tưởng</a>
-                                </li>  
-                                <li className="nav-item">
-                                    <a className="nav-link disable" href="#">Thiết lập nhà hàng</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link disable" href="#">Kinh doanh & Truyền thông</a>
-                                </li>
+                                {collectionRes.map((item, index) => (
+                                    <li className="nav-item">
+                                        <a className="nav-link disable" href="#">{item.fields.name}</a>
+                                    </li>  
+                                ))}                                
                             </ul>
                         </div>   
                         <div className="navbar-toggler" onClick={this.toggleSubNav} style={{width: "100%"}}>

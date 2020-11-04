@@ -15,10 +15,6 @@ import BackgroundSlider from 'react-background-slider'
 
 // https://github.com/u2ix/react-background-slider
 
-import { BLOCKS } from '@contentful/rich-text-types';
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
-
-
 const AirtablePlus = require('airtable-plus');
 const airtable = new AirtablePlus({
     baseID: 'appCZGNOFg53FFSE4',
@@ -29,6 +25,10 @@ var mixpanel = require('mixpanel-browser');
 mixpanel.init("eb9876c08581cc2c1ab8c3e4a94b50fb");
 
 // contentful setting start
+
+import { BLOCKS } from '@contentful/rich-text-types';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+
 const contentful = require("contentful");
 const client = contentful.createClient({
   space: "0s01bkenrjm9",
@@ -97,7 +97,7 @@ export default class Cabinverse extends React.Component {
                                         <div className="row">
                                             <div className="col-12 article-item">
                                                 <img className="img-fluid" src="https://cdn.shopify.com/shopifycloud/brochure/assets/content-marketing/blog/blog_header/get-started-large-a46ee8d7c314de2b8faa5fdcd910ca5041420267f8efaea623e473eecd15f41c.jpg?quality=50" />
-                                                <p className="py-4">There are many successful businesses that aren’t born from unique ideas. There’s still value in looking for tried-and-true business ideas as there are many ways to make a business stand out beyond the products you sell. It’s how you use your desire to turn an idea into action that can make you a successful independent business owner. Today is a great day to start a business.</p>
+                                                <p className="py-4">Có rất nhiều doanh nghiệp thành công không được sinh ra từ những ý tưởng độc đáo. Vẫn có giá trị khi tìm kiếm những ý tưởng kinh doanh đã thử và đúng vì có nhiều cách để làm cho một doanh nghiệp nổi bật ngoài các món ăn, thức uống mà bạn bán. Đó là cách bạn sử dụng mong muốn của mình để biến một ý tưởng thành hành động có thể khiến bạn trở thành chủ doanh nghiệp độc lập thành công. <span className="font-weight-bold text-primary">Hôm nay là một ngày tuyệt vời để bắt đầu kinh doanh!</span> </p>
                                             </div>
                                         </div>
 

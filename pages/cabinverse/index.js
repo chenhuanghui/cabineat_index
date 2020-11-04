@@ -75,6 +75,12 @@ export default class Cabinverse extends React.Component {
                     
     }
 
+    formatDate(dateStr){
+        var d = new Date(dateStr)
+        var temp = d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear()
+        return temp
+    }
+
     render() {
         const {mHeight, courseList} = this.state
         return (
@@ -113,7 +119,7 @@ export default class Cabinverse extends React.Component {
                                                         </a>
                                                     </Link>                                                    
                                                     <p className="small">
-                                                        by <span className="text-primary">{item.fields.author.fields.name}</span>, {new Date().toDateString(item.fields.createdDate)}
+                                                        bởi <span className="text-primary">{item.fields.author.fields.name}</span>, {this.formatDate(item.fields.createdDate)}
                                                     </p>
                                                 </div>
                                             ))}

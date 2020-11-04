@@ -48,7 +48,7 @@ export default class NavCabinverse extends React.Component {
                                     <a className="nav-link disable" href="#">Mới nhất</a>
                                 </li>  
                                 {collectionRes.map((item, index) => (
-                                    <li className="nav-item">
+                                    <li className="nav-item" key={index}>
                                         <a className="nav-link disable" href="#">{item.fields.name}</a>
                                     </li>  
                                 ))}                                

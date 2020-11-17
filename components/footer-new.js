@@ -116,6 +116,7 @@ export default class FooterNew extends React.Component {
                                 <ul className="footer-nav pl-0 mb-4">
                                     <li className="mb-2"><a href="#">Liên hệ</a></li>
                                     <li className="mb-2"><a href="mailto:hello@cabineat.vn">Email</a></li>
+                                    <li className="mb-2"><a href="https://www.notion.so/cabineat/CabinEat-i-u-ki-n-i-u-kho-n-d67234052f56404b8d71166a143c51ab" target="_blank">Điều khoản, Chính sách</a></li>
                                 </ul>                                    
                             </div>
                             <div className="col-12 col-md-3">

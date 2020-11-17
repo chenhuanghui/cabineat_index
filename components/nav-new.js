@@ -36,7 +36,7 @@ export default class Nav extends React.Component {
                         <span className="fe fe-user-check " style={{fontSize: "25px"}}></span>
                     </div> */}
 
-                    <div className="navbar-collapse collapse ml-auto order-last" id="navbar" >
+                    <div className="navbar-collapse collapse ml-auto order-last" id="navbar">
                         <ul className="navbar-nav mr-lg-auto">
                             <li className="nav-item">
                                 <a className="nav-link disable" href="#">Công cụ</a>

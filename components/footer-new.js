@@ -115,7 +115,7 @@ export default class FooterNew extends React.Component {
                                 <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Hỗ trợ & Liên hệ</h4>
                                 <ul className="footer-nav pl-0 mb-4">
                                     <li className="mb-2"><a href="#">Liên hệ</a></li>
-                                    <li className="mb-2"><a href="mailto:hello@cabineat.vn">Email</a></li>
+                                    <li className="mb-2"><a href="mailto:growth@cabineat.vn">Email</a></li>
                                     <li className="mb-2"><a href="https://www.notion.so/cabineat/CabinEat-i-u-ki-n-i-u-kho-n-d67234052f56404b8d71166a143c51ab" target="_blank">Điều khoản, Chính sách</a></li>
                                 </ul>                                    
                             </div>
@@ -163,11 +163,20 @@ export default class FooterNew extends React.Component {
                             </div>
                         </div>
                         
-                        <div className="row">                            
-                            <div className="col-12 col-md-4 col-lg-8 col-xl-8">
-                                <p className="copyright text-md-left text-center ml-3 mt-3" style={{color: "#737373 !important"}}>CTY TNHH CabinFood, 51 Nguyễn Cư Trinh - Quận 1- Hồ Chí Minh | MST: 0316237460</p>
-                                <p className="copyright text-md-left text-center ml-3 mt-3" style={{color: "#737373 !important"}}>growth@cabineat.vn | 094.192.6368</p>
+                        <div className="row pt-5">                            
+                            <div className="col-12 col-md-4 col-lg-6 col-xl-6 mb-3">
+                                <p className="copyright text-md-left text-center ml-3 mb-2" style={{color: "#737373 !important"}}>CTY TNHH CabinFood | MST: 0316237460</p>
+                                <p className="copyright text-md-left text-center ml-3 mb-2" style={{color: "#737373 !important"}}>51 Nguyễn Cư Trinh - Quận 1- Hồ Chí Minh</p>
+                                <p className="copyright text-md-left text-center ml-3 mb-2" style={{color: "#737373 !important"}}>growth@cabineat.vn | 094.192.6368</p>
                                 {/* <p className="copyright text-md-left text-center ml-3 mt-3" style={{color: "#737373 !important"}}>© 2020 CabinEat Pte. Ltd.</p> */}
+                            </div>
+
+                            <div className="col-12 col-md-6 col-lg-6 col-xl-6 d-flex mb-3">
+                                <div className="row ml-md-auto">
+                                    <a className="text-white ml-3" href="#"> Chính sách bảo mật </a>
+                                    <a className="text-white ml-3" href="#"> Phương thức thanh toán </a>
+                                    <a className="text-white ml-3" href="#"> Điều kiện giao dịch </a>
+                                </div>
                             </div>
                             
                             {/* <div className="card-body ml-md-auto">

@@ -165,6 +165,7 @@ export default class FooterNew extends React.Component {
                         
                         <div className="row">                            
                             <div className="col-12 col-md-4">
+                                <p className="copyright text-md-left text-center ml-3 mt-3" style={{color: "#737373 !important"}}>CTY TNHH CabinFood, 51 Nguyễn Cư Trinh - Quận 1- Hồ Chí Minh</p>
                                 <p className="copyright text-md-left text-center ml-3 mt-3" style={{color: "#737373 !important"}}>© 2020 CabinEat Pte. Ltd.</p>
                             </div>
                             

@@ -164,8 +164,9 @@ export default class FooterNew extends React.Component {
                         </div>
                         
                         <div className="row">                            
-                            <div className="col-12 col-md-4">
-                                <p className="copyright text-md-left text-center ml-3 mt-3" style={{color: "#737373 !important"}}>CTY TNHH CabinFood, 51 Nguyễn Cư Trinh - Quận 1- Hồ Chí Minh</p>
+                            <div className="col-12 col-md-4 col-lg-8 col-xl-8">
+                                <p className="copyright text-md-left text-center ml-3 mt-3" style={{color: "#737373 !important"}}>CTY TNHH CabinFood, 51 Nguyễn Cư Trinh - Quận 1- Hồ Chí Minh | MST: 0316237460</p>
+                                <p className="copyright text-md-left text-center ml-3 mt-3" style={{color: "#737373 !important"}}>growth@cabineat.vn | 094.192.6368</p>
                                 <p className="copyright text-md-left text-center ml-3 mt-3" style={{color: "#737373 !important"}}>© 2020 CabinEat Pte. Ltd.</p>
                             </div>
                             

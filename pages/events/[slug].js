@@ -107,7 +107,7 @@ export default class EventDetail extends React.Component {
                                                 <div className="mt-3">
                                                     <h1 className="mb-3">{this.props.eventDetail.fields.title}</h1>                                                    
                                                     <p className="small text-secondary mb-2">Ngày: {this.formatDate(this.props.eventDetail.fields.date)}</p>
-                                                    <p className="small text-secondary mb-2 col-9 px-0">Tại: {this.props.eventDetail.fields.address}</p>
+                                                    <p className="small text-secondary mb-2 col-10 px-0">Tại: {this.props.eventDetail.fields.address}</p>
                                                 </div>
 
                                                 <hr />

@@ -136,7 +136,7 @@ export default class Event extends React.Component {
                                                         <p className="small text-secondary mb-2">
                                                             Ngày: {this.formatDate(item.fields.date)}
                                                         </p>
-                                                        <p className="small text-secondary mb-2 col-9 px-0">
+                                                        <p className="small text-secondary mb-2 col-10 px-0">
                                                             Tại: {item.fields.address}
                                                         </p>
                                                     </div>

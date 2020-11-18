@@ -9,3 +9,7 @@
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '654490075223818');
   fbq('track', 'PageView');
+
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=654490075223818&ev=PageView&noscript=1"
+/></noscript>

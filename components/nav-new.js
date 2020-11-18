@@ -39,11 +39,13 @@ export default class Nav extends React.Component {
                     <div className="navbar-collapse collapse ml-auto order-last" id="navbar">
                         <ul className="navbar-nav mr-lg-auto">
                             <li className="nav-item">
-                                <a className="nav-link disable" href="#">Công cụ</a>
+                                <Link href="/events">
+                                    <a className="nav-link">Sự kiện</a>
+                                </Link>
                             </li>  
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <a className="nav-link disable" href="#">Kiến thức</a>
-                            </li>
+                            </li> */}
                         </ul>
                         <hr className="d-md-none"/>
                         <ul className="navbar-nav mr-lg-auto">

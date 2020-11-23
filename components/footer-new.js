@@ -165,18 +165,18 @@ export default class FooterNew extends React.Component {
                         </div>
                         
                         <div className="row pt-5">                            
-                            <div className="col-12 col-md-4 col-lg-6 col-xl-6 mb-3">
+                            <div className="col-12 col-md-4 col-lg-4 col-xl-4 mb-3">
                                 <p className="copyright text-md-left text-center ml-3 mb-2" style={{color: "#737373 !important"}}>CTY TNHH CabinFood | MST: 0316237460</p>
                                 <p className="copyright text-md-left text-center ml-3 mb-2" style={{color: "#737373 !important"}}>51 Nguyễn Cư Trinh - Quận 1- Hồ Chí Minh</p>
                                 <p className="copyright text-md-left text-center ml-3 mb-2" style={{color: "#737373 !important"}}>growth@cabineat.vn | 094.192.6368</p>
                                 {/* <p className="copyright text-md-left text-center ml-3 mt-3" style={{color: "#737373 !important"}}>© 2020 CabinEat Pte. Ltd.</p> */}
                             </div>
 
-                            <div className="col-12 col-md-6 col-lg-6 col-xl-6 d-flex mb-3">
-                                <div className="row ml-md-auto">
-                                    <p className="col-12 col-md-auto text-center mb-md-0 mb-2"><a className="text-white  ml-3" href="#"> Chính sách bảo mật </a></p>
-                                    <p className="col-12 col-md-auto text-center mb-md-0 mb-2"><a className="text-white ml-3" href="#"> Phương thức thanh toán </a></p>
-                                    <p className="col-12 col-md-auto text-center mb-md-0 mb-2"><a className="text-white ml-3" href="#"> Điều kiện giao dịch </a></p>
+                            <div className="col-12 col-md-8 col-lg-8 col-xl-8 mb-3 ml-md-auto">
+                                <div className="row d-flex">
+                                    <div className="col-12 col-md-4 col-xl-auto col-lg-auto text-center mb-md-0 mb-2  mx-0 px-0"><a className="text-white ml-3" href="#"> Chính sách bảo mật </a></div>
+                                    <div className="col-12 col-md-4 col-xl-auto col-lg-auto text-center mb-md-0 mb-2  mx-0 px-0"><a className="text-white ml-3" href="#"> Phương thức thanh toán </a></div>
+                                    <div className="col-12 col-md-4 col-xl-auto col-lg-auto text-center mb-md-0 mb-2  mx-0 px-0"><a className="text-white ml-3" href="#"> Điều kiện giao dịch </a></div>
                                 </div>
                             </div>                                                    
 

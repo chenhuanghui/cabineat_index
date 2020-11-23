@@ -112,6 +112,7 @@ export default class HomePage extends React.Component {
                         <div className="py-4 ">
                             <h2 className="text-center">Văn phòng làm việc</h2>
                             <ul className="list-none-style text-center">
+                            <li className="mb-2"><p className="mb-0">Việt Nam: <span className="font-weight-bold"> 51 Nguyễn Cư Trinh, Quận 1, Hồ Chí Minh</span></p></li>
                                 <li className="mb-2"><p className="mb-0">Việt Nam: <span className="font-weight-bold"> 126 Nguyễn Thị Minh Khai, Quận 3, Hồ Chí Minh</span></p></li>
                                 <li className="mb-2"><p className="mb-0">Singapore: <span className="font-weight-bold"> 10 Marina Boulevard 018983, Singapore</span></p></li>
                             </ul>

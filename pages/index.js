@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Nav from '../components/nav-new'
 import CasoureSlider from '../components/corsousel-new'
 import Footer from '../components/footer-new'
+import { Helmet } from "react-helmet";
 
 import ReactMarkdown from "react-markdown";
 import $ from 'jquery';
@@ -239,9 +240,12 @@ export default class HomePage extends React.Component {
         const {brand, hero, feature, message, benefit, pricing, more, solution, call2action, stepready4sale, mHeight} = this.state
         return (
             <>
-                <Head>
+                 <Helmet>
+                    <meta charSet="utf-8" />
                     <title>CabinEat - Trang chủ</title>
-                </Head>
+                    <meta name="description" content="CabinEat - Trang chủ" />
+                    <meta name="keywords" content="cabineat,nha hang so, online restaurant, delivery" />
+                </Helmet>
                 <Nav />
                 <div className="main-container pt-5" style={{backgroundColor: "white", minHeight: mHeight}}>                    
                     {hero 

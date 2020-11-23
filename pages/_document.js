@@ -31,6 +31,7 @@ class MyDocument extends Document {
           {/* <script src="/static/ga.js" /> */}
           <script src="/static/segment.js" />
           <script src="/static/pixel.js" />
+          <script src="/static/freshchat.js" />
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176827516-1"></script>
         </Head>
         <body>

@@ -60,7 +60,8 @@ export default class Nav extends React.Component {
                     </button>      
                     
                 </div>
-            </nav>
+            </nav>            
+            
             {this.state.openMenu 
                 ? <MenuModal 
                     onClosed = {()=> {

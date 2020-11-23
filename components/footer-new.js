@@ -174,19 +174,11 @@ export default class FooterNew extends React.Component {
 
                             <div className="col-12 col-md-6 col-lg-6 col-xl-6 d-flex mb-3">
                                 <div className="row ml-md-auto">
-                                    <a className="text-white ml-3" href="#"> Chính sách bảo mật </a>
-                                    <a className="text-white ml-3" href="#"> Phương thức thanh toán </a>
-                                    <a className="text-white ml-3" href="#"> Điều kiện giao dịch </a>
+                                    <p className="col-12 col-md-auto text-center mb-md-0 mb-2"><a className="text-white  ml-3" href="#"> Chính sách bảo mật </a></p>
+                                    <p className="col-12 col-md-auto text-center mb-md-0 mb-2"><a className="text-white ml-3" href="#"> Phương thức thanh toán </a></p>
+                                    <p className="col-12 col-md-auto text-center mb-md-0 mb-2"><a className="text-white ml-3" href="#"> Điều kiện giao dịch </a></p>
                                 </div>
-                            </div>
-                            
-                            {/* <div className="card-body ml-md-auto">
-                                <nav className="align-items-center justify-content-center">
-                                    <ul className="destination-links text-md-right text-center">
-                                        <li className="py-2"><a href="#">Điều khoản & chính sách</a></li>
-                                    </ul>
-                                </nav>
-                            </div> */}
+                            </div>                                                    
 
                         </div>
                     </div>

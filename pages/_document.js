@@ -11,22 +11,13 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="stylesheet" href="../assets/css/theme.min.css"></link>
+          <link rel="stylesheet" href="../assets/fonts/feather/feather.css"></link>
           <link rel="icon" href="../assets/img/favicon.ico"></link>
-          {/* <link rel="stylesheet" href="../assets/css/style.css"></link> */}
           <link rel="stylesheet" href="../assets/css/custom.css"></link>
           
-          <link
-            rel="stylesheet"
-            type="text/css"
-            charSet="UTF-8"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-          />
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-          />
-          
+          {/* <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+          <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"></link> */}
+
           {/* <script src="/static/fb.js" /> */}
           {/* <script src="/static/ga.js" /> */}
           <script src="/static/segment.js" />
@@ -38,13 +29,14 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
           <div className="modal-backdrop fade"></div>
-          <div id="fb-root"></div>
+          
+          {/* <div id="fb-root"></div>
           <div className="fb-customerchat"
             attribution="setup_tool"
             page_id="104712234753529"
             logged_in_greeting="Xin chào, CabinEat có thể giúp gì cho Bạn ?"
             logged_out_greeting="Xin chào, CabinEat có thể giúp gì cho Bạn ?">            
-          </div>
+          </div> */}
         </body>
       </Html>
     )

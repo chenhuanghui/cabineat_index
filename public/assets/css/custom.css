@@ -1,5 +1,6 @@
 body {
     /* font-family: 'Cabin', sans-serif !important; */
+    /* font-family: "Square Market", sans-serif !important; */
 }
 
 .markdown-custom p {
@@ -33,8 +34,36 @@ body {
     opacity: 0.25;
 }
 
+.hero h1 {
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 46px;
+    letter-spacing: -1px;
+    margin-bottom: 20px !important;
+}
 
-.custom h1, .custom .h1 {
+@media (min-width: 718px) {
+    .hero h1 {
+        font-size: 90px;
+        line-height: 92px;
+        letter-spacing: -2px;
+    }
+}
+
+.hero h3 {
+    font-size: 16px !important;
+    line-height: 24px !important;
+}
+
+@media (min-width: 718px) {
+    .hero h3 {
+        font-size: 32px !important;
+        line-height: 44px !important;
+    }
+}
+
+
+.custom h1, .custom .h1, h1.custom{
     font-size: 32px;
     line-height: 40px;
     letter-spacing: -0.4px;
@@ -42,7 +71,7 @@ body {
 }
 
 @media (min-width: 718px) {
-    .custom h1, .custom .h1 {
+    .custom h1, .custom .h1, h1.custom {
         font-size: 44px;
         line-height: 52px;
         letter-spacing: -0.6px;
@@ -61,6 +90,19 @@ body {
         line-height: 44px;
         letter-spacing: -0.4px;
     }
+}
+
+@media (min-width: 718px) {
+    h3.custom {
+        font-size: 50px;
+        line-height: 62px;
+    }    
+}
+h3.custom {
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    /* font-weight: 600; */
 }
 
 .bg-dark {
@@ -91,4 +133,9 @@ body {
 .custom_fc_frame {
     right: 10px !important;
     bottom: 10px !important;
+}
+
+.btn-success {
+    background-color: #00a695 !important;
+    border-color: #00a695 !important;
 }

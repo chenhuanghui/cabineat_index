@@ -12,7 +12,7 @@ export default function Message(props) {
         <div className="container">
             <div className="row justify-content-center align-items-center">
                 <div className="col-10 col-md-6">
-                  <h3 className="text-center custom pb-5">{props.mess}</h3>
+                  <h3 className="text-center custom pb-5 text-justify">{props.mess}</h3>
                 </div>
             </div>
             <div className="row">

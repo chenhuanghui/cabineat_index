@@ -9,7 +9,7 @@ export default function Hero(props) {
     },[]);
 
     return (
-        <div className="pt-md-8 pt-8 hero" style={{minHeight: windowHeight}}>
+        <div className="pt-md-8 pt-8 hero" style={{minHeight:"100vh"}}>
             <div className="row align-items-center justify-content-center no-gutters">
                 <div className="col-10 col-md-8 text-center">
                     <h1 className="text-white">{props.hero_message}</h1>

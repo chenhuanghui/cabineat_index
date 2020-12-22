@@ -25,6 +25,7 @@ export default class LastestCourse extends React.Component {
         let currentComponent = this;
 
         const entriesRes = await client.getEntries({content_type: 'courseItem'})
+        console.log("conten:", entriesRes)
         currentComponent.setState({lastestEntries: [...entriesRes.items]})
     }
 

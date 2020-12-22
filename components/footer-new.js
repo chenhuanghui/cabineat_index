@@ -58,8 +58,9 @@ export default class FooterNew extends React.Component {
                                 <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Công ty</h4>
                                 <ul className="footer-nav pl-0 mb-4">
                                     <li className="mb-2"><a href="/about">Giới thiệu</a></li>
-                                    <li className="mb-2"><a href="#">Việc làm</a></li>
-                                    <li className="mb-2"><a href="#">Nhà đầu tư</a></li>
+                                    <li className="mb-2"><a href="#" className="text-muted">Việc làm</a></li>
+                                    <li className="mb-2"><a href="#" className="text-muted">Nhà đầu tư</a></li>
+                                    <li className="mb-2"><a href="/events" >Sự kiện</a></li>
                                 </ul>                                                                        
                             </div>
                             <div className="col-12 col-md-3">
@@ -80,7 +81,6 @@ export default class FooterNew extends React.Component {
                                     <li className="mb-2"><a href="#" >Cabin POS</a></li>
                                     <li className="mb-2"><a href="#" >Cabin Marketing</a></li>
                                     <li className="mb-2"><a href="/cabinverse" >Cabinverse</a></li>
-                                    <li className="mb-2"><a href="/events" >Sự kiện</a></li>
                                 </ul>                                    
                             </div>
                             <div className="col-12 col-md-3">

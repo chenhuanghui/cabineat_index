@@ -58,38 +58,39 @@ export default class FooterNew extends React.Component {
                                 <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Công ty</h4>
                                 <ul className="footer-nav pl-0 mb-4">
                                     <li className="mb-2"><a href="/about">Giới thiệu</a></li>
-                                    <li className="mb-2"><a href="#" className="text-muted">Việc làm</a></li>
-                                    <li className="mb-2"><a href="#" className="text-muted">Nhà đầu tư</a></li>
+                                    <li className="mb-2"><a href="#" className="disable">Việc làm</a></li>
+                                    <li className="mb-2"><a href="#" className="disable">Nhà đầu tư</a></li>
                                     <li className="mb-2"><a href="/events" >Sự kiện</a></li>
                                 </ul>                                                                        
                             </div>
                             <div className="col-12 col-md-3">
                                 <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>CabinEat</h4>
                                 <ul className="footer-nav pl-0 mb-4">
-                                    <li className="mb-2"><a href="#">Kênh bán hàng</a></li>
-                                    <li className="mb-2"><a href="#">Xử lý đơn hàng</a></li>
-                                    <li className="mb-2"><a href="#">Hệ thống quản lý</a></li>
-                                    <li className="mb-2"><a href="#">Kiến thức</a></li>
                                     <li className="mb-2"><a href="http://bit.ly/cabineat-signup">Tạo nhà hàng</a></li>
                                     <li className="mb-2"><a href="http://bit.ly/my-cabineat">Đăng nhập</a></li>
+                                    <li className="mb-2"><a href="#" className="disable">Kênh bán hàng</a></li>
+                                    <li className="mb-2"><a href="#" className="disable">Xử lý đơn hàng</a></li>
+                                    <li className="mb-2"><a href="#" className="disable">Hệ thống quản lý</a></li>
+                                    <li className="mb-2"><a href="#" className="disable">Kiến thức</a></li>                                    
                                 </ul>                                    
                             </div>
                             <div className="col-12 col-md-3">
                                 <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Cabin Platform</h4>
                                 <ul className="footer-nav pl-0 mb-4">
                                     <li className="mb-2"><a href="http://cabinfood.vn" target="_blank">Cabin Food</a></li>
-                                    <li className="mb-2"><a href="#" >Cabin POS</a></li>
-                                    <li className="mb-2"><a href="#" >Cabin Marketing</a></li>
-                                    <li className="mb-2"><a href="/cabinverse" >Cabinverse</a></li>
+                                    <li className="mb-2"><a href="/cabinverse">Cabinverse</a></li>
+                                    <li className="mb-2"><a href="#" className="disable" >Cabin POS</a></li>
+                                    <li className="mb-2"><a href="#" className="disable">Cabin Marketing</a></li>
+                                    
                                 </ul>                                    
                             </div>
                             <div className="col-12 col-md-3">
                                 <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Công cụ</h4>
                                 <ul className="footer-nav pl-0 mb-4">
-                                    <li className="mb-2"><a href="#">SMS quảng cáo</a></li>
-                                    <li className="mb-2"><a href="#">Tạo QRCode</a></li>
-                                    <li className="mb-2"><a href="#">Tạo link ngắn</a></li>
-                                    <li className="mb-2"><a href="#">Kho ảnh miễn phi</a></li>
+                                    <li className="mb-2"><a href="#" className="disable">SMS quảng cáo</a></li>
+                                    <li className="mb-2"><a href="#" className="disable">Tạo QRCode</a></li>
+                                    <li className="mb-2"><a href="#" className="disable">Tạo link ngắn</a></li>
+                                    <li className="mb-2"><a href="#" className="disable">Kho ảnh miễn phi</a></li>
                                 </ul>                                    
                             </div>
                         </div>
@@ -98,18 +99,18 @@ export default class FooterNew extends React.Component {
                             <div className="col-12 col-md-3">
                                 <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Đối tác</h4>
                                 <ul className="footer-nav pl-0 mb-4">
-                                    <li className="mb-2"><a href="#">Vận chuyển</a></li>                                    
-                                    <li className="mb-2"><a href="#">Đào tạo</a></li>
-                                    <li className="mb-2"><a href="#">Truyền thông</a></li>
+                                    <li className="mb-2"><a href="#" className="disable">Vận chuyển</a></li>                                    
+                                    <li className="mb-2"><a href="#" className="disable">Đào tạo</a></li>
+                                    <li className="mb-2"><a href="#" className="disable">Truyền thông</a></li>
                                 </ul>                                                                        
                             </div>
                             <div className="col-12 col-md-3">
                                 <h4 className="text-muted font-weight-bold mb-3 footer-nav-header" style={{color: "#737373 !important"}}>Nhà phát triển</h4>
                                 <ul className="footer-nav pl-0 mb-4">
-                                    <li className="mb-2"><a href="#">Nền tảng</a></li>
-                                    <li className="mb-2"><a href="#">Đăng ký</a></li>
-                                    <li className="mb-2"><a href="#">Tài liệu</a></li>                                    
-                                    <li className="mb-2"><a href="#">APIs</a></li>                   
+                                    <li className="mb-2"><a href="#" className="disable">Nền tảng</a></li>
+                                    <li className="mb-2"><a href="#" className="disable">Đăng ký</a></li>
+                                    <li className="mb-2"><a href="#" className="disable">Tài liệu</a></li>                                    
+                                    <li className="mb-2"><a href="#" className="disable">APIs</a></li>                   
                                 </ul>                                    
                             </div>                            
                             <div className="col-12 col-md-3">
@@ -123,7 +124,7 @@ export default class FooterNew extends React.Component {
                             <div className="col-12 col-md-3">
                                 <div className="mt-4 mt-md-0">
                                     <h2>CabinEat</h2>
-                                    <p>Hãy bắt đầu xây dựng câu chuyện thương hiệu của bạn từ nhà hàng online.</p>
+                                    <p>Hãy bắt đầu xây dựng câu chuyện thương hiệu của bạn từ Nhà Hàng Số.</p>
                                 </div>
                             </div>
                         </div>
@@ -153,9 +154,9 @@ export default class FooterNew extends React.Component {
                                                     </svg>
                                                 </a>
                                                 {/* <a href="#" title="Instagram">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
-                                                    <path fill="#fff" d="M17.8 6.7c0-.9-.2-1.4-.4-1.9-.2-.6-.5-1-1-1.4-.5-.5-.9-.7-1.4-1-.5-.2-1.1-.3-1.9-.4H10c-2.1 0-2.5 0-3.3.1-.9 0-1.4.2-1.9.4-.6.2-1 .4-1.4.9-.5.4-.7.9-1 1.4-.2.6-.3 1.1-.3 2-.1.7-.1 1-.1 3.2s0 2.5.1 3.3c0 .9.2 1.4.4 1.9.2.6.5 1 1 1.4s.9.7 1.4 1c.4.2 1.1.3 1.9.4H10c2.1 0 2.4 0 3.2-.1.9 0 1.4-.2 1.9-.4.6-.2 1-.5 1.4-1 .5-.5.7-.9 1-1.4.2-.5.3-1.1.4-1.9 0-.9.1-1 .1-3.2-.1-2.1-.1-2.5-.2-3.3zm-1.4 6.5c0 .8-.2 1.2-.2 1.5-.2.4-.3.6-.6.9-.2.2-.6.5-.9.6-.3.1-.7.2-1.5.2-.9 0-1.1.1-3.2.1s-2.4 0-3.2-.1c-.8 0-1.2-.2-1.5-.2-.5-.1-.7-.2-1-.6-.2-.2-.5-.6-.6-.9-.2-.3-.3-.7-.3-1.5 0-.9-.1-1.1-.1-3.2 0-2.2 0-2.4.1-3.2 0-.8.2-1.2.2-1.5.2-.4.3-.6.6-.9.2-.2.6-.5.9-.6.5-.1.9-.3 1.7-.3.9 0 1.2-.1 3.2-.1s2.3 0 3.1.1c.8 0 1.2.2 1.5.2.4.2.6.3.9.6.3.3.5.7.6 1 .2.3.3.7.3 1.5 0 .9.1 1.1.1 3.2 0 2.2 0 2.4-.1 3.2zM10 5.9c-2.2 0-4.1 1.8-4.1 4.1s1.8 4.1 4.1 4.1 4-1.9 4-4.1-1.8-4.1-4-4.1m0 6.7c-1.4 0-2.6-1.2-2.6-2.6S8.5 7.4 10 7.4s2.6 1.2 2.6 2.6-1.2 2.6-2.6 2.6m5.1-6.8c0 .6-.4 1-1 1s-1-.4-1-1 .4-1 1-1 1 .4 1 1"></path>
-                                                </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
+                                                        <path fill="#fff" d="M17.8 6.7c0-.9-.2-1.4-.4-1.9-.2-.6-.5-1-1-1.4-.5-.5-.9-.7-1.4-1-.5-.2-1.1-.3-1.9-.4H10c-2.1 0-2.5 0-3.3.1-.9 0-1.4.2-1.9.4-.6.2-1 .4-1.4.9-.5.4-.7.9-1 1.4-.2.6-.3 1.1-.3 2-.1.7-.1 1-.1 3.2s0 2.5.1 3.3c0 .9.2 1.4.4 1.9.2.6.5 1 1 1.4s.9.7 1.4 1c.4.2 1.1.3 1.9.4H10c2.1 0 2.4 0 3.2-.1.9 0 1.4-.2 1.9-.4.6-.2 1-.5 1.4-1 .5-.5.7-.9 1-1.4.2-.5.3-1.1.4-1.9 0-.9.1-1 .1-3.2-.1-2.1-.1-2.5-.2-3.3zm-1.4 6.5c0 .8-.2 1.2-.2 1.5-.2.4-.3.6-.6.9-.2.2-.6.5-.9.6-.3.1-.7.2-1.5.2-.9 0-1.1.1-3.2.1s-2.4 0-3.2-.1c-.8 0-1.2-.2-1.5-.2-.5-.1-.7-.2-1-.6-.2-.2-.5-.6-.6-.9-.2-.3-.3-.7-.3-1.5 0-.9-.1-1.1-.1-3.2 0-2.2 0-2.4.1-3.2 0-.8.2-1.2.2-1.5.2-.4.3-.6.6-.9.2-.2.6-.5.9-.6.5-.1.9-.3 1.7-.3.9 0 1.2-.1 3.2-.1s2.3 0 3.1.1c.8 0 1.2.2 1.5.2.4.2.6.3.9.6.3.3.5.7.6 1 .2.3.3.7.3 1.5 0 .9.1 1.1.1 3.2 0 2.2 0 2.4-.1 3.2zM10 5.9c-2.2 0-4.1 1.8-4.1 4.1s1.8 4.1 4.1 4.1 4-1.9 4-4.1-1.8-4.1-4-4.1m0 6.7c-1.4 0-2.6-1.2-2.6-2.6S8.5 7.4 10 7.4s2.6 1.2 2.6 2.6-1.2 2.6-2.6 2.6m5.1-6.8c0 .6-.4 1-1 1s-1-.4-1-1 .4-1 1-1 1 .4 1 1"></path>
+                                                    </svg>
                                                 </a> */}
                                             </div>
                                         </div>
@@ -166,9 +167,9 @@ export default class FooterNew extends React.Component {
                         
                         <div className="row pt-5">                            
                             <div className="col-12 col-md-4 col-lg-4 col-xl-4 mb-3">
-                                <p className="copyright text-md-left text-center ml-3 mb-2" style={{color: "#737373 !important"}}>CTY TNHH CabinFood | MST: 0316237460</p>
-                                <p className="copyright text-md-left text-center ml-3 mb-2" style={{color: "#737373 !important"}}>51 Nguyễn Cư Trinh - Quận 1- Hồ Chí Minh</p>
-                                <p className="copyright text-md-left text-center ml-3 mb-2" style={{color: "#737373 !important"}}>growth@cabineat.vn | 094.192.6368</p>
+                                <p className="copyright text-md-left text-center ml-3 mb-2 small" style={{color: "#737373 !important"}}>CTY TNHH CabinEat | MST: 0316637878</p>
+                                <p className="copyright text-md-left text-center ml-3 mb-2 small" style={{color: "#737373 !important"}}>51 Nguyễn Cư Trinh - Quận 1- Hồ Chí Minh</p>
+                                <p className="copyright text-md-left text-center ml-3 mb-2 small" style={{color: "#737373 !important"}}>growth@cabineat.vn | 094.192.6368</p>
                                 {/* <p className="copyright text-md-left text-center ml-3 mt-3" style={{color: "#737373 !important"}}>© 2020 CabinEat Pte. Ltd.</p> */}
                             </div>
 
@@ -212,6 +213,13 @@ export default class FooterNew extends React.Component {
                     color: #737373 !important;
                     border-bottom: 1px solid;
                     padding-bottom: 10px;
+                }
+
+                .disable {
+                    color: #737373 !important ;                   
+                }
+                .disable:hover {
+                    cursor: default;
                 }
                     
                 `}</style>

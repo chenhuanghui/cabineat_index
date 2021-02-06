@@ -24,7 +24,7 @@ export default function LastestCourse ({notionPageID}) {
     
     return (
         <>            
-            <div id="releated" className="mt-5 container">
+            <div className="releated mt-5">
                 <h5 className="pre-title"> <span className="fe fe-briefcase mr-2"></span> Mới nhất</h5>
                 <ul className="list-none-style pt-2">
                     {posts && posts.map((item, index)=>(
@@ -39,6 +39,17 @@ export default function LastestCourse ({notionPageID}) {
                     ))}
                 </ul>
             </div>
+            <style jsx>{`
+            .releated {
+                padding-left: 0px;
+            }
+            
+            @media (min-width:768px){
+                .releated {
+                    padding-left: 12px !important;
+                }   
+            }
+            `}</style>
         </>
     )
 }

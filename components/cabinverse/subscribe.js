@@ -45,7 +45,9 @@ export default class Subscribe extends React.Component {
                         placeholder="Địa chỉ email"
                         onKeyPress={()=>{$('.invalid-feedback').hide()}}
                     />
-                    <button className="col-12 mt-3 btn btn-primary btn-subscribe" onClick={this.addScubscribe}>Nhận thông báo</button>
+                    <button className="col-12 mt-3 btn btn-primary btn-subscribe" onClick={this.addScubscribe}>
+                        <small>Nhận thông báo</small>
+                    </button>
                     <div className="form-notify">
                         <div className="invalid-feedback text-center">Địa chỉ email chưa chính xác</div>
                         <div className="valid-feedback text-center">Chúng tôi sẽ gởi cập nhật thông tin đến email của bạn vừa đăng ký.</div>

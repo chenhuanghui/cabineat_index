@@ -41,7 +41,7 @@ export default function Cabinverse() {
     return(
         <>
             <Head>
-                <title>Cabinverse - Học viện kinh doanh nhà hàng online</title>
+                <title>Cabinverse - Học viện kinh doanh nhà hàng số</title>
             </Head>
             <Nav />
             <div className="container-cabin-fluid">

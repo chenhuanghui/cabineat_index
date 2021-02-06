@@ -37,8 +37,8 @@ export default class Intro extends React.Component {
                 <div className="custom section bg-dark" id="hero">
                     <div className="container-fluid pt-7 row align-items-center justify-content-center ml-0 pl-0 mr-0 pr-0">
                         <div className="col-12 col-md-7 pb-6">
-                            <h1 className="text-center">Học viện Cabinverse</h1>
-                            <p className="text-center">Chúng tôi ở đây để giúp đỡ, chia sẻ kiến thức, công thức, mẹo và nguồn cảm hứng để giúp bạn bắt đầu và phát triển nhà hàng online thành công.</p>
+                            <h1 className="text-center">Cabinverse</h1>
+                            <p className="text-center font-weight-lighter"><strong>Học viện kinh doanh nhà hàng số</strong> được lập ra từ mong muốn được giúp đỡ, chia sẻ kiến thức, kinh nghiệm, nguồn cảm hứng để giúp bạn bắt đầu và phát triển nhà hàng số thành công.</p>
                             <div className="row align-items-center justify-content-center">
                                 <div className="col-11 col-md-12 mt-5 ">
                                     <div className="row align-items-center justify-content-center">

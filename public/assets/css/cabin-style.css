@@ -2,7 +2,7 @@
     --white: #ffffff;
     --grey09: #6E84A3;
     --brandcolor: #00ACA1;
-    --primary: #2C7BE5;
+    --primary: #1F4DF5;
     --soft-blue: #E4EBF6;
     --danger: #FF3008;
     --warning: #FFB000;
@@ -155,7 +155,7 @@ p {
 }
 
 .alert-link:hover {
-    color: #E13143 !important;
+    color: var(--primary) !important;
 }
 
 
@@ -253,7 +253,7 @@ small, .small, .smal p {
     background: linear-gradient(180deg, #FF9A02 -56.61%, #FF5894 100%);
 }
 .bg-primary {
-    background-color: #E13143 !important;
+    background-color: var(--primary) !important;
 }
 
 .bg-yellow {
@@ -270,15 +270,15 @@ small, .small, .smal p {
     color: #F2F2F2 !important;    
 }
 .text-primary {
-    color: #E13143 !important;
+    color: var(--primary) !important;
 }
 .text-underline {
     text-decoration: underline;
 }
 .btn-primary {
-    background-color: #E13143 !important;
+    background-color: var(--primary) !important;
     color: white;
-    border-color:  #E13143 !important;
+    border-color:  var(--primary) !important;
 }
 
 .button {

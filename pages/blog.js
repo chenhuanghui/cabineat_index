@@ -26,14 +26,36 @@ export default function BlogPage({ posts }) {
                 <title>CabinEat - Blog</title>
             </Head>
             <Nav />
-            <div className="container-cabin">                
-                {posts.map((post, index) => (
-                    <a href= {`/${post.id}`} key={index}>
-                        {post.title}
-                    </a>
-                ))}
+            <div className="container-cabin">             
+                <div className="content-wrapper grid">
+                    {posts && posts.length>0 && posts.map((post, id)=>(
+                        <div className="article-item grid" key={id}>
+                            <div className="article-cover cover-fit rounded" style={{backgroundImage:`url("${post.cover ? post.cover[0].url : ""}")`, backgroundColor: "#1F4DF5"}}></div>
+                            {/* <img className="img-fluid rounded" src={post.cover ? post.cover[0].url : ""} /> */}
+                            <a className="title py-2 text-primary font-weight-bold mt-2" href={`/${post.id}`}>{post.title}</a>     
+                            <p className="small">
+                                inspirator: <span className="text-primary">{post.author}</span>
+                            </p>
+                        </div>
+                    ))}
+                </div>                
             </div>
+            <hr />
             <FooterNew />
+            <style jsx>{`
+            .content-wrapper {
+                margin: 24px 0px;
+                grid-template-columns: 1fr;
+                grid-gap: 24px 16px;
+            }
+            .article-item {
+                grid-template-rows: 200px 1fr 1fr;
+            }
+
+            @media (min-width:768px){
+                grid-template-columns: repeat(auto-fill, minmax(250px,1fr)) !important;
+            }
+            `}</style>
         </div>
     );
 }

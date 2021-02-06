@@ -211,7 +211,7 @@ export default class HomePage extends React.Component {
                                         <img className="avatar-img rounded-circle border border-4 border-card" src={item.fields.img[0].url}/>
                                     </div>
                                     <div className="mb-0">
-                                    <h2 className="card-title text-center mb-0">{item.fields.title}</h2>
+                                    <h2 className="card-title text-center title font-weight-bold">{item.fields.title}</h2>
                                         <p className="small text-center mb-1 mt-1">{item.fields.desc}</p>
                                     </div>
                                 </div>
@@ -232,13 +232,25 @@ export default class HomePage extends React.Component {
                                 </div>
                             </div>
                             <div className="col-12 col-md-6 card-body">
-                                <ReactMarkdown source={message.fields.title} className="header-title mb-3 markdown-custom h2"/>
-                                <p>{message.fields.desc}</p>
+                                <ReactMarkdown source={message.fields.title} className="header-title mb-3 caption font-weight-bold"/>
+                                <p className="mb-1">{message.fields.desc}</p>
                                 <ul className="check-list list-none-style ml-md-4" style={{paddingLeft: "calc(5px + 1.75em)"}}>
-                                    <li className="mb-3"> <span className="fe fe-check mr-2 text-primary"></span>Có ngay trang đặt món cho khách hàng được thiết kế tối ưu cho các loại thiết bị</li>
-                                    <li className="mb-3"><span className="fe fe-check mr-2 text-primary"></span>Kênh xử lý đơn hàng chuyên biệt từ delivery, và đồng bộ các dịch vụ vận chuyển COD</li>
-                                    <li className="mb-3"><span className="fe fe-check mr-2 text-primary"></span>Quản lý đơn hàng, khách hàng, sản phẩm và các dữ liệu quan trọng chỉ trong một hệ thống </li>
-                                    <li className="mb-3"><span className="fe fe-check mr-2 text-primary"></span>Chủ động xây dựng các chương trình khuyến mãi, tiếp cận khách hàng bằng các công cụ và khuôn mẫu marketing được tích hợp sẵn </li>
+                                    <li className="mb-3">
+                                        <span className="fe fe-check mr-2 text-primary"></span>
+                                        <span className="p">Có ngay trang đặt món cho khách hàng được thiết kế tối ưu cho các loại thiết bị</span>
+                                    </li>
+                                    <li className="mb-3">
+                                        <span className="fe fe-check mr-2 text-primary"></span>
+                                        <span className="p">Kênh xử lý đơn hàng chuyên biệt từ delivery, và đồng bộ các dịch vụ vận chuyển COD</span>
+                                    </li>
+                                    <li className="mb-3">
+                                        <span className="fe fe-check mr-2 text-primary"></span>
+                                        <span className="p">Quản lý đơn hàng, khách hàng, sản phẩm và các dữ liệu quan trọng chỉ trong một hệ thống</span>
+                                    </li>
+                                    <li className="mb-3">
+                                        <span className="fe fe-check mr-2 text-primary"></span>
+                                        <span className="p">Chủ động xây dựng các chương trình khuyến mãi, tiếp cận khách hàng bằng các công cụ và khuôn mẫu marketing được tích hợp sẵn</span>
+                                    </li>
                                 </ul>
                                 <a href={message.fields.btn_href} className="text-primary card-title font-weight-bold"> {message.fields.btn_title} <span className="fe fe-chevrons-right ml-2"></span></a>
                             </div>

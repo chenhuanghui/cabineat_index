@@ -198,7 +198,7 @@ a.text-white:visited {
     color: white !important;
 }
 
-p {
+p, .p {
     font-style: normal !important;
     font-size: 14px !important;
     margin-top: 0 !important;

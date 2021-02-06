@@ -402,3 +402,11 @@ small, .small, .smal p {
 .notion-asset-wrapper {
     width: 100% !important;
 }
+
+.notion-list.notion-list-disc {
+    font-size: 14px !important;   
+}
+
+img.notion-image-inset {
+    border-radius: 10px !important;
+}

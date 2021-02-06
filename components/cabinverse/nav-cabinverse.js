@@ -8,7 +8,6 @@ export const getAllPosts = async () => {
 }
 
 export default function NavCabinverse () {
-    const [posts, setAllPosts] = useState()
     const [collectionList, setCollectionList] = useState()
 
     useEffect(()=>{    

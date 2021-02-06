@@ -28,16 +28,16 @@ export default function BlogPage({ posts }) {
             <Nav />
             <div className="container-cabin">             
                 <div className="content-wrapper grid">
-                    {posts && posts.length>0 && posts.map((post, id)=>(
-                        <div className="article-item grid" key={id}>
-                            <div className="article-cover cover-fit rounded" style={{backgroundImage:`url("${post.cover ? post.cover[0].url : ""}")`, backgroundColor: "#1F4DF5", height: "200px"}}></div>
-                            <a className="title py-2 text-primary font-weight-bold mt-2" href={`/${post.id}`}>{post.title}</a>     
-                            <p className="small mb-2 pb-2 border-bottom">
-                                inspirator: <span className="text-primary mr-2">{post.author}</span>
-                                ngày: <span className="text-primary">{post.date}</span>
-                            </p>
-                            <p className="small text-gray">{post.preview}</p>
-                        </div>
+                    {posts && posts.length>0 && posts.map((post, id)=> (
+                            <div className={`article-item grid ${!post.published ? "d-none" : ""}`} key={id}>
+                                <div className="article-cover cover-fit rounded" style={{backgroundImage:`url("${post.cover ? post.cover[0].url : ""}")`, backgroundColor: "#1F4DF5", height: "200px"}}></div>
+                                <a className="title py-2 text-primary font-weight-bold mt-2" href={`/${post.id}`}>{post.title}</a>     
+                                <p className="small mb-2 pb-2 border-bottom">
+                                    inspirator: <span className="text-primary mr-2">{post.author}</span>
+                                    ngày: <span className="text-primary">{post.date}</span>
+                                </p>
+                                <p className="small text-gray">{post.preview}</p>
+                            </div>
                     ))}
                 </div>                
             </div>

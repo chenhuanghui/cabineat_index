@@ -71,7 +71,7 @@ export default class FooterNew extends React.Component {
                                     <li className="mb-2"><a href="#" className="disable">Kênh bán hàng</a></li>
                                     <li className="mb-2"><a href="#" className="disable">Xử lý đơn hàng</a></li>
                                     <li className="mb-2"><a href="#" className="disable">Hệ thống quản lý</a></li>
-                                    <li className="mb-2"><a href="#" className="disable">Kiến thức</a></li>                                    
+                                    <li className="mb-2"><a href="/blog" className="">Kiến thức</a></li>                                    
                                 </ul>                                    
                             </div>
                             <div className="col-12 col-md-3">
@@ -118,10 +118,7 @@ export default class FooterNew extends React.Component {
                                 <ul className="footer-nav pl-0 mb-4">
                                     <li className="mb-2"><a href="#">Liên hệ</a></li>
                                     <li className="mb-2"><a href="mailto:growth@cabineat.vn">Email</a></li>
-                                    <li className="mb-2">
-                                        <a href="/d67234052f56404b8d71166a143c51ab" target="_blank">Điều khoản, Chính sách</a>
-                                        
-                                    </li>
+                                    <li className="mb-2"><a href="/d67234052f56404b8d71166a143c51ab">Điều khoản, Chính sách</a></li>
                                 </ul>                                    
                             </div>
                             <div className="col-12 col-md-3">

@@ -40,7 +40,7 @@ export default function NotionDetail({blocks, post}) {
         <div className="content-wrapper">
           <div className="article-detail-wrapper">
             <div className="acticle-detail-top">
-              <p className="caption font-weight-bold">{post.title}</p>
+              <p className="caption font-weight-bold text-primary">{post.title}</p>
               <p className="small">inspirator: <span className="text-primary">{post.author}</span></p>
             </div>                
             <div className="article-cover cover-fit rounded" style={{backgroundImage:`url("${post.cover ? post.cover[0].url : ""}")`, backgroundColor: "#1F4DF5"}}></div>

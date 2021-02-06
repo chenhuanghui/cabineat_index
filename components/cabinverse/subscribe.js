@@ -36,28 +36,27 @@ export default class Subscribe extends React.Component {
     render() {
         return (
             <>            
-                <div className="bg-dark">         
-                    <div className="container">
-                        <div className="row align-items-center justify-content-center py-6 ">
-                            <div className="col-11">
-                                <h1 className="fe fe-file-text text-center" style={{fontSize: "3rem"}}></h1>
-                                <h2 className="text-center" style={{lineHeight: "30px"}}>Tham gia cùng hơn 3.000 nhà hàng, đã kinh doanh cùng chúng tôi.</h2>
-                                <p className="text-center small">Nhận các hướng dẫn, mẹo và kiến thức kinh doanh nhà hàng online qua email.</p>
-                                <div className="form">
-                                    <input type="text" 
-                                        id="email_address" 
-                                        className="col-12 form-control form-control-appended" 
-                                        placeholder="Địa chỉ email"
-                                        onKeyPress={()=>{$('.invalid-feedback').hide()}}
-                                    />
-                                    <button className="col-12 mt-3 btn btn-primary btn-subscribe" onClick={this.addScubscribe}>Nhận thông báo</button>
-                                    <div className="invalid-feedback text-center">Địa chỉ email chưa chính xác</div>
-                                    <div className="valid-feedback text-center">Chúng tôi sẽ gởi cập nhật thông tin đến email của bạn vừa đăng ký.</div>
-                                </div>
-                            </div>
-                        </div>
+                <div className="bg-dark subscribe-wrapper grid grid-gap-12-12 align-items-center justify-content-center">
+                    <p className="text-center caption" style={{lineHeight: "30px"}}>Tham gia cùng hơn 3.000 nhà hàng, đã kinh doanh cùng chúng tôi.</p>
+                    <p className="text-center small font-weight-lighter">Nhận các hướng dẫn, mẹo và kiến thức kinh doanh nhà hàng số qua email.</p>
+                    <input type="text" 
+                        id="email_address" 
+                        className="col-12 form-control form-control-appended" 
+                        placeholder="Địa chỉ email"
+                        onKeyPress={()=>{$('.invalid-feedback').hide()}}
+                    />
+                    <button className="col-12 mt-3 btn btn-primary btn-subscribe" onClick={this.addScubscribe}>Nhận thông báo</button>
+                    <div className="form-notify">
+                        <div className="invalid-feedback text-center">Địa chỉ email chưa chính xác</div>
+                        <div className="valid-feedback text-center">Chúng tôi sẽ gởi cập nhật thông tin đến email của bạn vừa đăng ký.</div>
                     </div>
-                </div>                
+                </div>
+                <style>{`
+                .subscribe-wrapper {
+                    grid-template-rows: 1fr;
+                    padding: 100px 24px;
+                }
+                `}</style>          
             </>
         )
     }

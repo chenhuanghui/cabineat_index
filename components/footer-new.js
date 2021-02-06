@@ -165,22 +165,21 @@ export default class FooterNew extends React.Component {
                             </div>
                         </div>
                         
-                        <div className="row pt-5">                            
-                            <div className="col-12 col-md-4 col-lg-4 col-xl-4 mb-3">
+                        <div className="footer-bottom-wrapper grid pt-5">                            
+                            <div className="footer-bottom-item1">
                                 <p className="copyright text-md-left text-center ml-3 mb-2 small" style={{color: "#737373 !important"}}>CTY TNHH CabinEat | MST: 0316637878</p>
                                 <p className="copyright text-md-left text-center ml-3 mb-2 small" style={{color: "#737373 !important"}}>51 Nguyễn Cư Trinh - Quận 1- Hồ Chí Minh</p>
-                                <p className="copyright text-md-left text-center ml-3 mb-2 small" style={{color: "#737373 !important"}}>growth@cabineat.vn | 094.192.6368</p>
+                                <p className="copyright text-md-left text-center ml-3 mb-2 small" style={{color: "#737373 !important"}}>growth@cabineat.vn</p>
                                 {/* <p className="copyright text-md-left text-center ml-3 mt-3" style={{color: "#737373 !important"}}>© 2020 CabinEat Pte. Ltd.</p> */}
                             </div>
 
-                            <div className="col-12 col-md-8 col-lg-8 col-xl-8 mb-3 ml-md-auto">
+                            <div className="footer-bottom-item2 justify-self-end">
                                 <div className="row d-flex">
-                                    <div className="col-12 col-md-4 col-xl-auto col-lg-auto text-center mb-md-0 mb-2  mx-0 px-0"><a className="text-white ml-3" href="#"> Chính sách bảo mật </a></div>
                                     <div className="col-12 col-md-4 col-xl-auto col-lg-auto text-center mb-md-0 mb-2  mx-0 px-0"><a className="text-white ml-3" href="#"> Phương thức thanh toán </a></div>
+                                    <div className="col-12 col-md-4 col-xl-auto col-lg-auto text-center mb-md-0 mb-2  mx-0 px-0"><a className="text-white ml-3" href="#"> Chính sách bảo mật </a></div>
                                     <div className="col-12 col-md-4 col-xl-auto col-lg-auto text-center mb-md-0 mb-2  mx-0 px-0"><a className="text-white ml-3" href="#"> Điều kiện giao dịch </a></div>
                                 </div>
                             </div>                                                    
-
                         </div>
                     </div>
                 </footer>
@@ -221,7 +220,18 @@ export default class FooterNew extends React.Component {
                 .disable:hover {
                     cursor: default;
                 }
-                    
+
+                .footer-bottom-wrapper {
+                    grid-template-columns: 1fr;
+                    grid-gap: 24px 16px;
+                }    
+
+                @media (min-width:768px){
+                    .footer-bottom-wrapper {
+                        grid-template-columns: 1fr auto;
+                        grid-gap: 24px 16px;
+                    }
+                }
                 `}</style>
             </>
         )

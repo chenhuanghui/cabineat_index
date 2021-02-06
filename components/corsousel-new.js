@@ -62,8 +62,8 @@ export default class CarouselNew extends React.Component {
                                             </div>
                                         </div>
                                         <div className="row pt-4">
-                                            <ReactMarkdown source={item.fields.title} className="mb-0 mb-n3 h2"/>
-                                            <ReactMarkdown source={item.fields.desc} />
+                                            <ReactMarkdown source={item.fields.title} className="mb-1 title font-weight-bold"/>
+                                            <ReactMarkdown source={item.fields.desc}/>
                                         </div>
                                     </div>
                                 </div>

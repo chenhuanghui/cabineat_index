@@ -26,13 +26,12 @@ export async function getServerSideProps({ params: { notionID } }) {
     return {
       props: {
         blocks,
-        post,
-        posts
+        post
       },
     };
   }
 }
-export default function NotionDetail({blocks, post, posts}) {
+export default function NotionDetail({blocks, post}) {
 
   useEffect(()=>{
     const ReactPixel =  require('react-facebook-pixel');
@@ -43,14 +42,14 @@ export default function NotionDetail({blocks, post, posts}) {
     <div className="app">
       <Head>
           <title>CabinEat - Blog</title>
-          { blocks && posts && post ? <meta property="og:title" content={post.title}></meta> : null }
-          { blocks && posts && post ? <meta property="og:type" content="article"></meta> : null }
-          { blocks && posts && post ? <meta property="og:url" content={`https://cabineat.vn/${post.id}`}></meta> : null }
-          { blocks && posts && post ? <meta property="og:imgage" content={`${post.cover ? post.cover[0].url : ""}`}></meta> : null }
+          { blocks && post ? <meta property="og:title" content={post.title}></meta> : null }
+          { blocks && post ? <meta property="og:type" content="article"></meta> : null }
+          { blocks && post ? <meta property="og:url" content={`https://cabineat.vn/${post.id}`}></meta> : null }
+          { blocks && post ? <meta property="og:image" content={`${post.cover ? post.cover[0].url : ""}`}></meta> : null }
       </Head>
       <Nav />
       <div className="container-cabin">       
-        { blocks && posts && post
+        { blocks && post
           ?
           <div className="content-wrapper grid">          
             <div className="article-detail-wrapper grid grid-gap-24-16">
@@ -68,15 +67,7 @@ export default function NotionDetail({blocks, post, posts}) {
             </div>
 
             <div className="nav-wrapper">
-              <Subscribe />          
-              {/* <div className="grid grid-gap-12-12">
-                <p className="title font-weight-bold margin-top border-bottom padding-y grid-template-rows-auto">Các bài viết khác</p>
-                <div className="article-listing">
-                  {posts && posts.map((item, index)=>(
-                    <a key={index} className="d-block py-1 font-weight-light" href={`/${item.id}`}>{item.title}</a>
-                  ))}
-                </div>
-              </div> */}
+              <Subscribe />
               <LastestCourse notionPageID="90ad638172fd4481806c9106d9ce8287"/>
             </div>
             

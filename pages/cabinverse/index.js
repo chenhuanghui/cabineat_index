@@ -4,10 +4,8 @@ import Nav from '../../components/nav-new'
 
 import Footer from '../../components/footer-new'
 import Intro from '../../components/cabinverse/intro'
-import LastedCourse from '../../components/cabinverse/lastedCourse'
 import Subscribe from '../../components/cabinverse/subscribe'
 import NavCabinverse from '../../components/cabinverse/nav-cabinverse'
-import { post } from 'jquery';
 
 const NOTION_BLOG_ID = '90ad638172fd4481806c9106d9ce8287'
 

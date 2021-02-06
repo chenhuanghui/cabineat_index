@@ -74,14 +74,14 @@ export default class HomePage extends React.Component {
                     <title>CabinEat - Giới thiệu CabinEat</title>
                 </Head>
                 <Nav />
-                <div className="main-container pt-5" style={{backgroundColor: "white", minHeight: mHeight}}>
+                <div className="main-container" style={{backgroundColor: "white", minHeight: mHeight}}>
                     {hero
                     ?    
                         <section className="bg-dark custom" id="hero" style={{minHeight: mHeight}}>
                             <div className="container-fluid py-6 align-items-center justify-content-center row">
                                 <div className="col-12 col-md-6 custom">
                                     <p className="text-center pre-title text-uppercase font-weight-bold small" style={{letterSpacing: "2px"}}>{hero.pre_title}</p>
-                                    <ReactMarkdown source={hero.message} className="h1 text-center"/>
+                                    <ReactMarkdown source={hero.message} className="caption font-weight-bold text-center"/>
                                 </div>
                             </div>
                         </section> 
@@ -120,7 +120,7 @@ export default class HomePage extends React.Component {
                         <div className="py-4 ">
                             <h2 className="text-center">Email</h2>
                             <ul className="list-none-style text-center">
-                                <li className="mb-2"><p className="mb-0"> Hỗ trợ: <span className="font-weight-bold"> hello@cabineat.vn</span></p></li>
+                                <li className="mb-2"><p className="mb-0"> Hỗ trợ: <span className="font-weight-bold"> growth@cabineat.vn</span></p></li>
                             </ul>
                         </div>
                     </section>

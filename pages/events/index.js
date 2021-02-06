@@ -90,7 +90,7 @@ export default class Event extends React.Component {
                     <title>Events</title>
                 </Head>
                 <Nav />
-                <div className="main-container pt-5" style={{backgroundColor: "white", minHeight: mHeight}}>
+                <div className="main-container" style={{backgroundColor: "white", minHeight: mHeight}}>
                     <Intro />
 
                     <div className="section " id="">

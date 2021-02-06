@@ -81,7 +81,7 @@ export default class EventDetail extends React.Component {
                     <title>Event - {this.props.eventDetail.fields.title}</title>
                 </Head>
                 <Nav />
-                <div className="main-container pt-5" style={{backgroundColor: "white", minHeight: mHeight}}>
+                <div className="main-container" style={{backgroundColor: "white", minHeight: mHeight}}>
                     <Intro />
 
                     <div className="section mt-md-5 mt-3" id="">

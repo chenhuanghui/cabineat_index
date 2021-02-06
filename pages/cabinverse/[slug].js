@@ -72,7 +72,7 @@ export default class CourseItem extends React.Component {
                     <title>Cabinverse - {this.props.course.fields.title}</title>
                 </Head>
                 <Nav />
-                <div className="main-container pt-5" style={{backgroundColor: "white", minHeight: mHeight}}>
+                <div className="main-container" style={{backgroundColor: "white", minHeight: mHeight}}>
                     <Intro />
 
                     <NavCabinverse />

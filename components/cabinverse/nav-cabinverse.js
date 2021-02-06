@@ -16,7 +16,6 @@ export default function NavCabinverse () {
         async function fetchData() {
             const res = await getAllPosts()
             var temp = []
-            console.log(res)
             res.forEach((post, index) => {
                 console.log("collection item: ", post.collection)
                 temp.push(post.collection)

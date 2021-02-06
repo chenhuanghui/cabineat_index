@@ -19,12 +19,18 @@ export async function getStaticProps() {
 export default function BlogPage({ posts }) {
     console.log("blog list: ", posts)
     return (
-        <div>
-        {posts.map((post, index) => (
-            <a href= {`/${post.id}`} key={index}>
-                {post.title}
-            </a>
-        ))}
+        <div className="app">
+            <Head>
+                        <title>CabinEat - Giới thiệu CabinEat</title>
+            </Head>
+            <Nav />
+            <div className="container-cabin">
+                {posts.map((post, index) => (
+                    <a href= {`/${post.id}`} key={index}>
+                        {post.title}
+                    </a>
+                ))}
+            </div>
         </div>
     );
 }

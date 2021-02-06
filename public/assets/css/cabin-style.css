@@ -101,9 +101,9 @@ p {
     padding-right: 12px !important;
 }
 
-.padding-x-0 {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
+.padding-x-n24 {
+    padding-left: -24px !important;
+    padding-right: -24px !important;
 }
 
 .padding-left {
@@ -315,6 +315,12 @@ small, .small, .smal p {
 .grid-gap-24-16{
     grid-gap: 24px 16px !important;
 }
+.grid-gap-16-16{
+    grid-gap: 16px 16px !important;
+}
+.grid-gap-12-12{
+    grid-gap: 12px 12px !important;
+}
 .grid-template-columns-1fr{
     grid-template-columns: 1fr;
 }
@@ -389,4 +395,10 @@ small, .small, .smal p {
 
 .align-self-stretch {
     align-self: stretch !important;
+}
+
+
+/* notion style */
+.notion-asset-wrapper {
+    width: 100% !important;
 }

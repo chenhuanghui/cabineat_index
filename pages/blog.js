@@ -31,7 +31,6 @@ export default function BlogPage({ posts }) {
                     {posts && posts.length>0 && posts.map((post, id)=>(
                         <div className="article-item grid" key={id}>
                             <div className="article-cover cover-fit rounded" style={{backgroundImage:`url("${post.cover ? post.cover[0].url : ""}")`, backgroundColor: "#1F4DF5"}}></div>
-                            {/* <img className="img-fluid rounded" src={post.cover ? post.cover[0].url : ""} /> */}
                             <a className="title py-2 text-primary font-weight-bold mt-2" href={`/${post.id}`}>{post.title}</a>     
                             <p className="small">
                                 inspirator: <span className="text-primary">{post.author}</span>
@@ -43,6 +42,7 @@ export default function BlogPage({ posts }) {
             <hr />
             <FooterNew />
             <style jsx>{`
+            
             .content-wrapper {
                 margin: 24px 0px;
                 grid-template-columns: 1fr;

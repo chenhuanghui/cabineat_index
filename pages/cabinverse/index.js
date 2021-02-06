@@ -6,6 +6,7 @@ import Footer from '../../components/footer-new'
 import Intro from '../../components/cabinverse/intro'
 import Subscribe from '../../components/cabinverse/subscribe'
 import NavCabinverse from '../../components/cabinverse/nav-cabinverse'
+import { useEffect, useState } from 'react';
 
 const NOTION_BLOG_ID = '90ad638172fd4481806c9106d9ce8287'
 
@@ -15,16 +16,25 @@ export const getAllPosts = async () => {
   ).then((res) => res.json());
 }
 
-export async function getStaticProps() {
-  const posts = await getAllPosts()
-  return {
-    props: {
-      posts
-    },
-  };
-}
+// export async function getStaticProps() {
+//   const posts = await getAllPosts()
+//   return {
+//     props: {
+//       posts
+//     },
+//   };
+// }
 
-export default function Cabinverse({ posts }) {
+export default function Cabinverse() {
+    const [posts, setPosts] = useState()
+    useEffect(()=>{
+        async function fectData() {
+            const posts = await getAllPosts()
+            setPosts(posts)
+        }
+        fectData()
+    },[])
+
     console.log(posts)
     return(
         <>

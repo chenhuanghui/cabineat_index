@@ -91,7 +91,7 @@ export default class Nav extends React.Component {
         }
 
         .navbar{
-            position: fixed;
+            position: sticky;
             width: 100%;
             top: 0px;
             z-index: 1001

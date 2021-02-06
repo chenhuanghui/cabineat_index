@@ -1,4 +1,6 @@
-import Link from "next/link";
+import Head from 'next/head'
+import FooterNew from '../components/footer-new';
+import Nav from '../components/nav-new'
 const NOTION_BLOG_ID = '90ad638172fd4481806c9106d9ce8287'
 
 export const getAllPosts = async () => {
@@ -21,16 +23,17 @@ export default function BlogPage({ posts }) {
     return (
         <div className="app">
             <Head>
-                        <title>CabinEat - Giới thiệu CabinEat</title>
+                <title>CabinEat - Blog</title>
             </Head>
             <Nav />
-            <div className="container-cabin">
+            <div className="container-cabin">                
                 {posts.map((post, index) => (
                     <a href= {`/${post.id}`} key={index}>
                         {post.title}
                     </a>
                 ))}
             </div>
+            <FooterNew />
         </div>
     );
 }

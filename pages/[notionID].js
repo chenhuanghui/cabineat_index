@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { NotionRenderer } from "react-notion";
 import { getAllPosts } from './blog'
 import Subscribe from '../components/cabinverse/subscribe';
+import LastestCourse from '../components/cabinverse/lastedCourse';
 
 export async function getServerSideProps({ params: { notionID } }) {
   // term and condition
@@ -55,7 +56,10 @@ export default function NotionDetail({blocks, post, posts}) {
             <div className="article-detail-wrapper grid grid-gap-24-16">
               <div className="acticle-detail-header padding-bottom">
                 <p className="caption font-weight-bold text-primary">{post.title}</p>
-                <p className="small">inspirator: <span className="text-primary">{post.author}</span></p>
+                <p className="small">
+                  inspirator: <span className="text-primary mr-2">{post.author}</span>
+                  ngày: <span className="text-primary">{post.date}</span>
+                </p>
               </div>                
               <div className="article-cover cover-fit rounded" style={{backgroundImage:`url("${post.cover ? post.cover[0].url : ""}")`, backgroundColor: "#1F4DF5", height: "250px"}}></div>
               <div className="d-block">
@@ -65,14 +69,15 @@ export default function NotionDetail({blocks, post, posts}) {
 
             <div className="nav-wrapper">
               <Subscribe />          
-              <div className="grid grid-gap-12-12">
+              {/* <div className="grid grid-gap-12-12">
                 <p className="title font-weight-bold margin-top border-bottom padding-y grid-template-rows-auto">Các bài viết khác</p>
                 <div className="article-listing">
                   {posts && posts.map((item, index)=>(
                     <a key={index} className="d-block py-1 font-weight-light" href={`/${item.id}`}>{item.title}</a>
                   ))}
                 </div>
-              </div>
+              </div> */}
+              <LastestCourse notionPageID="90ad638172fd4481806c9106d9ce8287"/>
             </div>
             
           </div>

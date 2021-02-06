@@ -7,6 +7,8 @@ import Intro from '../../components/cabinverse/intro'
 import Subscribe from '../../components/cabinverse/subscribe'
 import NavCabinverse from '../../components/cabinverse/nav-cabinverse'
 import { useEffect, useState } from 'react';
+import LastestCourse from '../../components/cabinverse/lastedCourse';
+import CardBlogItem from '../../components/card/card-blog-item';
 
 const NOTION_BLOG_ID = '90ad638172fd4481806c9106d9ce8287'
 
@@ -57,21 +59,22 @@ export default function Cabinverse() {
                             <hr/>
                             <div className="content-wrapper grid grid-gap-24-16">
                                 {posts && posts.length>0 && posts.map((post, id)=> (
-                                    <div className={`article-item grid ${!post.published ? "d-none" : ""}`} key={id}>
-                                        <div className="article-cover cover-fit rounded" style={{backgroundImage:`url("${post.cover ? post.cover[0].url : ""}")`, backgroundColor: "#1F4DF5", height: "200px"}}></div>
-                                        <a className="title py-2 text-primary font-weight-bold" href={`/${post.id}`}>{post.title}</a>
-                                        <p className="small mb-2 pb-2 border-bottom">
-                                            inspirator: <span className="text-primary mr-2">{post.author}</span>
-                                            ngày: <span className="text-primary">{post.date}</span>
-                                        </p>
-                                        <p className="small text-gray">{post.preview}</p>
-                                    </div>
+                                    // <div className={`article-item grid ${!post.published ? "d-none" : ""}`} key={id}>
+                                    //     <div className="article-cover cover-fit rounded" style={{backgroundImage:`url("${post.cover ? post.cover[0].url : ""}")`, backgroundColor: "#1F4DF5", height: "200px"}}></div>
+                                    //     <a className="title py-2 text-primary font-weight-bold" href={`/${post.id}`}>{post.title}</a>
+                                    //     <p className="small mb-2 pb-2 border-bottom">
+                                    //         inspirator: <span className="text-primary mr-2">{post.author}</span>
+                                    //         ngày: <span className="text-primary">{post.date}</span>
+                                    //     </p>
+                                    //     <p className="small text-gray">{post.preview}</p>
+                                    // </div>
+                                    <CardBlogItem post = {post} key={id}/>
                                 ))}
                             </div>                                        
                         </div>
                         <div className="cabinverse-nav-related">
                             <Subscribe />
-                            <div id="releated" className="mt-5 container">
+                            {/* <div id="releated" className="mt-5 container">
                                 <h5 className="pre-title"> <span className="fe fe-briefcase mr-2"></span> Mới nhất</h5>
                                 <ul className="list-none-style pt-2">
                                     {posts && posts.map((item, index)=>(
@@ -85,7 +88,9 @@ export default function Cabinverse() {
                                         </li>
                                     ))}
                                 </ul>
-                            </div>
+                            </div> */}
+                            <LastestCourse notionPageID = "90ad638172fd4481806c9106d9ce8287" />
+                            
                         </div>
                     </div>
                     

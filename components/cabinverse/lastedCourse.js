@@ -1,54 +1,44 @@
 import Link from 'next/link';
-import Head from 'next/head'
-import Nav from '../nav-new'
-import Footer from '../footer-new'
+import { useEffect, useState } from 'react';
 
-import ReactMarkdown from "react-markdown";
-import $ from 'jquery';
+// const NOTION_BLOG_ID = '90ad638172fd4481806c9106d9ce8287'
 
+// export const getAllPosts = async () => {
+// 	return await fetch(
+//     `https://notion-api.splitbee.io/v1/table/${NOTION_BLOG_ID}`
+//   ).then((res) => res.json());
+// }
 
-const contentful = require("contentful");
-const client = contentful.createClient({
-  space: "0s01bkenrjm9",
-  accessToken: "n9oDwlvUxgwxjQPXKEl0TepabVC7zjC-ZuwO5yCf9Ls"
-});
-
-export default class LastestCourse extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            lastestEntries : []
+export default function LastestCourse ({notionPageID}) {
+    const [posts, setPosts] = useState()
+    useEffect(()=>{
+        if (!notionPageID) return;
+        async function fetchData() {
+            const posts = await fetch(
+                `https://notion-api.splitbee.io/v1/table/${notionPageID}`
+            ).then((res) => res.json());
+            setPosts(posts)
         }
-
-    }
-    async componentDidMount() {
-        let currentComponent = this;
-
-        const entriesRes = await client.getEntries({content_type: 'courseItem'})
-        console.log("conten:", entriesRes)
-        currentComponent.setState({lastestEntries: [...entriesRes.items]})
-    }
-
-    render() {
-        const {lastestEntries} = this.state
-        return (
-            <>            
-                <div id="releated" className="mt-5 container">
-                    <h5 className="pre-title"> <span className="fe fe-briefcase mr-2"></span> Mới nhất</h5>
-                    <ul className="list-none-style pt-2">
-                        {lastestEntries && lastestEntries.map((item, index)=>(
-                            <li className="border-bottom py-3 related-item" key={index}>
-                                <h4 className="font-weight-bold "><a href="#" className="text-dark mb-2">{item.fields.collection.fields.name}</a></h4>
-                                <Link href="cabinverse/[slug]" as={`cabinverse/${item.sys.id}`}>
-                                    <a className="py-2 ">
-                                        {item.fields.title}
-                                    </a>
-                                </Link>                                                    
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </>
-        )
-    }
+        fetchData()
+    },[])
+    
+    return (
+        <>            
+            <div id="releated" className="mt-5 container">
+                <h5 className="pre-title"> <span className="fe fe-briefcase mr-2"></span> Mới nhất</h5>
+                <ul className="list-none-style pt-2">
+                    {posts && posts.map((item, index)=>(
+                        <li className="border-bottom py-3 related-item" key={index}>
+                            <p className="font-weight-bold title"><a href="#" className="text-dark mb-2">{item.collection}</a></p>
+                            <Link href="/[notionID]" as={`/${item.id}`}>
+                                <a className="py-2 ">
+                                    {item.title}
+                                </a>
+                            </Link>                                                    
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </>
+    )
 }

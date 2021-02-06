@@ -55,7 +55,9 @@ export default function BlogPage({ posts }) {
             }
 
             @media (min-width:768px){
-                grid-template-columns: repeat(auto-fill, minmax(250px,1fr)) !important;
+                .content-wrapper {
+                    grid-template-columns: repeat(auto-fill, minmax(250px,1fr)) !important;
+                }                
             }
             `}</style>
         </div>

@@ -22,6 +22,7 @@ export async function getServerSideProps({ params: { notionID } }) {
     // Find the current blogpost by slug
     const post = posts.find((t) => t.id === notionID);
     const blocks = await fetch(`https://notion-api.splitbee.io/v1/page/${post.id}`).then((res) => res.json());
+        
 
     return {
       props: {

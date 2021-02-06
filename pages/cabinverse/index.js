@@ -18,23 +18,19 @@ export const getAllPosts = async () => {
   ).then((res) => res.json());
 }
 
-// export async function getStaticProps() {
-//   const posts = await getAllPosts()
-//   return {
-//     props: {
-//       posts
-//     },
-//   };
-// }
-
 export default function Cabinverse() {
     const [posts, setPosts] = useState()
     useEffect(()=>{
+        const ReactPixel =  require('react-facebook-pixel');
+        ReactPixel.default.init('962321430930011');
+
         async function fectData() {
             const posts = await getAllPosts()
             setPosts(posts)
         }
         fectData()
+
+        
     },[])
 
     console.log(posts)

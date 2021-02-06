@@ -1,10 +1,8 @@
 import Head from 'next/head'
 import Nav from '../components/nav-new'
-import CasoureSlider from '../components/corsousel-new'
 import Footer from '../components/footer-new'
 
 import ReactMarkdown from "react-markdown";
-import $ from 'jquery';
 
 import BackgroundSlider from 'react-background-slider'
 // https://github.com/u2ix/react-background-slider
@@ -29,6 +27,9 @@ export default class HomePage extends React.Component {
     }
 
     async componentDidMount() { 
+        const ReactPixel =  require('react-facebook-pixel');
+        ReactPixel.default.init('962321430930011');
+
         // tracking
         mixpanel.track("visit",{"page":"cabineat.vn"})
 

@@ -32,21 +32,15 @@ export default class Nav extends React.Component {
                         <img src="../assets/img/logo.svg" alt="..." className="navbar-brand-img" style={{maxHeight: "2rem"}}/>
                     </a>
 
-                    {/* <div className="navbar-user d-flex d-md-none" id="navbar" >
-                        <span className="fe fe-user-check " style={{fontSize: "25px"}}></span>
-                    </div> */}
-
                     <div className="navbar-collapse collapse ml-auto order-last" id="navbar">
                         <ul className="navbar-nav mr-lg-auto">
                             <li className="nav-item">
                                 <Link href="/events">
                                     <a className="nav-link">Sự kiện</a>
                                 </Link>
-                            </li>  
-                            {/* <li className="nav-item">
-                                <a className="nav-link disable" href="#">Kiến thức</a>
-                            </li> */}
+                            </li>                              
                         </ul>
+                        
                         <hr className="d-md-none"/>
                         <ul className="navbar-nav mr-lg-auto">
                             <li className="nav-item">

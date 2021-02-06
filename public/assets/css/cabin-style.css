@@ -211,18 +211,18 @@ p {
     font-weight: 400 !important;
 }
 
-small, .small {
+small, .small, .smal p {
     font-style: normal !important;
     font-size: 12px !important;
     font-weight: 400 !important;
 }
 
-.title {
+.title, .title p {
     font-style: normal !important;
     font-size: 16px !important;
 }
 
-.caption {
+.caption, .caption p {
     font-style: normal !important;
     font-size: 24px !important;
 }
@@ -278,6 +278,7 @@ small, .small {
 .btn-primary {
     background-color: #E13143 !important;
     color: white;
+    border-color:  #E13143 !important;
 }
 
 .button {

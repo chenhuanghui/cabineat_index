@@ -142,31 +142,6 @@ export default class HomePage extends React.Component {
 
         // console.log(stepready4saleRes)
         currentComponent.setState({stepready4sale: stepready4saleRes})
-        // end get data of stepready4saleRes
-    
-        // start get data of benefitRes
-
-        {/*
-        const benefitHeadlineRes = await airtable.read({
-            filterByFormula: `AND(type="headline", isActive = "1")`,
-            maxRecords: 1
-        },{tableName:"benefit"});
-
-        const benefitItemRes = await airtable.read({
-            filterByFormula: `AND(type="item", isActive = "1")`,
-            sort: [{field: 'sort', direction: 'asc'}]
-        },{tableName:"benefit"});
-        
-        var benefitRes
-        if (benefitHeadlineRes.length > 0 && benefitItemRes.length > 0) {
-            benefitRes = {
-                headline: benefitHeadlineRes[0].fields.title,
-                item: benefitItemRes
-            }    
-        }
-        currentComponent.setState({benefit: benefitRes})
-        */}
-
         // end get data of benefitRes
 
         // end get data of pricing
@@ -176,55 +151,7 @@ export default class HomePage extends React.Component {
         },{tableName:"pricing"});
         // console.log(pricingRes)
         currentComponent.setState({pricing: pricingRes[0]})
-        // end get data of pricing
-    
-        // start get data of more
-        {/*
-        const moreRes1 = await airtable.read({
-            filterByFormula: `AND(type = "headline", isActive = "1")`,
-            maxRecords: 1
-        },{tableName:"more"});
-        const moreRes2 = await airtable.read({
-            filterByFormula: `AND(type = "list-item", isActive = "1")`,
-        },{tableName:"more"});
-    
-        var moreRes
-        if (moreRes1.length > 0 && moreRes2.length > 0) {
-            moreRes = {
-                headline: moreRes1[0].fields,
-                listitem: moreRes2
-            }   
-        }    
-    
-        // console.log("more res: ", moreRes)
-        currentComponent.setState({more: moreRes})
-
-        */}
-        // end get data of more
-
-        // start get data of solution
-        {/*
-        const solutionRes = await airtable.read({
-            filterByFormula: `isActive = "1"`,
-            maxRecords: 1
-        },{tableName:"solution"});
-        
-        // console.log("solution res: ", solutionRes)
-        currentComponent.setState({solution: solutionRes[0]})
-
-        */}
-        // end get data from solution
-
-        // start get data of call2action
-        {/*
-        const call2actionRes = await airtable.read({
-            filterByFormula: `isActive = "1"`,
-            maxRecords: 1
-        },{tableName:"call2action"});
-        // console.log("call2action res: ", call2actionRes)
-        currentComponent.setState({call2action: call2actionRes[0]})
-        */}
-        // end get data of call2action
+                
         
     }   
 
@@ -247,14 +174,14 @@ export default class HomePage extends React.Component {
                     <meta name="keywords" content="cabineat,nha hang so, online restaurant, delivery" />
                 </Helmet>
                 <Nav />
-                <div className="main-container pt-5" style={{backgroundColor: "white", minHeight: mHeight}}>                    
+                <div className="main-container" style={{backgroundColor: "white", minHeight: mHeight}}>                    
                     {hero 
                     ?
                         <section className="bg-dark custom">
                             <div className="container-fluid py-6">                            
-                                <p className="text-center pre-title text-uppercase font-weight-bold small" style={{letterSpacing: "2px"}}>{hero.fields.pre_title}</p>
-                                <ReactMarkdown source={hero.fields.title} className="mt-0 mb-0 text-center markdown-custom h1"/> 
-                                <ReactMarkdown source={hero.fields.sub_title} className="text-center mt-5 markdown-custom mb-3"/>
+                                <p className="text-center pre-title text-uppercase font-weight-lighter title mb-0" style={{letterSpacing: "2px"}}>{hero.fields.pre_title}</p>                                
+                                <ReactMarkdown source={hero.fields.title} className="mt-0 mb-0 text-center caption font-weight-bold"/> 
+                                <ReactMarkdown source={hero.fields.sub_title} className="text-center mt-5 small mb-3"/>
                                 <div className="row align-items-center justify-content-center">
                                     <a className="btn btn-primary btn-lg font-weight-bold" href={hero.fields.call2action_href} target="_blank" onClick={this.wantToSignUpHero}>{hero.fields.call2action}</a>
                                 </div>
@@ -396,16 +323,6 @@ export default class HomePage extends React.Component {
                 
                 
                 <style jsx>{`
-                // .bg-dark {
-                //     background-color: #030303 !important;
-                // }
-                // .bg-dark p, .bg-dark h1, .bg-dark h2, .bg-dark h3 {
-                //     color: white !important;
-                // }
-                // .bg-invert-to-white, .bg-theme-to-white {
-                //     background-image: linear-gradient(to bottom, #030303 0%, #030303 50%, #fff 50%, #fff 100%);
-                // }
-
                 
                 
 

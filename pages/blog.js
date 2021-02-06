@@ -16,7 +16,7 @@ export async function getStaticProps() {
   };
 }
 
-function BlogPage({ posts }) {
+export default function BlogPage({ posts }) {
     console.log("blog list: ", posts)
     return (
         <div>
@@ -28,4 +28,3 @@ function BlogPage({ posts }) {
         </div>
     );
 }
-export default BlogPage

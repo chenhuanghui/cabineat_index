@@ -1,3 +1,5 @@
+import {formatDate} from "../../pages/utils"
+
 export default function CardBlogItem({post}) {
     return (
         <div className={`article-item-wrapper grid grid-gap-12-12 justify-content-start align-items-start ${!post.published ? "d-none" : ""}`}>            
@@ -6,7 +8,7 @@ export default function CardBlogItem({post}) {
                 <a className="title py-2 text-primary font-weight-bold" href={`/${post.id}`}>{post.title}</a>
                 <p className="small mb-2">
                     inspirator: <span className="text-primary mr-2">{post.author}</span>
-                    ngày: <span className="text-primary">{post.date}</span>
+                    ngày: <span className="text-primary">{formatDate(post.date)}</span>
                 </p>
             </div>                        
             <p className="small text-gray">{post.preview}</p>

@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import Head from 'next/head'
-import Nav from '../../components/nav-new'
+import Nav from '../components/nav-new'
 
-import Footer from '../../components/footer-new'
-import Intro from '../../components/cabinverse/intro'
-import Subscribe from '../../components/cabinverse/subscribe'
-import NavCabinverse from '../../components/cabinverse/nav-cabinverse'
+import Footer from '../components/footer-new'
+import Intro from '../components/cabinverse/intro'
+import Subscribe from '../components/cabinverse/subscribe'
+import NavCabinverse from '../components/cabinverse/nav-cabinverse'
 import { useEffect, useState } from 'react';
-import LastestCourse from '../../components/cabinverse/lastedCourse';
-import CardBlogItem from '../../components/card/card-blog-item';
+import LastestCourse from '../components/cabinverse/lastedCourse';
+import CardBlogItem from '../components/card/card-blog-item';
 
 const NOTION_BLOG_ID = '90ad638172fd4481806c9106d9ce8287'
 

@@ -42,7 +42,7 @@ export default function NotionDetail({blocks, post}) {
   return (
     <div className="app">
       <Head>
-          <title>CabinEat - Blog</title>
+          <title>{post.title} | CabinEat Sharing</title>
           { blocks && post ? <meta property="og:title" content={post.title}></meta> : null }
           { blocks && post ? <meta property="og:type" content="article"></meta> : null }
           { blocks && post ? <meta property="og:url" content={`https://cabineat.vn/${post.id}`}></meta> : null }

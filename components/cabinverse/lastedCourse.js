@@ -28,7 +28,7 @@ export default function LastestCourse ({notionPageID}) {
                 <h5 className="pre-title"> <span className="fe fe-briefcase mr-2"></span> Mới nhất</h5>
                 <ul className="list-none-style pt-2">
                     {posts && posts.map((item, index)=>(
-                        <li className="border-bottom py-3 related-item" key={index}>
+                        <li className={`border-bottom py-3 related-item ${!item.published ? "d-none" : ""}`} key={index}>
                             <p className="font-weight-bold title"><a href="#" className="text-dark mb-2">{item.collection}</a></p>
                             <Link href="/[notionID]" as={`/${item.id}`}>
                                 <a className="py-2 ">

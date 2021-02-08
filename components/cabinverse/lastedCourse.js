@@ -1,14 +1,6 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-// const NOTION_BLOG_ID = '90ad638172fd4481806c9106d9ce8287'
-
-// export const getAllPosts = async () => {
-// 	return await fetch(
-//     `https://notion-api.splitbee.io/v1/table/${NOTION_BLOG_ID}`
-//   ).then((res) => res.json());
-// }
-
 export default function LastestCourse ({notionPageID}) {
     const [posts, setPosts] = useState()
     useEffect(()=>{

@@ -6,7 +6,7 @@ import { NotionRenderer } from "react-notion";
 import { getAllPosts } from './blog'
 import Subscribe from '../components/cabinverse/subscribe';
 import LastestCourse from '../components/cabinverse/lastedCourse';
-import {formatDate} from "./utils"
+// import {formatDate} from "./utils"
 
 export async function getServerSideProps({ params: { notionID } }) {
   // term and condition
@@ -60,7 +60,7 @@ export default function NotionDetail({blocks, post}) {
                 <p className="caption font-weight-bold text-primary">{post.title}</p>
                 <p className="small">
                   inspirator: <span className="text-primary mr-2">{post.author}</span>
-                  ngày: <span className="text-primary">{formatDate(post.date)}</span>
+                  {/* ngày: <span className="text-primary">{formatDate(post.date)}</span> */}
                 </p>
               </div>                
               <div className="article-cover cover-fit rounded" style={{backgroundImage:`url("${post.cover ? post.cover[0].url : ""}")`, backgroundColor: "#1F4DF5", height: "250px"}}></div>

@@ -175,6 +175,7 @@ export default class HomePage extends React.Component {
                     <title>CabinEat - Trang chủ</title>
                     <meta name="description" content="CabinEat - Trang chủ" />
                     <meta name="keywords" content="cabineat,nha hang so, online restaurant, delivery" />
+                    <script async src="https://cdn.splitbee.io/sb.js"></script>
                 </Helmet>
                 <Nav />
                 <div className="main-container" style={{backgroundColor: "white", minHeight: mHeight}}>                    

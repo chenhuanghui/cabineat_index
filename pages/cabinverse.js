@@ -38,6 +38,7 @@ export default function Cabinverse() {
         <>
             <Head>
                 <title>Cabinverse - Học viện kinh doanh nhà hàng số</title>
+                <script async src="https://cdn.splitbee.io/sb.js"></script>
             </Head>
             <Nav />
             <div className="container-cabin-fluid">

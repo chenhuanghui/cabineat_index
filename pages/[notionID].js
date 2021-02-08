@@ -40,6 +40,8 @@ export default function NotionDetail({blocks, post}) {
     ReactPixel.default.init('962321430930011');
   },[])
 
+  console.log("blocks: ", blocks)
+
   return (
     <div className="app">
       <Head>
@@ -49,6 +51,7 @@ export default function NotionDetail({blocks, post}) {
           { blocks && post ? <meta property="og:url" content={`https://cabineat.vn/${post.id}`}></meta> : null }
           { blocks && post ? <meta property="og:image" content={`${post.cover ? post.cover[0].url : ""}`}></meta> : null }
           { blocks && post ? <meta property="og:description" content={`${post.preview ? post.preview : "Cabineat - Giải pháp chủ động kinh doanh delivery cho nhà hàng của bạn"}`}></meta> : null }
+          <script async src="https://cdn.splitbee.io/sb.js"></script>
       </Head>
       <Nav />
       <div className="container-cabin">       

@@ -35,7 +35,7 @@ export default class Nav extends React.Component {
                     <div className="navbar-collapse collapse ml-auto order-last" id="navbar">
                         
                         <ul className="navbar-nav mr-lg-auto">
-                            <li className="nav-item"><a href="/cabinverse" className="nav-link">Cabinverse</a></li>  
+                            <li className="nav-item"><a href="/cabinverse" className="nav-link">Học viện</a></li>  
                             <li className="nav-item"><Link href="/events"><a className="nav-link">Sự kiện</a></Link></li>                              
                         </ul>
                         

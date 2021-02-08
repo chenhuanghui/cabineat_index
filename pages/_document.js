@@ -19,11 +19,11 @@ class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"></link> */}
 
           {/* <script src="/static/fb.js" /> */}
-          {/* <script src="/static/ga.js" /> */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176827516-1"></script>
+          <script src="/static/ga.js" />
           {/* <script src="/static/segment.js" /> */}
           {/* <script src="/static/pixel.js" /> */}
           {/* <script src="/static/freshchat.js" /> */}
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176827516-1"></script>
           <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8878637.js"></script>
         </Head>
         <body>

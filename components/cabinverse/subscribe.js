@@ -34,11 +34,12 @@ export default class Subscribe extends React.Component {
     }
 
     render() {
+        
         return (
             <>            
                 <div className="bg-dark subscribe-wrapper grid grid-gap-12-12 align-items-center justify-content-center">
-                    <p className="text-center caption" style={{lineHeight: "30px"}}>Tham gia cùng hơn 3.000 nhà hàng, đã kinh doanh cùng chúng tôi.</p>
-                    <p className="text-center small font-weight-lighter">Nhận các hướng dẫn, mẹo và kiến thức kinh doanh nhà hàng số qua email.</p>
+                    <p className="text-center caption" style={{lineHeight: "30px"}}>Đã hơn 3.000 nhà hàng đã tham gia cùng chúng tôi.</p>
+                    <p className="text-center small font-weight-lighter">Sở hữu <strong>Nhà Hàng Số</strong>, làm chủ hoạt động kinh doanh delivery trong vòng 1 nốt nhạc cùng CabinEat.</p>
                     <input type="text" 
                         id="email_address" 
                         className="col-12 form-control form-control-appended" 

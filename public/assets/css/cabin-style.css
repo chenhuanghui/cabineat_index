@@ -401,9 +401,13 @@ small, .small, .smal p {
 /* notion style */
 .notion-asset-wrapper {
     width: 100% !important;
+    
+}
+.notion {
+    text-align: justify !important;
 }
 
-.notion-list.notion-list-disc {
+.notion-list.notion-list-disc, .notion-list.notion-list-numbered, .notion-callout-text{
     font-size: 14px !important;   
 }
 

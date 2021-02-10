@@ -9,7 +9,13 @@ export default function LastestCourse ({notionPageID}) {
             const posts = await fetch(
                 `https://notion-api.splitbee.io/v1/table/${notionPageID}`
             ).then((res) => res.json());
-            setPosts(posts)
+            
+            const temp = []
+            posts.forEach(post => {
+                if(post.type === "articles") temp.push(post)
+            });
+
+            setPosts(temp)
         }
         fetchData()
     },[])

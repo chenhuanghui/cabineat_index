@@ -22,15 +22,22 @@ class MyDocument extends Document {
           {/* <script src="/static/fb.js" /> */}
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176827516-1"></script>
           <script src="/static/ga.js" />
+          
           {/* <script src="/static/segment.js" /> */}
           {/* <script src="/static/pixel.js" /> */}
-          {/* <script src="/static/freshchat.js" /> */}
-          <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8878637.js"></script>
+          
+          
+          {/* hubspot chat */}
+          {/* <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8878637.js"></script> */}
+          
+          {/* chat  */}
+          <script src="/static/freshchat.js" />
+          {/* <script src="/static/fb-chat.js" /> */}
         </Head>
         <body>
           <Main />
           <NextScript />
-          <div className="modal-backdrop fade"></div>
+          {/* <div className="modal-backdrop fade"></div> */}
           
           {/* <div id="fb-root"></div>
           <div className="fb-customerchat"
@@ -39,6 +46,8 @@ class MyDocument extends Document {
             logged_in_greeting="Xin chào, CabinEat có thể giúp gì cho Bạn ?"
             logged_out_greeting="Xin chào, CabinEat có thể giúp gì cho Bạn ?">            
           </div> */}
+
+          
         </body>
       </Html>
     )

@@ -3,6 +3,7 @@ import Router from 'next/router';
 import Link from 'next/link'
 import Modal from 'react-modal';
 import MenuModal from '../components/menu-modal'
+import Annoucement from './announcement';
 
 export default class Nav extends React.Component {
     constructor(props){
@@ -26,6 +27,10 @@ export default class Nav extends React.Component {
     render() {           
         return(
             <>
+            <Annoucement
+                url="https://www.facebook.com/cabineat.vn"
+                title="Chương trình hỗ trợ đồng hành cùng doanh nghiệp Việt, giảm tác động covid-19"
+            />
             <nav className="navbar navbar-expand-lg navbar-light" id="topnav">
                 <div className="container">          
                     <a className="navbar-brand mr-auto mt-2" href="/">

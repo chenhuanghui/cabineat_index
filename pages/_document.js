@@ -16,8 +16,8 @@ class MyDocument extends Document {
           <link rel="icon" href="../assets/img/favicon-96x96.png"></link>
           <link rel="stylesheet" href="../assets/css/custom.css"></link>
           
-          {/* <link rel="preconnect" href="https://fonts.gstatic.com"></link>
-          <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"></link> */}
+          <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+          <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"></link>          
 
           {/* <script src="/static/fb.js" /> */}
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176827516-1"></script>
@@ -37,7 +37,6 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          {/* <div className="modal-backdrop fade"></div> */}
           
           {/* <div id="fb-root"></div>
           <div className="fb-customerchat"

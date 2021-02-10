@@ -62,7 +62,7 @@ export default function NotionDetail({blocks, post}) {
               <div className="acticle-detail-header padding-bottom">
                 <p className="caption font-weight-bold text-primary">{post.title}</p>
                 <p className="small">
-                  Cabin-er: <span className="text-primary mr-2">{post.author}</span>
+                  đăng bởi: <span className="text-primary mr-2">{post.author}</span>
                   {/* ngày: <span className="text-primary">{formatDate(post.date)}</span> */}
                 </p>
               </div>                

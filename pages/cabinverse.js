@@ -9,6 +9,7 @@ import NavCabinverse from '../components/cabinverse/nav-cabinverse'
 import { useEffect, useState } from 'react';
 import LastestCourse from '../components/cabinverse/lastedCourse';
 import CardBlogItem from '../components/card/card-blog-item';
+import { post } from 'jquery';
 
 const NOTION_BLOG_ID = '90ad638172fd4481806c9106d9ce8287'
 
@@ -26,7 +27,12 @@ export default function Cabinverse() {
 
         async function fectData() {
             const posts = await getAllPosts()
-            setPosts(posts)
+            const temp = []
+            posts.forEach(post => {
+                if(post.type === "articles") temp.push(post)
+            });
+            console.log("Posts: ", temp)
+            setPosts(temp)
         }
         fectData()
 

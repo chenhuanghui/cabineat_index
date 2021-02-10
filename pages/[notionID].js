@@ -62,11 +62,15 @@ export default function NotionDetail({blocks, post}) {
               <div className="acticle-detail-header padding-bottom">
                 <p className="caption font-weight-bold text-primary">{post.title}</p>
                 <p className="small">
-                  inspirator: <span className="text-primary mr-2">{post.author}</span>
+                  Cabin-er: <span className="text-primary mr-2">{post.author}</span>
                   {/* ngày: <span className="text-primary">{formatDate(post.date)}</span> */}
                 </p>
               </div>                
-              <div className="article-cover cover-fit rounded" style={{backgroundImage:`url("${post.cover ? post.cover[0].url : ""}")`, backgroundColor: "#1F4DF5", height: "250px"}}></div>
+              {post.cover
+              ? <div className="article-cover cover-fit rounded" style={{backgroundImage:`url("${post.cover[0].url}")`, backgroundColor: "#1F4DF5", height: "250px"}}></div>
+              : null
+              }
+              
               <div className="d-block">
                 <NotionRenderer blockMap={blocks} />
               </div>

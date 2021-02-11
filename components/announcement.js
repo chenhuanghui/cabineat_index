@@ -3,7 +3,7 @@ export default function Annoucement({url, title}) {
         <div className="announcement-wrapper">
             <div className="container-cabin annoucement-body">
                 
-                <a className="text-white d-block annoucement-title font-weight-lighter text-center" href={url}>
+                <a className="text-white d-block annoucement-title font-weight-lighter text-center" href={url} target="_blank">
                     {title}
                 </a>
             </div>

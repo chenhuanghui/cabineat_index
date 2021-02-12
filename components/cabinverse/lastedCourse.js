@@ -12,7 +12,7 @@ export default function LastestCourse ({notionPageID}) {
             
             const temp = []
             posts.forEach(post => {
-                if(post.type === "articles") temp.push(post)
+                if(post.type === "cabinverse") temp.push(post)
             });
 
             setPosts(temp)

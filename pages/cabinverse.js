@@ -25,21 +25,18 @@ export default function Cabinverse() {
         const ReactPixel =  require('react-facebook-pixel');
         ReactPixel.default.init('962321430930011');
 
-        async function fectData() {
+        async function fetchData() {
             const posts = await getAllPosts()
             const temp = []
             posts.forEach(post => {
                 if(post.type === "cabinverse") temp.push(post)
             });
-            console.log("Posts: ", temp)
             setPosts(temp)
         }
-        fectData()
-
+        fetchData()
         
     },[])
 
-    console.log(posts)
     return(
         <>
             <Head>

@@ -17,7 +17,7 @@ export default function NavCabinverse () {
             var temp = []
             res.forEach((post, index) => {
                 console.log("collection item: ", post.collection)
-                temp.push(post.collection)
+                if (post.type === "cabinverse") temp.push(post.collection)
             });
             console.log("collection list: ", temp)
             setCollectionList(temp)

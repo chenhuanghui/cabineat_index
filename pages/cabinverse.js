@@ -29,7 +29,7 @@ export default function Cabinverse() {
             const posts = await getAllPosts()
             const temp = []
             posts.forEach(post => {
-                if(post.type === "articles") temp.push(post)
+                if(post.type === "cabinverse") temp.push(post)
             });
             console.log("Posts: ", temp)
             setPosts(temp)
@@ -62,7 +62,10 @@ export default function Cabinverse() {
                             <hr/>
                             <div className="content-wrapper grid grid-gap-24-16">
                                 {posts && posts.length>0 && posts.map((post, id)=> (
-                                    <CardBlogItem post = {post} key={id}/>
+                                    <CardBlogItem 
+                                        post = {post} 
+                                        key={id}
+                                    />
                                 ))}
                             </div>                                        
                         </div>

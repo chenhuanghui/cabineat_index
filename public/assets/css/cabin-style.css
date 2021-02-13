@@ -208,11 +208,15 @@ a.text-white:visited {
     color: white !important;
 }
 
-p, .p {
+a, p, .p {
     font-style: normal !important;
     font-size: 14px !important;
     margin-top: 0 !important;
 	margin-bottom: 0 !important;
+}
+a:hover {
+    cursor: pointer;
+    text-decoration: underline !important;
 }
 
 .extra-small {

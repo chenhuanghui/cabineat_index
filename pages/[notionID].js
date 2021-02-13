@@ -13,8 +13,8 @@ import { getPageTitle, getAllPagesInSpace } from 'notion-utils'
 
 export async function getServerSideProps({ params: { notionID } }) {
   
-  // const posts = await getAllPosts();
-  // const post = posts.find((t) => t.id === notionID);
+  const posts = await getAllPosts();
+  const post = posts.find((t) => t.id === notionID);
   // const blocks = await fetch(`https://notion-api.splitbee.io/v1/page/${post.id}`).then((res) => res.json());
 
   // return {
@@ -28,7 +28,8 @@ export async function getServerSideProps({ params: { notionID } }) {
   const recordMap = await api.getPage(notionID)
   return {
     props: {
-      recordMap
+      recordMap,
+      post
     }
   }
 
@@ -47,11 +48,11 @@ export default function NotionDetail({blocks, post, recordMap}) {
     <div className="app">
       <Head>
           <title>{ post && post.title} | Cabinverse Sharing</title>
-          { blocks && post ? <meta property="og:title" content={post.title}></meta> : null }
-          { blocks && post ? <meta property="og:type" content="article"></meta> : null }
-          { blocks && post ? <meta property="og:url" content={`https://cabineat.vn/${post.id}`}></meta> : null }
-          { blocks && post ? <meta property="og:image" content={`${post.cover ? post.cover[0].url : ""}`}></meta> : null }
-          { blocks && post ? <meta property="og:description" content={`${post.preview ? post.preview : "Cabineat - Giải pháp chủ động kinh doanh delivery cho nhà hàng của bạn"}`}></meta> : null }
+          { post ? <meta property="og:title" content={post.title}></meta> : null }
+          { post ? <meta property="og:type" content="article"></meta> : null }
+          { post ? <meta property="og:url" content={`https://cabineat.vn/${post.id}`}></meta> : null }
+          { post ? <meta property="og:image" content={`${post.cover ? post.cover[0].url : ""}`}></meta> : null }
+          { post ? <meta property="og:description" content={`${post.preview ? post.preview : "Cabineat - Giải pháp chủ động kinh doanh delivery cho nhà hàng của bạn"}`}></meta> : null }
           <script async src="https://cdn.splitbee.io/sb.js"></script>
       </Head>
       <Nav />
@@ -77,46 +78,6 @@ export default function NotionDetail({blocks, post, recordMap}) {
           </div>
           
         </div>    
-        { blocks && post
-          ?
-          <div className="content-wrapper grid">          
-            <div className="article-detail-wrapper grid grid-gap-24-16">
-              <div className="acticle-detail-header padding-bottom">
-                {/* <p className="caption font-weight-bold text-primary">{post.title}</p> */}
-                <p className="caption font-weight-bold text-primary">{getPageTitle(recordMap)}</p>
-                <p className="small">
-                  đăng bởi: <span className="text-primary mr-2">{post.author}</span>
-                  {/* ngày: <span className="text-primary">{formatDate(post.date)}</span> */}
-                </p>
-              </div>                
-              {/* {post.cover
-              ? <div className="article-cover cover-fit rounded" style={{backgroundImage:`url("${post.cover[0].url}")`, backgroundColor: "#1F4DF5", height: "250px"}}></div>
-              : null
-              } */}
-              
-              <div className="d-block">
-                {/* <NotionRenderer blockMap={blocks} /> */}
-                <NotionRenderer
-                  recordMap={recordMap}
-                  fullPage={false}
-                  darkMode={false}
-                />
-              </div>
-            </div>
-
-            <div className="nav-wrapper">
-              <Subscribe />
-              <LastestCourse notionPageID="90ad638172fd4481806c9106d9ce8287"/>
-            </div>
-            
-          </div>
-          :
-          <div className="container-cabin">
-            <NotionRenderer blockMap={blocks} />
-          </div>
-
-        }              
-        
         
       </div>
       

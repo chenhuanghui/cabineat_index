@@ -2,35 +2,39 @@ import Head from 'next/head'
 import FooterNew from '../components/footer-new';
 import Nav from '../components/nav-new'
 import React, { useState, useEffect } from 'react';
-import { NotionRenderer } from "react-notion";
+// import { NotionRenderer } from "react-notion";
 import { getAllPosts } from './blog'
 import Subscribe from '../components/cabinverse/subscribe';
 import LastestCourse from '../components/cabinverse/lastedCourse';
-// import {formatDate} from "./utils"
+
+import { NotionRenderer } from 'react-notion-x'
+import { NotionAPI } from 'notion-client'
+import { getPageTitle, getAllPagesInSpace } from 'notion-utils'
 
 export async function getServerSideProps({ params: { notionID } }) {
-  // term and condition
-  if (notionID === "d67234052f56404b8d71166a143c51ab") {
-    const blocks = await fetch(`https://notion-api.splitbee.io/v1/page/d67234052f56404b8d71166a143c51ab`).then((res) => res.json());
-    return {
-      props: {
-        blocks
-      },
-    }
-  } else {
-    const posts = await getAllPosts();
-    const post = posts.find((t) => t.id === notionID);
-    const blocks = await fetch(`https://notion-api.splitbee.io/v1/page/${post.id}`).then((res) => res.json());
+  
+  // const posts = await getAllPosts();
+  // const post = posts.find((t) => t.id === notionID);
+  // const blocks = await fetch(`https://notion-api.splitbee.io/v1/page/${post.id}`).then((res) => res.json());
 
-    return {
-      props: {
-        blocks,
-        post
-      },
-    };
+  // return {
+  //   props: {
+  //     blocks,
+  //     post
+  //   },
+  // };
+
+  const api = new NotionAPI()
+  const recordMap = await api.getPage(notionID)
+  return {
+    props: {
+      recordMap
+    }
   }
+
+  
 }
-export default function NotionDetail({blocks, post}) {
+export default function NotionDetail({blocks, post, recordMap}) {
 
   useEffect(()=>{
     const ReactPixel =  require('react-facebook-pixel');
@@ -42,7 +46,7 @@ export default function NotionDetail({blocks, post}) {
   return (
     <div className="app">
       <Head>
-          <title>{post.title} | Cabinverse Sharing</title>
+          <title>{ post && post.title} | Cabinverse Sharing</title>
           { blocks && post ? <meta property="og:title" content={post.title}></meta> : null }
           { blocks && post ? <meta property="og:type" content="article"></meta> : null }
           { blocks && post ? <meta property="og:url" content={`https://cabineat.vn/${post.id}`}></meta> : null }
@@ -51,25 +55,52 @@ export default function NotionDetail({blocks, post}) {
           <script async src="https://cdn.splitbee.io/sb.js"></script>
       </Head>
       <Nav />
-      <div className="container-cabin">       
+      <div className="container-cabin">   
+        <div className="content-wrapper grid">          
+          <div className="article-detail-wrapper grid grid-gap-24-16">
+            <div className="acticle-detail-header padding-bottom border-bottom">
+              <p className="caption font-weight-bold text-primary">{getPageTitle(recordMap)}</p>              
+            </div>                
+
+            <div className="d-block">
+              <NotionRenderer
+                recordMap={recordMap}
+                fullPage={false}
+                darkMode={false}
+              />
+            </div>
+          </div>
+
+          <div className="nav-wrapper">
+            <Subscribe />
+            <LastestCourse notionPageID="90ad638172fd4481806c9106d9ce8287"/>
+          </div>
+          
+        </div>    
         { blocks && post
           ?
           <div className="content-wrapper grid">          
             <div className="article-detail-wrapper grid grid-gap-24-16">
               <div className="acticle-detail-header padding-bottom">
-                <p className="caption font-weight-bold text-primary">{post.title}</p>
+                {/* <p className="caption font-weight-bold text-primary">{post.title}</p> */}
+                <p className="caption font-weight-bold text-primary">{getPageTitle(recordMap)}</p>
                 <p className="small">
                   đăng bởi: <span className="text-primary mr-2">{post.author}</span>
                   {/* ngày: <span className="text-primary">{formatDate(post.date)}</span> */}
                 </p>
               </div>                
-              {post.cover
+              {/* {post.cover
               ? <div className="article-cover cover-fit rounded" style={{backgroundImage:`url("${post.cover[0].url}")`, backgroundColor: "#1F4DF5", height: "250px"}}></div>
               : null
-              }
+              } */}
               
               <div className="d-block">
-                <NotionRenderer blockMap={blocks} />
+                {/* <NotionRenderer blockMap={blocks} /> */}
+                <NotionRenderer
+                  recordMap={recordMap}
+                  fullPage={false}
+                  darkMode={false}
+                />
               </div>
             </div>
 
@@ -85,7 +116,10 @@ export default function NotionDetail({blocks, post}) {
           </div>
 
         }              
+        
+        
       </div>
+      
       <hr />
       <FooterNew />
       <style jsx>{`

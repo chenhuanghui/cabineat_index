@@ -400,18 +400,17 @@ small, .small, .smal p {
 
 /* notion style */
 .notion-asset-wrapper {
-    width: 100% !important;
-    
+    width: 100% !important;    
 }
 .notion {
     text-align: justify !important;
 }
 
-.notion-list.notion-list-disc, .notion-list.notion-list-numbered, .notion-callout-text{
+.notion-list.notion-list-disc, .notion-list.notion-list-numbered, .notion-callout-text, .notion-text{
     font-size: 14px !important;   
 }
 
-img.notion-image-inset {
+img.notion-image-inset, .notion-asset-wrapper-image img {
     border-radius: 10px !important;
 }
 

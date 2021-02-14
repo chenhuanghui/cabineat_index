@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link'
 import Annoucement from '../../announcement';
+
 
 export default function NavVer02() {
     const toggleMenu = ()=> {        
@@ -16,9 +16,9 @@ export default function NavVer02() {
                         <span className="fe fe-user mr-2"></span>Hỗ trợ</a>
                 </div>
                 <div className="nav-top-item-2 justify-self-end">
-                    <a href="#" className="font-weight-bold small mr-4 text-dark">Đăng nhập</a>
-                    <a href="#" className="font-weight-bold small mr-4 text-dark">Sự kiện</a>
-                    <a href="#" className="font-weight-bold small text-dark">
+                    <a className="font-weight-bold small mr-4 text-dark" href="https://my.cabineat.vn">Đăng nhập</a>
+                    <a className="font-weight-bold small mr-4 text-dark" href="/events">Sự kiện</a>
+                    <a className="font-weight-bold small text-dark" href="/about">
                         Giới thiệu
                         <span className="fe fe-chevron-down"></span>
                     </a>
@@ -34,11 +34,9 @@ export default function NavVer02() {
                         <span className="navbar-toggler-icon" onClick={toggleMenu}></span>
                     </div>
 
-                    <div className="nav-item-3 nav-list-wrapper">
-                        <div className="nav-item-link align-self-center">
-                            <p className="font-weight-bold">Cổng đặt hàng</p>
-                        </div>
-                        <a className="nav-item-link align-self-center font-weight-bold">Học viện</a>
+                    <div className="nav-item-3 nav-list-wrapper">                        
+                        <a className="nav-item-link align-self-center font-weight-bold text-dark" href="/">Delivery Suite Bundle</a>
+                        <a className="nav-item-link align-self-center font-weight-bold text-dark" href="/cabinverse">Học viện</a>
                         <a className="nav-item-link align-self-center btn btn-create-store text-white" style={{padding: "6px 12px !important"}}>Tạo tài khoản miễn phí</a>
                     </div>
                 </div>
@@ -97,6 +95,9 @@ export default function NavVer02() {
                 }
                 .nav-item-3 a{
                     padding: 0px 6px !important;
+                }
+                .nav-item-link {
+                    margin-right: 10px;
                 }
             }
 

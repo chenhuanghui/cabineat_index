@@ -241,6 +241,11 @@ small, .small, .smal p {
     font-size: 24px !important;
 }
 
+.caption-extra {
+    font-style:normal !important;
+    font-size: 48px !important;
+}
+
 .font-weight-bold {
     font-weight: bold !important;
 }
@@ -329,6 +334,9 @@ small, .small, .smal p {
 }
 .grid-gap-12-12{
     grid-gap: 12px 12px !important;
+}
+.grid-gap-8-8{
+    grid-gap: 8px 8px !important;
 }
 .grid-template-columns-1fr{
     grid-template-columns: 1fr;

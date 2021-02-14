@@ -10,11 +10,20 @@ export default function NavVer02() {
     }
     return (
         <div className="nav grid grid-template-columns-1fr bg-white">
-            <Annoucement
-                url="https://www.facebook.com/cabineat.vn"
-                title="Chương trình hỗ trợ đồng hành cùng doanh nghiệp Việt, giảm tác động covid-19"
-            />
-
+            <div className="nav-top nav-top-wrapper container-cabin grid align-items-center">
+                <div className="nav-top-item-1 justify-self-start">
+                    <a href="#" className="font-weight-bold small mr-2 text-dark">
+                        <span className="fe fe-user mr-2"></span>Hỗ trợ</a>
+                </div>
+                <div className="nav-top-item-2 justify-self-end">
+                    <a href="#" className="font-weight-bold small mr-4 text-dark">Đăng nhập</a>
+                    <a href="#" className="font-weight-bold small mr-4 text-dark">Sự kiện</a>
+                    <a href="#" className="font-weight-bold small text-dark">
+                        Giới thiệu
+                        <span className="fe fe-chevron-down"></span>
+                    </a>
+                </div>
+            </div>
             <div className="navbar-light border-bottom">
                 <div className="nav-wrapper grid container-cabin align-items-center">
                     <div className="nav-item-1 logo">
@@ -26,18 +35,27 @@ export default function NavVer02() {
                     </div>
 
                     <div className="nav-item-3 nav-list-wrapper">
-                        <a className="nav-item-link font-weight-bold">Học viện</a>
-                        <a className="nav-item-link font-weight-bold">Sự kiện</a>
-                        <a className="nav-item-link font-weight-bold">Giới thiệu</a>
-                        <a className="nav-item-link font-weight-bold">Truy cập</a>
+                        <div className="nav-item-link align-self-center">
+                            <p className="font-weight-bold">Cổng đặt hàng</p>
+                        </div>
+                        <a className="nav-item-link align-self-center font-weight-bold">Học viện</a>
+                        <a className="nav-item-link align-self-center btn btn-create-store text-white" style={{padding: "6px 12px !important"}}>Tạo tài khoản miễn phí</a>
                     </div>
                 </div>
             </div>
+            
 
             <style>{`
+            .nav {
+                box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
+            }
+            .nav-top-wrapper {
+                padding: 12px 0px !important;     
+                display: none;
+            }
             .nav-wrapper {
                 grid-template-columns: 1fr 25px;
-                padding: 24px 0px;                
+                padding: 24px 0px;                                
             }
             .nav-item-2 {
 
@@ -58,7 +76,16 @@ export default function NavVer02() {
                 padding: 6px 0px;
             }
 
+            .btn-create-store {
+                background-color: #1F4DF5;                
+            }
+
             @media (min-width:992px){
+                .nav-top {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    // border-bottom: 1px solid #e2e2e2;
+                }
                 .nav-wrapper {
                     grid-template-columns: 150px 1fr;
                     padding: 12px 0px !important;

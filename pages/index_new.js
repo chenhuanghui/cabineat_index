@@ -22,30 +22,109 @@ export default function Index() {
             </Head>
             
             <NavVer02 />
-            <div className="container-cabin padding-y-24">
-                <div className="hero">
-                    <div className="hero-wrapper grid justify-content-center grid-gap-12-12">
-                        <div className="message">
-                            <p className="caption-extra font-weight-bold text-center" style={{lineHeight: "45px"}}>Selling online should be easy. </p>
-                            <p className="caption-extra font-weight-bold text-center text-primary" style={{lineHeight: "45px"}}>So we've made it easy</p>
-                        </div>
-                        <div className="action_create grid justify-content-center">
-                            <div className="justify-self-center" style={{width: "70%"}}>
-                                <p className="text-center font-weight-lighter">The average time it takes to create your takeaway store is 13 minutes. No signup costs, no monthly fees.</p>
-                            </div>                            
-                        </div>
-                        
-                        <div className="action_create grid justify-content-center">
-                            <div className="call-to-action grid grid-gap-8-8">
-                                <a href="#" className="btn btn-primary d-block">Tạo tài khoản miễn phí</a>
-                                <p className="small text-gray text-center">Không tốn phí hoa hồng.</p>
-                            </div>                            
-                        </div>    
+            <div className="main-container grid grid-gap-24-16">
+                <div className="hero grid justify-content-center padding-y-24 margin-y-24 grid-gap-24-16">
+                    <div className="message">
+                        <p className="caption-extra font-weight-bold text-center" style={{lineHeight: "45px"}}>Selling online should be easy. </p>
+                        <p className="caption-extra font-weight-bold text-center text-primary" style={{lineHeight: "45px"}}>So we've made it easy</p>
+                    </div>
 
-                        <div className="hero-image cover-fit" style={{minHeight: "500px", backgroundImage:`url("${"https://ucarecdn.com/34e6691a-acb3-40ed-9d72-b36922835b86/-/format/auto/"}")`}}></div>
-                        
+                    <div className="hero-description grid justify-self-center">
+                        <div className="justify-self-center">
+                            <p className="text-center font-weight-lighter">The average time it takes to create your takeaway store is 13 minutes. No signup costs, no monthly fees.</p>
+                        </div>                            
+                    </div>
+                    
+                    <div className="action_create justify-self-center">
+                        <div className="call-to-action grid grid-gap-8-8">
+                            <a href="#" className="btn btn-primary d-block">Tạo tài khoản miễn phí</a>
+                            <p className="small text-gray text-center">Không tốn phí hoa hồng.</p>
+                        </div>                            
+                    </div>    
+
+                    <div className="hero-image">
+                        <img src="https://ucarecdn.com/34e6691a-acb3-40ed-9d72-b36922835b86/-/format/auto/" width="100%"/>
+                    </div>
+                    
+                </div>
+
+                <div className="setup container-cabin bg-dark grid grid-gap-24-16 padding-y-24 margin-y-24 justify-content-center">
+                    <div className="setup_message grid grid-gap-8-8 justify-self-center">
+                        <p className="caption text-white font-weight-bold text-center">Up and running in 20 mins</p>
+                        <p className="text-white text-center">With the industry's easiest to use dashboard, you'll need just 20 minutes to build a world-class mobile ordering web app.</p>
+                    </div>                        
+                    <div className="setup-video justify-self-center">
+                        {/* <div className="cover-fit" style={{minHeight: "500px", backgroundImage:`url("https://ucarecdn.com/5ef680e7-0cff-4a39-9330-cfb3693d657c/createstore.mov")`}}></div> */}
+                        <video src="https://ucarecdn.com/5ef680e7-0cff-4a39-9330-cfb3693d657c/createstore.mov" autoPlay="true" width= "100%"></video>
+                    </div>
+                    <div className="setup-choices grid">
+                        <div className="bg-gray rounded padding grid grid-gap-8-8">
+                            <p className="title font-weight-bold">Create Your Store</p>
+                            <p className="font-weight-lighter">It'll take you just 20 minutes to build a world-class mobile ordering web app</p>
+                        </div>
+                        <div className="rounded padding grid grid-gap-8-8">
+                            <p className="title font-weight-bold">Create Your Store</p>
+                            <p className="font-weight-lighter">It'll take you just 20 minutes to build a world-class mobile ordering web app</p>
+                        </div>
+                        <div className="rounded padding grid grid-gap-8-8">
+                            <p className="title font-weight-bold">Create Your Store</p>
+                            <p className="font-weight-lighter">It'll take you just 20 minutes to build a world-class mobile ordering web app</p>
+                        </div>
                     </div>
                 </div>
+                
+                <div className="overview padding-y-24">
+                    <div className="overview-wrapper grid justify-content-center grid-gap-24-16">
+                        <div className="container-cabin grid grid-gap-24-16  margin-y-24 justify-content-center">
+                            <div className="setup_message grid grid-gap-8-8 justify-self-center">
+                                <p className="caption font-weight-bold text-center">Overview – Online Ordering Made Simple</p>
+                                <p className="text-center">Software that's intuitive and simple. That’s true both for you, and your customers.</p>
+                            </div>                        
+                        </div>
+                        <div className="overview-content-wrapper container-cabin grid grid-gap-24-16 justify-content-center align-items-center">
+                            <div className="overview-item-1 grid grid-gap-24-16">
+                                <p className="caption font-weight-bold letter-spacing-n1px">Get up and running in minutes</p>
+                                <div className="grid grid-template-columns-48px-1fr grid-gap-12-12">
+                                    <div className="icon">
+                                        <div className="bg-primary text-white rounded grid grid-template-columns-48px justify-content-center align-items-center">
+                                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                        </div>
+                                    </div>
+                                    <div className="grid grid-gap-8-8">
+                                        <p className="font-weight-bold title">Setup</p>
+                                        <p className="font-weight-lighter">Set up your store(s) – add your address, opening times, and what you sell – with easy-peasy menu and catalogue editing.</p>
+                                    </div>
+                                </div>
+                                <div className="grid grid-template-columns-48px-1fr grid-gap-12-12">
+                                    <div className="icon">
+                                        <div className="bg-primary text-white rounded grid grid-template-columns-48px justify-content-center align-items-center">
+                                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                        </div>
+                                    </div>
+                                    <div className="grid grid-gap-8-8">
+                                        <p className="font-weight-bold title">Promote</p>
+                                        <p className="font-weight-lighter">Publicise your StoreKit Takeaway URL or build it as a button into your site. Navigate to your “orders” tab to see the new orders as they come through!</p>
+                                    </div>
+                                </div>
+                                <div className="grid grid-template-columns-48px-1fr grid-gap-12-12">
+                                    <div className="icon">
+                                        <div className="bg-primary text-white rounded grid grid-template-columns-48px justify-content-center align-items-center">
+                                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                        </div>
+                                    </div>
+                                    <div className="grid grid-gap-8-8">
+                                        <p className="font-weight-bold title">Sell</p>
+                                        <p className="font-weight-lighter">Congratulations – you’re an online restaurant or shop. Onboard onto StoreKit payments at a leisurely pace to begin accepting card orders online.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="overview-item-2 justify-self-center">
+                                <video src="https://ucarecdn.com/5ef680e7-0cff-4a39-9330-cfb3693d657c/createstore.mov" autoPlay="true" width= "100%"></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <FooterNew />
             <style jsx>{`
@@ -53,6 +132,66 @@ export default function Index() {
                 background-image: linear-gradient(
                     -169deg
                     , rgb(248, 246, 243) 14%, rgb(255, 255, 255) 59%);
+            }
+            .main-container {
+                padding-top: 24px;
+            }
+            
+            .hero .hero-description {
+                width: 90%;
+            }
+
+            .setup {
+                padding-top: 48px !important; 
+                padding-bottom: 48px !important; 
+            }
+            
+            .overview {
+                background: rgb(248, 246, 243);
+            }
+
+            .overview-content-wrapper .overview-item-2 {
+                margin-left: -24px;
+                margin-right: -24px;
+            }
+
+            @media (min-width: 768px) {
+                .hero .hero-description {
+                    width: 70%;
+                }
+                
+                .overview-wrapper {
+                    width: 75%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding-bottom: 48px;
+                }
+
+                .setup {                    
+                    border-radius: 12px !important;
+                }
+                .setup .setup-choices {
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+            }
+
+            @media (min-width: 992px) {
+                .hero .hero-description {
+                    width: 50%;
+                }
+                .overview-content-wrapper {
+                    grid-template-columns: 1fr 1fr !important;
+                }
+                .overview-content-wrapper .overview-item-2 {
+                    margin-left: 0px;
+                    margin-right: 0px;
+                }
+                .setup {
+                    border-radius: 12px !important;
+                }
+                .setup .setup-choices {
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
             }
             `}</style>
         </div>

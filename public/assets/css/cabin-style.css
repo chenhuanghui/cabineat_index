@@ -146,6 +146,10 @@ p {
     margin-top: 12px !important;
     margin-bottom: 12px !important;
 }
+.margin-y-24 {
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
+}
 
 .margin-x {
     margin-left: 12px !important;
@@ -326,6 +330,9 @@ small, .small, .smal p {
 
 /* grid style */
 .grid {display: grid;}
+.grid-gap-30-16{
+    grid-gap: 30px 16px !important;
+}
 .grid-gap-24-16{
     grid-gap: 24px 16px !important;
 }
@@ -344,6 +351,12 @@ small, .small, .smal p {
 
 .grid-template-columns-1fr-1fr{
     grid-template-columns: 1fr 1fr;
+}
+.grid-template-columns-48px{
+    grid-template-columns: 48px;
+}
+.grid-template-columns-48px-1fr{
+    grid-template-columns: 48px 1fr;
 }
 .grid-template-columns-auto-1fr{
     grid-template-columns: auto 1fr;
@@ -418,6 +431,9 @@ small, .small, .smal p {
     align-self: stretch !important;
 }
 
+.letter-spacing-n1px{
+    letter-spacing: -1px;
+}
 
 /* notion style */
 .notion-asset-wrapper {

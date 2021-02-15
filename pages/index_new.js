@@ -54,8 +54,7 @@ export default function Index() {
                         <p className="text-white text-center">With the industry's easiest to use dashboard, you'll need just 20 minutes to build a world-class mobile ordering web app.</p>
                     </div>                        
                     <div className="setup-video justify-self-center">
-                        {/* <div className="cover-fit" style={{minHeight: "500px", backgroundImage:`url("https://ucarecdn.com/5ef680e7-0cff-4a39-9330-cfb3693d657c/createstore.mov")`}}></div> */}
-                        <video src="https://ucarecdn.com/5ef680e7-0cff-4a39-9330-cfb3693d657c/createstore.mov" autoPlay="true" width= "100%"></video>
+                        <video src="https://ucarecdn.com/5ef680e7-0cff-4a39-9330-cfb3693d657c/createstore.mov" width= "100%" className="rounded" autoPlay loop muted playsInline></video>
                     </div>
                     <div className="setup-choices grid">
                         <div className="bg-gray rounded padding grid grid-gap-8-8">
@@ -63,31 +62,33 @@ export default function Index() {
                             <p className="font-weight-lighter">It'll take you just 20 minutes to build a world-class mobile ordering web app</p>
                         </div>
                         <div className="rounded padding grid grid-gap-8-8">
-                            <p className="title font-weight-bold">Create Your Store</p>
-                            <p className="font-weight-lighter">It'll take you just 20 minutes to build a world-class mobile ordering web app</p>
+                            <p className="title font-weight-bold">Build Your Menu</p>
+                            <p className="font-weight-lighter">A super intuitive menu builder to create and edit your digital menu in minutes</p>
                         </div>
                         <div className="rounded padding grid grid-gap-8-8">
-                            <p className="title font-weight-bold">Create Your Store</p>
-                            <p className="font-weight-lighter">It'll take you just 20 minutes to build a world-class mobile ordering web app</p>
+                            <p className="title font-weight-bold">Mange Orders</p>
+                            <p className="font-weight-lighter">Process orders as fast as they come in with a full-screen live dashboard</p>
                         </div>
                     </div>
                 </div>
                 
-                <div className="overview padding-y-24">
-                    <div className="overview-wrapper grid justify-content-center grid-gap-24-16">
+                <div className="overview-manage padding-top-24">
+                    <div className="overview-manage-wrapper grid justify-content-center">
+                        
                         <div className="container-cabin grid grid-gap-24-16  margin-y-24 justify-content-center">
                             <div className="setup_message grid grid-gap-8-8 justify-self-center">
                                 <p className="caption font-weight-bold text-center">Overview – Online Ordering Made Simple</p>
                                 <p className="text-center">Software that's intuitive and simple. That’s true both for you, and your customers.</p>
                             </div>                        
                         </div>
+                        
                         <div className="overview-content-wrapper container-cabin grid grid-gap-24-16 justify-content-center align-items-center">
                             <div className="overview-item-1 grid grid-gap-24-16">
                                 <p className="caption font-weight-bold letter-spacing-n1px">Get up and running in minutes</p>
                                 <div className="grid grid-template-columns-48px-1fr grid-gap-12-12">
                                     <div className="icon">
                                         <div className="bg-primary text-white rounded grid grid-template-columns-48px justify-content-center align-items-center">
-                                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" ><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                                         </div>
                                     </div>
                                     <div className="grid grid-gap-8-8">
@@ -98,7 +99,7 @@ export default function Index() {
                                 <div className="grid grid-template-columns-48px-1fr grid-gap-12-12">
                                     <div className="icon">
                                         <div className="bg-primary text-white rounded grid grid-template-columns-48px justify-content-center align-items-center">
-                                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" ><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                                         </div>
                                     </div>
                                     <div className="grid grid-gap-8-8">
@@ -109,7 +110,7 @@ export default function Index() {
                                 <div className="grid grid-template-columns-48px-1fr grid-gap-12-12">
                                     <div className="icon">
                                         <div className="bg-primary text-white rounded grid grid-template-columns-48px justify-content-center align-items-center">
-                                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" ><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                                         </div>
                                     </div>
                                     <div className="grid grid-gap-8-8">
@@ -119,7 +120,49 @@ export default function Index() {
                                 </div>
                             </div>
                             <div className="overview-item-2 justify-self-center">
-                                <video src="https://ucarecdn.com/5ef680e7-0cff-4a39-9330-cfb3693d657c/createstore.mov" autoPlay="true" width= "100%"></video>
+                                <video src="https://ucarecdn.com/5ef680e7-0cff-4a39-9330-cfb3693d657c/createstore.mov" width= "100%" autoPlay loop muted playsInline></video>
+                            </div>
+                        </div>
+
+                        <div className="manage-content-wrapper container-cabin grid grid-gap-24-16 justify-content-center align-items-center">
+                            <div className="manage-item-1 grid grid-gap-24-16">
+                                <p className="caption font-weight-bold letter-spacing-n1px">Manage Everything</p>
+                                <div className="grid grid-template-columns-48px-1fr grid-gap-12-12">
+                                    <div className="icon">
+                                        <div className="bg-primary text-white rounded grid grid-template-columns-48px justify-content-center align-items-center">
+                                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" ><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                        </div>
+                                    </div>
+                                    <div className="grid grid-gap-8-8">
+                                        <p className="font-weight-bold title">One-look dashboard</p>
+                                        <p className="font-weight-lighter">Know everything about your business in a single glance with your new dashboard.</p>
+                                    </div>
+                                </div>
+                                <div className="grid grid-template-columns-48px-1fr grid-gap-12-12">
+                                    <div className="icon">
+                                        <div className="bg-primary text-white rounded grid grid-template-columns-48px justify-content-center align-items-center">
+                                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" ><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                        </div>
+                                    </div>
+                                    <div className="grid grid-gap-8-8">
+                                        <p className="font-weight-bold title">Orders, managed</p>
+                                        <p className="font-weight-lighter">All your orders in one place so you can manage your delivery, collection, asap and pre-orders in one place.</p>
+                                    </div>
+                                </div>
+                                <div className="grid grid-template-columns-48px-1fr grid-gap-12-12">
+                                    <div className="icon">
+                                        <div className="bg-primary text-white rounded grid grid-template-columns-48px justify-content-center align-items-center">
+                                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" ><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                        </div>
+                                    </div>
+                                    <div className="grid grid-gap-8-8">
+                                        <p className="font-weight-bold title">Email & SMS Notifications</p>
+                                        <p className="font-weight-lighter">Never miss a new order with notifications via your dashboard, by sound, and to your email and phone.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="manage-item-2 justify-self-center">
+                                <video src="https://ucarecdn.com/5ef680e7-0cff-4a39-9330-cfb3693d657c/createstore.mov" width= "100%" autoPlay loop muted playsInline></video>
                             </div>
                         </div>
                     </div>
@@ -146,8 +189,11 @@ export default function Index() {
                 padding-bottom: 48px !important; 
             }
             
-            .overview {
-                background: rgb(248, 246, 243);
+            .overview-manage{
+                background: rgb(248, 246, 243);                
+            }
+            .overview-manage-wrapper {
+                grid-gap: 40px 16px;
             }
 
             .overview-content-wrapper .overview-item-2 {
@@ -160,7 +206,7 @@ export default function Index() {
                     width: 70%;
                 }
                 
-                .overview-wrapper {
+                .overview-manage-wrapper {
                     width: 75%;
                     margin-left: auto;
                     margin-right: auto;
@@ -179,6 +225,10 @@ export default function Index() {
                 .hero .hero-description {
                     width: 50%;
                 }
+                .overview-manage-wrapper {
+                    width: 100%;
+                    padding-bottom: 48px;
+                }
                 .overview-content-wrapper {
                     grid-template-columns: 1fr 1fr !important;
                 }
@@ -191,6 +241,19 @@ export default function Index() {
                 }
                 .setup .setup-choices {
                     grid-template-columns: 1fr 1fr 1fr;
+                }
+
+                .manage-content-wrapper {
+                    grid-template-columns: 1fr 1fr !important;
+                }
+
+                .manage-content-wrapper .manage-item-1 {
+                    grid-column: 2 / 3;
+                    grid-row: 1 / 2;                    
+                }
+                .manage-content-wrapper .manage-item-2 {
+                    grid-column: 1 / 2;
+                    grid-row: 1 / 2;                    
                 }
             }
             `}</style>

@@ -196,7 +196,7 @@ export default function Index() {
                 grid-gap: 40px 16px;
             }
 
-            .overview-content-wrapper .overview-item-2 {
+            .overview-content-wrapper .overview-item-2, .manage-content-wrapper .manage-item-2 {
                 margin-left: -24px;
                 margin-right: -24px;
             }

@@ -3,7 +3,7 @@ import FooterNew from '../components/footer-new';
 import Nav from '../components/nav-new'
 import React, { useState, useEffect } from 'react';
 // import { NotionRenderer } from "react-notion";
-import { getAllPosts } from './blog'
+import { getAllPosts } from './cabinverse'
 import Subscribe from '../components/cabinverse/subscribe';
 import LastestCourse from '../components/cabinverse/lastedCourse';
 

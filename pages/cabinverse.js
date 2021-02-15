@@ -11,7 +11,8 @@ import LastestCourse from '../components/cabinverse/lastedCourse';
 import CardBlogItem from '../components/card/card-blog-item';
 import { post } from 'jquery';
 
-const NOTION_BLOG_ID = '90ad638172fd4481806c9106d9ce8287'
+// const NOTION_BLOG_ID = '90ad638172fd4481806c9106d9ce8287'
+const NOTION_BLOG_ID = '0608ced7e3d544608a55fbe47ca77f73'
 
 export const getAllPosts = async () => {
 	return await fetch(

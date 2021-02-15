@@ -1,33 +1,68 @@
+import React, { useState, useEffect } from 'react';
+import YouTube from '@u-wave/react-youtube';
+
+const NOTION_SETUP_ID = '7740af3ba3cb41448ab72439a0a73f54'
+
 export default function Setup() {
+    const [data , setData] = useState()
+    useEffect(()=>{
+        async function fetchData() {
+            const contents = await fetch(
+                `https://notion-api.splitbee.io/v1/table/${NOTION_SETUP_ID}`
+            ).then((res) => res.json());
+            
+            const temp = []
+            contents.forEach(item => {
+                if (item.isActive === true ) {
+                    console.log("active: ", item)    
+                    temp.push(item)                
+                }                
+            });
+            setData(temp);
+        }
+        fetchData()
+    },[])
     return (
         <div className="setup container-cabin bg-dark grid grid-gap-24-16 padding-y-24 margin-y-24 justify-content-center">
             <div className="setup_message grid grid-gap-8-8 justify-self-center">
                 <p className="caption text-white font-weight-bold text-center">Up and running in 20 mins</p>
                 <p className="text-white text-center">With the industry's easiest to use dashboard, you'll need just 20 minutes to build a world-class mobile ordering web app.</p>
             </div>                        
-            <div className="setup-video justify-self-center">
-                <video src="https://ucarecdn.com/5ef680e7-0cff-4a39-9330-cfb3693d657c/createstore.mov" width= "100%" className="rounded" autoPlay loop muted playsInline></video>
+            <div className="setup-video">
+                {data && data.map((item, index)=>(
+                    <div className= {`video-item ${item.id} ${index===0 ? "show" : null}`} key={index}>
+                        <YouTube
+                            video={item.youtubeID}
+                            autoplay
+                            width={"100%"}
+                            height={480}
+                        />
+                    </div>
+                ))}
             </div>
             <div className="setup-choices grid">
-                <div className="bg-gray rounded padding grid grid-gap-8-8">
-                    <p className="title font-weight-bold">Create Your Store</p>
-                    <p className="font-weight-lighter">It'll take you just 20 minutes to build a world-class mobile ordering web app</p>
-                </div>
-                <div className="rounded padding grid grid-gap-8-8">
-                    <p className="title font-weight-bold">Build Your Menu</p>
-                    <p className="font-weight-lighter">A super intuitive menu builder to create and edit your digital menu in minutes</p>
-                </div>
-                <div className="rounded padding grid grid-gap-8-8">
-                    <p className="title font-weight-bold">Mange Orders</p>
-                    <p className="font-weight-lighter">Process orders as fast as they come in with a full-screen live dashboard</p>
-                </div>
+                {data && data.map((item, index)=>(
+                    <div className={`choice-item rounded padding grid grid-gap-8-8 ${index===0 ? "selected" : null}`} key={index}>
+                        <p className="title font-weight-bold">{item.title}</p>
+                        <p className="font-weight-lighter">{item.sub}</p>
+                    </div>    
+                ))}                
             </div>
             <style jsx>{`
             .setup {
                 padding-top: 48px !important; 
                 padding-bottom: 48px !important; 
+            }            
+
+            .video-item {
+                display: none;
             }
-            
+            .video-item.show {
+                display: block;
+            }
+            .choice-item.selected {
+                background-color: #1d2838
+            }
             @media (min-width: 768px) {                      
                 .setup {                    
                     border-radius: 12px !important;

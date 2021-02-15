@@ -98,6 +98,9 @@ p {
 .padding-top-24{
     padding-top: 24px !important;
 }
+.padding-bottom-24{
+    padding-bottom: 24px !important;
+}
 .padding-y-24{
     padding-top: 24px !important;
     padding-bottom: 24px !important;
@@ -152,7 +155,10 @@ p {
     margin-top: 24px !important;
     margin-bottom: 24px !important;
 }
-
+.margin-x-n24 {
+    margin-left: -24px !important;
+    margin-right: -24px !important;
+}
 .margin-x {
     margin-left: 12px !important;
     margin-right: 12px !important;

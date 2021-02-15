@@ -42,7 +42,7 @@ export default function Index() {
                         </div>                            
                     </div>    
 
-                    <div className="hero-image">
+                    <div className="hero-image container-cabin magin-x-n24">
                         <img src="https://ucarecdn.com/34e6691a-acb3-40ed-9d72-b36922835b86/-/format/auto/" width="100%"/>
                     </div>
                     
@@ -120,11 +120,13 @@ export default function Index() {
                                 </div>
                             </div>
                             <div className="overview-item-2 justify-self-center">
-                                <video src="https://ucarecdn.com/5ef680e7-0cff-4a39-9330-cfb3693d657c/createstore.mov" width= "100%" autoPlay loop muted playsInline></video>
+                                <video width= "100%" autoPlay loop muted playsInline>
+                                    <source src="https://ucarecdn.com/3d6f9b1b-868b-4a04-babe-d3fb1b420322/OOSsetupvideo.mp4" type="video/mp4"/>
+                                </video>
                             </div>
                         </div>
 
-                        <div className="manage-content-wrapper container-cabin grid grid-gap-24-16 justify-content-center align-items-center">
+                        <div className="manage-content-wrapper container-cabin grid grid-gap-24-16 justify-content-center align-items-center padding-bottom-24">
                             <div className="manage-item-1 grid grid-gap-24-16">
                                 <p className="caption font-weight-bold letter-spacing-n1px">Manage Everything</p>
                                 <div className="grid grid-template-columns-48px-1fr grid-gap-12-12">
@@ -162,7 +164,36 @@ export default function Index() {
                                 </div>
                             </div>
                             <div className="manage-item-2 justify-self-center">
-                                <video src="https://ucarecdn.com/5ef680e7-0cff-4a39-9330-cfb3693d657c/createstore.mov" width= "100%" autoPlay loop muted playsInline></video>
+                                {/* <video src="https://ucarecdn.com/5ef680e7-0cff-4a39-9330-cfb3693d657c/createstore.mov" width= "100%" autoPlay loop muted playsInline></video> */}
+                                <img src="https://ucarecdn.com/3f46f08b-8e4d-44fe-b8e7-c5f9e8cf01bb/-/format/auto/" width="100%" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="features grid grid-gap-24-16 bg-white container-cabin">                    
+                    <div className="feature-video padding justify-self-center" style={{backgroundColor:"rgb(248, 246, 243)"}}>
+                        <video width= "100%" autoPlay loop muted playsInline>
+                            <source src="https://ucarecdn.com/3351b813-bc37-449a-9693-0fe4f87308e5/clickandcollect2.mp4" type="video/mp4"/>
+                        </video>
+                    </div>
+                    <div className="feature-content-wrapper">
+                        <div className="grid grid-gap-24-16">
+                            <div className="feature-title">
+                                <p className="caption-extra font-weight-bold">Click & Collect</p>
+                                <p className="title">Drive additional revenue with a best-in-class click & collect service</p>
+                            </div>                            
+                            <div className="grid grid-gap-8-8">
+                                <p className="font-weight-bold">Smart time slot</p>
+                                <p className="">Prevent overselling (or overcrowding) with availability limits per collection time slot.</p>
+                            </div>
+                            <div className="grid grid-gap-8-8">
+                                <p className="font-weight-bold">Real-time customer notifications</p>
+                                <p className="">Keep customers in the loop with automatic notifications at every step of the journey.</p>
+                            </div>
+                            <div className="grid grid-gap-8-8">
+                                <p className="font-weight-bold">Take orders in advance</p>
+                                <p className="">Manage demand and capacity plan by allowing your customers to pre-order, whether that's later in the day or in 2 weeks.</p>
                             </div>
                         </div>
                     </div>
@@ -170,6 +201,7 @@ export default function Index() {
 
             </div>
             <FooterNew />
+
             <style jsx>{`
             .app {
                 background-image: linear-gradient(
@@ -201,6 +233,10 @@ export default function Index() {
                 margin-right: -24px;
             }
 
+            .features {
+                padding-top: 100px;
+            }
+
             @media (min-width: 768px) {
                 .hero .hero-description {
                     width: 70%;
@@ -219,6 +255,16 @@ export default function Index() {
                 .setup .setup-choices {
                     grid-template-columns: 1fr 1fr 1fr;
                 }
+
+                .overview-content-wrapper .overview-item-2, .manage-content-wrapper .manage-item-2 {
+                    margin-left: 0px;
+                    margin-right: 0px;
+                }
+
+                .features {
+                    padding-top: 100px;
+                    grid-template-columns: 1fr 1fr;
+                }
             }
 
             @media (min-width: 992px) {
@@ -232,7 +278,7 @@ export default function Index() {
                 .overview-content-wrapper {
                     grid-template-columns: 1fr 1fr !important;
                 }
-                .overview-content-wrapper .overview-item-2 {
+                .overview-content-wrapper .overview-item-2, .manage-content-wrapper .manage-item-2  {
                     margin-left: 0px;
                     margin-right: 0px;
                 }

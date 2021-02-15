@@ -177,6 +177,10 @@ p {
     border-radius: 12px !important;
 }
 
+.rounded-top {
+    border-top-left-radius: 12px !important;
+}
+
 .alert-cabin {
     background-color: #FFD875 !important;
 }

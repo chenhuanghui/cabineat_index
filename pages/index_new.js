@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import FooterNew from '../components/footer-new'
-import Nav from '../components/nav-new'
+import Hero from '../components/ver02/home/hero'
 import NavVer02 from '../components/ver02/nav'
 
 export default function Index() {
@@ -23,30 +23,7 @@ export default function Index() {
             
             <NavVer02 />
             <div className="main-container grid grid-gap-24-16">
-                <div className="hero grid justify-content-center padding-y-24 margin-y-24 grid-gap-24-16">
-                    <div className="message">
-                        <p className="caption-extra font-weight-bold text-center" style={{lineHeight: "45px"}}>Selling online should be easy. </p>
-                        <p className="caption-extra font-weight-bold text-center text-primary" style={{lineHeight: "45px"}}>So we've made it easy</p>
-                    </div>
-
-                    <div className="hero-description grid justify-self-center">
-                        <div className="justify-self-center">
-                            <p className="text-center font-weight-lighter">The average time it takes to create your takeaway store is 13 minutes. No signup costs, no monthly fees.</p>
-                        </div>                            
-                    </div>
-                    
-                    <div className="action_create justify-self-center">
-                        <div className="call-to-action grid grid-gap-8-8">
-                            <a href="#" className="btn btn-primary d-block">Tạo tài khoản miễn phí</a>
-                            <p className="small text-gray text-center">Không tốn phí hoa hồng.</p>
-                        </div>                            
-                    </div>    
-
-                    <div className="hero-image container-cabin padding-x-0">
-                        <img src="https://ucarecdn.com/34e6691a-acb3-40ed-9d72-b36922835b86/-/format/auto/" width="100%"/>
-                    </div>
-                    
-                </div>
+                <Hero />
 
                 <div className="setup container-cabin bg-dark grid grid-gap-24-16 padding-y-24 margin-y-24 justify-content-center">
                     <div className="setup_message grid grid-gap-8-8 justify-self-center">
@@ -290,10 +267,7 @@ export default function Index() {
                 padding-bottom: 48px !important;
             }
 
-            @media (min-width: 768px) {
-                .hero .hero-description {
-                    width: 70%;
-                }
+            @media (min-width: 768px) {                
                 
                 .overview-manage-wrapper {
                     width: 75%;

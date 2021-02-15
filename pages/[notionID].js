@@ -15,14 +15,6 @@ export async function getServerSideProps({ params: { notionID } }) {
   
   const posts = await getAllPosts();
   const post = posts.find((t) => t.id === notionID);
-  // const blocks = await fetch(`https://notion-api.splitbee.io/v1/page/${post.id}`).then((res) => res.json());
-
-  // return {
-  //   props: {
-  //     blocks,
-  //     post
-  //   },
-  // };
 
   const api = new NotionAPI()
   const recordMap = await api.getPage(notionID)
@@ -32,8 +24,6 @@ export async function getServerSideProps({ params: { notionID } }) {
       post
     }
   }
-
-  
 }
 export default function NotionDetail({blocks, post, recordMap}) {
 

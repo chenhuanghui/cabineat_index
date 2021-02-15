@@ -42,7 +42,7 @@ export default function Index() {
                         </div>                            
                     </div>    
 
-                    <div className="hero-image container-cabin magin-x-n24">
+                    <div className="hero-image container-cabin padding-x-0">
                         <img src="https://ucarecdn.com/34e6691a-acb3-40ed-9d72-b36922835b86/-/format/auto/" width="100%"/>
                     </div>
                     

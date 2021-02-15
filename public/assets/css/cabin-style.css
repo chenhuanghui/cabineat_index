@@ -106,6 +106,11 @@ p {
     padding-bottom: 24px !important;
 }
 
+.padding-x-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 .padding-x {
     padding-left: 12px !important;
     padding-right: 12px !important;
@@ -184,8 +189,8 @@ p {
 /* frame */
 .container-cabin {
     width: 100%;
-    padding-right: 24px !important;
-    padding-left: 24px !important;
+    padding-right: 24px;
+    padding-left: 24px;
     margin-right: auto;
     margin-left: auto;
 }

@@ -10,7 +10,7 @@ export default function NavVer02() {
     }
     return (
         <div className="nav grid grid-template-columns-1fr bg-white">
-            <div className="nav-top nav-top-wrapper container-cabin grid align-items-center">
+            <div className="nav-top nav-top-wrapper container-cabin grid align-items-center padding-x">
                 <div className="nav-top-item-1 justify-self-start">
                     <a href="#" className="font-weight-bold small mr-2 text-dark">
                         <span className="fe fe-user mr-2"></span>Hỗ trợ</a>
@@ -48,12 +48,13 @@ export default function NavVer02() {
                 box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
             }
             .nav-top-wrapper {
-                padding: 12px 0px !important;     
+                padding: 12px 12px !important;     
                 display: none;
             }
+
             .nav-wrapper {
                 grid-template-columns: 1fr 25px;
-                padding: 24px 0px;                                
+                padding: 24px 12px !important;                                
             }
             .nav-item-2 {
 
@@ -82,11 +83,10 @@ export default function NavVer02() {
                 .nav-top {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
-                    // border-bottom: 1px solid #e2e2e2;
                 }
                 .nav-wrapper {
                     grid-template-columns: 150px 1fr;
-                    padding: 12px 0px !important;
+                    padding: 12px 12px !important;
                 }
                 .nav-item-2 {display: none;}
                 .nav-item-3 {

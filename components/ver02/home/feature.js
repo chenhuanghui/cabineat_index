@@ -61,26 +61,25 @@ export default function Feature() {
             .features {
                 padding-top: 100px;
             }
+
             .feature-video {
                 padding: 24px !important;
                 width: 100%;
             }
-            .video {
-                width: 100vw;
-            }
             
-
             @media (min-width: 768px) {     
                 .features {
                     padding-top: 100px;
                     grid-template-columns: 1fr 1fr;
                 }
-                .feature-video {
-                    width: 100%;
-                }
-                .video {
-                    width: 100%;
-                }
+                
+            }
+
+            @media (min-width: 992px) {     
+                .features {
+                    padding-top: 100px;
+                    grid-template-columns: 1fr 1fr;
+                }                
             }
             `}</style>
         </div>

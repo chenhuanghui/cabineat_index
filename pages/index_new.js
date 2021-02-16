@@ -32,9 +32,6 @@ export default function Index() {
                 <OverviewManage />
                 <Feature />
                 <Delivery />
-
-                
-
                 
 
                 <div className="container-cabin margin-top">

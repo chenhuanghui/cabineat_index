@@ -36,7 +36,7 @@ export default function Setup() {
     
 
     return (
-        <section className="setup container-cabin bg-dark grid grid-gap-24-16 padding-y-24 margin-y-24 justify-content-center" id="#setup">
+        <section className="setup container-cabin bg-dark grid grid-gap-24-16 padding-y-24 margin-y-24 justify-content-center" id="setup">
             <div className="setup_message grid grid-gap-8-8 justify-self-center">
                 <p className="caption text-white font-weight-bold text-center">{data && data[0].message}</p>
                 <p className="text-white text-center">{data && data[0].description}</p>

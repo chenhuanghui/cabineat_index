@@ -35,8 +35,12 @@ export default function NavVer02() {
                     </div>
 
                     <div className="nav-item-3 nav-list-wrapper">                        
-                        <a className="nav-item-link align-self-center font-weight-bold text-dark" href="/">Delivery Suite Bundle</a>
-                        <a className="nav-item-link align-self-center font-weight-bold text-dark" href="/cabinverse">Học viện</a>
+                        <a className="nav-item-link align-self-center font-weight-bold text-dark" href="#setup">Thiết lập</a>
+                        <a className="nav-item-link align-self-center font-weight-bold text-dark" href="#intro">Giới thiệu</a>
+                        <a className="nav-item-link align-self-center font-weight-bold text-dark" href="#hub-order">Cổng đặt hàng</a>
+                        <a className="nav-item-link align-self-center font-weight-bold text-dark" href="#cabin-pos">Xử lý đơn</a>
+                        <a className="nav-item-link align-self-center font-weight-bold text-dark" href="#delivery">Vận chuyển</a>
+                        <a className="nav-item-link align-self-center font-weight-bold text-dark" href="#payment">Thanh toán</a>
                         <a className="nav-item-link align-self-center btn btn-create-store text-white" style={{padding: "6px 12px !important"}}>Tạo tài khoản miễn phí</a>
                     </div>
                 </div>

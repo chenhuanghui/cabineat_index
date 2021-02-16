@@ -23,7 +23,7 @@ export default function Feature() {
     
 
     return (
-        <div className="features grid grid-gap-24-16 bg-white container-cabin" style={{paddingBottom: "100px"}}>
+        <section className="features grid grid-gap-24-16 bg-white container-cabin" style={{paddingBottom: "100px"}} id="cabin-pos">
             <div className="feature-video video justify-self-center align-self-center bg-soft-yellow">
                 <YoutubePlayer videoID={data && data[0].youtubeID} />                
             </div>
@@ -66,7 +66,7 @@ export default function Feature() {
                 }                
             }
             `}</style>
-        </div>
+        </section>
     )
     
 }

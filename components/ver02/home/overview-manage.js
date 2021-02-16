@@ -53,7 +53,7 @@ export default function OverviewManage() {
     },[])
 
     return (
-    <div className="overview-manage padding-top-24" style={{paddingBottom: "50px"}}>
+    <section className="overview-manage padding-top-24" style={{paddingBottom: "50px"}} id="intro">
         <div className="overview-manage-wrapper grid justify-content-center">
             
             <div className="container-cabin grid grid-gap-24-16  margin-y-24 justify-content-center">
@@ -184,6 +184,6 @@ export default function OverviewManage() {
             }
         }
         `}</style>
-    </div>
+    </section>
     )    
 }

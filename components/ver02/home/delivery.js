@@ -20,7 +20,7 @@ export default function Delivery() {
         fetchData()
     },[])
     return (
-    <div className="delivery bg-soft-yellow padding-y-24">
+    <section className="delivery bg-soft-yellow padding-y-24" id="delivery">
         <div className="container-cabin delivery-wrapper grid grid-gap-24-16">
             <div className="delivery-item-1 grid grid-gap-24-16">
                 <div className="delivery-title">
@@ -53,6 +53,6 @@ export default function Delivery() {
             }
         }
         `}</style>              
-    </div>
+    </section>
     )
 }

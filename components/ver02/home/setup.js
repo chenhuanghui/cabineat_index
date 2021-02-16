@@ -49,7 +49,7 @@ export default function Setup() {
                     muted
                     width={"100%"}
                     height={480}
-                    controls={false}
+                    controls={true}
                     suggestedQuality={'720'}
                     modestBranding = {true}
                     showRelatedVideos={false}

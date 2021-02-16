@@ -6,6 +6,7 @@
     --soft-blue: #E4EBF6;
     --danger: #FF3008;
     --warning: #FFB000;
+    --soft-yellow: rgb(248, 246, 243);
 }
 ::after,
 ::before {
@@ -304,6 +305,9 @@ small, .small, .smal p {
     background-color: #FFD875 !important;
 }
 
+.bg-soft-yellow {
+    background: var(--soft-yellow) !important;
+}
 .text-gray {
     color: #50555C !important;
 }
@@ -390,7 +394,9 @@ small, .small, .smal p {
 .grid-template-columns-1fr-1fr-1fr{
     grid-template-columns: repeat(3, 1fr);
 }
-
+.grid-template-rows-48px{
+    grid-template-rows: 48px;
+}
 .align-items-center {
     align-items: center !important;
 }

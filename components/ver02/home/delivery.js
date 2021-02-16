@@ -1,6 +1,6 @@
 export default function Delivery() {
     return (
-    <div className="delivery bg-soft padding-y-24">
+    <div className="delivery bg-soft-yellow padding-y-24">
         <div className="container-cabin delivery-wrapper grid grid-gap-24-16">
             <div className="delivery-item-1 grid grid-gap-24-16">
                 <div className="delivery-title">

@@ -11,7 +11,6 @@ export default function Hero({}) {
             ).then((res) => res.json());
             contents.forEach(item => {
                 if (item.isActive === true ) {
-                    console.log("active: ", item)
                     setData(item);
                     return;
                 }

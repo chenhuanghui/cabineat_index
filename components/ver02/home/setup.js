@@ -16,7 +16,6 @@ export default function Setup() {
             const temp = []
             contents.forEach(item => {
                 if (item.isActive === true ) {
-                    console.log("active: ", item)    
                     temp.push(item)                
                 }                
             });
@@ -27,9 +26,6 @@ export default function Setup() {
     },[])
 
     const handleSelected = (choiceID, videoID) => {
-        console.log('choiceid: ', choiceID)        
-        console.log('videoid: ', videoID)
-
         $('.selected').removeClass('selected')
         $(`.${choiceID}`).addClass('selected')
 
@@ -42,7 +38,7 @@ export default function Setup() {
                 <p className="caption text-white font-weight-bold text-center">{data && data[0].message}</p>
                 <p className="text-white text-center">{data && data[0].description}</p>
             </div>                        
-            <div className="setup-video">
+            <div className="setup-video video">
                 <YouTube
                     video={videoSelectedID}
                     autoplay

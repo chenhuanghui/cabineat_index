@@ -9,7 +9,7 @@ import NavVer02 from '../components/ver02/nav'
 
 export default function Index() {
     return (
-        <div className="app">
+        <div className="app home-page">
             <Head>
                 <meta charSet="utf-8" />
                 <title>CabinEat - Trang chủ</title>
@@ -50,13 +50,9 @@ export default function Index() {
             <FooterNew />
 
             <style jsx>{`
-            .app {
+            .home-page {
                 background-image: linear-gradient(-169deg, rgb(248, 246, 243) 14%, rgb(255, 255, 255) 59%);
-            }
-
-            .bg-soft {
-                background: rgb(248, 246, 243);
-            }
+            }            
 
             .main-container {
                 padding-top: 24px;

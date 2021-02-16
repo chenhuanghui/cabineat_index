@@ -1,7 +1,7 @@
 export default function Feature() {
     return (
-        <div className="features grid grid-gap-24-16 bg-white container-cabin">                    
-            <div className="feature-video padding justify-self-center" style={{backgroundColor:"rgb(248, 246, 243)"}}>
+        <div className="features grid grid-gap-24-16 bg-white container-cabin" style={{paddingBottom: "100px"}}>
+            <div className="feature-video padding justify-self-center bg-soft-yellow">
                 <video width= "100%" autoPlay loop muted playsInline>
                     <source src="https://ucarecdn.com/3351b813-bc37-449a-9693-0fe4f87308e5/clickandcollect2.mp4" type="video/mp4"/>
                 </video>

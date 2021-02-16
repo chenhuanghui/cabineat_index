@@ -1,99 +1,151 @@
+import React, { useState, useEffect } from 'react';
+import YouTube from '@u-wave/react-youtube';
+const NOTION_OVERVIEWMANAGE_ID = '05758774b62a4726a1e2da6e04be7f7b'
+const NOTION_OVERVIEWMANAGE_BLOCK_ID = 'd22cc95674994a7f993744b76005c2b7'
+
 export default function OverviewManage() {
+    const [sectionData , setSectionData] = useState(null)
+    const [block1 , setBlock1] = useState(null)
+    const [block2 , setBlock2] = useState(null)
+    const [topVideoSelectedID, setTopVideoSelectedID] = useState()
+    const [bottomVideoSelectedID, setBottomVideoSelectedID] = useState()
+
+    useEffect(()=>{
+        async function fetchDataSection() {
+            const contents = await fetch(
+                `https://notion-api.splitbee.io/v1/table/${NOTION_OVERVIEWMANAGE_ID}`
+            ).then((res) => res.json());
+            contents.forEach(item => {
+                if (item.isActive === true ) {
+                    console.log("active data:", item)
+                    setSectionData(item);  
+                    return;
+                }                
+            });
+                      
+        }
+
+        async function fetchBlockData() {
+            const contents = await fetch(
+                `https://notion-api.splitbee.io/v1/table/${NOTION_OVERVIEWMANAGE_BLOCK_ID}`
+            ).then((res) => res.json());
+            
+            const block1 = []
+            const block2 = []
+            contents.forEach(item => {
+                if (item.isActive === true) {
+                    if (item.block_position==="block_1") block1.push(item)
+                    else if(item.block_position==="block_2") block2.push(item)                    
+                    console.log("active data:", item)                    
+                }                
+            });
+            
+            setBlock1(block1)
+            setTopVideoSelectedID(block1[0].youtubeID)
+            setBlock2(block2)
+            setBottomVideoSelectedID(block2[0].youtubeID)
+        }
+
+        fetchDataSection()
+        fetchBlockData()
+    },[])
+
     return (
-    <div className="overview-manage padding-top-24">
+    <div className="overview-manage padding-top-24" style={{paddingBottom: "50px"}}>
         <div className="overview-manage-wrapper grid justify-content-center">
             
             <div className="container-cabin grid grid-gap-24-16  margin-y-24 justify-content-center">
                 <div className="setup_message grid grid-gap-8-8 justify-self-center">
-                    <p className="caption font-weight-bold text-center">Overview – Online Ordering Made Simple</p>
-                    <p className="text-center">Software that's intuitive and simple. That’s true both for you, and your customers.</p>
+                    <p className="caption font-weight-bold text-center">{sectionData?.message}</p>
+                    <p className="text-center">{sectionData?.description}</p>
                 </div>                        
             </div>
             
             <div className="overview-content-wrapper container-cabin grid grid-gap-24-16 justify-content-center align-items-center">
                 <div className="overview-item-1 grid grid-gap-24-16">
-                    <p className="caption font-weight-bold letter-spacing-n1px">Get up and running in minutes</p>
-                    <div className="grid grid-template-columns-48px-1fr grid-gap-12-12">
-                        <div className="icon">
-                            <div className="bg-primary text-white rounded grid grid-template-columns-48px justify-content-center align-items-center">
-                                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" ><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <p className="caption font-weight-bold letter-spacing-n1px">{block1 && block1[0].block_title}</p>
+                    {block1 && block1.map((item, index)=>(
+                        <div className="grid grid-template-columns-48px-1fr grid-gap-12-12" key={item.id}>
+                            <div className="icon-wrapper">
+                                <div className="bg-primary text-white rounded grid grid-template-columns-48px grid-template-rows-48px">
+                                    <div 
+                                        className="justify-self-center align-self-center cover-fit" 
+                                        style={{
+                                            width:"24px", 
+                                            height:"24px",
+                                            backgroundImage:`url("${item.icon && item.icon[0].url}")`
+                                        }}>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="grid grid-gap-8-8">
+                                <p className="font-weight-bold title">{item.title}</p>
+                                <p className="font-weight-lighter text-justify">{item.description}</p>
                             </div>
                         </div>
-                        <div className="grid grid-gap-8-8">
-                            <p className="font-weight-bold title">Setup</p>
-                            <p className="font-weight-lighter">Set up your store(s) – add your address, opening times, and what you sell – with easy-peasy menu and catalogue editing.</p>
-                        </div>
-                    </div>
-                    <div className="grid grid-template-columns-48px-1fr grid-gap-12-12">
-                        <div className="icon">
-                            <div className="bg-primary text-white rounded grid grid-template-columns-48px justify-content-center align-items-center">
-                                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" ><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            </div>
-                        </div>
-                        <div className="grid grid-gap-8-8">
-                            <p className="font-weight-bold title">Promote</p>
-                            <p className="font-weight-lighter">Publicise your StoreKit Takeaway URL or build it as a button into your site. Navigate to your “orders” tab to see the new orders as they come through!</p>
-                        </div>
-                    </div>
-                    <div className="grid grid-template-columns-48px-1fr grid-gap-12-12">
-                        <div className="icon">
-                            <div className="bg-primary text-white rounded grid grid-template-columns-48px justify-content-center align-items-center">
-                                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" ><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            </div>
-                        </div>
-                        <div className="grid grid-gap-8-8">
-                            <p className="font-weight-bold title">Sell</p>
-                            <p className="font-weight-lighter">Congratulations – you’re an online restaurant or shop. Onboard onto StoreKit payments at a leisurely pace to begin accepting card orders online.</p>
-                        </div>
-                    </div>
+                    ))}                    
                 </div>
                 <div className="overview-item-2 justify-self-center">
-                    <video width= "100%" autoPlay loop muted playsInline>
+                    <div className="video">
+                        <YouTube
+                            video={topVideoSelectedID}
+                            autoplay
+                            muted
+                            width={"100%"}
+                            height={360}
+                            controls={true}
+                            suggestedQuality={'720'}
+                            modestBranding = {true}
+                            showRelatedVideos={false}
+                            playsInline={true}
+                            showInfo={false}              
+                        />
+                    </div>
+                    {/* <video width= "100%" autoPlay loop muted playsInline>
                         <source src="https://ucarecdn.com/3d6f9b1b-868b-4a04-babe-d3fb1b420322/OOSsetupvideo.mp4" type="video/mp4"/>
-                    </video>
+                    </video> */}
                 </div>
             </div>
 
-            <div className="manage-content-wrapper container-cabin grid grid-gap-24-16 justify-content-center align-items-center padding-bottom-24">
+            <div className="manage-content-wrapper container-cabin grid grid-gap-24-16 justify-content-center align-items-center">
                 <div className="manage-item-1 grid grid-gap-24-16">
-                    <p className="caption font-weight-bold letter-spacing-n1px">Manage Everything</p>
-                    <div className="grid grid-template-columns-48px-1fr grid-gap-12-12">
-                        <div className="icon">
-                            <div className="bg-primary text-white rounded grid grid-template-columns-48px justify-content-center align-items-center">
-                                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" ><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <p className="caption font-weight-bold letter-spacing-n1px">{block2 && block2[0].block_title}</p>
+                    {block2 && block2.map((item, index)=>(
+                        <div className="grid grid-template-columns-48px-1fr grid-gap-12-12" key={item.id}>
+                            <div className="icon-wrapper">
+                                <div className="bg-primary text-white rounded grid grid-template-columns-48px grid-template-rows-48px">
+                                    <div 
+                                        className="justify-self-center align-self-center cover-fit" 
+                                        style={{
+                                            width:"24px", 
+                                            height:"24px",
+                                            backgroundImage:`url("${item.icon && item.icon[0].url}")`
+                                        }}>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="grid grid-gap-8-8">
+                                <p className="font-weight-bold title">{item.title}</p>
+                                <p className="font-weight-lighter text-justify">{item.description}</p>
                             </div>
                         </div>
-                        <div className="grid grid-gap-8-8">
-                            <p className="font-weight-bold title">One-look dashboard</p>
-                            <p className="font-weight-lighter">Know everything about your business in a single glance with your new dashboard.</p>
-                        </div>
-                    </div>
-                    <div className="grid grid-template-columns-48px-1fr grid-gap-12-12">
-                        <div className="icon">
-                            <div className="bg-primary text-white rounded grid grid-template-columns-48px justify-content-center align-items-center">
-                                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" ><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            </div>
-                        </div>
-                        <div className="grid grid-gap-8-8">
-                            <p className="font-weight-bold title">Orders, managed</p>
-                            <p className="font-weight-lighter">All your orders in one place so you can manage your delivery, collection, asap and pre-orders in one place.</p>
-                        </div>
-                    </div>
-                    <div className="grid grid-template-columns-48px-1fr grid-gap-12-12">
-                        <div className="icon">
-                            <div className="bg-primary text-white rounded grid grid-template-columns-48px justify-content-center align-items-center">
-                                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" ><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            </div>
-                        </div>
-                        <div className="grid grid-gap-8-8">
-                            <p className="font-weight-bold title">Email & SMS Notifications</p>
-                            <p className="font-weight-lighter">Never miss a new order with notifications via your dashboard, by sound, and to your email and phone.</p>
-                        </div>
-                    </div>
+                    ))}                    
                 </div>
                 <div className="manage-item-2 justify-self-center">
-                    {/* <video src="https://ucarecdn.com/5ef680e7-0cff-4a39-9330-cfb3693d657c/createstore.mov" width= "100%" autoPlay loop muted playsInline></video> */}
-                    <img src="https://ucarecdn.com/3f46f08b-8e4d-44fe-b8e7-c5f9e8cf01bb/-/format/auto/" width="100%" />
+                    <YouTube
+                        video={bottomVideoSelectedID}
+                        autoplay
+                        muted
+                        width={"100%"}
+                        height={360}
+                        controls={true}
+                        suggestedQuality={'720'}
+                        modestBranding = {true}
+                        showRelatedVideos={false}
+                        playsInline={true}
+                        showInfo={false}              
+                    />
+                    {/* <img src="https://ucarecdn.com/3f46f08b-8e4d-44fe-b8e7-c5f9e8cf01bb/-/format/auto/" width="100%" /> */}
                 </div>
             </div>
         </div>
@@ -102,12 +154,15 @@ export default function OverviewManage() {
             background: rgb(248, 246, 243);                
         }
         .overview-manage-wrapper {
-            grid-gap: 40px 16px;
+            grid-gap: 40px 16px;            
         }
+        
+        
 
         .overview-content-wrapper .overview-item-2, .manage-content-wrapper .manage-item-2 {
             margin-left: -24px;
             margin-right: -24px;
+            width: 100vw;
         }
         @media (min-width: 768px) {   
             .overview-manage-wrapper {
@@ -119,6 +174,7 @@ export default function OverviewManage() {
             .overview-content-wrapper .overview-item-2, .manage-content-wrapper .manage-item-2 {
                 margin-left: 0px;
                 margin-right: 0px;
+                width: 100%;
             }
         }
         @media (min-width: 992px) {

@@ -5,6 +5,8 @@ const NOTION_SETUP_ID = '7740af3ba3cb41448ab72439a0a73f54'
 
 export default function Setup() {
     const [data , setData] = useState()
+    const [videoSelectedID, setVideoSelectedID] = useState()
+
     useEffect(()=>{
         async function fetchData() {
             const contents = await fetch(
@@ -19,14 +21,19 @@ export default function Setup() {
                 }                
             });
             setData(temp);
+            setVideoSelectedID(temp[0].youtubeID)
         }
         fetchData()
     },[])
 
-    const handleSelected = (choiceID) => {
-        console.log('choiceid: ', choiceID)
+    const handleSelected = (choiceID, videoID) => {
+        console.log('choiceid: ', choiceID)        
+        console.log('videoid: ', videoID)
+
         $('.selected').removeClass('selected')
         $(`.${choiceID}`).addClass('selected')
+
+        setVideoSelectedID(videoID)
     }
 
     return (
@@ -36,23 +43,23 @@ export default function Setup() {
                 <p className="text-white text-center">{data && data[0].description}</p>
             </div>                        
             <div className="setup-video">
-                {data && data.map((item, index)=>(
-                    <div className= {`video-item ${item.id} ${index===0 ? "selected" : null}`} key={index}>
-                        <YouTube
-                            video={item.youtubeID}
-                            autoplay
-                            muted
-                            width={"100%"}
-                            height={480}
-                            controls={false}
-                            suggestedQuality={'720'}
-                        />
-                    </div>
-                ))}
+                <YouTube
+                    video={videoSelectedID}
+                    autoplay
+                    muted
+                    width={"100%"}
+                    height={480}
+                    controls={false}
+                    suggestedQuality={'720'}
+                    modestBranding = {true}
+                    showRelatedVideos={false}
+                    playsInline={true}
+                    showInfo={false}              
+                />
             </div>
             <div className="setup-choices grid">
                 {data && data.map((item, index)=>(
-                    <div className={`choice-item rounded padding grid grid-gap-8-8 ${item.id} ${index===0 ? "selected" : null}`} key={index} onClick={()=>{handleSelected(item.id)}}>
+                    <div className={`choice-item rounded padding grid grid-gap-8-8 ${item.id} ${index===0 ? "selected" : null}`} key={index} onClick={()=>{handleSelected(item.id, item.youtubeID)}}>
                         <p className="title font-weight-bold">{item.title}</p>
                         <p className="font-weight-lighter">{item.sub}</p>
                     </div>    

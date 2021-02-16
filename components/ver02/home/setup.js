@@ -22,15 +22,22 @@ export default function Setup() {
         }
         fetchData()
     },[])
+
+    const onSelected = (choiceID) => {
+        console.log('choiceid: ', choiceID)
+        $('.selected').removeClass('selected')
+        $(`.${choiceID}`).addClass('selected')
+    }
+
     return (
         <div className="setup container-cabin bg-dark grid grid-gap-24-16 padding-y-24 margin-y-24 justify-content-center">
             <div className="setup_message grid grid-gap-8-8 justify-self-center">
-                <p className="caption text-white font-weight-bold text-center">Up and running in 20 mins</p>
-                <p className="text-white text-center">With the industry's easiest to use dashboard, you'll need just 20 minutes to build a world-class mobile ordering web app.</p>
+                <p className="caption text-white font-weight-bold text-center">{data && data[0].message}</p>
+                <p className="text-white text-center">{data && data[0].description}</p>
             </div>                        
             <div className="setup-video">
                 {data && data.map((item, index)=>(
-                    <div className= {`video-item ${item.id} ${index===0 ? "show" : null}`} key={index}>
+                    <div className= {`video-item ${item.id} ${index===0 ? "selected" : null}`} key={index}>
                         <YouTube
                             video={item.youtubeID}
                             autoplay
@@ -42,7 +49,7 @@ export default function Setup() {
             </div>
             <div className="setup-choices grid">
                 {data && data.map((item, index)=>(
-                    <div className={`choice-item rounded padding grid grid-gap-8-8 ${index===0 ? "selected" : null}`} key={index}>
+                    <div className={`choice-item rounded padding grid grid-gap-8-8 ${item.id} ${index===0 ? "selected" : null}`} key={index} onClick={()=>{onSelected(item.id)}}>
                         <p className="title font-weight-bold">{item.title}</p>
                         <p className="font-weight-lighter">{item.sub}</p>
                     </div>    
@@ -57,12 +64,16 @@ export default function Setup() {
             .video-item {
                 display: none;
             }
-            .video-item.show {
+            .video-item.selected {
                 display: block;
+            }
+            .choice-item:hover {
+                cursor: pointer;
             }
             .choice-item.selected {
                 background-color: #1d2838
             }
+
             @media (min-width: 768px) {                      
                 .setup {                    
                     border-radius: 12px !important;

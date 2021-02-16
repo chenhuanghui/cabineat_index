@@ -23,7 +23,7 @@ export default function Setup() {
         fetchData()
     },[])
 
-    const onSelected = (choiceID) => {
+    const handleSelected = (choiceID) => {
         console.log('choiceid: ', choiceID)
         $('.selected').removeClass('selected')
         $(`.${choiceID}`).addClass('selected')
@@ -41,15 +41,18 @@ export default function Setup() {
                         <YouTube
                             video={item.youtubeID}
                             autoplay
+                            muted
                             width={"100%"}
                             height={480}
+                            controls={false}
+                            suggestedQuality={'720'}
                         />
                     </div>
                 ))}
             </div>
             <div className="setup-choices grid">
                 {data && data.map((item, index)=>(
-                    <div className={`choice-item rounded padding grid grid-gap-8-8 ${item.id} ${index===0 ? "selected" : null}`} key={index} onClick={()=>{onSelected(item.id)}}>
+                    <div className={`choice-item rounded padding grid grid-gap-8-8 ${item.id} ${index===0 ? "selected" : null}`} key={index} onClick={()=>{handleSelected(item.id)}}>
                         <p className="title font-weight-bold">{item.title}</p>
                         <p className="font-weight-lighter">{item.sub}</p>
                     </div>    

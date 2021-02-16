@@ -1,35 +1,62 @@
+import React, { useState, useEffect } from 'react';
+import YouTube from '@u-wave/react-youtube';
+const NOTION_DELIVERY_ID = 'e9273c8a7565489eb4e630bde8e8658d'
+
 export default function Delivery() {
+    const [data, setData] = useState(null)
+    useEffect(()=>{
+        async function fetchData() {
+            const contents = await fetch(
+                `https://notion-api.splitbee.io/v1/table/${NOTION_DELIVERY_ID}`
+            ).then((res) => res.json());
+            console.log("contents: ", contents)
+            const temp = []
+            contents.forEach(item => {
+                if (item.isActive === true) {
+                    temp.push(item)
+                    console.log("active: ", item)
+                }                
+            });
+            setData(temp)        
+        }
+        fetchData()
+    },[])
     return (
     <div className="delivery bg-soft-yellow padding-y-24">
         <div className="container-cabin delivery-wrapper grid grid-gap-24-16">
             <div className="delivery-item-1 grid grid-gap-24-16">
                 <div className="delivery-title">
-                    <p className="caption-extra font-weight-bold letter-spacing-n1px">Local delivery</p>
-                    <p className="title">Offer a delivery experience to match the aggregators. Bring your own drivers or connect to our network</p>
+                    <p className="caption-extra font-weight-bold letter-spacing-n1px">{data && data[0].message}</p>
+                    <p className="title">{data && data[0].description}</p>
                 </div>
                 <div className="delivery-content-wrapper grid grid-gap-24-16">
-                    <div className="grid grid-gap-8-8">
-                        <p className="font-weight-bold">Update customers in real-time</p>
-                        <p className="">Keep customers in the loop with automatic notifications at every step of the journey.</p>
-                    </div>
-                    <div className="grid grid-gap-8-8">
-                        <p className="font-weight-bold">Live tracking screen</p>
-                        <p className="">Reduce phone calls and set expectations with a live map displaying the driver's current location and expected arrival time.</p>
-                    </div>
-                    <div className="grid grid-gap-8-8">
-                        <p className="font-weight-bold">Delivery zones</p>
-                        <p className="">Cover your variable delivery costs with dynamic delivery fees calculated by postcode lookup.</p>
-                    </div>
-                    <div className="grid grid-gap-8-8">
-                        <p className="font-weight-bold">Connect to 15+ couriers</p>
-                        <p className="">Auto-dispatch orders to the courier of your choice through our delivery integration partner, Orkestro.</p>
-                    </div>
+                    {data && data.map((item,index)=>(
+                        <div className="grid grid-gap-8-8" key={item.id}>
+                            <p className="font-weight-bold">{item.title}</p>
+                            <p className="">{item.sub}</p>
+                        </div>
+                    ))}                    
                 </div>
             </div>
             <div className="delivery-item-2 justify-self-center align-self-center">
-                <video width= "100%" autoPlay loop muted playsInline>
-                    <source src="https://ucarecdn.com/4f13583f-1dcb-4d82-9a35-cd7ff0a5c9e3/delivery3.mp4" type="video/mp4"/>
-                </video>
+                <div className="delivery-video video justify-self-center align-self-center">
+                    <YouTube
+                        video={data && data[0].youtubeID}
+                        autoplay
+                        muted
+                        width={"100%"}
+                        height={360}
+                        controls={true}
+                        suggestedQuality={'720'}
+                        modestBranding = {true}
+                        showRelatedVideos={false}
+                        playsInline={true}
+                        showInfo={false}              
+                        style={{
+                            backgroundColor: 'transparent !important'
+                        }}
+                    />
+                </div>
             </div>
         </div>      
         <style jsx>{`

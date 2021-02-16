@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import YouTube from '@u-wave/react-youtube';
+import YoutubePlayer from '../../player/youtube-player';
 const NOTION_FEATURE_ID = '20bcda33776141de900ec9989947a79b'
 
 export default function Feature() {
@@ -25,22 +25,7 @@ export default function Feature() {
     return (
         <div className="features grid grid-gap-24-16 bg-white container-cabin" style={{paddingBottom: "100px"}}>
             <div className="feature-video video justify-self-center align-self-center bg-soft-yellow">
-                <YouTube
-                    video={data && data[0].youtubeID}
-                    autoplay
-                    muted
-                    width={"100%"}
-                    height={360}
-                    controls={true}
-                    suggestedQuality={'720'}
-                    modestBranding = {true}
-                    showRelatedVideos={false}
-                    playsInline={true}
-                    showInfo={false}              
-                    style={{
-                        backgroundColor: 'white !important'
-                    }}
-                />
+                <YoutubePlayer videoID={data && data[0].youtubeID} />                
             </div>
             <div className="feature-content-wrapper">
                 <div className="grid grid-gap-24-16">

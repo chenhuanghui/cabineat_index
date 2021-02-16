@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import YouTube from '@u-wave/react-youtube';
+import YoutubePlayer from '../../player/youtube-player';
 const NOTION_DELIVERY_ID = 'e9273c8a7565489eb4e630bde8e8658d'
 
 export default function Delivery() {
@@ -40,22 +40,7 @@ export default function Delivery() {
             </div>        
             <div className="delivery-item-2 justify-self-center align-self-center">
                 <div className="delivery-video video justify-self-center align-self-center">
-                    <YouTube
-                        video={data && data[0].youtubeID}
-                        autoplay
-                        muted
-                        width={"100%"}
-                        height={360}
-                        controls={true}
-                        suggestedQuality={'720'}
-                        modestBranding = {true}
-                        showRelatedVideos={false}
-                        playsInline={true}
-                        showInfo={false}              
-                        style={{
-                            backgroundColor: 'transparent !important'
-                        }}
-                    />
+                    <YoutubePlayer videoID={data && data[0].youtubeID} />                    
                 </div>
             </div>
         </div>      

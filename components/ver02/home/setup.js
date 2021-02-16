@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import YouTube from '@u-wave/react-youtube';
+import YoutubePlayer from '../../player/youtube-player';
 
 const NOTION_SETUP_ID = '7740af3ba3cb41448ab72439a0a73f54'
 
@@ -39,19 +39,8 @@ export default function Setup() {
                 <p className="text-white text-center">{data && data[0].description}</p>
             </div>                        
             <div className="setup-video video">
-                <YouTube
-                    video={videoSelectedID}
-                    autoplay
-                    muted
-                    width={"100%"}
-                    height={480}
-                    controls={true}
-                    suggestedQuality={'720'}
-                    modestBranding = {true}
-                    showRelatedVideos={false}
-                    playsInline={true}
-                    showInfo={false}              
-                />
+                <YoutubePlayer videoID={videoSelectedID} />
+                
             </div>
             <div className="setup-choices grid">
                 {data && data.map((item, index)=>(

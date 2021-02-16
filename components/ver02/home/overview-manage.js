@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import YouTube from '@u-wave/react-youtube';
+import YoutubePlayer from '../../player/youtube-player';
+
 const NOTION_OVERVIEWMANAGE_ID = '05758774b62a4726a1e2da6e04be7f7b'
 const NOTION_OVERVIEWMANAGE_BLOCK_ID = 'd22cc95674994a7f993744b76005c2b7'
 
@@ -46,6 +47,9 @@ export default function OverviewManage() {
 
         fetchDataSection()
         fetchBlockData()
+
+
+        
     },[])
 
     return (
@@ -85,19 +89,8 @@ export default function OverviewManage() {
                 </div>
                 <div className="overview-item-2 justify-self-center">
                     <div className="video">
-                        <YouTube
-                            video={topVideoSelectedID}
-                            autoplay
-                            muted
-                            width={"100%"}
-                            height={360}
-                            controls={true}
-                            suggestedQuality={'720'}
-                            modestBranding = {true}
-                            showRelatedVideos={false}
-                            playsInline={true}
-                            showInfo={false}              
-                        />
+                        <YoutubePlayer videoID={topVideoSelectedID} />
+                        
                     </div>
                     {/* <video width= "100%" autoPlay loop muted playsInline>
                         <source src="https://ucarecdn.com/3d6f9b1b-868b-4a04-babe-d3fb1b420322/OOSsetupvideo.mp4" type="video/mp4"/>
@@ -129,21 +122,8 @@ export default function OverviewManage() {
                         </div>
                     ))}                    
                 </div>
-                <div className="manage-item-2 justify-self-center">
-                    <YouTube
-                        video={bottomVideoSelectedID}
-                        autoplay
-                        muted
-                        width={"100%"}
-                        height={360}
-                        controls={true}
-                        suggestedQuality={'720'}
-                        modestBranding = {true}
-                        showRelatedVideos={false}
-                        playsInline={true}
-                        showInfo={false}              
-                    />
-                    {/* <img src="https://ucarecdn.com/3f46f08b-8e4d-44fe-b8e7-c5f9e8cf01bb/-/format/auto/" width="100%" /> */}
+                <div className="manage-item-2 justify-self-center">                    
+                    <YoutubePlayer videoID={bottomVideoSelectedID} />
                 </div>
             </div>
         </div>
@@ -154,13 +134,15 @@ export default function OverviewManage() {
         .overview-manage-wrapper {
             grid-gap: 40px 16px;            
         }
-        
-        
-
+                
         .overview-content-wrapper .overview-item-2, .manage-content-wrapper .manage-item-2 {
             margin-left: -24px;
             margin-right: -24px;
             width: 100vw;
+        }
+
+        #player .html5-video-player:not(.ytp-transparent) {
+            background: rgb(248, 246, 243) !important;
         }
         
         @media (min-width: 768px) {   

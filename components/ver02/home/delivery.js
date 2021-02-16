@@ -37,9 +37,7 @@ export default function Delivery() {
                         </div>
                     ))}                    
                 </div>
-            </div>
-
-            
+            </div>        
             <div className="delivery-item-2 justify-self-center align-self-center">
                 <div className="delivery-video video justify-self-center align-self-center">
                     <YouTube

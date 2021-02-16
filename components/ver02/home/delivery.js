@@ -9,12 +9,10 @@ export default function Delivery() {
             const contents = await fetch(
                 `https://notion-api.splitbee.io/v1/table/${NOTION_DELIVERY_ID}`
             ).then((res) => res.json());
-            console.log("contents: ", contents)
             const temp = []
             contents.forEach(item => {
                 if (item.isActive === true) {
                     temp.push(item)
-                    console.log("active: ", item)
                 }                
             });
             setData(temp)        

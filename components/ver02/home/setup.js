@@ -23,6 +23,7 @@ export default function Setup() {
             setVideoSelectedID(temp[0].youtubeID)
         }
         fetchData()
+        
     },[])
 
     const handleSelected = (choiceID, videoID) => {
@@ -31,9 +32,11 @@ export default function Setup() {
 
         setVideoSelectedID(videoID)
     }
+    
+    
 
     return (
-        <div className="setup container-cabin bg-dark grid grid-gap-24-16 padding-y-24 margin-y-24 justify-content-center">
+        <section className="setup container-cabin bg-dark grid grid-gap-24-16 padding-y-24 margin-y-24 justify-content-center" id="#setup">
             <div className="setup_message grid grid-gap-8-8 justify-self-center">
                 <p className="caption text-white font-weight-bold text-center">{data && data[0].message}</p>
                 <p className="text-white text-center">{data && data[0].description}</p>
@@ -87,6 +90,6 @@ export default function Setup() {
                 }
             }
             `}</style>
-        </div>
+        </section>
     )
 }

@@ -17,7 +17,6 @@ export default function OverviewManage() {
             ).then((res) => res.json());
             contents.forEach(item => {
                 if (item.isActive === true ) {
-                    console.log("active data:", item)
                     setSectionData(item);  
                     return;
                 }                
@@ -35,8 +34,7 @@ export default function OverviewManage() {
             contents.forEach(item => {
                 if (item.isActive === true) {
                     if (item.block_position==="block_1") block1.push(item)
-                    else if(item.block_position==="block_2") block2.push(item)                    
-                    console.log("active data:", item)                    
+                    else if(item.block_position==="block_2") block2.push(item)                             
                 }                
             });
             
@@ -164,6 +162,7 @@ export default function OverviewManage() {
             margin-right: -24px;
             width: 100vw;
         }
+        
         @media (min-width: 768px) {   
             .overview-manage-wrapper {
                 width: 75%;

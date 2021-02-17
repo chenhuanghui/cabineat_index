@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import YoutubePlayer from '../../player/youtube-player';
 const NOTION_FEATURE_ID = '20bcda33776141de900ec9989947a79b'
 
-export default function Feature() {
+export default function Pos() {
     const [data, setData] = useState(null)
     useEffect(()=>{
         async function fetchData() {

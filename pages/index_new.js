@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import FooterNew from '../components/footer-new'
 import Delivery from '../components/ver02/home/delivery'
-import Feature from '../components/ver02/home/feature'
+import Pos from '../components/ver02/home/pos'
 import Hero from '../components/ver02/home/hero'
-import OverviewManage from '../components/ver02/home/overview-manage'
+import HubOrder from '../components/ver02/home/hub-order'
 import Setup from '../components/ver02/home/setup'
 import NavVer02 from '../components/ver02/nav'
 
@@ -29,8 +29,8 @@ export default function Index() {
             <div className="main-container grid grid-gap-24-16">
                 <Hero />
                 <Setup />
-                <OverviewManage />
-                <Feature />
+                <HubOrder />
+                <Pos />
                 <Delivery />
                 
 

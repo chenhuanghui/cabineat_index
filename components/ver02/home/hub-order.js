@@ -4,7 +4,7 @@ import YoutubePlayer from '../../player/youtube-player';
 const NOTION_OVERVIEWMANAGE_ID = '05758774b62a4726a1e2da6e04be7f7b'
 const NOTION_OVERVIEWMANAGE_BLOCK_ID = 'd22cc95674994a7f993744b76005c2b7'
 
-export default function OverviewManage() {
+export default function HubOrder() {
     const [sectionData , setSectionData] = useState(null)
     const [block1 , setBlock1] = useState(null)
     const [block2 , setBlock2] = useState(null)

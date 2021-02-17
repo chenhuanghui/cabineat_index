@@ -27,7 +27,6 @@ export default function YoutubePlayer({videoID}) {
                 className='player'
                 url={`https://www.youtube.com/watch?v=${videoID}`}
                 width="100%"
-                heigh="100%"
                 controls={true}
                 mostbranding={`true`}
                 loop={true}                

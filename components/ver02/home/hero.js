@@ -24,9 +24,9 @@ export default function Hero({}) {
     return (
         
         <div className="hero grid justify-content-center padding-y-24 margin-y-24 grid-gap-24-16">
-            <div className="message">
-                <p className="caption-extra font-weight-bold text-center" style={{lineHeight: "45px"}}>{data ?.message_line_1}</p>
-                <p className="caption-extra font-weight-bold text-center text-primary" style={{lineHeight: "45px"}}>{data?.message_line_2}</p>
+            <div className="message padding-x">
+                <p className="caption-extra font-weight-bold text-center" >{data ?.message_line_1}</p>
+                <p className="caption-extra font-weight-bold text-center text-primary">{data?.message_line_2}</p>
             </div>
 
             <div className="hero-description grid justify-self-center">

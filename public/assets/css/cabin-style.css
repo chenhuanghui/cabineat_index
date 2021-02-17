@@ -205,6 +205,13 @@ p {
     margin-right: auto;
     margin-left: auto;
 }
+/* .container-cabin-padding-0 {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+} */
 
 .container-fluid-cabin {
     width: 100%;
@@ -218,11 +225,19 @@ p {
     .container-cabin {
       max-width: 720px;
     }
+    .container-fluid-cabin{
+        max-width: 720px !important;
+    }
+    
 }
 
 @media (min-width:992px){
     .container-cabin {
       max-width: 960px;
+    }
+
+    .container-fluid-cabin {
+        max-width: 960px !important;
     }
 }
 

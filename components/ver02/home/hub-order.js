@@ -47,10 +47,20 @@ export default function HubOrder() {
 
         fetchDataSection()
         fetchBlockData()
-
-
         
     },[])
+
+    const handleSelectTopChoice = (itemID, videoID) => {
+        $('.overview-item-choice.selected').removeClass('selected')
+        $(`.overview-item-choice.${itemID}`).addClass('selected')
+        setTopVideoSelectedID(videoID)
+    }
+
+    const handleSelectBottomChoice = (itemID, videoID) => {
+        $('.manage-item-choice.selected').removeClass('selected')
+        $(`.manage-item-choice.${itemID}`).addClass('selected')
+        setBottomVideoSelectedID(videoID)
+    }
 
     return (
     <section className="overview-manage padding-top-24" style={{paddingBottom: "50px"}} id="intro">
@@ -63,11 +73,11 @@ export default function HubOrder() {
                 </div>                        
             </div>
             
-            <div className="overview-content-wrapper container-cabin grid grid-gap-24-16 justify-content-center align-items-center">
-                <div className="overview-item-1 grid grid-gap-24-16">
-                    <p className="caption font-weight-bold letter-spacing-n1px">{block1 && block1[0].block_title}</p>
+            <div className="overview-content-wrapper container-fluid-cabin grid grid-gap-24-16 justify-content-center align-items-center">
+                <div className="overview-item-1 grid margin-x">
+                    <p className="caption font-weight-bold letter-spacing-n1px padding-bottom">{block1 && block1[0].block_title}</p>
                     {block1 && block1.map((item, index)=>(
-                        <div className="grid grid-template-columns-48px-1fr grid-gap-12-12" key={item.id}>
+                        <div className={`grid grid-template-columns-48px-1fr grid-gap-12-12 padding rounded overview-item-choice ${item.id} ${index===0 ? "selected" : null}`} key={item.id} onClick={()=>{handleSelectTopChoice(item.id, item.youtubeID)}}>
                             <div className="icon-wrapper">
                                 <div className="bg-primary text-white rounded grid grid-template-columns-48px grid-template-rows-48px">
                                     <div 
@@ -90,19 +100,15 @@ export default function HubOrder() {
                 <div className="overview-item-2 justify-self-center">
                     <div className="video">
                         <YoutubePlayer videoID={topVideoSelectedID} />
-                        
-                    </div>
-                    {/* <video width= "100%" autoPlay loop muted playsInline>
-                        <source src="https://ucarecdn.com/3d6f9b1b-868b-4a04-babe-d3fb1b420322/OOSsetupvideo.mp4" type="video/mp4"/>
-                    </video> */}
+                    </div>                    
                 </div>
             </div>
 
-            <div className="manage-content-wrapper container-cabin grid grid-gap-24-16 justify-content-center align-items-center">
-                <div className="manage-item-1 grid grid-gap-24-16">
-                    <p className="caption font-weight-bold letter-spacing-n1px">{block2 && block2[0].block_title}</p>
+            <div className="manage-content-wrapper container-fluid-cabin grid grid-gap-24-16 justify-content-center align-items-center">
+                <div className="manage-item-1 grid margin-x">
+                    <p className="caption font-weight-bold letter-spacing-n1px padding-bottom">{block2 && block2[0].block_title}</p>
                     {block2 && block2.map((item, index)=>(
-                        <div className="grid grid-template-columns-48px-1fr grid-gap-12-12" key={item.id}>
+                        <div className={`grid grid-template-columns-48px-1fr grid-gap-12-12 padding rounded manage-item-choice ${item.id} ${index===0 ? "selected" : null}`} key={item.id} onClick={()=>{handleSelectBottomChoice(item.id, item.youtubeID)}}>
                             <div className="icon-wrapper">
                                 <div className="bg-primary text-white rounded grid grid-template-columns-48px grid-template-rows-48px">
                                     <div 
@@ -131,9 +137,19 @@ export default function HubOrder() {
         .overview-manage{
             background: rgb(248, 246, 243);                
         }
+        
         .overview-manage-wrapper {
             grid-gap: 40px 16px;            
         }
+
+        .overview-item-choice:hover, .manage-item-choice:hover {
+            cursor: pointer
+        }
+
+        .overview-item-choice.selected, .manage-item-choice.selected {
+            background-color: #E4EBF6;
+        }
+        
                 
         .overview-content-wrapper .overview-item-2, .manage-content-wrapper .manage-item-2 {
             margin-left: -24px;

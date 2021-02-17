@@ -27,8 +27,8 @@ export default function Setup() {
     },[])
 
     const handleSelected = (choiceID, videoID) => {
-        $('.selected').removeClass('selected')
-        $(`.${choiceID}`).addClass('selected')
+        $('.setup-choice-item.selected').removeClass('selected')
+        $(`.setup-choice-item.${choiceID}`).addClass('selected')
 
         setVideoSelectedID(videoID)
     }
@@ -47,7 +47,7 @@ export default function Setup() {
             </div>
             <div className="setup-choices grid">
                 {data && data.map((item, index)=>(
-                    <div className={`choice-item rounded padding grid grid-gap-8-8 align-items-start ${item.id} ${index===0 ? "selected" : null}`} key={index} onClick={()=>{handleSelected(item.id, item.youtubeID)}}>
+                    <div className={`setup-choice-item rounded padding grid grid-gap-8-8 align-items-start ${item.id} ${index===0 ? "selected" : null}`} key={index} onClick={()=>{handleSelected(item.id, item.youtubeID)}}>
                         <p className="title font-weight-bold">{item.title}</p>
                         <p className="font-weight-lighter">{item.sub}</p>
                     </div>    
@@ -65,10 +65,10 @@ export default function Setup() {
             .video-item.selected {
                 display: block;
             }
-            .choice-item:hover {
+            .setup-choice-item:hover {
                 cursor: pointer;
             }
-            .choice-item.selected {
+            .setup-choice-item.selected {
                 background-color: #1d2838
             }
 

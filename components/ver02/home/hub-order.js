@@ -54,12 +54,16 @@ export default function HubOrder() {
         $('.overview-item-choice.selected').removeClass('selected')
         $(`.overview-item-choice.${itemID}`).addClass('selected')
         setTopVideoSelectedID(videoID)
+        var videoTop = document.querySelector("#video-top");
+        videoTop.scrollIntoView({ behavior: 'smooth', block: 'end'})
     }
 
     const handleSelectBottomChoice = (itemID, videoID) => {
         $('.manage-item-choice.selected').removeClass('selected')
         $(`.manage-item-choice.${itemID}`).addClass('selected')
         setBottomVideoSelectedID(videoID)
+        var videoBottom = document.querySelector("#video-bottom");
+        videoBottom.scrollIntoView({ behavior: 'smooth', block: 'end'})
     }
 
     return (
@@ -98,7 +102,7 @@ export default function HubOrder() {
                     ))}                    
                 </div>
                 <div className="overview-item-2 justify-self-center">
-                    <div className="video">
+                    <div className="video" id="video-top">
                         <YoutubePlayer videoID={topVideoSelectedID} />
                     </div>                    
                 </div>
@@ -128,8 +132,10 @@ export default function HubOrder() {
                         </div>
                     ))}                    
                 </div>
-                <div className="manage-item-2 justify-self-center">                    
-                    <YoutubePlayer videoID={bottomVideoSelectedID} />
+                <div className="manage-item-2 justify-self-center"> 
+                    <div className="video" id="video-bottom">
+                        <YoutubePlayer videoID={bottomVideoSelectedID} />
+                    </div>                   
                 </div>
             </div>
         </div>

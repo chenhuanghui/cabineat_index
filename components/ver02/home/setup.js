@@ -31,6 +31,8 @@ export default function Setup() {
         $(`.setup-choice-item.${choiceID}`).addClass('selected')
 
         setVideoSelectedID(videoID)
+        var video = document.querySelector("#video-hero");
+        video.scrollIntoView({ behavior: 'smooth', block: 'start'})
     }
     
     
@@ -41,9 +43,8 @@ export default function Setup() {
                 <p className="caption text-white font-weight-bold text-center">{data && data[0].message}</p>
                 <p className="text-white text-center">{data && data[0].description}</p>
             </div>                        
-            <div className="setup-video video">
-                <YoutubePlayer videoID={videoSelectedID} />
-                
+            <div className="setup-video video" id="video-hero">
+                <YoutubePlayer videoID={videoSelectedID} />                
             </div>
             <div className="setup-choices grid">
                 {data && data.map((item, index)=>(

@@ -38,7 +38,7 @@ export default function Setup() {
     
 
     return (
-        <section className="setup container-cabin bg-dark grid grid-gap-24-16 padding-y-24 margin-y-24 justify-content-center" id="setup">
+        <section className="setup container-cabin bg-dark grid grid-gap-24-16 padding-y-24 padding-x margin-y-24 justify-content-center" id="setup">
             <div className="setup_message grid grid-gap-8-8 justify-self-center">
                 <p className="caption text-white font-weight-bold text-center">{data && data[0].message}</p>
                 <p className="text-white text-center">{data && data[0].description}</p>
@@ -50,7 +50,7 @@ export default function Setup() {
                 {data && data.map((item, index)=>(
                     <div className={`setup-choice-item rounded padding grid grid-gap-8-8 align-items-start ${item.id} ${index===0 ? "selected" : null}`} key={index} onClick={()=>{handleSelected(item.id, item.youtubeID)}}>
                         <p className="title font-weight-bold">{item.title}</p>
-                        <p className="font-weight-lighter">{item.sub}</p>
+                        <p className="font-weight-lighter text-justify">{item.sub}</p>
                     </div>    
                 ))}                
             </div>

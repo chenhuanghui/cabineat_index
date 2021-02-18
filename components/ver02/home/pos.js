@@ -40,7 +40,7 @@ export default function Pos() {
             </div>
             <div className="feature-content-wrapper margin-x">
                 <div className="grid">
-                    <div className="feature-title padding-bottom">
+                    <div className="feature-title grid grid-gap-8-8 padding-bottom">
                         <p className="caption-extra font-weight-bold">{data && data[0].message}</p>
                         <p className="title">{data && data[0].description}</p>
                     </div>                            

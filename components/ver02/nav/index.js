@@ -19,20 +19,6 @@ export default function NavVer02() {
     }
     return (
         <div className="nav grid grid-template-columns-1fr bg-white">
-            {/* <div className="nav-top nav-top-wrapper container-cabin grid align-items-center padding-x">
-                <div className="nav-top-item-1 justify-self-start">
-                    <a href="#" className="font-weight-bold small mr-2 text-dark">
-                        <span className="fe fe-user mr-2"></span>Hỗ trợ</a>
-                </div>
-                <div className="nav-top-item-2 justify-self-end">
-                    <a className="font-weight-bold small mr-4 text-dark" href="https://my.cabineat.vn">Đăng nhập</a>
-                    <a className="font-weight-bold small mr-4 text-dark" href="/events">Sự kiện</a>
-                    <a className="font-weight-bold small text-dark" href="/about">
-                        Giới thiệu
-                        <span className="fe fe-chevron-down"></span>
-                    </a>
-                </div>
-            </div> */}
             <div className="navbar-light border-bottom">
                 <div className="nav-wrapper grid container-cabin align-items-center grid-gap-16-16">
                     <div className="nav-item-1 logo grid">

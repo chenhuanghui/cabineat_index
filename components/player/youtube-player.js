@@ -4,9 +4,7 @@ import YouTube from '@u-wave/react-youtube';
 import ReactPlayer from 'react-player/lazy'
 
 export default function YoutubePlayer({videoID}) {
-    useEffect(()=>{
-        
-        
+    useEffect(()=>{        
     },[])
     return (         
         <div className="player-wrapper">
@@ -26,11 +24,13 @@ export default function YoutubePlayer({videoID}) {
             <ReactPlayer 
                 className='player'
                 url={`https://www.youtube.com/watch?v=${videoID}`}
+                // url={`https://www.facebook.com/104712234753529/videos/405775910800152`}
                 width="100%"
+                // height="auto"
                 controls={true}
                 mostbranding={`true`}
                 loop={true}                
-                muted={false}
+                muted={true}
                 playsinline={true}
 
             />

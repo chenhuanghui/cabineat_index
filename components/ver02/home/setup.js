@@ -27,6 +27,7 @@ export default function Setup() {
     },[])
 
     const handleSelected = (choiceID, videoID) => {
+        console.log(videoID)
         $('.setup-choice-item.selected').removeClass('selected')
         $(`.setup-choice-item.${choiceID}`).addClass('selected')
 

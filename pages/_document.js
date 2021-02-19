@@ -31,21 +31,20 @@ class MyDocument extends Document {
           {/* <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8878637.js"></script> */}
           
           {/* chat  */}
-          <script src="/static/freshchat.js" />
+          {/* <script src="/static/freshchat.js" /> */}
           {/* <script src="/static/fb-chat.js" /> */}
         </Head>
         <body>
           <Main />
           <NextScript />
-          
-          {/* <div id="fb-root"></div>
-          <div className="fb-customerchat"
-            attribution="setup_tool"
-            page_id="104712234753529"
-            logged_in_greeting="Xin chào, CabinEat có thể giúp gì cho Bạn ?"
-            logged_out_greeting="Xin chào, CabinEat có thể giúp gì cho Bạn ?">            
-          </div> */}
-
+          <div id="fb-root"></div>
+          <div class="fb-customerchat"
+              attribution="setup_tool"
+              page_id="104712234753529"
+              theme_color="#1F4DF5"
+              logged_in_greeting="Xin chào, CabinEat có thể giúp gì cho Bạn ?"
+              logged_out_greeting="Xin chào, CabinEat có thể giúp gì cho Bạn ?">
+            </div>          
           
         </body>
       </Html>

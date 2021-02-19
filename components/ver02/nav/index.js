@@ -26,20 +26,22 @@ export default function NavVer02() {
                         <span className="navbar-toggler-icon ml-auto" onClick={toggleMenu}></span>                    
                     </div>
 
-                    <div className="nav-list-wrapper grid grid-gap-12-12">                        
+                    <div className="nav-list-wrapper padding-top grid grid-gap-12-12 border-top">                        
                         <a className="nav-item-link font-weight-bold text-dark" href="#">nhahang.so</a>
                         <a className="nav-item-link font-weight-bold text-dark" href="#">cabinpos</a>
                         <a className="nav-item-link font-weight-bold text-dark" href="#">delivery</a>
                         <a className="nav-item-link font-weight-bold text-dark" href="#">thanh toán</a>                        
                     </div>
-
-                    <a className="nav-item-link btn-primary btn btn-create-store text-white" style={{padding: "6px 12px !important"}}>Tạo tài khoản miễn phí</a>
-
-                    <div className="grid padding-y grid-gap-12-12 sub-menu">
+                    <div className="grid padding-y grid-gap-12-12 sub-menu border-top">
+                        <a className="font-weight-bold text-dark" href="/cabinverse">Học viện</a>
                         <a className="font-weight-bold text-dark" href="/events">Sự kiện</a>
                         <a className="font-weight-bold text-dark" href="/about">Giới thiệu</a>
                         <a className="font-weight-bold text-dark" href="https://my.cabineat.vn">Đăng nhập</a>
                     </div>
+
+                    <a className="nav-item-link btn-primary btn btn-create-store text-white" style={{padding: "6px 12px !important"}}>Tạo tài khoản miễn phí</a>
+
+                    
                 </div>
             </div>
             
@@ -56,7 +58,9 @@ export default function NavVer02() {
 
             .logo {
                 grid-template-columns: 1fr 25px;
-                border-bottom: 1px;
+            }
+            .nav-list-wrapper {
+                // border-bottom: 1px solid #e3ebf6;
             }
 
             .nav-list-wrapper, .sub-menu, .btn-create-store {
@@ -81,6 +85,7 @@ export default function NavVer02() {
                 }
                 .nav-list-wrapper {
                     grid-template-columns: repeat(auto-fit, minmax(min-content, 100px));
+                    border-top: none !important;
                 }
                 .nav-item-link {
                     text-align: center;
@@ -88,6 +93,7 @@ export default function NavVer02() {
                 
                 .nav-list-wrapper, .sub-menu, .btn-create-store {
                     display: grid;
+                    border-top: none !important;
                 }
 
                 .sub-menu {

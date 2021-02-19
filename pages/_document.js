@@ -33,6 +33,7 @@ class MyDocument extends Document {
           {/* chat  */}
           {/* <script src="/static/freshchat.js" /> */}
           {/* <script src="/static/fb-chat.js" /> */}
+          <script src="/static/messenger.js"></script>
         </Head>
         <body>
           <Main />

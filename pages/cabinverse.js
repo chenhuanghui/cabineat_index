@@ -55,7 +55,9 @@ export default function Cabinverse() {
                         <div className="">
                             <div className="">
                                 <img className="img-fluid" src="https://cdn.shopify.com/shopifycloud/brochure/assets/content-marketing/blog/blog_header/get-started-large-a46ee8d7c314de2b8faa5fdcd910ca5041420267f8efaea623e473eecd15f41c.jpg?quality=50" />
-                                <p className="py-4">Có rất nhiều doanh nghiệp thành công không được sinh ra từ những ý tưởng độc đáo. Vẫn có giá trị khi tìm kiếm những ý tưởng kinh doanh đã thử và đúng vì có nhiều cách để làm cho một doanh nghiệp nổi bật ngoài các món ăn, thức uống mà bạn bán. Đó là cách bạn sử dụng mong muốn của mình để biến một ý tưởng thành hành động có thể khiến bạn trở thành chủ doanh nghiệp độc lập thành công. <span className="font-weight-bold text-primary">Hôm nay là một ngày tuyệt vời để bắt đầu kinh doanh!</span> </p>
+                                <p className="py-4">
+                                    Một năm nữa lại qua đi, bạn liệu có đang "cầu cứu" và tìm kiếm những ý tưởng chuyển mình cho quán của mình trước sự trở lại của đại dịch? Nếu bạn nhận ra rằng nhà hàng của mình cần thay đổi và delivery là hoạt động chính cho sự thay đổi để thích nghi này thì hãy cùng điểm qua những kiến thức giúp bạn tối ưu từ Cabinverse nhé.
+                                </p>
                             </div>
                             <hr/>
                             <div className="content-wrapper grid grid-gap-24-16">

@@ -11,7 +11,7 @@ export default function CardBlogItem({post}) {
                     {/* ngày: <span className="text-primary">{formatDate(post.date)}</span> */}
                 </p>
             </div>                        
-            <p className="small text-gray">{post.preview}</p>
+            <p className="small text-gray text-justify">{post.preview}</p>
         
             <style jsx>{`
                 .article-item-wrapper {

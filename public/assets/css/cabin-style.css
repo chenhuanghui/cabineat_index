@@ -418,6 +418,9 @@ small, .small, .smal p {
 .grid-template-columns-48px-1fr{
     grid-template-columns: 48px 1fr;
 }
+.grid-template-columns-24px-1fr {
+    grid-template-columns: 24px 1fr;
+}
 .grid-template-columns-auto-1fr{
     grid-template-columns: auto 1fr;
 }

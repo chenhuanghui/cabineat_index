@@ -8,8 +8,11 @@ export default function HubOrder() {
     const [sectionData , setSectionData] = useState(null)
     const [block1 , setBlock1] = useState(null)
     const [block2 , setBlock2] = useState(null)
-    const [topVideoSelectedID, setTopVideoSelectedID] = useState()
+    const [topVideoSelectedID, setTopVideoSelectedID] = useState()    
     const [bottomVideoSelectedID, setBottomVideoSelectedID] = useState()
+    
+    const [topThumbSelected, setTopThumbSelected] = useState()
+    const [bottomThumbSelected, setBottomThumbSelected] = useState()
 
     useEffect(()=>{
         async function fetchDataSection() {
@@ -40,9 +43,11 @@ export default function HubOrder() {
             });
             
             setBlock1(block1)
-            setTopVideoSelectedID(block1[0].youtubeID)
+            // setTopVideoSelectedID(block1[0].youtubeID)
+            setTopThumbSelected(block1[0].thumb && block1[0].thumb[0].url)
             setBlock2(block2)
-            setBottomVideoSelectedID(block2[0].youtubeID)
+            // setBottomVideoSelectedID(block2[0].youtubeID)
+            setBottomThumbSelected(block2[0].thumb && block2[0].thumb[0].url)
         }
 
         fetchDataSection()
@@ -50,18 +55,20 @@ export default function HubOrder() {
         
     },[])
 
-    const handleSelectTopChoice = (itemID, videoID) => {
+    const handleSelectTopChoice = (itemID, thumbURL) => {
         $('.overview-item-choice.selected').removeClass('selected')
         $(`.overview-item-choice.${itemID}`).addClass('selected')
-        setTopVideoSelectedID(videoID)
+        // setTopVideoSelectedID(videoID)
+        setTopThumbSelected(thumbURL)
         var videoTop = document.querySelector("#video-top");
         videoTop.scrollIntoView({ behavior: 'smooth', block: 'end'})
     }
 
-    const handleSelectBottomChoice = (itemID, videoID) => {
+    const handleSelectBottomChoice = (itemID, thumbURL) => {
         $('.manage-item-choice.selected').removeClass('selected')
         $(`.manage-item-choice.${itemID}`).addClass('selected')
-        setBottomVideoSelectedID(videoID)
+        // setBottomVideoSelectedID(videoID)
+        setBottomThumbSelected(thumbURL)
         var videoBottom = document.querySelector("#video-bottom");
         videoBottom.scrollIntoView({ behavior: 'smooth', block: 'end'})
     }
@@ -81,7 +88,7 @@ export default function HubOrder() {
                 <div className="overview-item-1 grid margin-x">
                     <p className="caption font-weight-bold letter-spacing-n1px padding-bottom">{block1 && block1[0].block_title}</p>
                     {block1 && block1.map((item, index)=>(
-                        <div className={`grid grid-template-columns-48px-1fr grid-gap-12-12 padding rounded overview-item-choice ${item.id} ${index===0 ? "selected" : null}`} key={item.id} onClick={()=>{handleSelectTopChoice(item.id, item.youtubeID)}}>
+                        <div className={`grid grid-template-columns-48px-1fr grid-gap-12-12 padding rounded overview-item-choice ${item.id} ${index===0 ? "selected" : null}`} key={item.id} onClick={()=>{handleSelectTopChoice(item.id, item.thumb && item?.thumb[0].url)}}>
                             <div className="icon-wrapper">
                                 <div className="bg-primary text-white rounded grid grid-template-columns-48px grid-template-rows-48px">
                                     <div 
@@ -103,7 +110,8 @@ export default function HubOrder() {
                 </div>
                 <div className="overview-item-2 justify-self-center">
                     <div className="video" id="video-top">
-                        <YoutubePlayer videoID={topVideoSelectedID} />
+                        <img className="rounded" src={topThumbSelected} width="100%"/>
+                        {/* <YoutubePlayer videoID={topVideoSelectedID} /> */}
                     </div>                    
                 </div>
             </div>
@@ -112,7 +120,7 @@ export default function HubOrder() {
                 <div className="manage-item-1 grid margin-x">
                     <p className="caption font-weight-bold letter-spacing-n1px padding-bottom">{block2 && block2[0].block_title}</p>
                     {block2 && block2.map((item, index)=>(
-                        <div className={`grid grid-template-columns-48px-1fr grid-gap-12-12 padding rounded manage-item-choice ${item.id} ${index===0 ? "selected" : null}`} key={item.id} onClick={()=>{handleSelectBottomChoice(item.id, item.youtubeID)}}>
+                        <div className={`grid grid-template-columns-48px-1fr grid-gap-12-12 padding rounded manage-item-choice ${item.id} ${index===0 ? "selected" : null}`} key={item.id} onClick={()=>{handleSelectBottomChoice(item.id, item.thumb && item?.thumb[0].url)}}>
                             <div className="icon-wrapper">
                                 <div className="bg-primary text-white rounded grid grid-template-columns-48px grid-template-rows-48px">
                                     <div 
@@ -134,7 +142,8 @@ export default function HubOrder() {
                 </div>
                 <div className="manage-item-2 justify-self-center"> 
                     <div className="video" id="video-bottom">
-                        <YoutubePlayer videoID={bottomVideoSelectedID} />
+                        {/* <YoutubePlayer videoID={bottomVideoSelectedID} /> */}
+                        <img className="rounded" src={bottomThumbSelected} width="100%"/>
                     </div>                   
                 </div>
             </div>

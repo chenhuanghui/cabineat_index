@@ -24,7 +24,7 @@ class MyDocument extends Document {
           <script src="/static/ga.js" />
           
           {/* <script src="/static/segment.js" /> */}
-          {/* <script src="/static/pixel.js" /> */}
+          <script src="/static/pixel.js" />
           
           
           {/* hubspot chat */}

@@ -28,8 +28,8 @@ export async function getServerSideProps({ params: { notionID } }) {
 export default function NotionDetail({blocks, post, recordMap}) {
 
   useEffect(()=>{
-    const ReactPixel =  require('react-facebook-pixel');
-    ReactPixel.default.init('962321430930011');
+    // const ReactPixel =  require('react-facebook-pixel');
+    // ReactPixel.default.init('962321430930011');
   },[])
 
   console.log("blocks: ", blocks)

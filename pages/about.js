@@ -27,8 +27,8 @@ export default class HomePage extends React.Component {
     }
 
     async componentDidMount() { 
-        const ReactPixel =  require('react-facebook-pixel');
-        ReactPixel.default.init('962321430930011');
+        // const ReactPixel =  require('react-facebook-pixel');
+        // ReactPixel.default.init('962321430930011');
 
         // tracking
         mixpanel.track("visit",{"page":"cabineat.vn"})

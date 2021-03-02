@@ -23,8 +23,8 @@ export const getAllPosts = async () => {
 export default function Cabinverse() {
     const [posts, setPosts] = useState()
     useEffect(()=>{
-        const ReactPixel =  require('react-facebook-pixel');
-        ReactPixel.default.init('962321430930011');
+        // const ReactPixel =  require('react-facebook-pixel');
+        // ReactPixel.default.init('962321430930011');
 
         async function fetchData() {
             const posts = await getAllPosts()

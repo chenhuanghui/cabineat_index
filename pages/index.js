@@ -61,8 +61,8 @@ export default class HomePage extends React.Component {
         //     tel: '090123123'
         // })
 
-        const ReactPixel =  require('react-facebook-pixel');
-        ReactPixel.default.init('962321430930011');
+        // const ReactPixel =  require('react-facebook-pixel');
+        // ReactPixel.default.init('962321430930011');
 
         // fetching data
         let currentComponent = this

@@ -39,7 +39,11 @@ export default function NavVer02() {
                         <a className="font-weight-bold text-dark" href="https://my.cabineat.vn">Đăng nhập</a>
                     </div>
 
-                    <a className="nav-item-link btn-primary btn btn-create-store text-white" style={{padding: "6px 12px !important"}}>Tạo tài khoản miễn phí</a>
+                    <a 
+                        className="nav-item-link btn-primary btn btn-create-store text-white" 
+                        style={{padding: "6px 12px !important"}}
+                        href="https://my.cabineat.vn/sign-up"
+                    >Tạo tài khoản miễn phí</a>
 
                     
                 </div>

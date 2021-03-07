@@ -38,7 +38,7 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
           <div id="fb-root"></div>
-          <div class="fb-customerchat"
+          <div className="fb-customerchat"
               attribution="setup_tool"
               page_id="104712234753529"
               theme_color="#1F4DF5"

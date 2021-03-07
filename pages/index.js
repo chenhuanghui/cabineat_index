@@ -34,14 +34,14 @@ export default function Index() {
                 <Delivery />
                 
 
-                <div className="container-cabin margin-top">
+                {/* <div className="container-cabin margin-top">
                     <div className="grid border rounded">
                         <img src="https://ucarecdn.com/d822eaf0-1a91-4786-85f2-429902a55fd9/41842833_1374809102654983_861106054828654592_o.jpg" width="100%" className="rounded-top"/>
                         <div className="padding-24 text-justify">
                             <p> Urban Chocolatier is fast growing dessert shop franchise with 6 stores in the UK. With ambitious growth plans, they chose StoreKit to power their direct delivery and click & collect ordering channels.</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
             </div>
             <FooterNew />

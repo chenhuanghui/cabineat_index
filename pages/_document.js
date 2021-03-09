@@ -34,7 +34,8 @@ class MyDocument extends Document {
           {/* <script src="/static/fb-chat.js" /> */}
           <script src="/static/messenger.js"></script>
         </Head>
-        <body>
+        <body>          
+         
           <Main />
           <NextScript />
           <div id="fb-root"></div>

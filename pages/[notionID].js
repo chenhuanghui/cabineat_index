@@ -7,17 +7,22 @@ import { getAllPosts } from './cabinverse'
 import Subscribe from '../components/cabinverse/subscribe';
 import LastestCourse from '../components/cabinverse/lastedCourse';
 
-import { NotionRenderer } from 'react-notion-x'
+// import { NotionRenderer } from 'react-notion-x'
+import { NotionRenderer } from "react-notion";
 import { NotionAPI } from 'notion-client'
 import { getPageTitle, getAllPagesInSpace } from 'notion-utils'
 
 export async function getServerSideProps({ params: { notionID } }) {
   
   const posts = await getAllPosts();
+  console.log("res :", posts)
   const post = posts.find((t) => t.id === notionID);
 
   const api = new NotionAPI()
-  const recordMap = await api.getPage(notionID)
+  // const recordMap = await api.getPage(notionID)
+  const recordMap = await fetch(`https://notion-api.splitbee.io/v1/page/${notionID}`).then((res) => res.json());  
+  console.log("record Map: ", recordMap)
+
   return {
     props: {
       recordMap,
@@ -25,14 +30,13 @@ export async function getServerSideProps({ params: { notionID } }) {
     }
   }
 }
+
 export default function NotionDetail({blocks, post, recordMap}) {
 
   useEffect(()=>{
     // const ReactPixel =  require('react-facebook-pixel');
     // ReactPixel.default.init('962321430930011');
   },[])
-
-  console.log("blocks: ", blocks)
 
   return (
     <div className="app">
@@ -45,20 +49,22 @@ export default function NotionDetail({blocks, post, recordMap}) {
           { post ? <meta property="og:description" content={`${post.preview ? post.preview : "Cabineat - Giải pháp chủ động kinh doanh delivery cho nhà hàng của bạn"}`}></meta> : null }
           <script async src="https://cdn.splitbee.io/sb.js"></script>
       </Head>
+      
       <Nav />
       <div className="container-cabin">   
         <div className="content-wrapper grid">          
           <div className="article-detail-wrapper grid grid-gap-24-16">
             <div className="acticle-detail-header padding-bottom border-bottom">
-              <p className="caption font-weight-bold text-primary">{getPageTitle(recordMap)}</p>              
+              <p className="caption font-weight-bold text-primary">{post.title}</p>              
             </div>                
 
             <div className="d-block">
-              <NotionRenderer
+              {/* <NotionRenderer
                 recordMap={recordMap}
                 fullPage={false}
                 darkMode={false}
-              />
+              /> */}
+               <NotionRenderer blockMap={recordMap} />
             </div>
           </div>
 

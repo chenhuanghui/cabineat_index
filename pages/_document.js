@@ -19,6 +19,8 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.gstatic.com"></link>
           <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"></link>          
 
+          <meta name="facebook-domain-verification" content="im91o6di2h0rotw7ocdp9kacxvoe91" />
+
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176827516-1"></script>
           <script src="/static/ga.js" />
           

@@ -26,7 +26,9 @@ class MyDocument extends Document {
           
           {/* <script src="/static/segment.js" /> */}
           <script src="/static/pixel.js" />
-          
+                  
+          <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8878637.js"></script>
+
           
           {/* hubspot chat */}
           {/* <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8878637.js"></script> */}

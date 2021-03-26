@@ -42,14 +42,14 @@ class MyDocument extends Document {
          
           <Main />
           <NextScript />
-          <div id="fb-root"></div>
+          {/* <div id="fb-root"></div>
           <div className="fb-customerchat"
               attribution="setup_tool"
               page_id="104712234753529"
               theme_color="#1F4DF5"
               logged_in_greeting="Xin chào, CabinEat có thể giúp gì cho Bạn ?"
               logged_out_greeting="Xin chào, CabinEat có thể giúp gì cho Bạn ?">
-            </div>          
+            </div>           */}
           
         </body>
       </Html>

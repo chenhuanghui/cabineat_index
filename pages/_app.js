@@ -1,6 +1,4 @@
 import '../public/assets/css/cabin-style.css'
-import 'react-multi-carousel/lib/styles.css';
-import "react-notion/src/styles.css";
 
 // core styles shared by all of react-notion-x (required)
 import 'react-notion-x/src/styles.css'

@@ -520,5 +520,12 @@ img.notion-image-inset, .notion-asset-wrapper-image img {
     margin-bottom: 12px !important;
 }
 
+.notion-header {
+    display: none;
+}
+
+video {
+    max-width: 100%;
+}
 
 /* PLAYER CUSTOM */

@@ -510,7 +510,7 @@ small, .small, .smal p {
     width: 100% !important;    
 }
 .notion {
-    text-align: justify !important;
+    /* text-align: justify !important; */
 }
 
 .notion-list.notion-list-disc, .notion-list.notion-list-numbered, .notion-callout-text, .notion-text{

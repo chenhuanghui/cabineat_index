@@ -40,7 +40,7 @@ body {
 	line-height: 1.5;
 	color: #12263f;
 	text-align: left;
-	background-color: #f9fbfd
+	background-color: white;
 }
 [tabindex="-1"]:focus:not(:focus-visible) {
 	outline: 0!important
@@ -500,7 +500,12 @@ small, .small, .smal p {
     letter-spacing: -1px;
 }
 
+.main-container {
+    margin: 0px 10px;
+}
 /* notion style */
+
+
 .notion-asset-wrapper {
     width: 100% !important;    
 }
@@ -519,13 +524,19 @@ img.notion-image-inset, .notion-asset-wrapper-image img {
 .notion p {
     margin-bottom: 12px !important;
 }
-
+.notion-page-icon-wrapper {
+    justify-content: start !important;
+}
 .notion-header {
     display: none;
 }
 
 video {
     max-width: 100%;
+}
+
+.notion-asset-wrapper-image div{
+    align-self: start !important;
 }
 
 /* PLAYER CUSTOM */

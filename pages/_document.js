@@ -4,7 +4,7 @@ class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx)
     return { ...initialProps }
-  }
+  }  
 
   render() {
     return (
@@ -22,6 +22,7 @@ class MyDocument extends Document {
           <meta name="facebook-domain-verification" content="im91o6di2h0rotw7ocdp9kacxvoe91" />
 
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176827516-1"></script>
+          
           <script src="/static/ga.js" />
           
           {/* <script src="/static/segment.js" /> */}
@@ -37,6 +38,7 @@ class MyDocument extends Document {
           {/* <script src="/static/freshchat.js" /> */}
           {/* <script src="/static/fb-chat.js" /> */}
           <script src="/static/messenger.js"></script>
+          
         </Head>
         <body>          
          

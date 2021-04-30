@@ -521,7 +521,7 @@ img.notion-image-inset, .notion-asset-wrapper-image img {
 }
 
 .notion-header {
-    display: none;
+    /* display: none; */
 }
 
 video {

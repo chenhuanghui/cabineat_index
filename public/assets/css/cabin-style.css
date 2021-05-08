@@ -70,7 +70,26 @@ a:not([href]):hover {
 p {
     margin: 0;
 }
+
+
 /* general style */
+.navbar-ver2 {
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+}
+.outer {
+    padding: 0px 20px;
+}
+
+.limit {
+    width: 100%;
+    margin: 0 auto;
+}
+.limit--l {
+    max-width: 1260px;
+}
+
 .border {
     border: 1px solid #CCCCCC !important;
 }

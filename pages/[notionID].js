@@ -2,6 +2,7 @@ import Head from 'next/head'
 import React, { useState, useEffect } from 'react';
 import { NotionRenderer } from 'react-notion-x'
 import { NotionAPI } from 'notion-client'
+import LayoutMasterVer02 from "../layouts/master_ver2"
 
 export async function getServerSideProps({ params: { notionID } }) {
     const notion = new NotionAPI()
@@ -32,12 +33,14 @@ export default function NotionPage({recordMap}) {
                 <meta property="og:description" content="Giải pháp giúp nhà hàng kinh doanh delivery trực tiếp đến khách hàng quen, không tốn phí hoa hồng"></meta>
             </Head>
                         
-            <div className="main-container">
-                {recordMap 
-                ? <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={false} />
-                : null
-                }
-            </div>
+            <LayoutMasterVer02>
+                <div className="main-container">
+                    {recordMap 
+                    ? <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={false} />
+                    : null
+                    }
+                </div>
+            </LayoutMasterVer02>            
             
 
             <style jsx>{`

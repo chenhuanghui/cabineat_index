@@ -10,9 +10,9 @@ export default function NavVer02() {
         <header className="navbar-ver2 bg-white">
             <div className="outer">
                 <div className="limit limit--l nav-wrapper">
-                    <div className="nav-left logo">
+                    <a href="/" className="nav-left logo">
                         <img src="/assets/img/logo.svg" className=""/>
-                    </div>                
+                    </a>                
                     <div className="nav-right">                        
                         {/* <a href='/a0012da95c2341beb0b38bcce71b1048?utm_source="cabineat.vn"' className="">Trợ giúp</a> */}
                         <a href='https://my.cabineat.vn/sign-up?utm_source="cabineat.vn"' className="ml-3 font-weight-bold text-dark">Tạo tài khoản miễn phí 👌</a>

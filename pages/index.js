@@ -43,6 +43,7 @@ export default function Index({recordMap}) {
                     }
                 </div>
             </LayoutMasterVer02>
+            
 
             <style jsx>{`
             

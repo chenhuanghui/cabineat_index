@@ -36,14 +36,14 @@ export default function NotionPage({recordMap, notionData}) {
         <div className="app home-page">
             <Head>
                 <meta charSet="utf-8" />
-                <title>CabinEat</title>
+                <title>{pageTitle}</title>
                 <meta name="description" content="Giải pháp giúp nhà hàng kinh doanh delivery trực tiếp đến khách hàng quen, không tốn phí hoa hồng" />
                 <meta name="keywords" content="cabineat,nha hang so, online restaurant, delivery" />
                 <meta property="og:title" content={pageTitle}></meta>
                 <meta property="og:type" content="website"></meta>
                 <meta property="og:locale" content="vi_VN"></meta>
-                <meta property="og:url" content="https://cabineat.vn"></meta>
-                <meta property="og:image" content={pageCover}></meta>                
+                {/* <meta property="og:url" content="https://cabineat.vn"></meta> */}
+                <meta property="og:image" content={notionData[Object.keys(notionData)[0]].value.format.page_cover}></meta>                
                 <meta property="og:description" content="Giải pháp giúp nhà hàng kinh doanh delivery trực tiếp đến khách hàng quen, không tốn phí hoa hồng"></meta>
             </Head>
                         

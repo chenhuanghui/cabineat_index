@@ -10,11 +10,11 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="stylesheet" href="../assets/css/theme.min.css"></link>
-          <link rel="stylesheet" href="../assets/fonts/feather/feather.css"></link>
+          <link rel="stylesheet" href="/assets/css/theme.min.css"></link>
+          <link rel="stylesheet" href="/assets/fonts/feather/feather.css"></link>
           {/* <link rel="icon" href="../assets/img/favicon.ico"></link> */}
           <link rel="icon" href="/assets/img/favicon-96x96.png"></link>
-          <link rel="stylesheet" href="../assets/css/custom.css"></link>
+          <link rel="stylesheet" href="/assets/css/custom.css"></link>
           
           <link rel="preconnect" href="https://fonts.gstatic.com"></link>
           <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"></link>          
@@ -25,7 +25,6 @@ class MyDocument extends Document {
           
           <script src="/static/ga.js" />
           
-          {/* <script src="/static/segment.js" /> */}
           <script src="/static/pixel.js" />
                   
           <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8878637.js"></script>
@@ -37,7 +36,7 @@ class MyDocument extends Document {
           {/* chat  */}
           {/* <script src="/static/freshchat.js" /> */}
           {/* <script src="/static/fb-chat.js" /> */}
-          <script src="/static/messenger.js"></script>
+          {/* <script src="/static/messenger.js"></script> */}
           
         </Head>
         <body>          

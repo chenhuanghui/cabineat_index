@@ -13,7 +13,7 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="../assets/css/theme.min.css"></link>
           <link rel="stylesheet" href="../assets/fonts/feather/feather.css"></link>
           {/* <link rel="icon" href="../assets/img/favicon.ico"></link> */}
-          <link rel="icon" href="../assets/img/favicon-96x96.png"></link>
+          <link rel="icon" href="/assets/img/favicon-96x96.png"></link>
           <link rel="stylesheet" href="../assets/css/custom.css"></link>
           
           <link rel="preconnect" href="https://fonts.gstatic.com"></link>

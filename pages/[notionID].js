@@ -17,7 +17,7 @@ export async function getServerSideProps({ params: { notionID } }) {
 
 export default function NotionPage({recordMap}) {    
     useEffect(()=>{
-        
+        console.log("page content", recordMap)
     },[])
     return (
         <div className="app home-page">

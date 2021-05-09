@@ -19,9 +19,8 @@ export default function FooterNotion() {
             {footerData
                 ? <NotionRenderer blockMap={footerData} />
                 : null
-
             }
-             
+           
         </div>
     )
 }

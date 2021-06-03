@@ -27,11 +27,13 @@ export default function FooterNotion() {
                 </a>
             </div>
            
-           <style jsx>{`
+           <style jsx>{`           
                 .footer-low {
                     display: grid;
                     grid-template-columns: 5fr 2fr;
                     grid-gap: 15px 15px;
+                    display: relative;
+                    z-index: 99999999;
                 }
                 @media (min-width:768px){
                     .footer-low {
